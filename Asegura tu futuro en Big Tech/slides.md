@@ -8,9 +8,9 @@ drawings:
   persist: false
 transition: slide-left
 title: Asegura tu futuro en Big Tech
-css: |-
-  @import url('./theme/colors.css');
 ---
+
+<style src="./theme/colors.css"></style>
 
 # Asegura tu futuro en Big Tech
 ## <span style="color: #d9c4b1ff;">La estrategia para entrar a las grandes ligas siendo estudiante</span>
