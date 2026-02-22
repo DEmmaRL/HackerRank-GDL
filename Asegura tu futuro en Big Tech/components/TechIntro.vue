@@ -363,11 +363,14 @@ onUnmounted(() => {
   font-family: 'DM Sans', sans-serif !important;
   font-size: 4.2rem !important;
   font-weight: 700 !important;
-  color: #d9c4b1ff !important;
+  background: linear-gradient(to bottom, #d9c4b1ff 20%, #b4a08cff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   line-height: 1.1 !important;
   margin-bottom: 0.5rem !important;
   letter-spacing: -0.02em !important;
-  text-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  text-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
 :deep(h2) {
