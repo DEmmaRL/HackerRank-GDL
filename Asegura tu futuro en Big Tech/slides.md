@@ -25,17 +25,13 @@ layout: cover
 layout: section
 ---
 
-# Big Tech hoy
+# ¿Qué es Big Tech?
 
 ---
 
 ## ¿Qué es Big Tech?
 
 Las empresas más dominantes, influyentes y valiosas de la industria tecnológica global.
-
-- Marcan tendencias
-- Cambian cómo trabajamos y consumimos información
-- Tienen impacto económico, político y cultural
 
 ---
 
