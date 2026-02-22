@@ -206,14 +206,14 @@ onUnmounted(() => {
 }
 
 .net-line {
-  stroke-width: 0.8;
-  stroke-dasharray: 2 3;
+  stroke-width: 0.45;
+  stroke-dasharray: 1 1.5;
   transition: opacity 0.2s ease;
-  animation: flowLine 10s linear infinite;
+  animation: flowLine 8s linear infinite;
 }
 
 @keyframes flowLine {
-  from { stroke-dashoffset: 20; }
+  from { stroke-dashoffset: 25; }
   to { stroke-dashoffset: 0; }
 }
 
