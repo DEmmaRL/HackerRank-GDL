@@ -286,8 +286,9 @@ onUnmounted(() => {
 }
 
 :deep(h1) {
+  font-family: 'DM Sans', sans-serif !important;
   font-size: 4.2rem !important;
-  font-weight: 900 !important;
+  font-weight: 700 !important;
   color: #31394d !important;
   line-height: 1.1 !important;
   margin-bottom: 0.5rem !important;
@@ -295,11 +296,16 @@ onUnmounted(() => {
 }
 
 :deep(h2) {
-  font-size: 1.5rem !important;
+  font-family: 'Space Mono', monospace !important;
+  font-size: 1.25rem !important;
   color: #b85741 !important;
-  font-weight: 600 !important;
+  font-weight: 400 !important;
   text-transform: uppercase !important;
-  letter-spacing: 0.12em !important;
+  letter-spacing: 0.15em !important;
   margin-bottom: 2rem !important;
+}
+
+:deep(p), :deep(strong) {
+  font-family: 'DM Sans', sans-serif !important;
 }
 </style>

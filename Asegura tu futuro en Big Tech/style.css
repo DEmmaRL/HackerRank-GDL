@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Mono&display=swap');
+
 /* Color Palette */
 :root {
   --charcoal-blue: #31394dff;
@@ -5,12 +7,15 @@
   --pale-oak: #d9c4b1ff;
   --rosy-copper: #b85741ff;
   --deep-space-blue: #002f4aff;
+  --font-sans: 'DM Sans', sans-serif;
+  --font-mono: 'Space Mono', monospace;
 }
 
 /* Slidev Theme Overrides */
 .slidev-layout {
   background-color: var(--white);
   color: var(--charcoal-blue);
+  font-family: var(--font-sans);
 }
 
 /* Title & Section Slides */
