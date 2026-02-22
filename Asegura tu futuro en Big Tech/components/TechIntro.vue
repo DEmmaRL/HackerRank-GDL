@@ -13,7 +13,6 @@ const containerRef = ref(null)
 const nodeElements = []
 const lineElements = []
 
-// State for nodes (non-reactive for performance)
 const nodes = nodesData.map(n => ({
   ...n,
   currX: n.x,
@@ -22,18 +21,29 @@ const nodes = nodesData.map(n => ({
   vy: 0
 }))
 
+const pairs = []
+for (let i = 0; i < nodes.length; i++) {
+  for (let j = i + 1; j < nodes.length; j++) {
+    pairs.push([i, j])
+  }
+}
+
 let rafId
 let lastTime = 0
-const friction = 0.95
-const spring = 0.0012
+const friction = 0.94
+const spring = 0.0004
+const speedScale = 0.4 // Slower for premium feel
 const centerRadius = 35
+const minNodeDist = 18
+const maxConnectDist = 55 // Large range
+const margin = 8 // Safety margin %
 
 const setNodeRef = (el, i) => { if (el) nodeElements[i] = el }
 const setLineRef = (el, i) => { if (el) lineElements[i] = el }
 
 const update = (time) => {
   if (!lastTime) lastTime = time
-  const dt = Math.min((time - lastTime) / 16, 2)
+  const dt = Math.min((time - lastTime) / 16, 2) * speedScale
   lastTime = time
 
   const container = containerRef.value
@@ -42,33 +52,51 @@ const update = (time) => {
   const w = container.offsetWidth
   const h = container.offsetHeight
 
-  // Only update if container has size
   if (w > 0 && h > 0) {
     nodes.forEach((node, i) => {
-      // 1. Organic Drift Physics
-      const driftX = Math.sin(time * 0.0006 + node.x) * 2
-      const driftY = Math.cos(time * 0.0005 + node.y) * 2
+      // 1. Organic Physics
+      const driftX = Math.sin(time * (0.0003 + i * 0.0001) + node.x) * 12
+      const driftY = Math.cos(time * (0.0002 + i * 0.0001) + node.y) * 12
       
       node.vx += ((node.x + driftX) - node.currX) * spring * dt
       node.vy += ((node.y + driftY) - node.currY) * spring * dt
 
-      // Central Repulsion
+      // 2. Central repulsion
       const dx = node.currX - 50
       const dy = node.currY - 50
-      const dSq = dx * dx + dy * dy
-      if (dSq < centerRadius * centerRadius) {
-        const d = Math.sqrt(dSq) || 1
-        const f = Math.pow(1 - d / centerRadius, 2) * 0.06
+      const distSq = dx * dx + dy * dy
+      if (distSq < centerRadius * centerRadius) {
+        const d = Math.sqrt(distSq) || 1
+        const f = Math.pow(1 - d / centerRadius, 2) * 0.08
         node.vx += (dx / d) * f * dt
         node.vy += (dy / d) * f * dt
       }
 
+      // 3. Avoid overlaps
+      nodes.forEach((other, j) => {
+        if (i === j) return
+        const nx = node.currX - other.currX
+        const ny = node.currY - other.currY
+        const dSq = nx * nx + ny * ny
+        const minDistSq = minNodeDist * minNodeDist
+        if (dSq < minDistSq) {
+          const d = Math.sqrt(dSq) || 1
+          const f = Math.pow(1 - d / minNodeDist, 2) * 0.05
+          node.vx += (nx / d) * f * dt
+          node.vy += (ny / d) * f * dt
+        }
+      })
+
       node.currX += node.vx * dt
       node.currY += node.vy * dt
+      
+      // 4. Hard bounds check (KEEP IN SCREEN)
+      node.currX = Math.max(margin, Math.min(100 - margin, node.currX))
+      node.currY = Math.max(margin, Math.min(100 - margin, node.currY))
+
       node.vx *= Math.pow(friction, dt)
       node.vy *= Math.pow(friction, dt)
 
-      // 2. Direct DOM update
       const el = nodeElements[i]
       if (el) {
         const x = (node.currX * w) / 100
@@ -77,15 +105,26 @@ const update = (time) => {
       }
     })
 
-    // 3. Update Connections
-    lineElements.forEach((line, i) => {
-      const n1 = nodes[i]
-      const n2 = nodes[(i + 1) % nodes.length]
-      if (n1 && n2) {
+    // 5. Dynamic Connections
+    pairs.forEach((pair, index) => {
+      const line = lineElements[index]
+      if (!line) return
+
+      const n1 = nodes[pair[0]]
+      const n2 = nodes[pair[1]]
+      const dx = n1.currX - n2.currX
+      const dy = n1.currY - n2.currY
+      const dist = Math.sqrt(dx * dx + dy * dy)
+
+      if (dist < maxConnectDist) {
+        const opacity = Math.pow(1 - dist / maxConnectDist, 1.1) * 0.7
         line.setAttribute('x1', n1.currX)
         line.setAttribute('y1', n1.currY)
         line.setAttribute('x2', n2.currX)
         line.setAttribute('y2', n2.currY)
+        line.style.opacity = opacity
+      } else {
+        line.style.opacity = 0
       }
     })
   }
@@ -109,15 +148,15 @@ onUnmounted(() => {
     
     <svg class="net-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
       <defs>
-        <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style="stop-color: #b85741; stop-opacity: 0.12" />
-          <stop offset="100%" style="stop-color: #31394d; stop-opacity: 0.08" />
+        <linearGradient id="lineGrad" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="100" y2="100">
+          <stop offset="0%" style="stop-color: #b85741; stop-opacity: 1" />
+          <stop offset="100%" style="stop-color: #31394d; stop-opacity: 1" />
         </linearGradient>
       </defs>
       <line 
-        v-for="(node, i) in nodes" 
+        v-for="i in pairs.length" 
         :key="`line-${i}`"
-        :ref="el => setLineRef(el, i)"
+        :ref="el => setLineRef(el, i-1)"
         class="net-line"
         stroke="url(#lineGrad)"
       />
@@ -167,9 +206,15 @@ onUnmounted(() => {
 }
 
 .net-line {
-  stroke-width: 0.15;
-  stroke-dasharray: 1 2;
-  vector-effect: non-scaling-stroke;
+  stroke-width: 0.8;
+  stroke-dasharray: 2 3;
+  transition: opacity 0.2s ease;
+  animation: flowLine 10s linear infinite;
+}
+
+@keyframes flowLine {
+  from { stroke-dashoffset: 20; }
+  to { stroke-dashoffset: 0; }
 }
 
 .hw-node {
