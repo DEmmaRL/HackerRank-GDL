@@ -1,87 +1,101 @@
 <script setup>
-import { ref, reactive, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, nextTick } from 'vue'
 
 const nodesData = [
-  { id: 'google', logo: 'https://logo.clearbit.com/google.com', x: 20, y: 25 },
-  { id: 'meta', logo: 'https://logo.clearbit.com/meta.com', x: 80, y: 20 },
-  { id: 'amazon', logo: 'https://logo.clearbit.com/amazon.com', x: 85, y: 75 },
-  { id: 'microsoft', logo: 'https://logo.clearbit.com/microsoft.com', x: 15, y: 80 },
-  { id: 'apple', logo: 'https://logo.clearbit.com/apple.com', x: 50, y: 85 }
+  { id: 'microsoft', logo: 'https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg', x: 50, y: 15 },
+  { id: 'meta', logo: 'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/meta-icon.png', x: 8, y: 42 },
+  { id: 'amazon', logo: 'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/amazon-icon.png', x: 92, y: 42 },
+  { id: 'nvidia', logo: 'https://upload.wikimedia.org/wikipedia/sco/2/21/Nvidia_logo.svg', x: 15, y: 88 },
+  { id: 'apple', logo: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg', x: 85, y: 88 }
 ]
 
-// State for simulation
-const state = reactive({
-  nodes: nodesData.map(node => ({
-    ...node,
-    currX: node.x,
-    currY: node.y,
-    vx: (Math.random() - 0.5) * 0.02,
-    vy: (Math.random() - 0.5) * 0.02,
-    baseX: node.x,
-    baseY: node.y
-  }))
-})
+const containerRef = ref(null)
+const nodeElements = []
+const lineElements = []
+
+// State for nodes (non-reactive for performance)
+const nodes = nodesData.map(n => ({
+  ...n,
+  currX: n.x,
+  currY: n.y,
+  vx: 0,
+  vy: 0
+}))
 
 let rafId
-const friction = 0.98
-const spring = 0.001
-const repulsion = 0.5
-const minDist = 18
-const centerRadius = 32 // Exclusion zone for text
+let lastTime = 0
+const friction = 0.95
+const spring = 0.0012
+const centerRadius = 35
 
-const updatePhysics = () => {
-  const time = Date.now() * 0.001
+const setNodeRef = (el, i) => { if (el) nodeElements[i] = el }
+const setLineRef = (el, i) => { if (el) lineElements[i] = el }
+
+const update = (time) => {
+  if (!lastTime) lastTime = time
+  const dt = Math.min((time - lastTime) / 16, 2)
+  lastTime = time
+
+  const container = containerRef.value
+  if (!container) return (rafId = requestAnimationFrame(update))
   
-  state.nodes.forEach(node => {
-    // 1. Floating drift (organic movement)
-    const driftX = Math.sin(time + node.baseX) * 2
-    const driftY = Math.cos(time * 0.8 + node.baseY) * 2
-    const targetX = node.baseX + driftX
-    const targetY = node.baseY + driftY
+  const w = container.offsetWidth
+  const h = container.offsetHeight
 
-    // 2. Spring towards target
-    node.vx += (targetX - node.currX) * spring
-    node.vy += (targetY - node.currY) * spring
+  // Only update if container has size
+  if (w > 0 && h > 0) {
+    nodes.forEach((node, i) => {
+      // 1. Organic Drift Physics
+      const driftX = Math.sin(time * 0.0006 + node.x) * 2
+      const driftY = Math.cos(time * 0.0005 + node.y) * 2
+      
+      node.vx += ((node.x + driftX) - node.currX) * spring * dt
+      node.vy += ((node.y + driftY) - node.currY) * spring * dt
 
-    // 3. Avoid center (text area)
-    const dx = node.currX - 50
-    const dy = node.currY - 50
-    const dCenter = Math.sqrt(dx * dx + dy * dy)
-    if (dCenter < centerRadius) {
-      const force = (centerRadius - dCenter) / centerRadius
-      node.vx += (dx / dCenter) * force * 0.02
-      node.vy += (dy / dCenter) * force * 0.02
-    }
+      // Central Repulsion
+      const dx = node.currX - 50
+      const dy = node.currY - 50
+      const dSq = dx * dx + dy * dy
+      if (dSq < centerRadius * centerRadius) {
+        const d = Math.sqrt(dSq) || 1
+        const f = Math.pow(1 - d / centerRadius, 2) * 0.06
+        node.vx += (dx / d) * f * dt
+        node.vy += (dy / d) * f * dt
+      }
 
-    // 4. Avoid other nodes
-    state.nodes.forEach(other => {
-      if (node.id === other.id) return
-      const nx = node.currX - other.currX
-      const ny = node.currY - other.currY
-      const dist = Math.sqrt(nx * nx + ny * ny)
-      if (dist < minDist) {
-        const force = (minDist - dist) / minDist
-        node.vx += (nx / dist) * force * 0.01
-        node.vy += (ny / dist) * force * 0.01
+      node.currX += node.vx * dt
+      node.currY += node.vy * dt
+      node.vx *= Math.pow(friction, dt)
+      node.vy *= Math.pow(friction, dt)
+
+      // 2. Direct DOM update
+      const el = nodeElements[i]
+      if (el) {
+        const x = (node.currX * w) / 100
+        const y = (node.currY * h) / 100
+        el.style.transform = `translate3d(${x}px, ${y}px, 0) translate(-50%, -50%)`
       }
     })
 
-    // 5. Apply velocity
-    node.currX += node.vx
-    node.currY += node.vy
-    node.vx *= friction
-    node.vy *= friction
+    // 3. Update Connections
+    lineElements.forEach((line, i) => {
+      const n1 = nodes[i]
+      const n2 = nodes[(i + 1) % nodes.length]
+      if (n1 && n2) {
+        line.setAttribute('x1', n1.currX)
+        line.setAttribute('y1', n1.currY)
+        line.setAttribute('x2', n2.currX)
+        line.setAttribute('y2', n2.currY)
+      }
+    })
+  }
 
-    // 6. Hard bounds
-    node.currX = Math.max(5, Math.min(95, node.currX))
-    node.currY = Math.max(5, Math.min(95, node.currY))
-  })
-
-  rafId = requestAnimationFrame(updatePhysics)
+  rafId = requestAnimationFrame(update)
 }
 
-onMounted(() => {
-  rafId = requestAnimationFrame(updatePhysics)
+onMounted(async () => {
+  await nextTick()
+  rafId = requestAnimationFrame(update)
 })
 
 onUnmounted(() => {
@@ -90,110 +104,99 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="tech-intro-container">
-    <div class="background-overlay"></div>
+  <div ref="containerRef" class="tech-intro-system">
+    <div class="background-canvas"></div>
     
-    <svg class="network-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <svg class="net-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
       <defs>
         <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style="stop-color: #b85741; stop-opacity: 0.15" />
-          <stop offset="100%" style="stop-color: #31394d; stop-opacity: 0.1" />
+          <stop offset="0%" style="stop-color: #b85741; stop-opacity: 0.12" />
+          <stop offset="100%" style="stop-color: #31394d; stop-opacity: 0.08" />
         </linearGradient>
       </defs>
-      
-      <!-- Dynamic connections -->
       <line 
-        v-for="(node, i) in state.nodes" 
+        v-for="(node, i) in nodes" 
         :key="`line-${i}`"
-        :x1="node.currX" 
-        :y1="node.currY"
-        :x2="state.nodes[(i + 1) % state.nodes.length].currX"
-        :y2="state.nodes[(i + 1) % state.nodes.length].currY"
-        class="connection-line"
+        :ref="el => setLineRef(el, i)"
+        class="net-line"
+        stroke="url(#lineGrad)"
       />
     </svg>
 
-    <!-- Interactive Nodes -->
     <div 
-      v-for="node in state.nodes" 
+      v-for="(node, i) in nodes" 
       :key="node.id"
-      class="tech-node"
-      :style="{ 
-        left: `${node.currX}%`, 
-        top: `${node.currY}%`,
-      }"
+      :ref="el => setNodeRef(el, i)"
+      class="hw-node"
     >
-      <div class="node-glow"></div>
-      <div class="node-content">
+      <div class="hw-node-pulse"></div>
+      <div class="hw-node-inner">
         <img :src="node.logo" :alt="node.id" />
       </div>
     </div>
 
-    <!-- Main Content -->
-    <div class="intro-content">
+    <div class="intro-overlay">
       <slot />
     </div>
   </div>
 </template>
 
 <style scoped>
-.tech-intro-container {
-  position: relative;
+.tech-intro-system {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  min-height: 500px;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background: #ffffff;
 }
 
-.background-overlay {
+.background-canvas {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at center, rgba(255,255,255,0) 0%, rgba(245,245,247,1) 100%);
+  background: radial-gradient(circle at center, #ffffff 0%, #f1f3f6 100%);
   pointer-events: none;
 }
 
-.network-svg {
+.net-svg {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
   pointer-events: none;
 }
 
-.connection-line {
-  stroke: url(#lineGrad);
-  stroke-width: 0.1;
-  stroke-dasharray: 1 1;
+.net-line {
+  stroke-width: 0.15;
+  stroke-dasharray: 1 2;
+  vector-effect: non-scaling-stroke;
 }
 
-.tech-node {
+.hw-node {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 68px;
   height: 68px;
-  transform: translate(-50%, -50%);
+  will-change: transform;
   z-index: 10;
-  will-change: left, top;
+  pointer-events: auto;
 }
 
-.node-glow {
+.hw-node-pulse {
   position: absolute;
-  inset: -10px;
+  inset: -12px;
   background: radial-gradient(circle, rgba(184, 87, 65, 0.1) 0%, transparent 70%);
   border-radius: 50%;
-  animation: pulseGlow 4s ease-in-out infinite;
+  animation: pulseNode 5s ease-in-out infinite;
 }
 
-@keyframes pulseGlow {
-  0%, 100% { transform: scale(1); opacity: 0.5; }
-  50% { transform: scale(1.4); opacity: 0.2; }
+@keyframes pulseNode {
+  0%, 100% { transform: scale(1); opacity: 0.3; }
+  50% { transform: scale(1.4); opacity: 0.1; }
 }
 
-.node-content {
+.hw-node-inner {
   position: relative;
   width: 100%;
   height: 100%;
@@ -203,41 +206,45 @@ onUnmounted(() => {
   align-items: center;
   justify-content: center;
   padding: 12px;
-  box-shadow: 0 10px 30px -5px rgba(49, 57, 77, 0.15);
-  border: 1px solid rgba(0,0,0,0.05);
-  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 10px 30px rgba(49, 57, 77, 0.12);
+  border: 1px solid rgba(0,0,0,0.03);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.tech-node:hover .node-content {
+.hw-node:hover .hw-node-inner {
   transform: scale(1.15);
-  box-shadow: 0 15px 40px -5px rgba(184, 87, 65, 0.25);
+  box-shadow: 0 15px 40px rgba(184, 87, 65, 0.2);
   border-color: rgba(184, 87, 65, 0.2);
 }
 
-.node-content img {
+.hw-node-inner img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-.intro-content {
-  position: relative;
+.intro-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   z-index: 20;
-  max-width: 800px;
   text-align: center;
+  padding: 2rem;
   pointer-events: none;
 }
 
-.intro-content > * {
+.intro-overlay > * {
   pointer-events: auto;
 }
 
-/* Slidev text styles override */
 :deep(h1) {
-  font-size: 4.5rem !important;
-  font-weight: 800 !important;
+  font-size: 4.2rem !important;
+  font-weight: 900 !important;
   color: #31394d !important;
-  line-height: 1 !important;
+  line-height: 1.1 !important;
   margin-bottom: 0.5rem !important;
   letter-spacing: -0.02em !important;
 }
@@ -245,14 +252,9 @@ onUnmounted(() => {
 :deep(h2) {
   font-size: 1.5rem !important;
   color: #b85741 !important;
-  font-weight: 500 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.1em !important;
-  margin-bottom: 2rem !important;
-}
-
-:deep(strong) {
-  color: #4a5568 !important;
   font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.12em !important;
+  margin-bottom: 2rem !important;
 }
 </style>
