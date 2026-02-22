@@ -1,6 +1,5 @@
 ---
 theme: seriph
-background: https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=2070
 class: text-center
 highlighter: shiki
 lineNumbers: false
@@ -8,14 +7,19 @@ drawings:
   persist: false
 transition: slide-left
 title: Asegura tu futuro en Big Tech
+layout: cover
 ---
 
 <style src="./theme/colors.css"></style>
 
+<TechIntro>
+
 # Asegura tu futuro en Big Tech
-## <span style="color: #d9c4b1ff;">La estrategia para entrar a las grandes ligas siendo estudiante</span>
+## La estrategia para entrar a las grandes ligas siendo estudiante
 
 **Diego E Rivera**
+
+</TechIntro>
 
 ---
 layout: section
