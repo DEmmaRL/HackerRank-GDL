@@ -2,16 +2,16 @@
 import { ref, onMounted, onUnmounted, nextTick } from 'vue'
 
 const nodesData = [
-  { id: 'microsoft', logo: 'https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg', x: 50, y: 15 },
-  { id: 'meta', logo: 'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/meta-icon.png', x: 8, y: 42 },
-  { id: 'amazon', logo: 'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/amazon-icon.png', x: 92, y: 42 },
-  { id: 'nvidia', logo: 'https://upload.wikimedia.org/wikipedia/sco/2/21/Nvidia_logo.svg', x: 15, y: 88 },
-  { id: 'apple', logo: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg', x: 85, y: 88 }
+  { id: 'microsoft', logo: 'https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg', x: 50, y: 15, invert: false },
+  { id: 'meta', logo: 'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/meta-icon.png', x: 8, y: 42, invert: false },
+  { id: 'amazon', logo: 'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/amazon-icon.png', x: 92, y: 42, invert: true },
+  { id: 'nvidia', logo: '/logos/Nvidia-Light-Vertical-Logo.wine.svg', x: 15, y: 88, invert: false },
+  { id: 'apple', logo: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg', x: 85, y: 88, invert: true }
 ]
 
 const containerRef = ref(null)
-const nodeElements = []
-const lineElements = []
+const nodeElements = ref([])
+const lineElements = ref([])
 
 const nodes = nodesData.map(n => ({
   ...n,
@@ -31,15 +31,12 @@ for (let i = 0; i < nodes.length; i++) {
 let rafId
 let lastTime = 0
 const friction = 0.94
-const spring = 0.0004
-const speedScale = 0.4 // Slower for premium feel
+const spring = 0.0004 
+const speedScale = 0.4 
 const centerRadius = 35
 const minNodeDist = 18
-const maxConnectDist = 55 // Large range
-const margin = 8 // Safety margin %
-
-const setNodeRef = (el, i) => { if (el) nodeElements[i] = el }
-const setLineRef = (el, i) => { if (el) lineElements[i] = el }
+const maxConnectDist = 55 
+const margin = 8 
 
 const update = (time) => {
   if (!lastTime) lastTime = time
@@ -54,14 +51,12 @@ const update = (time) => {
 
   if (w > 0 && h > 0) {
     nodes.forEach((node, i) => {
-      // 1. Organic Physics
       const driftX = Math.sin(time * (0.0003 + i * 0.0001) + node.x) * 12
       const driftY = Math.cos(time * (0.0002 + i * 0.0001) + node.y) * 12
       
       node.vx += ((node.x + driftX) - node.currX) * spring * dt
       node.vy += ((node.y + driftY) - node.currY) * spring * dt
 
-      // 2. Central repulsion
       const dx = node.currX - 50
       const dy = node.currY - 50
       const distSq = dx * dx + dy * dy
@@ -72,7 +67,6 @@ const update = (time) => {
         node.vy += (dy / d) * f * dt
       }
 
-      // 3. Avoid overlaps
       nodes.forEach((other, j) => {
         if (i === j) return
         const nx = node.currX - other.currX
@@ -89,15 +83,13 @@ const update = (time) => {
 
       node.currX += node.vx * dt
       node.currY += node.vy * dt
-      
-      // 4. Hard bounds check (KEEP IN SCREEN)
       node.currX = Math.max(margin, Math.min(100 - margin, node.currX))
       node.currY = Math.max(margin, Math.min(100 - margin, node.currY))
 
       node.vx *= Math.pow(friction, dt)
       node.vy *= Math.pow(friction, dt)
 
-      const el = nodeElements[i]
+      const el = nodeElements.value[i]
       if (el) {
         const x = (node.currX * w) / 100
         const y = (node.currY * h) / 100
@@ -105,17 +97,14 @@ const update = (time) => {
       }
     })
 
-    // 5. Dynamic Connections
     pairs.forEach((pair, index) => {
-      const line = lineElements[index]
+      const line = lineElements.value[index]
       if (!line) return
-
       const n1 = nodes[pair[0]]
       const n2 = nodes[pair[1]]
       const dx = n1.currX - n2.currX
       const dy = n1.currY - n2.currY
       const dist = Math.sqrt(dx * dx + dy * dy)
-
       if (dist < maxConnectDist) {
         const opacity = Math.pow(1 - dist / maxConnectDist, 1.1) * 0.7
         line.setAttribute('x1', n1.currX)
@@ -128,7 +117,6 @@ const update = (time) => {
       }
     })
   }
-
   rafId = requestAnimationFrame(update)
 }
 
@@ -148,15 +136,15 @@ onUnmounted(() => {
     
     <svg class="net-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
       <defs>
-        <linearGradient id="lineGrad" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="100" y2="100">
+        <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" style="stop-color: #b85741; stop-opacity: 1" />
-          <stop offset="100%" style="stop-color: #31394d; stop-opacity: 1" />
+          <stop offset="100%" style="stop-color: #d9c4b1; stop-opacity: 1" />
         </linearGradient>
       </defs>
       <line 
-        v-for="i in pairs.length" 
+        v-for="(pair, i) in pairs" 
         :key="`line-${i}`"
-        :ref="el => setLineRef(el, i-1)"
+        :ref="el => { if (el) lineElements[i] = el }"
         class="net-line"
         stroke="url(#lineGrad)"
       />
@@ -165,12 +153,20 @@ onUnmounted(() => {
     <div 
       v-for="(node, i) in nodes" 
       :key="node.id"
-      :ref="el => setNodeRef(el, i)"
+      :ref="el => { if (el) nodeElements[i] = el }"
       class="hw-node"
     >
       <div class="hw-node-pulse"></div>
       <div class="hw-node-inner">
-        <img :src="node.logo" :alt="node.id" />
+        <img 
+          :src="node.logo" 
+          :alt="node.id" 
+          :class="{ 
+            'invert-logo': node.invert,
+            'nvidia-fix': node.id === 'nvidia',
+            'microsoft-fix': node.id === 'microsoft'
+          }" 
+        />
       </div>
     </div>
 
@@ -187,13 +183,13 @@ onUnmounted(() => {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: #ffffff;
+  background: #002f4a;
 }
 
 .background-canvas {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at center, #ffffff 0%, #f1f3f6 100%);
+  background: linear-gradient(135deg, #002f4aff 0%, #31394dff 50%, #31394dff 100%);
   pointer-events: none;
 }
 
@@ -203,13 +199,14 @@ onUnmounted(() => {
   width: 100%;
   height: 100%;
   pointer-events: none;
+  opacity: 0.8;
 }
 
 .net-line {
   stroke-width: 0.45;
   stroke-dasharray: 1 1.5;
-  transition: opacity 0.2s ease;
   animation: flowLine 8s linear infinite;
+  transition: opacity 0.3s ease;
 }
 
 @keyframes flowLine {
@@ -221,8 +218,8 @@ onUnmounted(() => {
   position: absolute;
   top: 0;
   left: 0;
-  width: 68px;
-  height: 68px;
+  width: 72px;
+  height: 72px;
   will-change: transform;
   z-index: 10;
   pointer-events: auto;
@@ -230,42 +227,55 @@ onUnmounted(() => {
 
 .hw-node-pulse {
   position: absolute;
-  inset: -12px;
-  background: radial-gradient(circle, rgba(184, 87, 65, 0.1) 0%, transparent 70%);
+  inset: -15px;
+  background: radial-gradient(circle, rgba(217, 196, 177, 0.15) 0%, transparent 70%);
   border-radius: 50%;
   animation: pulseNode 5s ease-in-out infinite;
 }
 
 @keyframes pulseNode {
-  0%, 100% { transform: scale(1); opacity: 0.3; }
-  50% { transform: scale(1.4); opacity: 0.1; }
+  0%, 100% { transform: scale(1); opacity: 0.4; }
+  50% { transform: scale(1.5); opacity: 0.15; }
 }
 
 .hw-node-inner {
   position: relative;
   width: 100%;
   height: 100%;
-  background: white;
+  background: #001a2b;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 12px;
-  box-shadow: 0 10px 30px rgba(49, 57, 77, 0.12);
-  border: 1px solid rgba(0,0,0,0.03);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255,255,255,0.12);
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .hw-node:hover .hw-node-inner {
   transform: scale(1.15);
-  box-shadow: 0 15px 40px rgba(184, 87, 65, 0.2);
-  border-color: rgba(184, 87, 65, 0.2);
+  box-shadow: 0 15px 50px rgba(184, 87, 65, 0.4);
+  border-color: rgba(255,255,255,0.3);
 }
 
 .hw-node-inner img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  transition: filter 0.3s ease;
+}
+
+.nvidia-fix {
+  transform: scale(1.4);
+}
+
+.microsoft-fix {
+  transform: scale(0.9);
+}
+
+.invert-logo {
+  filter: brightness(0) invert(1);
 }
 
 .intro-overlay {
@@ -289,16 +299,18 @@ onUnmounted(() => {
   font-family: 'DM Sans', sans-serif !important;
   font-size: 4.2rem !important;
   font-weight: 700 !important;
-  color: #31394d !important;
+  color: #d9c4b1ff !important;
   line-height: 1.1 !important;
   margin-bottom: 0.5rem !important;
   letter-spacing: -0.02em !important;
+  text-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
 :deep(h2) {
   font-family: 'Space Mono', monospace !important;
   font-size: 1.25rem !important;
-  color: #b85741 !important;
+  color: #ffffffff !important;
+  opacity: 0.85;
   font-weight: 400 !important;
   text-transform: uppercase !important;
   letter-spacing: 0.15em !important;
@@ -307,5 +319,6 @@ onUnmounted(() => {
 
 :deep(p), :deep(strong) {
   font-family: 'DM Sans', sans-serif !important;
+  color: #ffffffff !important;
 }
 </style>
