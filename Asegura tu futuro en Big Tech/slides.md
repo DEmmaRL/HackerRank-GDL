@@ -8,10 +8,12 @@ drawings:
   persist: false
 transition: slide-left
 title: Asegura tu futuro en Big Tech
+css: |-
+  @import url('./theme/colors.css');
 ---
 
 # Asegura tu futuro en Big Tech
-## La estrategia para entrar a las grandes ligas siendo estudiante
+## <span style="color: #d9c4b1ff;">La estrategia para entrar a las grandes ligas siendo estudiante</span>
 
 **Diego E Rivera**
 
@@ -36,12 +38,12 @@ Las empresas más dominantes, influyentes y valiosas de la industria tecnológic
 ## ¿Quiénes están en esta conversación?
 
 <div class="grid grid-cols-3 gap-4 mt-8">
-  <div class="p-4 border border-gray-200 rounded text-center font-bold">Meta</div>
-  <div class="p-4 border border-gray-200 rounded text-center font-bold">Apple</div>
-  <div class="p-4 border border-gray-200 rounded text-center font-bold">Amazon</div>
-  <div class="p-4 border border-gray-200 rounded text-center font-bold">NVIDIA</div>
-  <div class="p-4 border border-gray-200 rounded text-center font-bold">Google / Alphabet</div>
-  <div class="p-4 border border-gray-200 rounded text-center font-bold">Tesla</div>
+  <div class="p-4 border-2 rounded-lg text-center font-bold bg-accent text-secondary hover:shadow-lg transition">Meta</div>
+  <div class="p-4 border-2 rounded-lg text-center font-bold bg-accent text-secondary hover:shadow-lg transition">Apple</div>
+  <div class="p-4 border-2 rounded-lg text-center font-bold bg-accent text-secondary hover:shadow-lg transition">Amazon</div>
+  <div class="p-4 border-2 rounded-lg text-center font-bold bg-accent text-secondary hover:shadow-lg transition">NVIDIA</div>
+  <div class="p-4 border-2 rounded-lg text-center font-bold bg-accent text-secondary hover:shadow-lg transition">Google / Alphabet</div>
+  <div class="p-4 border-2 rounded-lg text-center font-bold bg-accent text-secondary hover:shadow-lg transition">Tesla</div>
 </div>
 
 <p class="mt-8 text-sm italic">Además: Oracle, Pinterest, Netflix, Intel, Uber, IBM, AMD…</p>

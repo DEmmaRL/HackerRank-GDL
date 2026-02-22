@@ -1,0 +1,187 @@
+/* Color Palette */
+:root {
+  --charcoal-blue: #31394dff;
+  --white: #ffffffff;
+  --pale-oak: #d9c4b1ff;
+  --rosy-copper: #b85741ff;
+  --deep-space-blue: #002f4aff;
+}
+
+/* Slidev Theme Overrides */
+.slidev-layout {
+  background-color: var(--white);
+  color: var(--charcoal-blue);
+}
+
+/* Title & Section Slides */
+.slidev-layout.title,
+.slidev-layout.section {
+  background: linear-gradient(135deg, var(--deep-space-blue) 0%, var(--charcoal-blue) 50%, var(--charcoal-blue) 100%);
+  color: var(--white);
+}
+
+.slidev-layout.title h1,
+.slidev-layout.section h1 {
+  color: var(--pale-oak);
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.slidev-layout.title h2,
+.slidev-layout.section h2 {
+  color: var(--pale-oak);
+  opacity: 0.95;
+}
+
+/* Default Layout */
+.slidev-layout.default h1 {
+  color: var(--deep-space-blue);
+  border-bottom: 3px solid var(--rosy-copper);
+  padding-bottom: 0.5rem;
+}
+
+.slidev-layout.default h2 {
+  color: var(--charcoal-blue);
+}
+
+.slidev-layout.default h3 {
+  color: var(--rosy-copper);
+}
+
+/* Accent Elements */
+a {
+  color: var(--rosy-copper);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  color: var(--deep-space-blue);
+  text-decoration: underline;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table thead {
+  background-color: var(--charcoal-blue);
+  color: var(--white);
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: rgba(217, 196, 177, 0.2);
+}
+
+table tbody tr:hover {
+  background-color: rgba(184, 87, 65, 0.1);
+}
+
+table td,
+table th {
+  border: 1px solid var(--pale-oak);
+  padding: 0.75rem;
+}
+
+/* Borders & Cards */
+.border {
+  border-color: var(--pale-oak) !important;
+}
+
+.border-gray-200 {
+  border-color: var(--pale-oak) !important;
+}
+
+/* Shadow */
+.shadow-sm {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+div.rounded {
+  background-color: rgba(49, 57, 77, 0.05);
+  border-left: 4px solid var(--rosy-copper);
+  padding: 1rem;
+}
+
+/* Lists */
+ul {
+  list-style-color: var(--rosy-copper);
+}
+
+li {
+  color: var(--charcoal-blue);
+}
+
+strong {
+  color: var(--rosy-copper);
+  font-weight: 700;
+}
+
+em {
+  color: var(--deep-space-blue);
+  font-style: italic;
+}
+
+/* Blockquote */
+blockquote {
+  border-left: 4px solid var(--rosy-copper);
+  color: var(--charcoal-blue);
+  background-color: rgba(217, 196, 177, 0.15);
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+/* Code blocks */
+.shiki {
+  background-color: var(--charcoal-blue) !important;
+  color: var(--pale-oak) !important;
+}
+
+.shiki code {
+  color: var(--pale-oak);
+}
+
+/* Button-like elements */
+button,
+.btn {
+  background-color: var(--rosy-copper);
+  color: var(--white);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+button:hover,
+.btn:hover {
+  background-color: var(--deep-space-blue);
+}
+
+/* Animations */
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.5s ease-out;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .grid-cols-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grid-cols-2 {
+    grid-template-columns: 1fr;
+  }
+}
