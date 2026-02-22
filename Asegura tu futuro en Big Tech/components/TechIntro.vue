@@ -12,6 +12,8 @@ const nodesData = [
 const containerRef = ref(null)
 const nodeElements = ref([])
 const lineElements = ref([])
+let draggedIndex = -1
+let draggedPointerId = null
 
 const nodes = nodesData.map(n => ({
   ...n,
@@ -38,6 +40,45 @@ const minNodeDist = 18
 const maxConnectDist = 55 
 const margin = 8 
 
+const clamp = (value, min, max) => Math.max(min, Math.min(max, value))
+
+const moveNodeToClient = (index, clientX, clientY) => {
+  const container = containerRef.value
+  if (!container) return
+
+  const rect = container.getBoundingClientRect()
+  if (rect.width === 0 || rect.height === 0) return
+
+  const x = clamp(((clientX - rect.left) / rect.width) * 100, margin, 100 - margin)
+  const y = clamp(((clientY - rect.top) / rect.height) * 100, margin, 100 - margin)
+
+  const node = nodes[index]
+  node.currX = x
+  node.currY = y
+  node.x = x
+  node.y = y
+  node.vx = 0
+  node.vy = 0
+}
+
+const startDrag = (index, event) => {
+  draggedIndex = index
+  draggedPointerId = event.pointerId
+  event.preventDefault()
+  moveNodeToClient(index, event.clientX, event.clientY)
+}
+
+const onPointerMove = (event) => {
+  if (draggedIndex < 0 || event.pointerId !== draggedPointerId) return
+  moveNodeToClient(draggedIndex, event.clientX, event.clientY)
+}
+
+const endDrag = (event) => {
+  if (draggedIndex < 0 || event.pointerId !== draggedPointerId) return
+  draggedIndex = -1
+  draggedPointerId = null
+}
+
 const update = (time) => {
   if (!lastTime) lastTime = time
   const dt = Math.min((time - lastTime) / 16, 2) * speedScale
@@ -51,6 +92,16 @@ const update = (time) => {
 
   if (w > 0 && h > 0) {
     nodes.forEach((node, i) => {
+      if (i === draggedIndex) {
+        const el = nodeElements.value[i]
+        if (el) {
+          const x = (node.currX * w) / 100
+          const y = (node.currY * h) / 100
+          el.style.transform = `translate3d(${x}px, ${y}px, 0) translate(-50%, -50%)`
+        }
+        return
+      }
+
       const driftX = Math.sin(time * (0.0003 + i * 0.0001) + node.x) * 12
       const driftY = Math.cos(time * (0.0002 + i * 0.0001) + node.y) * 12
       
@@ -122,11 +173,17 @@ const update = (time) => {
 
 onMounted(async () => {
   await nextTick()
+  window.addEventListener('pointermove', onPointerMove)
+  window.addEventListener('pointerup', endDrag)
+  window.addEventListener('pointercancel', endDrag)
   rafId = requestAnimationFrame(update)
 })
 
 onUnmounted(() => {
   cancelAnimationFrame(rafId)
+  window.removeEventListener('pointermove', onPointerMove)
+  window.removeEventListener('pointerup', endDrag)
+  window.removeEventListener('pointercancel', endDrag)
 })
 </script>
 
@@ -155,6 +212,7 @@ onUnmounted(() => {
       :key="node.id"
       :ref="el => { if (el) nodeElements[i] = el }"
       class="hw-node"
+      @pointerdown="startDrag(i, $event)"
     >
       <div class="hw-node-pulse"></div>
       <div class="hw-node-inner">
@@ -223,6 +281,12 @@ onUnmounted(() => {
   will-change: transform;
   z-index: 10;
   pointer-events: auto;
+  cursor: grab;
+  touch-action: none;
+}
+
+.hw-node:active {
+  cursor: grabbing;
 }
 
 .hw-node-pulse {
