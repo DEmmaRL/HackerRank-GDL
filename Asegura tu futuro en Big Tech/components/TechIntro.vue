@@ -1,162 +1,258 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, reactive, onMounted, onUnmounted } from 'vue'
 
-const nodes = [
-  { x: 15, y: 20, logo: 'https://logo.clearbit.com/google.com', delay: 0 },
-  { x: 75, y: 15, logo: 'https://logo.clearbit.com/meta.com', delay: 0.5 },
-  { x: 85, y: 65, logo: 'https://logo.clearbit.com/amazon.com', delay: 1 },
-  { x: 25, y: 75, logo: 'https://logo.clearbit.com/microsoft.com', delay: 1.5 },
-  { x: 50, y: 85, logo: 'https://logo.clearbit.com/apple.com', delay: 2 }
+const nodesData = [
+  { id: 'google', logo: 'https://logo.clearbit.com/google.com', x: 20, y: 25 },
+  { id: 'meta', logo: 'https://logo.clearbit.com/meta.com', x: 80, y: 20 },
+  { id: 'amazon', logo: 'https://logo.clearbit.com/amazon.com', x: 85, y: 75 },
+  { id: 'microsoft', logo: 'https://logo.clearbit.com/microsoft.com', x: 15, y: 80 },
+  { id: 'apple', logo: 'https://logo.clearbit.com/apple.com', x: 50, y: 85 }
 ]
+
+// State for simulation
+const state = reactive({
+  nodes: nodesData.map(node => ({
+    ...node,
+    currX: node.x,
+    currY: node.y,
+    vx: (Math.random() - 0.5) * 0.02,
+    vy: (Math.random() - 0.5) * 0.02,
+    baseX: node.x,
+    baseY: node.y
+  }))
+})
+
+let rafId
+const friction = 0.98
+const spring = 0.001
+const repulsion = 0.5
+const minDist = 18
+const centerRadius = 32 // Exclusion zone for text
+
+const updatePhysics = () => {
+  const time = Date.now() * 0.001
+  
+  state.nodes.forEach(node => {
+    // 1. Floating drift (organic movement)
+    const driftX = Math.sin(time + node.baseX) * 2
+    const driftY = Math.cos(time * 0.8 + node.baseY) * 2
+    const targetX = node.baseX + driftX
+    const targetY = node.baseY + driftY
+
+    // 2. Spring towards target
+    node.vx += (targetX - node.currX) * spring
+    node.vy += (targetY - node.currY) * spring
+
+    // 3. Avoid center (text area)
+    const dx = node.currX - 50
+    const dy = node.currY - 50
+    const dCenter = Math.sqrt(dx * dx + dy * dy)
+    if (dCenter < centerRadius) {
+      const force = (centerRadius - dCenter) / centerRadius
+      node.vx += (dx / dCenter) * force * 0.02
+      node.vy += (dy / dCenter) * force * 0.02
+    }
+
+    // 4. Avoid other nodes
+    state.nodes.forEach(other => {
+      if (node.id === other.id) return
+      const nx = node.currX - other.currX
+      const ny = node.currY - other.currY
+      const dist = Math.sqrt(nx * nx + ny * ny)
+      if (dist < minDist) {
+        const force = (minDist - dist) / minDist
+        node.vx += (nx / dist) * force * 0.01
+        node.vy += (ny / dist) * force * 0.01
+      }
+    })
+
+    // 5. Apply velocity
+    node.currX += node.vx
+    node.currY += node.vy
+    node.vx *= friction
+    node.vy *= friction
+
+    // 6. Hard bounds
+    node.currX = Math.max(5, Math.min(95, node.currX))
+    node.currY = Math.max(5, Math.min(95, node.currY))
+  })
+
+  rafId = requestAnimationFrame(updatePhysics)
+}
+
+onMounted(() => {
+  rafId = requestAnimationFrame(updatePhysics)
+})
+
+onUnmounted(() => {
+  cancelAnimationFrame(rafId)
+})
 </script>
 
 <template>
-  <div class="tech-intro">
-    <svg class="connections" viewBox="0 0 100 100" preserveAspectRatio="none">
+  <div class="tech-intro-container">
+    <div class="background-overlay"></div>
+    
+    <svg class="network-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
       <defs>
-        <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" style="stop-color:#b85741;stop-opacity:0.25" />
-          <stop offset="100%" style="stop-color:#31394d;stop-opacity:0.4" />
+        <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color: #b85741; stop-opacity: 0.15" />
+          <stop offset="100%" style="stop-color: #31394d; stop-opacity: 0.1" />
         </linearGradient>
       </defs>
       
-      <line v-for="(node, i) in nodes.slice(0, -1)" :key="`line-${i}`"
-        :x1="nodes[i].x" :y1="nodes[i].y"
-        :x2="nodes[i + 1].x" :y2="nodes[i + 1].y"
-        stroke="url(#lineGradient)"
-        stroke-width="0.2"
-        stroke-dasharray="2,2"
-        class="animated-line"
-        :style="{ animationDelay: `${node.delay}s` }"
+      <!-- Dynamic connections -->
+      <line 
+        v-for="(node, i) in state.nodes" 
+        :key="`line-${i}`"
+        :x1="node.currX" 
+        :y1="node.currY"
+        :x2="state.nodes[(i + 1) % state.nodes.length].currX"
+        :y2="state.nodes[(i + 1) % state.nodes.length].currY"
+        class="connection-line"
       />
     </svg>
 
-    <div v-for="(node, i) in nodes" :key="`node-${i}`" class="node" :style="{ left: `${node.x}%`, top: `${node.y}%`, animationDelay: `${node.delay}s` }">
-      <div class="node-ring"></div>
-      <img :src="node.logo" :alt="`Company ${i}`" loading="lazy" />
+    <!-- Interactive Nodes -->
+    <div 
+      v-for="node in state.nodes" 
+      :key="node.id"
+      class="tech-node"
+      :style="{ 
+        left: `${node.currX}%`, 
+        top: `${node.currY}%`,
+      }"
+    >
+      <div class="node-glow"></div>
+      <div class="node-content">
+        <img :src="node.logo" :alt="node.id" />
+      </div>
     </div>
 
-    <div class="content">
+    <!-- Main Content -->
+    <div class="intro-content">
       <slot />
     </div>
   </div>
 </template>
 
 <style scoped>
-:deep(.slidev-page) {
-  background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
-}
-
-.slidev-page {
+.tech-intro-container {
   position: relative;
   width: 100%;
   height: 100%;
+  min-height: 500px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
 }
 
-.connections {
+.background-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255,255,255,0) 0%, rgba(245,245,247,1) 100%);
+  pointer-events: none;
+}
+
+.network-svg {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.4;
+  z-index: 1;
   pointer-events: none;
 }
 
-.animated-line {
-  stroke-dashoffset: 0;
-  animation: flowLine 3s linear infinite;
-  vector-effect: non-scaling-stroke;
+.connection-line {
+  stroke: url(#lineGrad);
+  stroke-width: 0.1;
+  stroke-dasharray: 1 1;
 }
 
-@keyframes flowLine {
-  to {
-    stroke-dashoffset: -4;
-  }
-}
-
-.node {
+.tech-node {
   position: absolute;
-  width: 60px;
-  height: 60px;
+  width: 68px;
+  height: 68px;
   transform: translate(-50%, -50%);
-  animation: slideInNode 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-  opacity: 0;
+  z-index: 10;
+  will-change: left, top;
 }
 
-@keyframes slideInNode {
-  to {
-    opacity: 1;
-  }
-}
-
-.node-ring {
+.node-glow {
   position: absolute;
+  inset: -10px;
+  background: radial-gradient(circle, rgba(184, 87, 65, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.4); opacity: 0.2; }
+}
+
+.node-content {
+  position: relative;
   width: 100%;
   height: 100%;
-  border: 2px solid #b85741;
-  border-radius: 50%;
-  animation: pulse 2.5s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 0.4;
-  }
-  50% {
-    transform: scale(1.25);
-    opacity: 0.15;
-  }
-}
-
-.node img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
   background: white;
-  padding: 8px;
-  box-sizing: border-box;
-  box-shadow: 0 4px 16px rgba(49, 57, 77, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  box-shadow: 0 10px 30px -5px rgba(49, 57, 77, 0.15);
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.node img:hover {
-  box-shadow: 0 6px 24px rgba(184, 87, 65, 0.2);
+.tech-node:hover .node-content {
+  transform: scale(1.15);
+  box-shadow: 0 15px 40px -5px rgba(184, 87, 65, 0.25);
+  border-color: rgba(184, 87, 65, 0.2);
 }
 
-.content-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.node-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.intro-content {
+  position: relative;
   z-index: 20;
-  width: 85%;
+  max-width: 800px;
   text-align: center;
+  pointer-events: none;
 }
 
-.content-box :deep(h1) {
-  font-size: 3.5rem;
-  font-weight: 700;
-  color: #31394d;
-  margin: 0 0 0.5rem 0;
-  line-height: 1.1;
+.intro-content > * {
+  pointer-events: auto;
 }
 
-.content-box :deep(h2) {
-  font-size: 1.5rem;
-  color: #b85741;
-  font-weight: 400;
-  margin: 0 0 1.5rem 0;
-  line-height: 1.3;
+/* Slidev text styles override */
+:deep(h1) {
+  font-size: 4.5rem !important;
+  font-weight: 800 !important;
+  color: #31394d !important;
+  line-height: 1 !important;
+  margin-bottom: 0.5rem !important;
+  letter-spacing: -0.02em !important;
 }
 
-.content-box :deep(p) {
-  font-size: 1.2rem;
-  color: #31394d;
-  font-weight: 500;
-  margin: 0;
+:deep(h2) {
+  font-size: 1.5rem !important;
+  color: #b85741 !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  margin-bottom: 2rem !important;
+}
+
+:deep(strong) {
+  color: #4a5568 !important;
+  font-weight: 600 !important;
 }
 </style>
-
