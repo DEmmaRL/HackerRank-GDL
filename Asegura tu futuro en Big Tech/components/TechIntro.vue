@@ -4,7 +4,7 @@ import { ref, onMounted, onUnmounted, nextTick } from 'vue'
 const nodesData = [
   { id: 'microsoft', logo: 'https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg', x: 50, y: 15, invert: false },
   { id: 'meta', logo: 'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/meta-icon.png', x: 8, y: 42, invert: false },
-  { id: 'amazon', logo: 'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/amazon-icon.png', x: 92, y: 42, invert: true },
+  { id: 'amazon', logo: '/logos/amazon.svg', x: 92, y: 42, invert: false },
   { id: 'nvidia', logo: '/logos/Nvidia-Light-Vertical-Logo.wine.svg', x: 15, y: 88, invert: false },
   { id: 'apple', logo: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg', x: 85, y: 88, invert: true }
 ]
@@ -222,7 +222,8 @@ onUnmounted(() => {
           :class="{ 
             'invert-logo': node.invert,
             'nvidia-fix': node.id === 'nvidia',
-            'microsoft-fix': node.id === 'microsoft'
+            'microsoft-fix': node.id === 'microsoft',
+            'amazon-fix': node.id === 'amazon'
           }" 
         />
       </div>
@@ -320,7 +321,7 @@ onUnmounted(() => {
 .hw-node:hover .hw-node-inner {
   transform: scale(1.15);
   box-shadow: 0 15px 50px rgba(184, 87, 65, 0.4);
-  border-color: rgba(255,255,255,0.3);
+  border-color: rgba(184, 87, 65, 0.2);
 }
 
 .hw-node-inner img {
@@ -336,6 +337,10 @@ onUnmounted(() => {
 
 .microsoft-fix {
   transform: scale(0.9);
+}
+
+.amazon-fix {
+  transform: scale(1.2);
 }
 
 .invert-logo {
