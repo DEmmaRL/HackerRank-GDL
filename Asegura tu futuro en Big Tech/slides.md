@@ -87,6 +87,7 @@ transition: view-transition
 
 ---
 transition: view-transition
+transition: slide-down
 ---
 
 <div class="browser-wrap slidev-vclick-visible">
@@ -106,27 +107,14 @@ transition: view-transition
 layout: section
 ---
 
-# ¿Cuánto crees que gana un recién graduado?
-
----
-
-## Respuesta corta
-
-# En Big Tech, normalmente más.
-
-- Empresa pequeña: menor base y menos componentes variables
-- Empresa grande: mejor compensación y beneficios más robustos
-- Big Tech: paquetes más altos (base + bono + equity)
-
----
-layout: section
----
-
 # La realidad del mercado
 
 ---
 
-## Probabilidades de éxito (estimadas)
+## Probabilidades de éxito
+
+<div style="display: flex; gap: 20px; align-items: center;">
+  <div style="flex: 2;">
 
 | Compañía | Tasa de aceptación | Nota |
 | :-- | :--: | :-- |
@@ -135,6 +123,21 @@ layout: section
 | Meta | 1% - 2% | Alta variación según ciclo |
 | Amazon | 2% - 3% | Contratación masiva |
 | Apple | 2% - 3% | Mayor foco en perfiles mid/senior |
+
+  </div>
+  <div style="flex: 1; text-align: center;">
+    <img src="/stock/12083608_Wavy_Bus-26_Single-11.svg" alt="Competencia" style="max-width: 100%; max-height: 300px; object-fit: contain; pointer-events: none;" />
+  </div>
+</div>
+
+<!--
+Google: Recibe más de 3 millones de solicitudes al año. Si hacemos el promedio, se traduce en aproximadamente 50,000 resumes por semana.
+
+Microsoft y Amazon: Se estiman volúmenes similares a los de Google.
+
+Cambio en la ubicación del talento: Debido a nuevas regulaciones de visas en Estados Unidos, empresas como Google, Meta y Microsoft han desplazado miles de nuevas vacantes a centros tecnológicos en el extranjero, como India, donde agregaron más de 32,000 empleos en 2025.
+
+-->
 
 ---
 
