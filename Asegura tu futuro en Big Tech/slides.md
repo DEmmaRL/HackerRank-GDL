@@ -196,20 +196,24 @@ En contraste, según datos de Indeed Hiring Lab: Las vacantes que requieren 5 a�
 
 ---
 
-## Dato clave 2025
-
-# New Grads = ~7% de contrataciones en Big Tech
-
-## Implicación
-
-El 93% de las vacantes buscan personas que puedan aportar valor desde el día 1.
-
-<!--
-Ahora, la Linux fundation publicó un estudio reciente sobre el estado del talento en tech, titulado: Truth vs. Vibe: The Not So Disruptive
-Workforce Impact of AI.
-O en español: El no tan disrruptivo impacto de la IA sobre la fuerza de trabajo en IT. 
-El estudio completo es muy interesante, se los recomiendo, pero me voy a centrar los puntos importantes para la presentación.
--->
+<div style="display: flex; gap: 24px; align-items: center;">
+  <div style="flex: 1.1; text-align: left;">
+    <img src="/stock/percentage-54.png" alt="AI value in software development and data analysis" style="width: 100%; max-height: 360px; object-fit: contain;" />
+    <p style="margin-top: 12px; font-size: 16px; line-height: 1.35; text-align: center;">
+      Se espera que la IA aporte mayor valor en <strong style="font-weight: 600; font-style: italic;">desarrollo de software (54%) y analisis de datos (52%)</strong>, lo que destaca su fuerte alineacion con funciones clave de programacion y analisis
+    </p>
+  </div>
+  <div style="flex: 1; text-align: left;">
+    <h2 style="font-size: 34px; line-height: 1.15; margin: 0 0 12px;">
+      ¿Por qué han dejado de contratar juniors para formarlos? : IA
+    </h2>
+    <p style="font-size: 18px; line-height: 1.45; margin: 0;">
+      Las tareas que hacian 5 juniors ahora las hace la IA bajo supervision senior.
+      En consecuencia, la vara se elevo respecto a lo que se espera de las capacidades de un junior.
+      No hay espacio para entrenamiento
+    </p>
+  </div>
+</div>
 
 ---
 layout: section
