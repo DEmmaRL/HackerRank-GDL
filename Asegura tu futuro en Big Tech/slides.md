@@ -138,7 +138,9 @@ Microsoft y Amazon: Se estiman volúmenes similares a los de Google.
 Cambio en la ubicación del talento: Debido a nuevas regulaciones de visas en Estados Unidos, empresas como Google, Meta y Microsoft han desplazado miles de nuevas vacantes a centros tecnológicos en el extranjero, como India, donde agregaron más de 32,000 empleos en 2025.
 
 -->
-
+---
+transition: view-transition
+transition: slide-up
 ---
 
 ## ¿Cómo es el proceso de selección?
@@ -156,7 +158,9 @@ Por lo general son de una hora, algunas son técnicas y por lo menos hay una de 
 ¿Por qué solo 35 de 10k?
 
 -->
-
+---
+transition: view-transition
+transition: fade
 ---
 
 ## Truth vs. Vibe: The Not So Disruptive Workforce Impact of AI (2025)
