@@ -141,22 +141,24 @@ Cambio en la ubicación del talento: Debido a nuevas regulaciones de visas en Es
 
 ---
 
-## Más competencia global
+## ¿Cómo es el proceso de selección?
 
 - Google recibe ~50,000 CV por semana (promedio anual)
 - Microsoft y Amazon manejan volúmenes similares
 - Nuevas regulaciones de visas desplazaron vacantes a hubs globales
 - India sumó +32,000 empleos tech en 2025 (referencia de mercado)
 
----
+<!--
+ATS: Más del 75% de los currículums enviados a través de portales de empleo son descartados automáticamente por algoritmos que buscan palabras clave específicas, prestigio de la universidad de origen o experiencia en otras empresas de su interés.
 
-## Proceso de selección típico
+OA: Si superas el ATS, entonces recibes un Online Assessment, que el estándar aún son problemas clásicos de Leetcode, Hackerrank (aunque algunas empresas se están poniendo creativas al respecto)… Buscan poner a prueba tu habilidad para resolver problemas.
 
-1. **ATS** → filtra por palabras clave, señales de experiencia y contexto
-2. **OA** → evaluación técnica (LeetCode / HackerRank u otros)
-3. **Interviews 1:1** → rondas técnicas y de comportamiento
+Interviews: Suponiendo que pasaste el filtro del OA, viene una serie de rondas de entrevistas 1:1. 
+Por lo general son de una hora, algunas son técnicas y por lo menos hay una de comportamiento. A veces toca que el primer entrevistador es de RH (behavioral), luego toca un desarrollador que, puede o no, ser parte del equipo al cual entrarías, la cantidad de entrevistas y orden varían mucho. 
 
-> Cada filtro reduce drásticamente el número de candidatos.
+¿Por qué solo 35 de 10k?
+
+-->
 
 ---
 
