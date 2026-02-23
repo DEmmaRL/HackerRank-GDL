@@ -196,7 +196,7 @@ En contraste, según datos de Indeed Hiring Lab: Las vacantes que requieren 5 a�
 
 ---
 
-<div style="display: flex; gap: 24px; align-items: center;">
+<div style="display: flex; gap: 24px; align-items: flex-start;">
   <div style="flex: 1.1; text-align: left;">
     <img src="/stock/percentage-54.png" alt="AI value in software development and data analysis" style="width: 100%; max-height: 360px; object-fit: contain;" />
     <p style="margin-top: 12px; font-size: 16px; line-height: 1.35; text-align: center;">
@@ -205,7 +205,7 @@ En contraste, según datos de Indeed Hiring Lab: Las vacantes que requieren 5 a�
   </div>
   <div style="flex: 1; text-align: left;">
     <h2 style="font-size: 34px; line-height: 1.15; margin: 0 0 12px;">
-      ¿Por qué han dejado de contratar juniors para formarlos? : IA
+      ¿Por qué han dejado de contratar juniors para formarlos? : <strong style="font-weight: 600;">IA</strong>
     </h2>
     <p style="font-size: 18px; line-height: 1.45; margin: 0;">
       Las tareas que hacian 5 juniors ahora las hace la IA bajo supervision senior.
@@ -214,6 +214,20 @@ En contraste, según datos de Indeed Hiring Lab: Las vacantes que requieren 5 a�
     </p>
   </div>
 </div>
+
+<!--
+La respuesta es obvia:
+Las tareas que tradicionalmente se asignaban a un ingeniero junior para su entrenamiento —escribir pruebas unitarias, documentar código, refactorizaciones simples, corrección de bugs menores— ahora son realizadas de manera eficiente por la IA bajo la supervisión de un ingeniero Senior. 
+
+En consecuencia,  lo que se le pide a un junior ahora exige un mayor nivel de complejidad, es decir, se piden más habilidades, más experiencia. 
+Paradójicamente, ya no puedes postularte como junior sin experiencia previa. Como el meme.
+
+El título por sí solo no es una garantía. La estrategia hoy es especialización extrema y experiencia comprobable.
+
+Parafraseando a la Linux Fundation:
+Las rueditas de entrenamiento se fueron. Con menos roles nivel de entrada, nos encaminamos a que el principal apoyo para aprender para los nuevos desarrolladores sean los bootcamps, el open source, freelance y proyectos creativos en general. Tampoco es suficiente con dominar las herramientas de IA más recientes. [ Conozco estudiantes que aún no dominan lo que es POO que pueden crear apps completas solo con Antigravity, Kiro, Claude code, Gemini… ] En este panorama, parece que debemos enfocarnos en debuguear el código generado por estas herramientas.
+
+-->
 
 ---
 layout: section
