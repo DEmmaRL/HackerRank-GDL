@@ -39,7 +39,7 @@ Las empresas más dominantes, influyentes y valiosas de la industria tecnológic
 
 <BigTechGraph />
 
-<p class="mt-8 text-sm italic">Además: Oracle, Pinterest, Netflix, Intel, Uber, IBM, AMD…</p>
+<p class="mt-8 text-sm italic">Incluye Activas, Nuevas, Candidata y empresas DEAD (ex-top que ya no están arriba).</p>
 
 ---
 

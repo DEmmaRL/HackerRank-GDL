@@ -2,25 +2,33 @@
 import { ref, onMounted, onUnmounted, nextTick } from 'vue'
 
 const nodesData = [
-  { id: 'apple', label: 'Apple', logo: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg', x: 50, y: 14, size: 108, invert: true },
-  { id: 'microsoft', label: 'Microsoft', logo: 'https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg', x: 24, y: 24, size: 102 },
-  { id: 'nvidia', label: 'NVIDIA', logo: '/logos/Nvidia-Light-Vertical-Logo.wine.svg', x: 76, y: 24, size: 96 },
-  { id: 'google', label: 'Google', logo: 'https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg', x: 17, y: 48, size: 90 },
-  { id: 'amazon', label: 'Amazon', logo: '/logos/amazon.svg', x: 83, y: 48, size: 88 },
-  { id: 'meta', label: 'Meta', logo: 'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/meta-icon.png', x: 50, y: 40, size: 84 },
-  { id: 'tesla', label: 'Tesla', logo: 'https://upload.wikimedia.org/wikipedia/commons/b/bd/Tesla_Motors.svg', x: 50, y: 62, size: 72 },
-  { id: 'oracle', label: 'Oracle', logo: 'https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg', x: 30, y: 72, size: 64 },
-  { id: 'netflix', label: 'Netflix', logo: 'https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png', x: 69, y: 72, size: 62 },
-  { id: 'ibm', label: 'IBM', logo: 'https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg', x: 18, y: 84, size: 58 },
-  { id: 'intel', label: 'Intel', logo: 'https://upload.wikimedia.org/wikipedia/commons/6/64/Intel-logo-2022.png', x: 82, y: 84, size: 56 },
-  { id: 'amd', label: 'AMD', logo: 'https://upload.wikimedia.org/wikipedia/commons/7/7c/AMD_Logo.svg', x: 40, y: 88, size: 52 },
-  { id: 'uber', label: 'Uber', logo: 'https://upload.wikimedia.org/wikipedia/commons/c/cc/Uber_logo_2018.png', x: 60, y: 88, size: 50 },
-  { id: 'pinterest', label: 'Pinterest', logo: 'https://upload.wikimedia.org/wikipedia/commons/0/08/Pinterest-logo.png', x: 50, y: 96, size: 46 }
+  { id: 'nvidia', rank: 1, label: 'Nvidia', status: 'activa', valueT: 4.56, current: '$4.56 billones', peak: '$5.00 billones (Oct 2025)', preExit: 'N/A', logo: '/logos/Nvidia-Light-Vertical-Logo.wine.svg', x: 50, y: 14, size: 114 },
+  { id: 'apple', rank: 2, label: 'Apple', status: 'activa', valueT: 3.95, current: '$3.95 billones', peak: '$4.06 billones (Dic 2025)', preExit: 'N/A', logo: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg', x: 22, y: 23, size: 104, invert: true },
+  { id: 'alphabet', rank: 3, label: 'Alphabet', status: 'activa', valueT: 3.83, current: '$3.83 billones', peak: '$4.15 billones (Feb 2026)', preExit: 'N/A', logo: 'https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg', x: 78, y: 23, size: 103 },
+  { id: 'microsoft', rank: 4, label: 'Microsoft', status: 'activa', valueT: 3.53, current: '$3.53 billones', peak: '$3.85 billones (Sep 2025)', preExit: 'N/A', logo: 'https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg', x: 17, y: 42, size: 98 },
+  { id: 'amazon', rank: 5, label: 'Amazon', status: 'activa', valueT: 2.49, current: '$2.49 billones', peak: '$2.60 billones (Feb 2026)', preExit: 'N/A', logo: '/logos/amazon.svg', x: 83, y: 42, size: 82 },
+  { id: 'tsmc', rank: 6, label: 'TSMC', status: 'nueva', valueT: 1.9, current: '$1.90 billones', peak: '$3.14 billones (Dic 2025)', preExit: 'N/A', logo: 'https://upload.wikimedia.org/wikipedia/commons/1/1a/TSMC_Logo.svg', x: 36, y: 43, size: 74 },
+  { id: 'meta', rank: 7, label: 'Meta', status: 'activa', valueT: 1.7, current: '$1.70 billones', peak: '$1.79 billones (Feb 2026)', preExit: 'N/A', logo: 'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/meta-icon.png', x: 64, y: 43, size: 71 },
+  { id: 'elililly', rank: 8, label: 'Eli Lilly', status: 'nueva', valueT: 1.58, current: '$1.58 billones', peak: '$1.58 billones (Feb 2026)', preExit: 'N/A', logo: 'https://upload.wikimedia.org/wikipedia/commons/c/c2/Eli_Lilly_and_Company.svg', x: 50, y: 56, size: 68 },
+  { id: 'broadcom', rank: 9, label: 'Broadcom', status: 'nueva', valueT: 1.57, current: '$1.57 billones', peak: '$1.75 billones (Sep 2025)', preExit: 'N/A', logo: 'https://upload.wikimedia.org/wikipedia/commons/8/8a/Broadcom_logo.svg', x: 25, y: 62, size: 68 },
+  { id: 'tesla', rank: 10, label: 'Tesla', status: 'activa', valueT: 1.55, current: '$1.55 billones', peak: '$1.60 billones (Dic 2024)', preExit: 'N/A', logo: 'https://upload.wikimedia.org/wikipedia/commons/b/bd/Tesla_Motors.svg', x: 75, y: 62, size: 68 },
+  { id: 'openai', rank: 11, label: 'OpenAI', status: 'candidata', valueT: 1.0, current: '$1.00 billón (Est.)', peak: 'N/A', preExit: 'N/A', logo: 'https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg', x: 50, y: 70, size: 60 },
+  { id: 'alibaba', rank: 12, label: 'Alibaba', status: 'dead', valueT: 0.37, current: '$370 mil M', peak: '$783 mil M (Oct 2020)', preExit: '$606 mil M (Jun 2021)', logo: 'https://upload.wikimedia.org/wikipedia/commons/1/13/Alibaba_Group_logo.svg', x: 16, y: 82, size: 50 },
+  { id: 'cisco', rank: 13, label: 'Cisco', status: 'dead', valueT: 0.312, current: '$312 mil M', peak: '$555 mil M (Mar 2000)', preExit: '$129 mil M (Jul 2014)', logo: 'https://upload.wikimedia.org/wikipedia/commons/0/08/Cisco_logo_blue_2016.svg', x: 36, y: 87, size: 49 },
+  { id: 'ibm', rank: 14, label: 'IBM', status: 'dead', valueT: 0.24, current: '$240 mil M', peak: '$274 mil M (Jun 2025)', preExit: '$138 mil M (Mar 2013)', logo: 'https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg', x: 64, y: 87, size: 48 },
+  { id: 'intel', rank: 15, label: 'Intel', status: 'dead', valueT: 0.222, current: '$222 mil M', peak: '$509 mil M (Ago 2000)', preExit: '$211 mil M (Dic 2023)', logo: 'https://upload.wikimedia.org/wikipedia/commons/6/64/Intel-logo-2022.png', x: 84, y: 82, size: 48 }
 ]
 
 const containerRef = ref(null)
 const nodeElements = ref([])
 const lineElements = ref([])
+const failedLogos = ref({})
+const tooltip = ref({
+  visible: false,
+  left: 0,
+  top: 0,
+  node: null,
+})
 let draggedIndex = -1
 let draggedPointerId = null
 
@@ -48,6 +56,45 @@ const centerRadius = 28
 const maxConnectDist = 36
 
 const clamp = (value, min, max) => Math.max(min, Math.min(max, value))
+
+const statusLabel = {
+  activa: 'Activa',
+  nueva: 'Nueva',
+  candidata: 'Candidata',
+  dead: 'DEAD',
+}
+
+const getFallbackInitials = (label) => label
+  .split(' ')
+  .map((part) => part[0])
+  .join('')
+  .slice(0, 3)
+  .toUpperCase()
+
+const markLogoFailed = (id) => {
+  failedLogos.value = {
+    ...failedLogos.value,
+    [id]: true,
+  }
+}
+
+const updateTooltip = (node, width, height) => {
+  tooltip.value = {
+    visible: true,
+    left: (node.currX * width) / 100 + node.size * 0.5 + 14,
+    top: (node.currY * height) / 100 - node.size * 0.5 - 14,
+    node,
+  }
+}
+
+const hideTooltip = () => {
+  tooltip.value = {
+    visible: false,
+    left: 0,
+    top: 0,
+    node: null,
+  }
+}
 
 const getNodeMargins = (node, width, height) => {
   const marginX = Math.max(4, ((node.size / 2) / width) * 100 + 1)
@@ -80,6 +127,12 @@ const startDrag = (index, event) => {
   draggedPointerId = event.pointerId
   event.preventDefault()
   moveNodeToClient(index, event.clientX, event.clientY)
+
+  const container = containerRef.value
+  if (container) {
+    const node = nodes[index]
+    updateTooltip(node, container.offsetWidth, container.offsetHeight)
+  }
 }
 
 const onPointerMove = (event) => {
@@ -91,6 +144,7 @@ const endDrag = (event) => {
   if (draggedIndex < 0 || event.pointerId !== draggedPointerId) return
   draggedIndex = -1
   draggedPointerId = null
+  hideTooltip()
 }
 
 const update = (time) => {
@@ -119,6 +173,7 @@ const update = (time) => {
         const y = (node.currY * height) / 100
         element.style.transform = `translate3d(${x}px, ${y}px, 0) translate(-50%, -50%)`
       }
+      updateTooltip(node, width, height)
       return
     }
 
@@ -165,6 +220,11 @@ const update = (time) => {
       const x = (node.currX * width) / 100
       const y = (node.currY * height) / 100
       element.style.transform = `translate3d(${x}px, ${y}px, 0) translate(-50%, -50%)`
+      if (draggedIndex >= 0 && index !== draggedIndex) {
+        element.style.filter = 'blur(2px) opacity(0.5)'
+      } else {
+        element.style.filter = ''
+      }
     }
   })
 
@@ -182,7 +242,13 @@ const update = (time) => {
       line.setAttribute('y1', n1.currY)
       line.setAttribute('x2', n2.currX)
       line.setAttribute('y2', n2.currY)
-      line.style.opacity = opacity
+      if (draggedIndex >= 0 && draggedIndex !== pair[0] && draggedIndex !== pair[1]) {
+        line.style.filter = 'blur(0.5px)'
+        line.style.opacity = opacity * 0.3
+      } else {
+        line.style.filter = ''
+        line.style.opacity = opacity
+      }
     } else {
       line.style.opacity = 0
     }
@@ -204,6 +270,7 @@ onUnmounted(() => {
   window.removeEventListener('pointermove', onPointerMove)
   window.removeEventListener('pointerup', endDrag)
   window.removeEventListener('pointercancel', endDrag)
+  hideTooltip()
 })
 </script>
 
@@ -230,14 +297,35 @@ onUnmounted(() => {
       :key="node.id"
       :ref="(el) => { if (el) nodeElements[index] = el }"
       class="market-node"
+      :class="{ 'is-dead': node.status === 'dead' }"
       :style="{ width: `${node.size}px`, height: `${node.size}px` }"
       @pointerdown="startDrag(index, $event)"
     >
       <div class="market-node-pulse"></div>
       <div class="market-node-inner">
-        <img :src="node.logo" :alt="node.label" :class="{ 'invert-logo': node.invert, 'nvidia-fix': node.id === 'nvidia' }" />
+        <img
+          v-if="!failedLogos[node.id]"
+          :src="node.logo"
+          :alt="node.label"
+          :class="{ 'invert-logo': node.invert, 'nvidia-fix': node.id === 'nvidia' }"
+          @error="markLogoFailed(node.id)"
+        />
+        <span v-else class="market-fallback">{{ getFallbackInitials(node.label) }}</span>
       </div>
       <!-- <p class="market-node-label">{{ node.label }}</p> -->
+    </div>
+
+    <div
+      v-if="tooltip.visible && tooltip.node"
+      class="node-tooltip"
+      :class="{ 'node-tooltip-dead': tooltip.node.status === 'dead' }"
+      :style="{ left: `${tooltip.left}px`, top: `${tooltip.top}px` }"
+    >
+      <p class="tooltip-title">#{{ tooltip.node.rank }} · {{ tooltip.node.label }}</p>
+      <p><strong>Estado:</strong> {{ statusLabel[tooltip.node.status] }}</p>
+      <p><strong>Valor actual:</strong> {{ tooltip.node.current }}</p>
+      <p><strong>Peak histórico:</strong> {{ tooltip.node.peak }}</p>
+      <p><strong>Pre-salida:</strong> {{ tooltip.node.preExit }}</p>
     </div>
   </div>
 </template>
@@ -247,7 +335,7 @@ onUnmounted(() => {
   position: relative;
   height: 420px;
   margin-top: 1rem;
-  overflow: hidden;
+  overflow: visible !important;
   border-radius: 0;
   background: transparent;
 }
@@ -294,6 +382,10 @@ onUnmounted(() => {
   animation: pulseNode 5s ease-in-out infinite;
 }
 
+.market-node.is-dead .market-node-pulse {
+  background: radial-gradient(circle, rgba(184, 87, 65, 0.35) 0%, transparent 72%);
+}
+
 @keyframes pulseNode {
   0%, 100% { transform: scale(1); opacity: 0.35; }
   50% { transform: scale(1.35); opacity: 0.12; }
@@ -313,6 +405,11 @@ onUnmounted(() => {
   border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
+.market-node.is-dead .market-node-inner {
+  box-shadow: 0 0 0 1px rgba(184, 87, 65, 0.45), 0 0 28px rgba(184, 87, 65, 0.55);
+  border: 1px solid rgba(184, 87, 65, 0.7);
+}
+
 .market-node-inner img {
   width: 100%;
   height: 100%;
@@ -325,6 +422,14 @@ onUnmounted(() => {
 
 .nvidia-fix {
   transform: scale(1.25);
+}
+
+.market-fallback {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #d9c4b1;
+  letter-spacing: 0.08em;
 }
 
 .market-node-label {
@@ -341,5 +446,46 @@ onUnmounted(() => {
   letter-spacing: 0.05em;
   white-space: nowrap;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.node-tooltip {
+  position: absolute;
+  z-index: 40;
+  min-width: 220px;
+  max-width: 300px;
+  transform: translate(-8px, -100%);
+  background: rgba(0, 26, 43, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.6rem;
+  padding: 0.55rem 0.7rem;
+  text-align: left;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.45);
+  pointer-events: none;
+  overflow: visible !important;
+  word-wrap: break-word;
+}
+
+.node-tooltip-dead {
+  border-color: rgba(184, 87, 65, 0.7);
+  box-shadow: 0 8px 26px rgba(184, 87, 65, 0.35);
+}
+
+.tooltip-title {
+  margin: 0 0 0.3rem;
+  color: #d9c4b1;
+  font-weight: 700;
+  font-size: 0.82rem;
+}
+
+.node-tooltip p {
+  margin: 0.12rem 0;
+  color: #ffffff;
+  font-size: 0.72rem;
+  line-height: 1.3;
+}
+
+.node-tooltip strong {
+  color: #d9c4b1;
 }
 </style>
