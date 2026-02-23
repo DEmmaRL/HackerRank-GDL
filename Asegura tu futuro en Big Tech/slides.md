@@ -619,9 +619,120 @@ Ya establecimos lo valiosas que pueden ser las internships.
 
 ## Distintos programas
 
-- Internship: menor costo, periodo corto y riesgo controlado
-- Junior: mayor costo y horizonte de evaluación más largo
-- Muchas empresas usan internships como semillero de talento
+<div style="display: flex; flex-direction: column; gap: 24px; margin-top: 24px;">
+  <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 24px; border-radius: 12px;">
+    <h3 style="margin: 0 0 16px; font-size: 22px; color: var(----deep-space-blue); font-weight: 600;">Portales principales</h3>
+    <ul style="list-style: none; padding: 0; margin: 0;">
+      <li style="margin-bottom: 12px; font-size: 18px;">
+        <a href="https://www.metacareers.com/careerprograms/students" target="_blank" style="color: #e07a5f; font-weight: 600;">Jobs For Students & Recent Grads | Meta Careers</a>
+      </li>
+      <li style="margin-bottom: 12px; font-size: 18px;">
+        <a href="https://careers.microsoft.com/v2/global/en/students" target="_blank" style="color: #e07a5f; font-weight: 600;">Early in profession | Microsoft Careers</a>
+      </li>
+      <li style="font-size: 18px;">
+        <a href="https://www.google.com/about/careers/applications/buildyourfuture/internships" target="_blank" style="color: #e07a5f; font-weight: 600;">Internships - Google Careers</a>
+      </li>
+    </ul>
+  </div>
+
+  <div style="display: flex; gap: 24px;">
+    <div style="flex: 1; background: linear-gradient(135deg, #e07a5f 0%, #d96848 100%); padding: 24px; border-radius: 12px; color: #ffffff; text-align: center;">
+      <h3 style="margin: 0 0 12px; font-size: 20px; color: #ffffff; font-weight: 600;">Fechas clave</h3>
+      <p style="margin: 0; font-size: 32px; font-weight: 700;">Septiembre - Octubre</p>
+      <p style="margin: 8px 0 0; font-size: 15px;">Para internships del verano siguiente</p>
+    </div>
+    <div style="flex: 1; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 24px; border-radius: 12px;">
+      <h3 style="margin: 0 0 12px; font-size: 18px; color: #002f4a; font-weight: 600; text-decoration: underline;">Programas especializados</h3>
+      <p style="margin: 0; font-size: 16px; line-height: 1.5;">Existen programas dedicados a grupos poco representados: mujeres, latinos, personas neurodivergentes...</p>
+    </div>
+  </div>
+</div>
+
+<!--
+Esto es como un trabajo normal, la clave es aplicar y aplicar hasta que resulte.
+Si estás interesado en entrar a una empresa, busca en su página de careers.
+
+Pero no siempre encontrarás interns abiertas, ya que la temporada de internships es el verano, por las vacaciones.
+
+Lo que suelen hacer las empresas es publicar las vacantes para interns en Septiembre y Octubre del año anterior, para recibir solicitudes y tener tiempo para el proceso de selección y para la primavera enviar las cartas de aceptación. 
+
+Pero cada año se liberan programas diferentes para interns. Dedicados a diferentes roles, diferente nivel de experiencia.
+Porque sí, hay diferentes niveles de experiencia incluso desde la universidad. 
+-->
+
+---
+
+## Requisitos para aplicar
+
+<div style="display: flex; gap: 32px; margin-top: 24px;">
+  <div style="flex: 1;">
+    <div style="background: linear-gradient(135deg, #e07a5f 0%, #d96848 100%); padding: 24px; border-radius: 12px; color: #ffffff; margin-bottom: 24px;">
+      <h3 style="margin: 0 0 16px; font-size: 22px; color: #ffffff; font-weight: 600;">Cualidades mínimas</h3>
+      <ul style="list-style: none; padding: 0; margin: 0;">
+        <li style="margin-bottom: 12px; font-size: 18px; display: flex; align-items: flex-start;">
+          <span style="margin-right: 12px;">➤</span>
+          <span>Haber cursado <strong>POO</strong></span>
+        </li>
+        <li style="margin-bottom: 12px; font-size: 18px; display: flex; align-items: flex-start;">
+          <span style="margin-right: 12px;">➤</span>
+          <span>Habilidad para <strong>resolver problemas</strong></span>
+        </li>
+        <li style="font-size: 18px; display: flex; align-items: flex-start;">
+          <span style="margin-right: 12px;">➤</span>
+          <span>Saber <strong>un lenguaje de programación</strong></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <div style="flex: 1;">
+    <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 24px; border-radius: 12px; border-left: 4px solid #e07a5f;">
+      <h3 style="margin: 0 0 16px; font-size: 22px; color: #e07a5f; font-weight: 600;">Cualidades preferidas (según rol)</h3>
+      <ul style="list-style: none; padding: 0; margin: 0;">
+        <li style="margin-bottom: 14px; font-size: 16px;">
+          <strong style="color: #e07a5f;">Frontend:</strong> HTML/CSS, React, frameworks modernos
+        </li>
+        <li style="margin-bottom: 14px; font-size: 16px;">
+          <strong style="color: #e07a5f;">Mobile:</strong> React Native, Swift, Kotlin
+        </li>
+        <li style="margin-bottom: 14px; font-size: 16px;">
+          <strong style="color: #e07a5f;">Graphics/Games:</strong> Vulkan, OpenGL
+        </li>
+        <li style="font-size: 16px;">
+          <strong style="color: #e07a5f;">Backend:</strong> SQL, APIs, sistemas distribuidos
+        </li>
+      </ul>
+      <p style="margin: 16px 0 0; font-size: 15px; font-style: italic; color: #666;">El nivel de experiencia en estas áreas no suele ser muy exigente</p>
+    </div>
+  </div>
+</div>
+
+<!--
+Ahora ¿Cuáles creen que sean los requisitos para entrar a una internship? Es decir, qué cualidades creen que las empresas pidan a un estudiante que vaya a aplicar.
+
+Respuesta: Depende.
+
+Recordemos que existen diferentes roles y niveles de experiencia. 
+En un rol de frontend no vas a pedir SQL.
+En un rol de mobile no te van a pedir saber de redes.
+
+Sin embargo, sí existen estándares mínimos. Por lo general, te piden:
+Haber cursado POO.
+Tener habilidad para resolver problemas.
+Saber un lenguaje de programación.
+
+Además, dependiendo del rol, existen requisitos especializados.
+
+Para los que quieren algo de videojuegos o gráficos en general, te suelen pedir saber Vulkan, OPENGL,  
+Para frontend HTML/CSS, react y algún framework.
+Para móviles te pueden pedir react native, swift, kotlin… 
+Cosas más especializadas pues. 
+Recuerden, estos son requisitos especializados y en muchas ocasiones son cualidades preferidas, así mismo, el nivel de experiencia en estas áreas suelen ser mínimas.
+
+Existen internships para estudiantes de licenciatura, de maestría y doctorado incluso.
+
+Aquí entra a lo que me refería con entrar a Big tech desde primer semestre.
+-->
 
 ---
 layout: section
