@@ -477,7 +477,9 @@ Además que en muchas ocasiones el gobierno fomenta y puede llegar a dar benefic
 
 -->
 ---
-
+transition: view-transition
+transition: slide-up
+---
 ## ¿Por qué deberías valorarlas?
 
 <div style="display: flex; gap: 32px; align-items: center; margin-top: 24px;">
@@ -530,21 +532,59 @@ https://www.theforage.com/blog/basics/internship
 https://chronicle.brightspotcdn.com/d8/0f/acaab24146a8be689d203b19c20e/employers-survey.pdf
 
 -->
-
+---
+transition: view-transition
+transition: slide-up
 ---
 
-## Lo que el mercado está diciendo
+## Experiencia antes que buenas calificaciones
 
-El mercado valora más:
+<div style="display: flex; gap: 32px; align-items: flex-start; margin-top: 24px;">
+  <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
+    <img src="/stock/standOutCV.png" alt="StandOut CV Report" style="max-width: 100%; max-height: 450px; object-fit: contain; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);" />
+  </div>
+  
+  <div style="flex: 1; display: flex; flex-direction: column; gap: 20px;">
+    <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 20px 24px; border-radius: 12px; border-left: 4px solid #e07a5f;">
+      <h3 style="margin: 0 0 12px; font-size: 20px; color: #e07a5f; font-weight: 600;">Fuentes de evidencia</h3>
+      <ul style="list-style: none; padding: 0; margin: 0;">
+        <li style="margin-bottom: 10px; font-size: 16px; line-height: 1.5;">
+          <strong>StandOut CV</strong><br/>
+          <span style="font-size: 14px; color: #666;">Datos de 2021. Actualizado por Andrew Fennell el 4 de marzo de 2025</span>
+        </li>
+        <li style="margin-bottom: 10px; font-size: 16px; line-height: 1.5;">
+          <strong>2025 NACE Internship & Co-op Report & Dashboard</strong>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
 
-- Experiencia práctica
-- Evidencia de ejecución
-- Proyectos reales de impacto
+<div style="background: linear-gradient(135deg, #e07a5f 0%, #d96848 100%); padding: 16px 24px; margin-top:24px; border-radius: 12px; color: #ffffff;">
+      <ul style="list-style: none; padding: 0; margin: 0;">
+        <li style="margin-bottom: 8px; font-size: 15px;">
+          <a href="https://www.theforage.com/blog/basics/internship-statistics" target="_blank" style="color: #ffffff; text-decoration: underline;">Estadísticas de Pasantías - The Forage</a>
+        </li>
+        <li style="margin-bottom: 8px; font-size: 15px;">
+          <a href="https://www.theforage.com/blog/basics/internship" target="_blank" style="color: #ffffff; text-decoration: underline;">Pasantías - The Forage</a>
+        </li>
+        <li style="font-size: 15px;">
+          <a href="https://chronicle.brightspotcdn.com/d8/0f/acaab24146a8be689d203b19c20e/employers-survey.pdf" target="_blank" style="color: #ffffff; text-decoration: underline;">Encuesta a Empleadores (PDF) - Chronicle</a>
+        </li>
+      </ul>
+  </div>
 
-Más que:
+<!--
+Existen muchas evidencias del impacto real de tener experiencia previa a que un estudiante se gradúe y salga a buscar empleo.
 
-- Solo GPA
-- Solo prestigio universitario
+Ahora, es verdad que el mercado laboral tiene problemas de desempleo y no hay abasto para todos, tenemos que adaptarnos.
+
+Muchas veces escuchamos que una posición junior tiene como requisito tener experiencia previa y nos genera rechazo, pues parece paradójico. 
+
+El problema es que en el campo del desarrollo de software junior no significa sin experiencia.
+
+Como estudiantes debemos aprender a jugar bien nuestras cartas y aprovechar los recursos a nuestra disposición.
+-->
 
 ---
 
