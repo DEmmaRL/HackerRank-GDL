@@ -38,6 +38,11 @@
   opacity: 0.95;
 }
 
+.bigtech-title {
+  view-transition-name: bigtech-title;
+  display: inline-block;
+}
+
 /* Default Layout */
 .slidev-layout.default h1 {
   color: var(--deep-space-blue);

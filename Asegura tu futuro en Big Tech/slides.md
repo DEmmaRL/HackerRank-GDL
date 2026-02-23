@@ -23,28 +23,21 @@ layout: cover
 
 ---
 layout: section
+transition: view-transition
 ---
 
-# ¿Qué es Big Tech?
+<h1 class="bigtech-title">¿Qué es Big Tech?</h1>
 
 ---
+layout: section
+transition: view-transition
+---
 
-## ¿Qué es Big Tech?
+<h1 class="bigtech-title">¿Qué es Big Tech?</h1>
 
 Las empresas más dominantes, influyentes y valiosas de la industria tecnológica global.
 
----
-
-## ¿Quiénes están en esta conversación?
-
-<div class="grid grid-cols-3 gap-4 mt-8">
-  <div class="p-4 border-2 rounded-lg text-center font-bold bg-accent text-secondary hover:shadow-lg transition">Meta</div>
-  <div class="p-4 border-2 rounded-lg text-center font-bold bg-accent text-secondary hover:shadow-lg transition">Apple</div>
-  <div class="p-4 border-2 rounded-lg text-center font-bold bg-accent text-secondary hover:shadow-lg transition">Amazon</div>
-  <div class="p-4 border-2 rounded-lg text-center font-bold bg-accent text-secondary hover:shadow-lg transition">NVIDIA</div>
-  <div class="p-4 border-2 rounded-lg text-center font-bold bg-accent text-secondary hover:shadow-lg transition">Google / Alphabet</div>
-  <div class="p-4 border-2 rounded-lg text-center font-bold bg-accent text-secondary hover:shadow-lg transition">Tesla</div>
-</div>
+<BigTechGraph />
 
 <p class="mt-8 text-sm italic">Además: Oracle, Pinterest, Netflix, Intel, Uber, IBM, AMD…</p>
 
@@ -57,6 +50,22 @@ Las empresas más dominantes, influyentes y valiosas de la industria tecnológic
 - En una empresa pequeña
 - En una empresa grande
 - En Big Tech
+
+---
+layout: section
+---
+
+# ¿Cuánto crees que gana un recién graduado?
+
+---
+
+## Respuesta corta
+
+# En Big Tech, normalmente más.
+
+- Empresa pequeña: menor base y menos componentes variables
+- Empresa grande: mejor compensación y beneficios más robustos
+- Big Tech: paquetes más altos (base + bono + equity)
 
 ---
 layout: section
