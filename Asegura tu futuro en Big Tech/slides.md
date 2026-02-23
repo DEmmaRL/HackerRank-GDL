@@ -143,10 +143,7 @@ Cambio en la ubicación del talento: Debido a nuevas regulaciones de visas en Es
 
 ## ¿Cómo es el proceso de selección?
 
-- Google recibe ~50,000 CV por semana (promedio anual)
-- Microsoft y Amazon manejan volúmenes similares
-- Nuevas regulaciones de visas desplazaron vacantes a hubs globales
-- India sumó +32,000 empleos tech en 2025 (referencia de mercado)
+<iframe src="/process-pyramid.html" style="width: 100%; height: 600px; border: none; margin-top: 20px;"></iframe>
 
 <!--
 ATS: Más del 75% de los currículums enviados a través de portales de empleo son descartados automáticamente por algoritmos que buscan palabras clave específicas, prestigio de la universidad de origen o experiencia en otras empresas de su interés.
