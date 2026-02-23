@@ -429,6 +429,7 @@ orientación de cómo moverte en la empresa, cómo enfrentar una problemática�
 -->
 ---
 transition: view-transition
+transition: slide-up
 ---
 
 # Salarios de un intern en Big tech
@@ -436,9 +437,48 @@ transition: view-transition
 <p class="text-lg opacity-80" style="view-transition-name: salary-label;">Pregunta</p>
 <p class="text-2xl mt-2 font-bold" style="view-transition-name: salary-title;">¿Cuánto creen que gana un intern?</p>
 ---
-transition: view-transition
+
+## ¿Por qué las valoran los empleadores?
+
+<div style="display: flex; gap: 40px; align-items: center; margin-top: 24px;">
+  <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
+    <img src="/stock/success-team.svg" alt="Employers value" style="max-width: 280px; max-height: 320px; object-fit: contain;" />
+  </div>
+  
+  <div style="flex: 1.5; position: relative;">
+    <blockquote style="margin: 0; padding: 24px 20px 24px 40px; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-left: 4px solid #e07a5f; border-radius: 8px; position: relative;">
+      <p style="margin: 0 0 16px; font-size: 20px; line-height: 1.6; color: #333; font-style: italic;">
+        Las internships demuestran que el candidato tiene experiencia práctica en el sector y está mejor preparado para tener éxito en un entorno profesional.
+      </p>
+      <footer style="margin: 0; padding-top: 12px; border-top: 2px solid #e07a5f;">
+        <p style="margin: 0; font-size: 16px; font-weight: 600; color: #e07a5f;">Matthew Warzel</p>
+        <p style="margin: 4px 0 0; font-size: 14px; color: #666; font-style: normal;">Redactor de currículums profesional y ex reclutador de Fortune 500</p>
+      </footer>
+    </blockquote>
+  </div>
+</div>
+
+<!--
+Al trabajar como intern, la empresa evalúa tu ética de trabajo y habilidades con un riesgo mínimo. 
+Muchas organizaciones utilizan sus programas de pasantías como un "semillero de talento" para cubrir futuras vacantes.
+
+Pero entonces ¿En qué se diferencia entonces con ser Junior?
+
+Es simple: Para la empresa, es más barato.
+A un estudiante le pagas menos que a un recién graduado.
+
+Un contrato de 3 o 6 meses es finito y corto. 
+
+Si no te convence el intern, solo te costó 12 semanas, pero si no te convence un junior… Por lo general sus contratos son de un año.
+Incluso si no te convenció el intern, le estás dando experiencia, que puede usar para mejorar en el futuro.
+Además que en muchas ocasiones el gobierno fomenta y puede llegar a dar beneficios a las empresas que tienen programas internships.
+
+
+
+-->
 ---
-## ¿Por qué importan tanto?
+
+## ¿Por qué deberías valorarlas?
 
 <div style="display: flex; gap: 32px; align-items: center; margin-top: 24px;">
   <div style="flex: 1;">
