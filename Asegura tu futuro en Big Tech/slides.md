@@ -174,11 +174,21 @@ El estudio completo es muy interesante, se los recomiendo, pero me voy a centrar
 
 ---
 
-## Indeed Hiring Lab (2025)
+## Indeed Hiring Lab (2025) & SignalFire
 
-<img src="/indeed-hiring-lab.png" alt="Indeed Hiring Lab 2025" style="width: 96%; max-height: 520px; object-fit: contain; margin: 10px auto 0;" />
+<img src="/indeed-hiring-lab.png" alt="Indeed Hiring Lab 2025" style="width: 96%; max-height: 420px; object-fit: contain; margin: 10px auto 0;" />
 
 [Ver reporte completo](https://www.hiringlab.org/2025/07/30/experience-requirements-have-tightened-amid-the-tech-hiring-freeze/)
+
+<!--
+La contratación de recién graduados se redujo un 50% comparado con niveles pre-pandemia.
+En pandemia todos los trabajos bajaron, en 2023 ya había un 25%, pero los empleos para new grads siguieron bajando
+
+En contraste, según datos de Indeed Hiring Lab: Las vacantes que requieren 5 años o más de experiencia han aumentado su cuota de mercado del 37% al 42%, desplazando directamente a las oportunidades para candidatos con 0-4 años de experiencia.
+
+¿Por qué?.
+
+-->
 
 ---
 
