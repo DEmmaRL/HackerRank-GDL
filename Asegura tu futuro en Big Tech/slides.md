@@ -735,100 +735,50 @@ Aquí entra a lo que me refería con entrar a Big tech desde primer semestre.
 -->
 
 ---
-layout: section
----
-
-# ¿Cómo conseguir una internship?
-
----
-layout: iframe
-url: /Timeline-Internships/index.html
----
-
----
-
-## Respuesta corta
-
-# Aplicando.
-
-Aplicar de forma constante y estratégica.
-
----
-
-## ¿Cuándo aplicar?
-
-Las ventanas más importantes suelen ser:
-
-- **Septiembre**
-- **Octubre**
-
-(para internships del verano siguiente)
-
----
-
-## Requisitos mínimos comunes
-
-- Haber cursado POO
-- Resolver problemas con lógica
-- Dominar al menos 1 lenguaje
-
-> Luego vienen requisitos por rol (frontend, mobile, graphics, data, etc.)
-
----
-
-## Programas y portales clave
-
-- [Meta Careers (Students)](https://www.metacareers.com/jobs/?offices[0]=University%20Programs)
-- [Microsoft Careers (Early in Profession)](https://careers.microsoft.com/students/us/en)
-- [Google Careers (Internships)](https://careers.google.com/students/)
-
----
 
 ## Programas para 1º y 2º año
 
-- Google STEP
+- Google STEP: 1º y 2º año.
 - NVIDIA Ignite
-- Microsoft Explore
-- UberSTAR
-- Meta University
+- Microsoft Explore: 1º y 2º año (rotativo SWE/PM).
 - Duolingo Thrive
+- UberSTAR: 1º y 2º año (enfoque en mentoría).
+- Meta University: 2º año.
 
+
+<!--
+¿Estamos de acuerdo en que la experiencia y capacidades de un estudiante de primer semestre es muy diferente de la de uno de último semestre?
+Sería injusto medirlos con la misma bara e históricamente las internships suelen aceptar más a estudiantes de últimos semestres.
+Sin embargo, existen estos programas hechos para los de primer y segundo año.
+
+Que igual son bastante peleados, pero son más accesibles. 
+Además que el filtro de personas cada vez es más pequeño y hay menos personas con las cuales competir.
+Las empresas no buscan stacks tecnológicos específicos, sino:
+Fundamentos sólidos (Estructuras de datos y Algoritmos).
+Capacidad de aprendizaje (Curiosidad técnica).
+Proyectos personales (Demostrar que te gusta construir cosas).
+
+
+
+-->
+---
+layout: iframe
+url: /Timeline-Internships/index.html
+transition: slide-up
+---
 ---
 
-## ¿Qué buscan realmente?
-
-No solo stack.
-
-Buscan:
-
-- Fundamentos sólidos (EDA + algoritmos)
-- Capacidad de aprendizaje
-- Curiosidad técnica
-- Proyectos personales que demuestren iniciativa
+## ¿Cómo se ve el Resume de alguien que lo logró?
 
 ---
 layout: section
 ---
 
-# Cierre
+# Preguntas
 
 ---
 
-## Mensaje final
-
-El título por sí solo ya no garantiza entrada.
-
-La estrategia hoy es:
-
-- especialización progresiva,
-- experiencia demostrable,
-- y ejecución constante.
-
-# Empieza ahora: prepara perfil + aplica temprano.
-
----
-
-## Fuentes sugeridas
+## Fuentes
 
 - 2025 NACE Internship & Co-op Report
 - StandOut CV (actualización 2025)
