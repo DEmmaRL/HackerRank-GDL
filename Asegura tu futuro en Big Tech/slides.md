@@ -280,16 +280,63 @@ layout: section
 ¿Me creerían si les dijera que hay manera de que entren a trabajar a Microsoft desde primer semestre?
 
 -->
+---
+layout: section
 
+transition: view-transition
+transition: fade
 ---
 
-## Bienvenidos a las Internships
+## ¿Qué es una internship?
 
-Una internship es una experiencia laboral de corto plazo diseñada para:
+<div style="display: flex; gap: 32px; align-items: flex-start; margin-top: 20px;">
+  <div style="flex: 1.2; text-align: left;">
+    <p style="font-size: 20px; line-height: 1.55; margin: 0;">
+      Experiencia laboral de corto plazo diseñada para el <strong style="color: #e07a5f;">aprendizaje práctico</strong> y la exposición directa a la industria.
+    </p>
+    <p style="font-size: 20px; line-height: 1.55; margin: 16px 0 0;">
+      Es una valiosa oportunidad de explorar y desarrollar sus <strong style="color: #e07a5f;">intereses profesionales</strong> mientras adquieren nuevas habilidades esenciales.
+    </p>
+  </div>
+  
+  <div style="flex: 1; text-align: left; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 24px; border-radius: 12px; border-left: 4px solid #e07a5f;">
+    <h3 style="margin: 0 0 16px; font-size: 22px; color: #002f4a;">Ideal para:</h3>
+    <ul style="list-style: none; padding: 0; margin: 0 0 0 -12px;">
+      <li style="display: flex; align-items: flex-start; margin-bottom: 12px;">
+        <span style="color: #e07a5f; font-size: 24px; margin-right: 12px; line-height: 1;">✓</span>
+        <span style="font-size: 18px;">Ganar experiencia <strong>REAL</strong> en el mercado laboral</span>
+      </li>
+      <li style="display: flex; align-items: flex-start; margin-bottom: 12px;">
+        <span style="color: #e07a5f; font-size: 24px; margin-right: 12px; line-height: 1;">✓</span>
+        <span style="font-size: 18px;">Establecer contactos</span>
+      </li>
+      <li style="display: flex; align-items: flex-start;">
+        <span style="color: #e07a5f; font-size: 24px; margin-right: 12px; line-height: 1;">✓</span>
+        <span style="font-size: 18px;">Construir un CV sólido</span>
+      </li>
+    </ul>
+  </div>
+</div>
 
-- Aprendizaje práctico real
-- Exposición directa a industria
-- Desarrollo de habilidades con mentoría
+<!--
+Son las verdaderas rueditas de entrenamiento ;)
+Una internship (o en español pasantía) es una experiencia laboral valiosa que ofrece a los estudiantes la oportunidad de explorar y desarrollar sus intereses profesionales mientras adquieren nuevas habilidades esenciales. 
+Es una forma de empleo a corto plazo ideal para ganar experiencia real en el mercado laboral, establecer contactos y construir un CV sólido.
+
+94% de los empleadores prefieren candidatos con esta experiencia.
+Salario inicial hasta $15,000 USD superior anual frente a quienes no hicieron una.
+x66.4% de los internos reciben una oferta permanente al finalizar.
+Tasas de ofertas: 1.61 ofertas promedio al graduarse vs 0.77 para el resto.
+El mercado actual valora las habilidades y la experiencia práctica por encima del promedio académico (GPA) o el renombre de la universidad.
+
+Los reclutadores de Big Tech pasan menos de 10 segundos en un CV; si no ven una pasantía o un proyecto real de alto impacto en los primeros tres renglones, el sistema ATS o el reclutador descartan automáticamente.
+
+
+
+
+
+Dinámica: Los pasantes trabajan en equipos de dos o tres ("pods") con el apoyo de mentores dedicados, lo que reduce la presión individual y fomenta el aprendizaje colaborativo.
+-->
 
 ---
 
