@@ -329,36 +329,39 @@ Es una forma de empleo a corto plazo ideal para ganar experiencia real en el mer
 
 ---
 
-## ¿Por qué importan tanto?
+## Ventajas estratégicas de una internship
 
-- 94% de empleadores prefieren candidatos con internship
-- Hasta $15,000 USD más de salario inicial anual
-- 66.4% recibe oferta permanente al finalizar
-- 1.61 ofertas promedio al graduarse vs 0.77 sin internship
-
-<!--
-- Y ya vimos estadísticas, pero el 94% de los empleadores prefieren candidatos con esta experiencia.
-
-- Una vez graduados, se reporta un salario inicial hasta $15,000 USD superior anual frente a quienes no hicieron una internhsip.
-
-- 66.4% de los internos reciben una oferta permanente al finalizar.
-Tasas de ofertas: 1.61 ofertas promedio al graduarse vs 0.77 para el resto.
-El mercado actual valora las habilidades y la experiencia práctica por encima del promedio académico (GPA) o el renombre de la universidad.
-
-Los reclutadores de Big Tech pasan menos de 10 segundos en un CV; si no ven una pasantía o un proyecto real de alto impacto en los primeros tres renglones, el sistema ATS o el reclutador descartan automáticamente.
-
-¿Cómo es la dinámica?: Los pasantes trabajan en equipos de dos o tres ("pods") con el apoyo de mentores dedicados, lo que reduce la presión individual y fomenta el aprendizaje colaborativo.
-
--->
-
----
-
-## ¿Por qué importan tanto?
-
-- 94% de empleadores prefieren candidatos con internship
-- Hasta $15,000 USD más de salario inicial anual
-- 66.4% recibe oferta permanente al finalizar
-- 1.61 ofertas promedio al graduarse vs 0.77 sin internship
+<div style="display: flex; gap: 28px; align-items: stretch; margin-top: 16px;">
+  <div style="flex: 1.1; display: flex; flex-direction: column; gap: 16px;">
+    <div style="background: linear-gradient(135deg, #e07a5f 0%, #d96848 100%); padding: 28px 24px; border-radius: 12px; color: #ffffff; display: flex; flex-direction: column; justify-content: flex-start;">
+      <h3 style="color: #ffffff; margin: 0 0 14px; font-size: 22px; font-weight: 600; line-height: 1.3;">Eres un FTE en entrenamiento</h3>
+      <p style="margin: 0; font-size: 16px; line-height: 1.5;">Trabajas con herramientas, equipos y procesos reales. Es tu oportunidad de vivir la experiencia full-time antes de graduarte.</p>
+    </div>
+    <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 20px 24px; border-radius: 8px; border-left: 4px solid #e07a5f;">
+      <h4 style="margin: 0 0 8px; font-size: 15px; font-weight: 600; color: #e07a5f;">Puerta de entrada a empleo permanente</h4>
+      <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #333;">Una internship es una entrevista laboral de 10-12 semanas. Si demuestras valor, existe alto potencial de conversión a oferta full-time tras graduarte.</p>
+    </div>
+  </div>
+  
+  <div style="flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+    <AdvantageCard 
+      title="Cultura empresarial" 
+      description="Conoce desde dentro la misión, procesos y día a día"
+    />
+    <AdvantageCard 
+      title="Exploración de roles" 
+      description="Prueba si tu carrera ideal te encaja realmente"
+    />
+    <AdvantageCard 
+      title="Mentoría real" 
+      description="Profesionales que viven tus aspiraciones cuidándote"
+    />
+    <AdvantageCard 
+      title="Networking" 
+      description="Contactos reales y endorsement de Big Tech"
+    />
+  </div>
+</div>
 
 <!--
 NO es como en las películas, la mayoría de las veces jaja.
@@ -378,11 +381,108 @@ Pero también puede ser tu puerta de entrada pues, al cursar una intern, existe 
 Son entrevistas de trabajo que duran meses.
 También es el ambiente perfecto para conocer a profesionales que pueden guiarte, especialmente si sus trayectorias coinciden con tus aspiraciones. 
 En general, son una mina de oro para hacer Networking
+-->
+---
+
+## ¿Cómo se vive una internship en Big Tech?
+
+<div style="display: flex; gap: 32px; align-items: flex-start; margin-top: 10px;">
+  <div style="flex: 1; display: flex; justify-content: center;">
+    <Gallery3D />
+  </div>
+  
+  <div style="flex: 1; text-align: left;">
+    <ul style="list-style: none; padding: 0; margin: 0;">
+      <li style="display: flex; align-items: flex-start; margin-bottom: 16px; font-size: 18px;">
+        <span style="color: #e07a5f; font-size: 24px; margin-right: 12px; line-height: 1;">✓</span>
+        <span><strong>Onboarding</strong> conjunto con otros interns para conocerse y apoyarse</span>
+      </li>
+      <li style="display: flex; align-items: flex-start; margin-bottom: 16px; font-size: 18px;">
+        <span style="color: #e07a5f; font-size: 24px; margin-right: 12px; line-height: 1;">✓</span>
+        <span><strong>Mentor asignado</strong> y proyecto de 10-12 semanas</span>
+      </li>
+      <li style="display: flex; align-items: flex-start; margin-bottom: 16px; font-size: 18px;">
+        <span style="color: #e07a5f; font-size: 24px; margin-right: 12px; line-height: 1;">✓</span>
+        <span><strong>Comunidad y eventos</strong> para ayudarte a desenvolverse</span>
+      </li>
+      <li style="display: flex; align-items: flex-start; font-size: 18px;">
+        <span style="color: #e07a5f; font-size: 24px; margin-right: 12px; line-height: 1;">✓</span>
+        <span><strong>Exposición real</strong> a equipos y procesos internos</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!--
+Realmente cada empresa y programa es diferente, pero en big tech suelen compartir las mismas cosas.
+
+Una vez que te aceptan para la intern, suelen enviarte un “swag” que son souvenirs y cositas de la empresa. 
+
+Por lo general, en big tech organizan todo para que todos los interns empiecen el mismo día y tengan una experiencia en conjunto.
+Así todos los estudiantes pueden conocerse y apoyarse entre sí.
+
+Se viven muchos eventos dedicados a los interns, con el motivo de ayudarlos a desenvolverse, actividades en lazer tags, en boliches…
+Existe el international intern day.
+
+Cada intern tiene un mentor asignado, además del proyecto que tiene asignado para trabjar durante las 12 semanas de su estancia, suelen ayudarte con dudas
+orientación de cómo moverte en la empresa, cómo enfrentar una problemática…
+-->
+---
+transition: view-transition
+---
+
+# Salarios de un intern en Big tech
+
+<p class="text-lg opacity-80" style="view-transition-name: salary-label;">Pregunta</p>
+<p class="text-2xl mt-2 font-bold" style="view-transition-name: salary-title;">¿Cuánto creen que gana un intern?</p>
+---
+transition: view-transition
+---
+## ¿Por qué importan tanto?
+
+<div style="display: flex; gap: 32px; align-items: center; margin-top: 24px;">
+  <div style="flex: 1;">
+    <ul style="list-style: none; padding: 0; margin: 0;">
+      <li style="display: flex; align-items: flex-start; margin-bottom: 18px; font-size: 19px;">
+        <span style="color: #e07a5f; font-size: 28px; margin-right: 12px; line-height: 1; font-weight: bold;">•</span>
+        <span><strong style="color: #e07a5f; font-size: 20px;">94%</strong> de empleadores prefieren candidatos con internship</span>
+      </li>
+      <li style="display: flex; align-items: flex-start; margin-bottom: 18px; font-size: 19px;">
+        <span style="color: #e07a5f; font-size: 28px; margin-right: 12px; line-height: 1; font-weight: bold;">•</span>
+        <span><strong style="color: #e07a5f; font-size: 20px;">$15,000 USD</strong> más de salario inicial anual</span>
+      </li>
+      <li style="display: flex; align-items: flex-start; margin-bottom: 18px; font-size: 19px;">
+        <span style="color: #e07a5f; font-size: 28px; margin-right: 12px; line-height: 1; font-weight: bold;">•</span>
+        <span><strong style="color: #e07a5f; font-size: 20px;">66.4%</strong> recibe oferta permanente al finalizar</span>
+      </li>
+      <li style="display: flex; align-items: flex-start; font-size: 19px;">
+        <span style="color: #e07a5f; font-size: 28px; margin-right: 12px; line-height: 1; font-weight: bold;">•</span>
+        <span><strong style="color: #e07a5f; font-size: 20px;">1.61 vs 0.77</strong> ofertas promedio al graduarse</span>
+      </li>
+    </ul>
+  </div>
+  <div style="flex: 0.85; background: linear-gradient(135deg, #e07a5f 0%, #d96848 100%); padding: 28px; border-radius: 12px; text-align: center; color: #ffffff;">
+    <div style="font-size: 64px; font-weight: 700; margin-bottom: 6px; line-height: 1;">94%</div>
+    <p style="font-size: 15px; margin: 0; line-height: 1.4;">de empleadores valoran la experiencia práctica</p>
+  </div>
+</div>
+
+<!--
+94% de los empleadores prefieren candidatos con esta experiencia.
+Salario inicial hasta $15,000 USD superior anual frente a quienes no hicieron una.
+
+x66.4% de los internos reciben una oferta permanente al finalizar.
+
+Tasas de ofertas: 1.61 ofertas promedio al graduarse vs 0.77 para el resto.
+
+El mercado actual valora las habilidades y la experiencia práctica por encima del promedio académico (GPA) o el renombre de la universidad.
+
+Los reclutadores de Big Tech pasan menos de 10 segundos en un CV; si no ven una pasantía o un proyecto real de alto impacto en los primeros renglones, el sistema ATS o el reclutador descartan automáticamente. 
+(Bueno, quizás no tan exagerado)
 
 -->
 
 ---
-
 
 ## Lo que el mercado está diciendo
 
@@ -396,25 +496,6 @@ Más que:
 
 - Solo GPA
 - Solo prestigio universitario
-
----
-
-## Ventajas estratégicas de una internship
-
-- Eres un **FTE en entrenamiento**
-- Pruebas cultura y rol antes de comprometerte
-- Obtienes mentoría real
-- Construyes networking y referencias
-- Puede ser puerta directa a oferta full-time
-
----
-
-## ¿Cómo se vive una internship en Big Tech?
-
-- Onboarding conjunto con otros interns
-- Mentor asignado y proyecto de 10-12 semanas
-- Comunidad, eventos y acompañamiento
-- Exposición real a equipos y procesos internos
 
 ---
 
