@@ -501,24 +501,33 @@ Además que en muchas ocasiones el gobierno fomenta y puede llegar a dar benefic
       </li>
     </ul>
   </div>
-  <div style="flex: 0.85; background: linear-gradient(135deg, #e07a5f 0%, #d96848 100%); padding: 28px; border-radius: 12px; text-align: center; color: #ffffff;">
-    <div style="font-size: 64px; font-weight: 700; margin-bottom: 6px; line-height: 1;">94%</div>
-    <p style="font-size: 15px; margin: 0; line-height: 1.4;">de empleadores valoran la experiencia práctica</p>
+  <div style="flex: 0.85; display: flex; flex-direction: column; gap: 20px;">
+    <div style="background: linear-gradient(135deg, #e07a5f 0%, #d96848 100%); padding: 20px; border-radius: 12px; text-align: center; color: #ffffff;">
+      <div style="font-size: 54px; font-weight: 700; margin-bottom: 6px; line-height: 1;">94%</div>
+      <p style="font-size: 15px; margin: 0; line-height: 1.4;">de empleadores valoran la experiencia práctica</p>
+    </div>
+    <div style="text-align: center;">
+      <img src="/stock/nace-report.jpeg" alt="NACE Report 2025" style="max-width: 100%; max-height: 280px; object-fit: contain; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); display: block; margin: 0 auto;" />
+    </div>
   </div>
 </div>
 
 <!--
-94% de los empleadores prefieren candidatos con esta experiencia.
-Salario inicial hasta $15,000 USD superior anual frente a quienes no hicieron una.
+Es un HECHO que el mercado actual valora las habilidades y la experiencia práctica por encima del promedio académico o del renombre de la universidad.
 
-x66.4% de los internos reciben una oferta permanente al finalizar.
+Según datos extraídos del 2025 NACE Internship & Co-op Report & Dashboard, de StandOut CV, de los Handshake Early Talent Awards 2025 y de la Georgia State College University, sabemos que:
+El 94% de los empleadores prefieren candidatos con experiencia en internships.
+El salario inicial es hasta $15,000 USD superior anual frente a quienes no hicieron una internship antes de iniciar como juniors.
+El 66.4% de los internos reciben una oferta permanente al finalizar una internship.
+Las personas que realizaron una internship reciben un promedio de 1.61 ofertas de trabajo al graduarse vs solo 0.77 para el resto.
 
-Tasas de ofertas: 1.61 ofertas promedio al graduarse vs 0.77 para el resto.
 
-El mercado actual valora las habilidades y la experiencia práctica por encima del promedio académico (GPA) o el renombre de la universidad.
-
-Los reclutadores de Big Tech pasan menos de 10 segundos en un CV; si no ven una pasantía o un proyecto real de alto impacto en los primeros renglones, el sistema ATS o el reclutador descartan automáticamente. 
-(Bueno, quizás no tan exagerado)
+StandOut CV, actualizado por Andrew Fennell el 4 de marzo de 2025.
+StandOut CV datos de 2021
+2025 NACE Internship & Co-op Report & Dashboard
+https://www.theforage.com/blog/basics/internship-statistics
+https://www.theforage.com/blog/basics/internship
+https://chronicle.brightspotcdn.com/d8/0f/acaab24146a8be689d203b19c20e/employers-survey.pdf
 
 -->
 
