@@ -195,6 +195,9 @@ En contraste, según datos de Indeed Hiring Lab: Las vacantes que requieren 5 a�
 -->
 
 ---
+transition: view-transition
+transition: fade
+---
 
 <div style="display: flex; gap: 24px; align-items: flex-start;">
   <div style="flex: 1.1; text-align: left;">
@@ -230,19 +233,23 @@ Las rueditas de entrenamiento se fueron. Con menos roles nivel de entrada, nos e
 -->
 
 ---
-transition: fade
+transition: slide-left
 ---
-## 2025
 
-<h1 style="margin: 0 0 12px;">
-  Los New Grads representaron solo el <span style="font-size: 1.15em; color: #e07a5f; font-weight: 700;">7%</span> de las contrataciones
-</h1>
 
-<p style="font-size: 22px; margin: 12px 0 6px; font-weight: 600;">Inferencia</p>
+<div style="background: linear-gradient(135deg, #e07a5f 0%, #d96848 100%); display: flex; flex-direction: column; justify-content: center; align-items: center; color: #ffffff; margin: -60px -80px 0; padding: 145px 80px 60px; position: relative;">
+  <div style="position: absolute; top: 40px; left: 120px; margin: 0; color: rgba(255,255,255,0.9); font-size: 24px; text-decoration: underline; font-weight: 600;">La realidad</div>
+  
+  <h1 style="margin: 0 0 20px; font-size: 1.5em;">
+    Los New Grads representaron solo el <span style="font-size: 1.4em; font-weight: 700; color: var(--pale-oak)">7%</span> de las contrataciones
+  </h1>
 
-<p style="font-size: 20px; margin: 0 0 16px;">El 93% de las vacantes son para <span style="font-size: 20px;">personas que ya saben que hacer desde el dia uno.</span> </p>
+  <p style="font-size: 24px; margin: 0 0 18px; max-width: 700px; font-weight: 450; line-height: 1.5; text-align: center;">
+    El 93% de las vacantes son para <span style="color: var(--deep-space-blue);">personas que ya saben que hacer desde el dia uno.</span>
+  </p>
 
-<img src="/stock/percentage-7.svg" alt="7%" style="width: 400px; margin: 8px auto 0;" />
+  <img src="/stock/percentage-7.svg" alt="7%" style="width: 360px; margin-top: 20px; opacity: 0.95;" />
+</div>
 
 <!--
 En Big tech, los New Grads representaron solo el 7% de las contrataciones en 2025.
@@ -251,6 +258,9 @@ En Big tech, los New Grads representaron solo el 7% de las contrataciones en 202
 -->
 ---
 layout: section
+
+transition: view-transition
+transition: fade
 ---
 
 # Entonces… ¿Qué nos queda?
@@ -264,7 +274,7 @@ layout: section
 layout: section
 ---
 
-# Internships
+# Bienvenidos a las Internships
 
 <!--
 ¿Me creerían si les dijera que hay manera de que entren a trabajar a Microsoft desde primer semestre?
