@@ -39,7 +39,6 @@ Las empresas más dominantes, influyentes y valiosas de la industria tecnológic
 
 <BigTechGraph />
 
-<p class="mt-8 text-sm italic">Incluye Activas, Nuevas, Candidata y empresas DEAD (ex-top que ya no están arriba).</p>
 
 <!--
 Estas empresas marcan tendencias, desafían a gobiernos y cambian cómo nos relacionamos, trabajamos y consumimos información.
@@ -55,14 +54,31 @@ Oracle, Pinterest, Netflix, Intel, Uber, IBM, AMD…
 
 
 ---
+transition: slide-down
+---
 
-## Pregunta rápida 💰
+# Salarios en Big Tech
 
-# ¿Cuánto crees que gana un recién graduado?
+<div class="salary-stage">
+  <div v-click-hide="2" class="salary-questions">
+    <p class="text-lg opacity-80">Pregunta</p>
+    <p class="text-2xl mt-2">¿Cuánto creen que gana un recién graduado?</p>
 
-- En una empresa pequeña
-- En una empresa grande
-- En Big Tech
+    <p v-click class="salary-question mt-8">¿En una empresa pequeña?</p>
+    <p v-click class="salary-question">¿En Google?</p>
+  </div>
+
+  <div v-click="2" class="browser-wrap">
+    <div class="browser-bar">
+      <span class="browser-dot is-red"></span>
+      <span class="browser-dot is-yellow"></span>
+      <span class="browser-dot is-green"></span>
+      <span class="browser-url">https://www.levels.fyi</span>
+    </div>
+    <iframe class="browser-frame" src="https://www.levels.fyi/" loading="lazy"></iframe>
+    <a class="browser-open" href="https://www.levels.fyi" target="_blank" rel="noopener">Abrir en navegador</a>
+  </div>
+</div>
 
 ---
 layout: section

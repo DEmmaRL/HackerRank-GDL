@@ -185,6 +185,120 @@ button:hover,
   animation: slide-in 0.5s ease-out;
 }
 
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fade-in 0.55s ease-out both;
+}
+
+.salary-question {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--charcoal-blue);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+  transform: translateY(8px);
+  opacity: 0;
+}
+
+.slidev-vclick-visible.salary-question {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.salary-stage {
+  position: relative;
+  margin-top: 1.5rem;
+  min-height: 420px;
+}
+
+.salary-questions {
+  position: relative;
+  z-index: 1;
+}
+
+.browser-wrap {
+  margin-top: 1.75rem;
+  border: 1px solid rgba(49, 57, 77, 0.2);
+  border-radius: 16px;
+  overflow: hidden;
+  background: #f6f3ef;
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.18);
+  position: relative;
+}
+
+.salary-stage .browser-wrap {
+  position: absolute;
+  inset: 0;
+  margin-top: 0;
+}
+
+.browser-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: #1b2533;
+  color: var(--pale-oak);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
+.browser-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.browser-dot.is-red {
+  background: #ff5f57;
+}
+
+.browser-dot.is-yellow {
+  background: #ffbd2e;
+}
+
+.browser-dot.is-green {
+  background: #28c840;
+}
+
+.browser-url {
+  margin-left: 6px;
+  opacity: 0.9;
+}
+
+.browser-frame {
+  width: 100%;
+  height: 360px;
+  border: 0;
+  background: #ffffff;
+}
+
+.browser-open {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  background: rgba(184, 87, 65, 0.9);
+  color: #ffffff;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  text-decoration: none;
+}
+
+.browser-open:hover {
+  background: var(--deep-space-blue);
+}
+
 /* Responsive tweaks */
 @media (max-width: 768px) {
   .grid-cols-3 {
