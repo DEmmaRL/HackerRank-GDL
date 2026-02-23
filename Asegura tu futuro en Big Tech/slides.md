@@ -54,30 +54,52 @@ Oracle, Pinterest, Netflix, Intel, Uber, IBM, AMD…
 
 
 ---
-transition: slide-down
+transition: view-transition
 ---
 
 # Salarios en Big Tech
 
-<div class="salary-stage">
-  <div v-click-hide="2" class="salary-questions">
-    <p class="text-lg opacity-80">Pregunta</p>
-    <p class="text-2xl mt-2">¿Cuánto creen que gana un recién graduado?</p>
+<p class="text-lg opacity-80" style="view-transition-name: salary-label;">Pregunta</p>
+<p class="text-2xl mt-2 font-bold" style="view-transition-name: salary-title;">¿Cuánto creen que gana un recién graduado?</p>
 
-    <p v-click class="salary-question mt-8">¿En una empresa pequeña?</p>
-    <p v-click class="salary-question">¿En Google?</p>
-  </div>
+---
+transition: view-transition
+---
 
-  <div v-click="2" class="browser-wrap">
-    <div class="browser-bar">
-      <span class="browser-dot is-red"></span>
-      <span class="browser-dot is-yellow"></span>
-      <span class="browser-dot is-green"></span>
-      <span class="browser-url">https://www.levels.fyi</span>
-    </div>
-    <iframe class="browser-frame" src="https://www.levels.fyi/" loading="lazy"></iframe>
-    <a class="browser-open" href="https://www.levels.fyi" target="_blank" rel="noopener">Abrir en navegador</a>
-  </div>
+# Salarios en Big Tech
+
+<p class="text-lg opacity-80" style="view-transition-name: salary-label;">Pregunta</p>
+<p class="text-2xl mt-2 font-bold" style="view-transition-name: salary-title;">¿Cuánto creen que gana un recién graduado?</p>
+
+<p class="text-xl mt-10">¿En una empresa pequeña?</p>
+
+---
+transition: view-transition
+---
+
+# Salarios en Big Tech
+
+<p class="text-lg opacity-80" style="view-transition-name: salary-label;">Pregunta</p>
+<p class="text-2xl mt-2 font-bold" style="view-transition-name: salary-title;">¿Cuánto creen que gana un recién graduado?</p>
+
+<p class="text-xl mt-10">¿En una empresa pequeña?</p>
+<p class="text-xl mt-4">¿En Google?</p>
+
+---
+transition: view-transition
+---
+
+<div class="browser-wrap slidev-vclick-visible">
+<div class="browser-bar">
+<div class="flex gap-1.5">
+<span class="browser-dot is-red"></span>
+<span class="browser-dot is-yellow"></span>
+<span class="browser-dot is-green"></span>
+</div>
+<span class="browser-url ml-4">https://www.levels.fyi</span>
+</div>
+<iframe class="browser-frame" src="https://www.levels.fyi/" loading="lazy"></iframe>
+<a class="browser-open" href="https://www.levels.fyi" target="_blank" rel="noopener">Abrir en navegador</a>
 </div>
 
 ---
