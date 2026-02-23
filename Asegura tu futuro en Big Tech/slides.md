@@ -213,7 +213,7 @@ En contraste, según datos de Indeed Hiring Lab: Las vacantes que requieren 5 a�
       No hay espacio para entrenamiento
     </p>
   </div>
-</div>
+  </div>
 
 <!--
 La respuesta es obvia:
@@ -230,10 +230,46 @@ Las rueditas de entrenamiento se fueron. Con menos roles nivel de entrada, nos e
 -->
 
 ---
+transition: fade
+---
+## 2025
+
+<h1 style="margin: 0 0 12px;">
+  Los New Grads representaron solo el <span style="font-size: 1.15em; color: #e07a5f; font-weight: 700;">7%</span> de las contrataciones
+</h1>
+
+<p style="font-size: 22px; margin: 12px 0 6px; font-weight: 600;">Inferencia</p>
+
+<p style="font-size: 20px; margin: 0 0 16px;">El 93% de las vacantes son para <span style="font-size: 20px;">personas que ya saben que hacer desde el dia uno.</span> </p>
+
+<img src="/stock/percentage-7.svg" alt="7%" style="width: 400px; margin: 8px auto 0;" />
+
+<!--
+En Big tech, los New Grads representaron solo el 7% de las contrataciones en 2025.
+
+¿Esto qué implica? El 93% de las vacantes son para personas que ya saben qué hacer desde el día uno
+-->
+---
 layout: section
 ---
 
-# Entonces… ¿qué sí funciona?
+# Entonces… ¿Qué nos queda?
+
+<!--
+¿Me creerían si les dijera que hay manera de que entren a trabajar a Microsoft desde primer semestre?
+
+-->
+
+---
+layout: section
+---
+
+# Internships
+
+<!--
+¿Me creerían si les dijera que hay manera de que entren a trabajar a Microsoft desde primer semestre?
+
+-->
 
 ---
 
