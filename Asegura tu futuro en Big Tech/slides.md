@@ -41,6 +41,19 @@ Las empresas más dominantes, influyentes y valiosas de la industria tecnológic
 
 <p class="mt-8 text-sm italic">Incluye Activas, Nuevas, Candidata y empresas DEAD (ex-top que ya no están arriba).</p>
 
+<!--
+Estas empresas marcan tendencias, desafían a gobiernos y cambian cómo nos relacionamos, trabajamos y consumimos información.
+Muchos las relacionan con haber alcanzado el trillón de dólares.
+
+En sí, las empresas más grandes de tecnología en el mundo, son: Meta, Apple, Amazon, Nvidia, Google/Alphabet, Tesla.
+
+Levante la mano quien ha usado google, quién ha usado facebook, quién ha pedido algo por amazon, quién tiene un tesla.
+En esta habitación estamos en contacto con más de un producto de cada una de estas empresas, excepto Tesla.
+
+Oracle, Pinterest, Netflix, Intel, Uber, IBM, AMD…
+-->
+
+
 ---
 
 ## Pregunta rápida 💰
