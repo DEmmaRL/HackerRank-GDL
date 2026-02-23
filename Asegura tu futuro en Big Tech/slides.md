@@ -159,12 +159,26 @@ Por lo general son de una hora, algunas son técnicas y por lo menos hay una de 
 
 ---
 
-## ¿Por qué ahora es más difícil para juniors?
+## Truth vs. Vibe: The Not So Disruptive Workforce Impact of AI (2025)
 
-- El hiring de new grads cayó ~50% vs niveles pre-pandemia
-- Crecen vacantes para perfiles con 5+ años de experiencia
-- IA + supervisión senior automatiza tareas de entrenamiento junior
-- Se eleva la vara para primer empleo
+<img src="/state-talent-2025.png" alt="State of Tech Talent 2025" style="width: 96%; max-height: 520px; object-fit: contain; margin: 10px auto 0;" />
+
+[Ver reporte completo](https://www.linuxfoundation.org/hubfs/Research%20Reports/LFTraining_Tech_Talent_Report_Global_2025_060525.pdf?hsLang=en)
+
+<!--
+Ahora, la Linux fundation publicó un estudio reciente sobre el estado del talento en tech, titulado: Truth vs. Vibe: The Not So Disruptive
+Workforce Impact of AI.
+O en español: El no tan disrruptivo impacto de la IA sobre la fuerza de trabajo en IT. 
+El estudio completo es muy interesante, se los recomiendo, pero me voy a centrar los puntos importantes para la presentación.
+-->
+
+---
+
+## Indeed Hiring Lab (2025)
+
+<img src="/indeed-hiring-lab.png" alt="Indeed Hiring Lab 2025" style="width: 96%; max-height: 520px; object-fit: contain; margin: 10px auto 0;" />
+
+[Ver reporte completo](https://www.hiringlab.org/2025/07/30/experience-requirements-have-tightened-amid-the-tech-hiring-freeze/)
 
 ---
 
@@ -175,6 +189,13 @@ Por lo general son de una hora, algunas son técnicas y por lo menos hay una de 
 ## Implicación
 
 El 93% de las vacantes buscan personas que puedan aportar valor desde el día 1.
+
+<!--
+Ahora, la Linux fundation publicó un estudio reciente sobre el estado del talento en tech, titulado: Truth vs. Vibe: The Not So Disruptive
+Workforce Impact of AI.
+O en español: El no tan disrruptivo impacto de la IA sobre la fuerza de trabajo en IT. 
+El estudio completo es muy interesante, se los recomiendo, pero me voy a centrar los puntos importantes para la presentación.
+-->
 
 ---
 layout: section
