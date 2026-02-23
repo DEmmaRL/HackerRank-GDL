@@ -585,10 +585,39 @@ El problema es que en el campo del desarrollo de software junior no significa si
 
 Como estudiantes debemos aprender a jugar bien nuestras cartas y aprovechar los recursos a nuestra disposición.
 -->
-
+---
+layout: section
+transition: view-transition
 ---
 
-## Internship vs Junior (desde la empresa)
+<h1 class="bigtech-title">Pero ¿Cómo consigo una internship?
+</h1>
+
+<!--
+Ya establecimos lo valiosas que pueden ser las internships.
+
+-->
+---
+layout: section
+transition: view-transition
+transition: slide-up
+---
+
+<div style=" display: flex; align-items: center; justify-content: center;">
+  <h1 class="bigtech-title" style="font-size: 4em; font-weight: 700; line-height: 1.2; text-align: center; color: #ffffff; margin: 0;">
+    <span style="color:var(--pale-oak)">Simple</span><br>Aplicando
+  </h1>
+</div>
+
+<!--
+Ya establecimos lo valiosas que pueden ser las internships.
+
+-->
+
+---
+---
+
+## Distintos programas
 
 - Internship: menor costo, periodo corto y riesgo controlado
 - Junior: mayor costo y horizonte de evaluación más largo
