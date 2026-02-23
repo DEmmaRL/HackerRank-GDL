@@ -272,6 +272,9 @@ transition: fade
 
 ---
 layout: section
+
+transition: view-transition
+transition: slide-up
 ---
 
 # Bienvenidos a las Internships
@@ -322,20 +325,6 @@ transition: fade
 Son las verdaderas rueditas de entrenamiento ;)
 Una internship (o en español pasantía) es una experiencia laboral valiosa que ofrece a los estudiantes la oportunidad de explorar y desarrollar sus intereses profesionales mientras adquieren nuevas habilidades esenciales. 
 Es una forma de empleo a corto plazo ideal para ganar experiencia real en el mercado laboral, establecer contactos y construir un CV sólido.
-
-94% de los empleadores prefieren candidatos con esta experiencia.
-Salario inicial hasta $15,000 USD superior anual frente a quienes no hicieron una.
-x66.4% de los internos reciben una oferta permanente al finalizar.
-Tasas de ofertas: 1.61 ofertas promedio al graduarse vs 0.77 para el resto.
-El mercado actual valora las habilidades y la experiencia práctica por encima del promedio académico (GPA) o el renombre de la universidad.
-
-Los reclutadores de Big Tech pasan menos de 10 segundos en un CV; si no ven una pasantía o un proyecto real de alto impacto en los primeros tres renglones, el sistema ATS o el reclutador descartan automáticamente.
-
-
-
-
-
-Dinámica: Los pasantes trabajan en equipos de dos o tres ("pods") con el apoyo de mentores dedicados, lo que reduce la presión individual y fomenta el aprendizaje colaborativo.
 -->
 
 ---
@@ -347,7 +336,53 @@ Dinámica: Los pasantes trabajan en equipos de dos o tres ("pods") con el apoyo 
 - 66.4% recibe oferta permanente al finalizar
 - 1.61 ofertas promedio al graduarse vs 0.77 sin internship
 
+<!--
+- Y ya vimos estadísticas, pero el 94% de los empleadores prefieren candidatos con esta experiencia.
+
+- Una vez graduados, se reporta un salario inicial hasta $15,000 USD superior anual frente a quienes no hicieron una internhsip.
+
+- 66.4% de los internos reciben una oferta permanente al finalizar.
+Tasas de ofertas: 1.61 ofertas promedio al graduarse vs 0.77 para el resto.
+El mercado actual valora las habilidades y la experiencia práctica por encima del promedio académico (GPA) o el renombre de la universidad.
+
+Los reclutadores de Big Tech pasan menos de 10 segundos en un CV; si no ven una pasantía o un proyecto real de alto impacto en los primeros tres renglones, el sistema ATS o el reclutador descartan automáticamente.
+
+¿Cómo es la dinámica?: Los pasantes trabajan en equipos de dos o tres ("pods") con el apoyo de mentores dedicados, lo que reduce la presión individual y fomenta el aprendizaje colaborativo.
+
+-->
+
 ---
+
+## ¿Por qué importan tanto?
+
+- 94% de empleadores prefieren candidatos con internship
+- Hasta $15,000 USD más de salario inicial anual
+- 66.4% recibe oferta permanente al finalizar
+- 1.61 ofertas promedio al graduarse vs 0.77 sin internship
+
+<!--
+NO es como en las películas, la mayoría de las veces jaja.
+No eres "el que trae el café". 
+
+El objetivo es operar como un FTE (Full-Time Employee) en entrenamiento.
+Más allá de mejorar tu currículum, las internships ofrecen ventajas estratégicas:
+
+Es la oportunidad de "probar" una cultura empresarial y un rol específico antes de comprometerte a largo plazo. En ocasiones pasa que graduados llegan a Apple, Meta, Google… Y no duran un año, porque no es lo que ellos esperaban o creían necesitar. 
+
+Tal vez ser frontend no era lo tuyo, quizás eras bueno en el backend pero descubriste que tu pasión es el testing.
+
+Como ya dijimos, las internships permiten conocer desde dentro la misión, los procesos y el día a día de una empresa, ayudándote a decidir qué entorno de trabajo prefieres.
+
+Pero también puede ser tu puerta de entrada pues, al cursar una intern, existe el potencial de ser contratado de forma permanente por la organización tras graduarte. 
+
+Son entrevistas de trabajo que duran meses.
+También es el ambiente perfecto para conocer a profesionales que pueden guiarte, especialmente si sus trayectorias coinciden con tus aspiraciones. 
+En general, son una mina de oro para hacer Networking
+
+-->
+
+---
+
 
 ## Lo que el mercado está diciendo
 
