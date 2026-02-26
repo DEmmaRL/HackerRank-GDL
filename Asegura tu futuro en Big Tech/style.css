@@ -307,6 +307,30 @@ button:hover,
   background: var(--deep-space-blue);
 }
 
+/* Presenter notes styling */
+.slidev-presenter-notes {
+  font-size: 1.5rem !important;
+  line-height: 1.7 !important;
+}
+
+.slidev-presenter-notes p {
+  font-size: 1.5rem !important;
+  margin-bottom: 1rem !important;
+}
+
+/* Presenter layout - slide más pequeña, notas más anchas (40/60) */
+.slidev-presenter-layout {
+  grid-template-columns: 0.7fr 1.3fr !important;
+}
+
+.slidev-presenter-layout > div:first-child {
+  grid-column: 1 !important;
+}
+
+.slidev-presenter-layout > div:last-child {
+  grid-column: 2 !important;
+}
+
 /* Responsive tweaks */
 @media (max-width: 768px) {
   .grid-cols-3 {
@@ -315,5 +339,13 @@ button:hover,
 
   .grid-cols-2 {
     grid-template-columns: 1fr;
+  }
+  
+  .slidev-presenter-notes {
+    font-size: 1.4rem !important;
+  }
+  
+  .slidev-presenter-notes p {
+    font-size: 1.4rem !important;
   }
 }

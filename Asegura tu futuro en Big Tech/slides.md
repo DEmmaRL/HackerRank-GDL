@@ -28,6 +28,10 @@ transition: view-transition
 
 <h1 class="bigtech-title">¿Qué es Big Tech?</h1>
 
+<!--
+4
+-->
+
 ---
 layout: section
 transition: view-transition
@@ -203,7 +207,7 @@ transition: fade
   <div style="flex: 1.1; text-align: left;">
     <img src="/stock/percentage-54.png" alt="AI value in software development and data analysis" style="width: 100%; max-height: 360px; object-fit: contain;" />
     <p style="margin-top: 12px; font-size: 16px; line-height: 1.35; text-align: center;">
-      Se espera que la IA aporte mayor valor en <strong style="font-weight: 600; font-style: italic;">desarrollo de software (54%) y analisis de datos (52%)</strong>, lo que destaca su fuerte alineacion con funciones clave de programacion y analisis
+      Se espera que la IA aporte mayor valor en <strong style="font-weight: 600; font-style: italic;">desarrollo de software (54%) y análisis de datos (52%)</strong>, lo que destaca su fuerte alineacion con funciones clave de programacion y analisis
     </p>
   </div>
   <div style="flex: 1; text-align: left;">
@@ -211,7 +215,7 @@ transition: fade
       ¿Por qué han dejado de contratar juniors para formarlos? : <strong style="font-weight: 600;">IA</strong>
     </h2>
     <p style="font-size: 18px; line-height: 1.45; margin: 0;">
-      Las tareas que hacian 5 juniors ahora las hace la IA bajo supervision senior.
+      Las tareas que hacían 5 juniors ahora las hace la IA bajo supervision senior.
       En consecuencia, la vara se elevo respecto a lo que se espera de las capacidades de un junior.
       No hay espacio para entrenamiento
     </p>
@@ -245,7 +249,7 @@ transition: slide-left
   </h1>
 
   <p style="font-size: 24px; margin: 0 0 18px; max-width: 700px; font-weight: 450; line-height: 1.5; text-align: center;">
-    El 93% de las vacantes son para <span style="color: var(--deep-space-blue);">personas que ya saben que hacer desde el dia uno.</span>
+    El 93% de las vacantes son para <span style="color: var(--deep-space-blue);">personas que ya saben qué hacer desde el dia uno.</span>
   </p>
 
   <img src="/stock/percentage-7.svg" alt="7%" style="width: 360px; margin-top: 20px; opacity: 0.95;" />
@@ -769,6 +773,21 @@ transition: slide-up
 ---
 
 ## ¿Cómo se ve el Resume de alguien que lo logró?
+
+<div class="grid grid-cols-3 gap-4 mt-8">
+  <div class="text-center">
+    <img src="/big tech resumes/RESUME-IBM.jpg" class="w-full h-auto rounded shadow-lg cursor-pointer" @click="$slidev.nav.openInEditor('/big tech resumes/RESUME-IBM.jpg')" />
+    <p class="mt-2 text-sm">IBM</p>
+  </div>
+  <div class="text-center">
+    <img src="/big tech resumes/RESUME-META.jpg" class="w-full h-auto rounded shadow-lg cursor-pointer" @click="$slidev.nav.openInEditor('/big tech resumes/RESUME-META.jpg')" />
+    <p class="mt-2 text-sm">Meta</p>
+  </div>
+  <div class="text-center">
+    <iframe src="/big tech resumes/RESUME-GOOGLE.pdf" class="w-full h-96 rounded shadow-lg"></iframe>
+    <p class="mt-2 text-sm">Google</p>
+  </div>
+</div>
 
 ---
 layout: section
