@@ -3,6 +3,7 @@ import { defineConfig } from '@slidev/cli'
 export default defineConfig({
   // Define custom color theme
   theme: 'seriph',
+  favicon: '/favicon.svg',
   themeConfig: {
     primary: '#b85741ff', // rosy-copper
     secondary: '#31394dff', // charcoal-blue
