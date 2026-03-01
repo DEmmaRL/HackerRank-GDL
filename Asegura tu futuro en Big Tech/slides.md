@@ -8,6 +8,7 @@ drawings:
 transition: slide-left
 title: Asegura tu futuro en Big Tech
 layout: cover
+favicon: '/favicon.svg'
 ---
 
 <style src="./theme/colors.css"></style>
