@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build": "slidev build",
+    "build:public": "node build-public.js && cd dist-public && slidev build --base /",
     "dev": "slidev --open --remote",
     "export": "slidev export"
   },
