@@ -17,23 +17,6 @@ class: dark-slide
 
 # Cómo construir un Resume de <span class="accent">clase mundial</span>
 
-<style scoped>
-.hero-lockup {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-}
-.hero-logo { height: 3rem; }
-.hero-gdl {
-  font-family: 'Departure Mono', monospace;
-  font-size: 3rem;
-  line-height: 1;
-  color: white;
-  letter-spacing: 0;
-}
-</style>
-
 ---
 class: green-slide
 layout: center
@@ -67,18 +50,6 @@ class: dark-slide
   </div>
 </div>
 
-<style scoped>
-.points { display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem; }
-.point { border-left: 2px solid var(--hr-green); padding-left: 1rem; }
-.label {
-  font-family: 'Departure Mono', monospace;
-  text-transform: uppercase;
-  font-size: 0.7rem;
-  color: var(--hr-green);
-}
-p { margin: 0.25rem 0 0; font-size: 0.95rem; }
-</style>
-
 <!--
 Énfasis: el resume es ingeniería documental, no un diario. Diseñado para algoritmos y para demostrar profundidad técnica.
 -->
@@ -93,7 +64,7 @@ class: dark-slide
 
 <div class="versus">
   <div class="card">
-    <div class="card-label">Resume</div>
+    <span class="label">Resume</span>
     <ul>
       <li>Contenido <strong>selectivo</strong>, no exhaustivo</li>
       <li><strong>1 página</strong> para junior / mid</li>
@@ -103,7 +74,7 @@ class: dark-slide
     </ul>
   </div>
   <div class="card">
-    <div class="card-label">CV</div>
+    <span class="label">CV</span>
     <ul>
       <li>Historial <strong>completo</strong>, varias páginas</li>
       <li>Investigaciones, publicaciones, conferencias</li>
@@ -113,29 +84,6 @@ class: dark-slide
     </ul>
   </div>
 </div>
-
-<style scoped>
-.versus {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-.card {
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 8px;
-  padding: 1.25rem;
-}
-.card-label {
-  font-family: 'Departure Mono', monospace;
-  text-transform: uppercase;
-  font-size: 0.75rem;
-  color: var(--hr-green);
-  margin-bottom: 0.75rem;
-}
-ul { margin: 0; padding-left: 1.25rem; font-size: 0.9rem; }
-li { margin-bottom: 0.4rem; }
-</style>
 
 ---
 class: terrain-slide
@@ -149,19 +97,10 @@ layout: center
   Es <span class="accent">asegurar la entrevista</span>.
 </h1>
 
-<div class="sub">
+<p class="sub">
   Ningún resume genera una oferta inmediata — ese no es su rol.<br>
   Su único trabajo es abrirte la puerta con los <strong>gatekeepers</strong>.
-</div>
-
-<style scoped>
-.sub {
-  margin-top: 2rem;
-  font-size: 0.95rem;
-  opacity: 0.75;
-  max-width: 36rem;
-}
-</style>
+</p>
 
 <!--
 Este es el mensaje más importante de la sección. Dejar que aterrice en silencio antes de continuar.
@@ -172,7 +111,7 @@ class: green-slide
 layout: center
 ---
 
-<span class="eyebrow" style="color: var(--hr-black)">Sección 2 </span>
+<span class="eyebrow" style="color: var(--hr-black)">Sección 2</span>
 
 # Pero ¿Qué Contiene Un Resume?
 
@@ -199,7 +138,7 @@ class: dark-slide
   </div>
   <div class="item">
     <span class="label">Skills técnicos</span>
-    <p>Agrupados por categoría: Lenguajes, Frameworks, DBs, Herramientas. Sin barras de progreso.</p>
+    <p>Agrupados por categoría: Lenguajes, Frameworks, DBs, Herramientas.</p>
   </div>
   <div class="item">
     <span class="label">Proyectos</span>
@@ -214,23 +153,6 @@ class: dark-slide
     <p>PDF o Docx</p>
   </div>
 </div>
-
-<style scoped>
-.grid-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.85rem;
-  margin-top: 1.25rem;
-}
-.item { border-left: 2px solid var(--hr-green); padding-left: 0.85rem; }
-.label {
-  font-family: 'Departure Mono', monospace;
-  text-transform: uppercase;
-  font-size: 0.65rem;
-  color: var(--hr-green);
-}
-p { margin: 0.2rem 0 0; font-size: 0.82rem; line-height: 1.4; }
-</style>
 
 <!--
 Destacar que los proyectos no son copias de tutoriales — deben resolver un problema real. Para juniors, esta sección puede compensar la falta de experiencia laboral formal.
@@ -268,27 +190,8 @@ transition: fade
 <div class="example">
   <span class="label">Ejemplo XYZ</span>
   <p class="bad">✕ &nbsp;"Desarrollé features para la app móvil del equipo."</p>
-  <p class="good">✓ &nbsp;"Reduje el tiempo de carga inicial en <span class="accent">40%</span> implementando lazy loading y code splitting en React Native, impactando a <span class="accent">120k usuarios activos</span>."</p>
+  <p>"✓ &nbsp;Reduje el tiempo de carga inicial en <span class="accent">40%</span> implementando lazy loading y code splitting en React Native, impactando a <span class="accent">120k usuarios activos</span>."</p>
 </div>
-
-<style scoped>
-.methods { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: 1.25rem; }
-.method { border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 1rem; }
-.method-name {
-  font-family: 'Departure Mono', monospace;
-  font-size: 0.9rem;
-  color: var(--hr-green);
-  margin-bottom: 0.5rem;
-}
-.method-formula { font-size: 0.82rem; margin-bottom: 0.5rem; display: flex; gap: 0.4rem; align-items: center; flex-wrap: wrap; }
-.method-formula.mono { font-family: 'Departure Mono', monospace; font-size: 0.75rem; }
-.sep { opacity: 0.4; }
-p { margin: 0; font-size: 0.8rem; opacity: 0.75; line-height: 1.4; }
-.example { margin-top: 1rem; border-left: 2px solid var(--hr-green); padding-left: 1rem; }
-.label { font-family: 'Departure Mono', monospace; text-transform: uppercase; font-size: 0.65rem; color: var(--hr-green); }
-.bad { margin: 0.3rem 0 0; font-size: 0.8rem; opacity: 0.5; }
-.good { margin: 0.3rem 0 0; font-size: 0.8rem; }
-</style>
 
 <!--
 El ejemplo es la parte más poderosa — leer ambas versiones en voz alta para que el contraste sea obvio. Preguntar al público cuál los haría llamar al candidato.
@@ -335,20 +238,6 @@ class: dark-slide
     </div>
   </div>
 </div>
-
-<style scoped>
-.noise-grid { display: flex; flex-direction: column; gap: 0.7rem; margin-top: 1.25rem; }
-.noise-item { display: flex; align-items: flex-start; gap: 0.85rem; }
-.no {
-  font-family: 'Departure Mono', monospace;
-  color: #ff4d4d;
-  font-size: 1rem;
-  margin-top: 0.1rem;
-  flex-shrink: 0;
-}
-strong { font-size: 0.9rem; }
-p { margin: 0.1rem 0 0; font-size: 0.8rem; opacity: 0.75; line-height: 1.4; }
-</style>
 
 <!--
 El punto de la dirección física suele sorprender al público — es un sesgo real y documentado. Detenerse aquí para que aterrice.
