@@ -156,6 +156,55 @@ class: dark-slide
 
 <!--
 Destacar que los proyectos no son copias de tutoriales — deben resolver un problema real. Para juniors, esta sección puede compensar la falta de experiencia laboral formal.
+Pregunta de cierre antes de avanzar: "¿Alguien ha escuchado sobre las metodologías STAR o XYZ?"
+-->
+
+---
+class: dark-slide
+---
+
+<span class="eyebrow">A vs B · Ejemplo 1</span>
+
+# ¿Cuál bullet te haría<br><span class="accent">llamar al candidato</span>?
+
+<div class="ab">
+  <div class="ab-card" :class="$clicks >= 1 ? 'bad' : ''">
+    <span class="ab-tag bad" v-click>✕ Sin metodología</span>
+    <p>"Trabajé en el desarrollo de la aplicación móvil del equipo y participé en reuniones de planeación."</p>
+  </div>
+  <div class="ab-card" :class="$clicks >= 1 ? 'good' : ''">
+    <span class="ab-tag good" v-click="1">✓ Con metodología</span>
+    <p>"Reduje el tiempo de carga inicial en <span :class="$clicks >= 1 ? 'accent' : ''">40%</span> implementando lazy loading en React Native, impactando a <span :class="$clicks >= 1 ? 'accent' : ''">120k usuarios activos</span>."</p>
+  </div>
+</div>
+
+<!--
+Antes del click: "¿Cuál creen que es mejor? ¿Cuál versión les gusta más?"
+Después del click: revelar etiquetas y colores — sin explicar todavía el porqué.
+-->
+
+---
+class: dark-slide
+---
+
+<span class="eyebrow">A vs B · Ejemplo 2</span>
+
+# Otro caso: mismo rol,<br><span class="accent">distinto impacto</span>
+
+<div class="ab">
+  <div class="ab-card" :class="$clicks >= 1 ? 'bad' : ''">
+    <span class="ab-tag bad" v-click>✕ Sin metodología</span>
+    <p>"Fui responsable de hacer code reviews y apoyar al equipo de backend con tareas de integración."</p>
+  </div>
+  <div class="ab-card" :class="$clicks >= 1 ? 'good' : ''">
+    <span class="ab-tag good" v-click="1">✓ Con metodología</span>
+    <p>"Disminuí el tiempo de integración entre servicios de <span :class="$clicks >= 1 ? 'accent' : ''">3 días a 4 horas</span> estandarizando el proceso de code review e introduciendo GitHub Actions en un equipo de <span :class="$clicks >= 1 ? 'accent' : ''">8 ingenieros</span>."</p>
+  </div>
+</div>
+
+<!--
+Mismo ritual: dejar que el público elija primero.
+Al revelar: "¿Qué tienen en común los bullets del lado derecho?" — guiar hacia acción + métrica + contexto. Eso es exactamente STAR y XYZ.
 -->
 
 ---

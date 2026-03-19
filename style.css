@@ -199,7 +199,32 @@ h1, h2, h3, h4 {
 .noise-item strong { font-size: var(--text-base); }
 .noise-item p      { margin: 0.1rem 0 0; font-size: var(--text-sm); opacity: 0.75; line-height: 1.4; }
 
-/* ─── Code blocks ────────────────────────────────────────────────────────── */
+/* ─── Component: A vs B ──────────────────────────────────────────────────── */
+.ab {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap-lg);
+  margin-top: var(--mt-section);
+}
+.ab-card {
+  border: 1px solid var(--hr-border);
+  border-radius: var(--radius);
+  padding: var(--gap-md);
+}
+.ab-card.bad  { border-color: rgba(255, 77,  77,  0.4); }
+.ab-card.good { border-color: rgba(5,  199, 112, 0.4); }
+.ab-tag {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  font-size: var(--text-label);
+  margin-bottom: 0.6rem;
+  display: block;
+}
+.ab-tag.bad  { color: #ff4d4d; }
+.ab-tag.good { color: var(--hr-green); }
+.ab-card p   { font-size: var(--text-sm); line-height: 1.6; margin: 0; }
+
+
 code, pre {
   font-family: var(--font-mono);
   background-color: var(--hr-terrain);
