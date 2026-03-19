@@ -8,25 +8,35 @@ css: style.css
 class: dark-slide
 ---
 
-<img src="/logos/logo-light-wide.svg" class="hero-logo" />
+<div class="hero-lockup">
+  <img src="/logos/logo-light-wide.svg" class="hero-logo" />
+  <span class="hero-gdl"><span class="accent">CREW</span> GDL</span>
+</div>
 
-<span class="eyebrow">Community Conference · GDL</span>
+<span class="eyebrow">Skills over pedigree</span>
+
+# Cómo construir un Resume de <span class="accent">clase mundial</span>
 
 <style scoped>
+.hero-lockup {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
 .hero-logo {
   height: 3rem;
-  margin-bottom: 2rem;
+}
+.hero-gdl {
+  font-family: 'Departure Mono', monospace;
+  font-size: 3rem;
+  line-height: 1;
+  color: white;
+  letter-spacing: 0;
 }
 </style>
 
-<div @click="$slidev.nav.next" class="mt-12 py-1" hover:bg="white op-10">
-  Press Space for next page <carbon:arrow-right />
-</div>
-
 <div class="abs-br m-6 text-xl">
-  <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="slidev-icon-btn">
-    <carbon:edit />
-  </button>
   <a href="https://github.com/slidevjs/slidev" target="_blank" class="slidev-icon-btn">
     <carbon:logo-github />
   </a>
