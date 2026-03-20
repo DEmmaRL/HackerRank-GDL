@@ -114,6 +114,28 @@ Este es el mensaje más importante de la sección. Dejar que aterrice en silenci
 -->
 
 ---
+class: dark-slide
+layout: center
+transition: fade
+---
+
+<span class="eyebrow">Eye-Tracking Study · The Ladders</span>
+
+<h1 style="font-size: 2.8rem; line-height: 1.1;">
+  Los reclutadores deciden en<br><span class="accent">6 segundos</span>.
+</h1>
+
+<p class="sub">
+  Un estudio de seguimiento ocular demostró que el <strong>80% del tiempo visual</strong> se concentra en solo 6 puntos de datos:<br>
+  nombre, cargo actual, fechas, cargo anterior y educación.
+</p>
+
+<!--
+Dato de impacto para cerrar la Sección 1. Dejar que aterrice antes de avanzar.
+Nick Singh (ex-Google/Facebook): "Debes lograr que el reclutador llegue al 'Sí' en 15 segundos. Tu resume debe ser comprensible para una persona no técnica en ese tiempo."
+-->
+
+---
 class: green-slide
 layout: center
 transition: fade
@@ -121,7 +143,7 @@ transition: fade
 
 <span class="eyebrow" style="color: var(--hr-black)">Sección 2</span>
 
-# Pero ¿Qué Contiene Un Resume?
+# El Esqueleto del Resume Tech
 
 <!--
 Dinámica: lluvia de ideas con el público antes de revelar las respuestas. Preguntar "¿qué creen que debe llevar un resume?" y dejar que respondan antes de avanzar.
@@ -131,40 +153,356 @@ Dinámica: lluvia de ideas con el público antes de revelar las respuestas. Preg
 class: dark-slide
 ---
 
-<span class="eyebrow">Lo que SÍ debe llevar</span>
+<span class="eyebrow">Las 5 Secciones Clave</span>
 
-# El contenido <span class="accent">esencial</span>
+# Un resume se <span class="accent">escanea</span>.
 
-<div class="grid-2">
-  <div class="item">
-    <span class="label">Contacto</span>
-    <p>Nombre prominente · Email profesional · LinkedIn · GitHub o portafolio</p>
+<div class="skeleton-layout">
+  <div class="resume-skeleton">
+    <div class="rs-block">
+      <span class="rs-title">Contacto</span>
+      <div class="rs-lines"><div class="rs-line" style="width:70%"></div><div class="rs-line" style="width:50%"></div></div>
+    </div>
+    <div class="rs-block">
+      <span class="rs-title">Technical Skills</span>
+      <div class="rs-lines"><div class="rs-line" style="width:90%"></div><div class="rs-line" style="width:75%"></div></div>
+    </div>
+    <div class="rs-block">
+      <span class="rs-title">Experience</span>
+      <div class="rs-lines"><div class="rs-line"></div><div class="rs-line" style="width:85%"></div><div class="rs-line" style="width:60%"></div></div>
+    </div>
+    <div class="rs-block">
+      <span class="rs-title">Projects</span>
+      <div class="rs-lines"><div class="rs-line" style="width:80%"></div><div class="rs-line" style="width:65%"></div></div>
+    </div>
+    <div class="rs-block">
+      <span class="rs-title">Education</span>
+      <div class="rs-lines"><div class="rs-line" style="width:55%"></div></div>
+    </div>
   </div>
-  <div class="item">
-    <span class="label">Experiencia</span>
-    <p>Orden cronológico inverso. <span class="accent">Logros cuantificables</span>, no listas de tareas. Metodologías STAR / XYZ.</p>
-  </div>
-  <div class="item">
-    <span class="label">Skills técnicos</span>
-    <p>Agrupados por categoría: Lenguajes, Frameworks, DBs, Herramientas.</p>
-  </div>
-  <div class="item">
-    <span class="label">Proyectos</span>
-    <p>Vitales para juniors. Problema real + tecnología usada + link al código o demo.</p>
-  </div>
-  <div class="item">
-    <span class="label">Educación</span>
-    <p>Al inicio si eres recién graduado. Al final si ya tienes experiencia sólida.</p>
-  </div>
-  <div class="item">
-    <span class="label">Formato</span>
-    <p>PDF o Docx</p>
+  <div class="skeleton-detail">
+    <p>La información se presenta de <span class="accent">arriba a abajo</span> en orden de relevancia para el reclutador técnico.</p>
+    <p style="opacity:0.6; font-size: var(--text-sm);">Este es el orden base. Más adelante veremos cómo cambia según tu seniority.</p>
   </div>
 </div>
 
 <!--
-Destacar que los proyectos no son copias de tutoriales — deben resolver un problema real. Para juniors, esta sección puede compensar la falta de experiencia laboral formal.
-Pregunta de cierre antes de avanzar: "¿Alguien ha escuchado sobre las metodologías STAR o XYZ?"
+Introducir el concepto de escaneo visual. El resume no es narrativa lineal — es una jerarquía de información.
+Señalar el skeleton de izquierda mientras se explica cada bloque.
+-->
+
+---
+class: dark-slide
+---
+
+<span class="eyebrow">Sección 1 del Resume</span>
+
+# <span class="accent">Contacto</span> e Información de Cabecera
+
+<div class="skeleton-layout">
+  <div class="resume-skeleton">
+    <div class="rs-block active">
+      <span class="rs-title">Contacto</span>
+      <div class="rs-lines"><div class="rs-line" style="width:70%"></div><div class="rs-line" style="width:50%"></div></div>
+    </div>
+    <div class="rs-block">
+      <span class="rs-title">Technical Skills</span>
+      <div class="rs-lines"><div class="rs-line" style="width:90%"></div><div class="rs-line" style="width:75%"></div></div>
+    </div>
+    <div class="rs-block">
+      <span class="rs-title">Experience</span>
+      <div class="rs-lines"><div class="rs-line"></div><div class="rs-line" style="width:85%"></div><div class="rs-line" style="width:60%"></div></div>
+    </div>
+    <div class="rs-block">
+      <span class="rs-title">Projects</span>
+      <div class="rs-lines"><div class="rs-line" style="width:80%"></div><div class="rs-line" style="width:65%"></div></div>
+    </div>
+    <div class="rs-block">
+      <span class="rs-title">Education</span>
+      <div class="rs-lines"><div class="rs-line" style="width:55%"></div></div>
+    </div>
+  </div>
+  <div class="skeleton-detail">
+    <span class="label">Qué incluir</span>
+    <ul>
+      <li>Nombre completo prominente</li>
+      <li>Ciudad / Estado <span style="opacity:0.5">(no dirección completa)</span></li>
+      <li>Email profesional · Teléfono</li>
+      <li>LinkedIn · <span class="accent">GitHub o portafolio</span></li>
+    </ul>
+    <div class="example" style="margin-top:0.8rem">
+      <span class="label">Por qué GitHub es obligatorio</span>
+      <p>"Los hiring managers revisarán tu GitHub para ver si realmente programas. Estos enlaces no son opcionales."</p>
+    </div>
+  </div>
+</div>
+
+<!--
+Énfasis en GitHub: para estudiantes de ingeniería, un GitHub activo puede compensar falta de experiencia laboral formal.
+-->
+
+---
+class: dark-slide
+---
+
+<span class="eyebrow">Sección 2 del Resume</span>
+
+# <span class="accent">Technical Skills</span>
+
+<div class="skeleton-layout">
+  <div class="resume-skeleton">
+    <div class="rs-block">
+      <span class="rs-title">Contacto</span>
+      <div class="rs-lines"><div class="rs-line" style="width:70%"></div><div class="rs-line" style="width:50%"></div></div>
+    </div>
+    <div class="rs-block active">
+      <span class="rs-title">Technical Skills</span>
+      <div class="rs-lines"><div class="rs-line" style="width:90%"></div><div class="rs-line" style="width:75%"></div></div>
+    </div>
+    <div class="rs-block">
+      <span class="rs-title">Experience</span>
+      <div class="rs-lines"><div class="rs-line"></div><div class="rs-line" style="width:85%"></div><div class="rs-line" style="width:60%"></div></div>
+    </div>
+    <div class="rs-block">
+      <span class="rs-title">Projects</span>
+      <div class="rs-lines"><div class="rs-line" style="width:80%"></div><div class="rs-line" style="width:65%"></div></div>
+    </div>
+    <div class="rs-block">
+      <span class="rs-title">Education</span>
+      <div class="rs-lines"><div class="rs-line" style="width:55%"></div></div>
+    </div>
+  </div>
+  <div class="skeleton-detail">
+    <span class="label">Va cerca de la parte superior</span>
+    <p>El reclutador técnico valida tu perfil en los primeros segundos. Las skills deben ser visibles de inmediato.</p>
+    <span class="label" style="margin-top:0.8rem">Cómo estructurarlo</span>
+    <ul>
+      <li><strong>Lenguajes:</strong> Python, JavaScript, Java</li>
+      <li><strong>Frameworks:</strong> React, Node.js, Spring</li>
+      <li><strong>Bases de datos:</strong> PostgreSQL, MongoDB</li>
+      <li><strong>Herramientas:</strong> AWS, Docker, Git</li>
+    </ul>
+    <p style="margin-top:0.6rem; opacity:0.6">Sin barras de progreso ni calificaciones — son métricas arbitrarias que no significan nada para un ingeniero.</p>
+  </div>
+</div>
+
+<!--
+A vs B de skills viene después: barras de progreso vs categorización por dominio.
+-->
+
+---
+class: dark-slide
+---
+
+<span class="eyebrow">Sección 3 del Resume</span>
+
+# <span class="accent">Work Experience</span>
+
+<div class="skeleton-layout">
+  <div class="resume-skeleton">
+    <div class="rs-block">
+      <span class="rs-title">Contacto</span>
+      <div class="rs-lines"><div class="rs-line" style="width:70%"></div><div class="rs-line" style="width:50%"></div></div>
+    </div>
+    <div class="rs-block">
+      <span class="rs-title">Technical Skills</span>
+      <div class="rs-lines"><div class="rs-line" style="width:90%"></div><div class="rs-line" style="width:75%"></div></div>
+    </div>
+    <div class="rs-block active">
+      <span class="rs-title">Experience</span>
+      <div class="rs-lines"><div class="rs-line"></div><div class="rs-line" style="width:85%"></div><div class="rs-line" style="width:60%"></div></div>
+    </div>
+    <div class="rs-block">
+      <span class="rs-title">Projects</span>
+      <div class="rs-lines"><div class="rs-line" style="width:80%"></div><div class="rs-line" style="width:65%"></div></div>
+    </div>
+    <div class="rs-block">
+      <span class="rs-title">Education</span>
+      <div class="rs-lines"><div class="rs-line" style="width:55%"></div></div>
+    </div>
+  </div>
+  <div class="skeleton-detail">
+    <span class="label">El núcleo del documento</span>
+    <p>Orden cronológico inverso. Cada puesto: <span class="accent">3 a 5 bullets</span> enfocados en logros y métricas.</p>
+    <div class="example" style="margin-top:0.8rem">
+      <span class="label">La regla del 95%</span>
+      <p>El 95% del contenido debe enfocarse en <span class="accent">resultados</span>, no en responsabilidades. Los bullets de impacto se construyen con las metodologías STAR y XYZ — las veremos en detalle en la siguiente sección.</p>
+    </div>
+  </div>
+</div>
+
+<!--
+No profundizar aquí en STAR/XYZ — solo mencionar que viene. El detalle está en la Sección 3 de la presentación.
+-->
+
+---
+class: dark-slide
+---
+
+<span class="eyebrow">Sección 4 del Resume</span>
+
+# <span class="accent">Projects</span>
+
+<div class="skeleton-layout">
+  <div class="resume-skeleton">
+    <div class="rs-block">
+      <span class="rs-title">Contacto</span>
+      <div class="rs-lines"><div class="rs-line" style="width:70%"></div><div class="rs-line" style="width:50%"></div></div>
+    </div>
+    <div class="rs-block">
+      <span class="rs-title">Technical Skills</span>
+      <div class="rs-lines"><div class="rs-line" style="width:90%"></div><div class="rs-line" style="width:75%"></div></div>
+    </div>
+    <div class="rs-block">
+      <span class="rs-title">Experience</span>
+      <div class="rs-lines"><div class="rs-line"></div><div class="rs-line" style="width:85%"></div><div class="rs-line" style="width:60%"></div></div>
+    </div>
+    <div class="rs-block active">
+      <span class="rs-title">Projects</span>
+      <div class="rs-lines"><div class="rs-line" style="width:80%"></div><div class="rs-line" style="width:65%"></div></div>
+    </div>
+    <div class="rs-block">
+      <span class="rs-title">Education</span>
+      <div class="rs-lines"><div class="rs-line" style="width:55%"></div></div>
+    </div>
+  </div>
+  <div class="skeleton-detail">
+    <span class="label">La sección más importante para juniors</span>
+    <p>Para estudiantes o perfiles junior, esta sección tiene <span class="accent">más peso que la experiencia laboral</span>.</p>
+    <span class="label" style="margin-top:0.8rem">Cada proyecto debe incluir</span>
+    <ul>
+      <li>Nombre del proyecto</li>
+      <li>Una línea de descripción del problema que resuelve</li>
+      <li>Stack tecnológico usado</li>
+      <li><span class="accent">Link al repo o demo en vivo</span></li>
+    </ul>
+    <p style="margin-top:0.6rem; opacity:0.75">"Esta sección separa a los candidatos que construyen cosas de los que solo hablan de construirlas."</p>
+  </div>
+</div>
+
+<!--
+Énfasis para la audiencia: si están en CUCEI y no tienen experiencia laboral, sus proyectos son su carta de presentación más fuerte.
+No copias de tutoriales — proyectos que resuelven un problema real.
+-->
+
+---
+class: dark-slide
+---
+
+<span class="eyebrow">Sección 5 del Resume</span>
+
+# <span class="accent">Education</span>
+
+<div class="skeleton-layout">
+  <div class="resume-skeleton">
+    <div class="rs-block">
+      <span class="rs-title">Contacto</span>
+      <div class="rs-lines"><div class="rs-line" style="width:70%"></div><div class="rs-line" style="width:50%"></div></div>
+    </div>
+    <div class="rs-block">
+      <span class="rs-title">Technical Skills</span>
+      <div class="rs-lines"><div class="rs-line" style="width:90%"></div><div class="rs-line" style="width:75%"></div></div>
+    </div>
+    <div class="rs-block">
+      <span class="rs-title">Experience</span>
+      <div class="rs-lines"><div class="rs-line"></div><div class="rs-line" style="width:85%"></div><div class="rs-line" style="width:60%"></div></div>
+    </div>
+    <div class="rs-block">
+      <span class="rs-title">Projects</span>
+      <div class="rs-lines"><div class="rs-line" style="width:80%"></div><div class="rs-line" style="width:65%"></div></div>
+    </div>
+    <div class="rs-block active">
+      <span class="rs-title">Education</span>
+      <div class="rs-lines"><div class="rs-line" style="width:55%"></div></div>
+    </div>
+  </div>
+  <div class="skeleton-detail">
+    <span class="label">Mantenlo breve</span>
+    <ul>
+      <li>Universidad · Título · Año de graduación</li>
+      <li>GPA solo si es <span class="accent">> 3.5</span> y te graduaste en los últimos 2 años</li>
+    </ul>
+    <div class="example" style="margin-top:0.8rem">
+      <span class="label">La regla de posición</span>
+      <p>Si eres recién graduado → va <span class="accent">arriba</span>, justo después del contacto.<br>
+      Si ya tienes experiencia sólida → va <span class="accent">al final</span>.<br>
+      Después de tu primer trabajo, a nadie le importa tu promedio.</p>
+    </div>
+  </div>
+</div>
+
+<!--
+Para la audiencia de CUCEI: si están en los últimos semestres o recién graduados, la educación va arriba. Eso cambia en cuanto consigan su primer trabajo real.
+-->
+
+---
+class: dark-slide
+---
+
+<span class="eyebrow">El Orden Dinámico</span>
+
+# El esqueleto cambia según<br>tu <span class="accent">seniority</span>
+
+<div class="seniority-grid">
+  <div class="seniority-col">
+    <span class="label">Junior / Recién Graduado</span>
+    <div class="seniority-item highlight"><span class="s-num">01</span> Contacto</div>
+    <div class="seniority-item highlight"><span class="s-num">02</span> <span class="accent">Educación</span> ← sube</div>
+    <div class="seniority-item highlight"><span class="s-num">03</span> <span class="accent">Proyectos</span> ← sube</div>
+    <div class="seniority-item"><span class="s-num">04</span> Technical Skills</div>
+    <div class="seniority-item"><span class="s-num">05</span> Experience</div>
+  </div>
+  <div class="seniority-col">
+    <span class="label">Mid / Senior</span>
+    <div class="seniority-item"><span class="s-num">01</span> Contacto</div>
+    <div class="seniority-item highlight"><span class="s-num">02</span> <span class="accent">Experience</span> ← sube</div>
+    <div class="seniority-item"><span class="s-num">03</span> Technical Skills</div>
+    <div class="seniority-item"><span class="s-num">04</span> Projects <span style="opacity:0.5; font-size:0.7rem">(se reduce)</span></div>
+    <div class="seniority-item highlight"><span class="s-num">05</span> <span class="accent">Education</span> ← baja</div>
+  </div>
+</div>
+
+<p class="sub" style="margin-top: var(--gap-md)">
+  "Rompe el orden cuando sea necesario para destacar. Pon tus puntos de venta más fuertes en la parte superior." — Nick Singh
+</p>
+
+<!--
+Esta slide es especialmente relevante para la audiencia: la mayoría son juniors o están por graduarse.
+La regla de Nick Singh: el orden no es dogma, es estrategia.
+-->
+
+---
+class: terrain-slide
+layout: center
+---
+
+<span class="eyebrow">Farah Sharghi · Ex-Reclutadora Google</span>
+
+<h1 style="font-size: 1.9rem; line-height: 1.4; max-width: 40rem;">
+  "En reclutamiento, el silencio equivale a riesgo. Tu resume debe explicar brevemente las cosas riesgosas por adelantado: un año sabático, un cambio de carrera o un despido."
+</h1>
+
+<p class="sub">
+  Un resumen de 1–2 líneas solo vale la pena cuando necesitas <span class="accent">explicar un riesgo</span>.<br>
+  Si no hay nada que aclarar, ese espacio es mejor usarlo en experiencia o proyectos.
+</p>
+
+<!--
+Cerrar la sección con el debate del Summary. La postura: los resúmenes genéricos se saltan. Solo úsalo para explicar transiciones o gaps.
+-->
+
+---
+class: green-slide
+layout: center
+transition: fade
+---
+
+<span class="eyebrow" style="color: var(--hr-black)">Sección 3</span>
+
+# Experiencia y la Fórmula de Oro
+
+<!--
+Transición: "Ya sabemos qué secciones tiene un resume. Ahora la pregunta es: ¿cómo se escribe la más importante?"
 -->
 
 ---

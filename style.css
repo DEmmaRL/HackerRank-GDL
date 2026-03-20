@@ -237,3 +237,82 @@ code, pre {
   background-color: var(--hr-terrain);
   color: var(--hr-terminal);
 }
+
+/* ─── Component: Resume Skeleton ─────────────────────────────────────────── */
+.resume-skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  border: 1px solid var(--hr-border);
+  border-radius: var(--radius);
+  padding: var(--gap-md);
+  font-size: var(--text-sm);
+  min-width: 13rem;
+}
+.rs-block {
+  border-radius: 4px;
+  padding: 0.45rem 0.6rem;
+  border-left: 3px solid transparent;
+  transition: border-color 0.3s, background 0.3s;
+  cursor: default;
+}
+.rs-block .rs-title {
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.2rem;
+}
+.rs-block .rs-lines { display: flex; flex-direction: column; gap: 0.2rem; }
+.rs-line {
+  height: 6px;
+  border-radius: 3px;
+  background: var(--hr-border);
+  opacity: 0.6;
+}
+.rs-block.active {
+  border-left-color: var(--hr-green);
+  background: var(--hr-green-dim);
+}
+.rs-block.active .rs-title { color: var(--hr-green); }
+
+/* ─── Layout: Skeleton + Detail side by side ─────────────────────────────── */
+.skeleton-layout {
+  display: grid;
+  grid-template-columns: 14rem 1fr;
+  gap: var(--gap-lg);
+  margin-top: var(--mt-section);
+  align-items: start;
+}
+.skeleton-detail { display: flex; flex-direction: column; gap: 0.6rem; }
+.skeleton-detail .label { margin-bottom: 0.3rem; }
+.skeleton-detail p { font-size: var(--text-sm); line-height: 1.5; margin: 0; }
+.skeleton-detail ul { margin: 0.4rem 0 0; padding-left: var(--gap-md); font-size: var(--text-sm); }
+.skeleton-detail li { margin-bottom: 0.3rem; line-height: 1.4; }
+
+/* ─── Component: Seniority order ─────────────────────────────────────────── */
+.seniority-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap-lg);
+  margin-top: var(--mt-section);
+}
+.seniority-col { display: flex; flex-direction: column; gap: 0.4rem; }
+.seniority-col .label { margin-bottom: 0.5rem; }
+.seniority-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  font-size: var(--text-sm);
+  border: 1px solid var(--hr-border);
+}
+.seniority-item .s-num {
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  color: var(--hr-green);
+  flex-shrink: 0;
+  width: 1.2rem;
+}
+.seniority-item.highlight { border-color: rgba(5,199,112,0.4); background: var(--hr-green-dim); }
