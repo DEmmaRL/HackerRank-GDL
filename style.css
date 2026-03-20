@@ -295,7 +295,61 @@ code, pre {
 .skeleton-detail ul { margin: 0.4rem 0 0; padding-left: var(--gap-md); font-size: var(--text-sm); }
 .skeleton-detail li { margin-bottom: 0.3rem; line-height: 1.4; }
 
-/* ─── Component: Seniority order ─────────────────────────────────────────── */
+/* ─── Component: Resume Snippet ──────────────────────────────────────────── */
+.rs-snippet {
+  border: 1px solid var(--hr-border);
+  border-radius: var(--radius);
+  padding: 0.75rem 0.9rem;
+  font-size: 0.72rem;
+  line-height: 1.5;
+  margin-top: var(--mt-section);
+  font-family: var(--font-primary);
+}
+.rs-snippet .rs-snippet-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  text-transform: uppercase;
+  color: var(--hr-green);
+  display: block;
+  margin-bottom: 0.4rem;
+  border-bottom: 1px solid var(--hr-green-dim);
+  padding-bottom: 0.3rem;
+}
+.rs-snippet p  { margin: 0.15rem 0; }
+.rs-snippet ul { margin: 0.2rem 0 0; padding-left: 1rem; }
+.rs-snippet li { margin-bottom: 0.15rem; }
+.rs-snippet strong { color: var(--hr-white); }
+.light-slide .rs-snippet { border-color: rgba(0,0,0,0.1); }
+.light-slide .rs-snippet strong { color: var(--hr-black); }
+/* ─── Component: Resume Full ─────────────────────────────────────────────── */
+.resume-full {
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: var(--radius);
+  padding: 0.6rem 0.9rem;
+  font-size: 0.65rem;
+  line-height: 1.45;
+  margin-top: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.rf-section { padding-bottom: 0.35rem; border-bottom: 1px solid rgba(0,0,0,0.08); }
+.rf-section:last-child { border-bottom: none; padding-bottom: 0; }
+.rf-name { font-size: 0.9rem; font-weight: 700; margin: 0; }
+.rf-contact { margin: 0.1rem 0 0; opacity: 0.7; }
+.rf-title {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  text-transform: uppercase;
+  color: var(--hr-green);
+  display: block;
+  margin-bottom: 0.2rem;
+  letter-spacing: 0.05em;
+}
+.resume-full p  { margin: 0.1rem 0; }
+.resume-full ul { margin: 0.15rem 0 0; padding-left: 0.9rem; }
+.resume-full li { margin-bottom: 0.05rem; }
+
 .seniority-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
