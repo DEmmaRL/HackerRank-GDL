@@ -378,9 +378,15 @@ transition: fade
 </div>
 
 <div class="example">
+  <span class="label">Ejemplo STAR</span>
+  <p class="bad">✕ &nbsp;"Apoyé al equipo con la migración de la base de datos."</p>
+  <p>✓ &nbsp;"Cuando migramos de MySQL a PostgreSQL (<span class="accent">S</span>), me asignaron garantizar cero downtime (<span class="accent">T</span>). Automaticé la sincronización con scripts en Python (<span class="accent">A</span>), logrando una migración de <span class="accent">4TB sin interrupciones</span> de servicio (<span class="accent">R</span>)."</p>
+</div>
+
+<div class="example">
   <span class="label">Ejemplo XYZ</span>
   <p class="bad">✕ &nbsp;"Desarrollé features para la app móvil del equipo."</p>
-  <p>"✓ &nbsp;Reduje el tiempo de carga inicial en <span class="accent">40%</span> implementando lazy loading y code splitting en React Native, impactando a <span class="accent">120k usuarios activos</span>."</p>
+  <p>✓ &nbsp;"Reduje el tiempo de carga inicial en <span class="accent">40%</span> implementando lazy loading y code splitting en React Native, impactando a <span class="accent">120k usuarios activos</span>."</p>
 </div>
 
 <!--
