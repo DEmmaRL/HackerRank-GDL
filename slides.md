@@ -156,7 +156,7 @@ transition: view-transition
 
 <span class="eyebrow">Las 5 Secciones Clave</span>
 
-# Un resume se <span class="accent">escanea</span>.
+# ¿Cómo un <span class="accent">reclutador espera leer</span> tu resume?
 
 <div class="skeleton-layout">
   <div class="resume-skeleton vt-skeleton">
