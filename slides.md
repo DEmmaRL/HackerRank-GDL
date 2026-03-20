@@ -630,46 +630,129 @@ Cerrar la sección con el debate del Summary. La postura: los resúmenes genéri
 class: dark-slide
 ---
 
-<span class="eyebrow">El Filtro de Ruido</span>
+<span class="eyebrow">El Filtro de Ruido · 1 / 3</span>
 
-# Lo que <span class="accent">NO</span> debe llevar
+# Lo que <span class="accent">NO</span> debe llevar — Educación
 
 <div class="noise-grid">
-  <div class="noise-item">
+  <div class="noise-item" v-click>
+    <span class="no">✕</span>
+    <div>
+      <strong>La preparatoria</strong>
+      <p>A los reclutadores solo les importa tu carrera universitaria. La prepa no aporta nada.</p>
+    </div>
+  </div>
+  <div class="noise-item" v-click>
+    <span class="no">✕</span>
+    <div>
+      <strong>Lista de materias (Coursework)</strong>
+      <p>"Estructuras de Datos", "Algoritmos"... todos los estudiantes de Software las toman. No te diferencian. Solo incluye cursos extremadamente especializados.</p>
+    </div>
+  </div>
+  <div class="noise-item" v-click>
+    <span class="no">✕</span>
+    <div>
+      <strong>Fecha de inicio de la carrera</strong>
+      <p>No pongas "2020–2024". Solo importa la fecha de graduación: "May 2025".</p>
+    </div>
+  </div>
+  <div class="noise-item" v-click>
+    <span class="no">✕</span>
+    <div>
+      <strong>GPA bajo o promedio</strong>
+      <p>Solo inclúyelo si es mayor a 90. Un proyecto interesante te diferencia más que una calificación estándar.</p>
+    </div>
+  </div>
+</div>
+
+<!--
+Revelar uno por uno con clicks. El de materias suele sorprender — muchos estudiantes las listan pensando que ayuda.
+-->
+
+---
+class: dark-slide
+---
+
+<span class="eyebrow">El Filtro de Ruido · 2 / 3</span>
+
+# Lo que <span class="accent">NO</span> debe llevar — Skills & Proyectos
+
+<div class="noise-grid">
+  <div class="noise-item" v-click>
+    <span class="no">✕</span>
+    <div>
+      <strong>Barras de progreso o niveles subjetivos</strong>
+      <p>"Java – Intermedio", "C++: 4/5". <span class="accent">Tu definición de intermedio no es la del hiring manager </span> . Si lo listas, se asume que puedes tener una entrevista técnica sobre ello.</p>
+    </div>
+  </div>
+  <div class="noise-item" v-click>
+    <span class="no">✕</span>
+    <div>
+      <strong>Soft skills y herramientas obvias</strong>
+      <p>"Liderazgo", "Trabajo en equipo", VS Code, Windows, Microsoft Word. En tech se da por sentado que sabes usar una computadora.</p>
+    </div>
+  </div>
+  <div class="noise-item" v-click>
+    <span class="no">✕</span>
+    <div>
+      <strong>Evita proyectos de tutorial o tareas genéricas</strong>
+      <p>Calculadora básica, clon de Netflix paso a paso. Los engineering managers los descartan de inmediato. Incluye proyectos que resuelvan un problema real.</p>
+    </div>
+  </div>
+  <div class="noise-item" v-click>
+    <span class="no">✕</span>
+    <div>
+      <strong>"GitHub" como skill — usa "Git"</strong>
+      <p>Git es la habilidad. GitHub es el sitio web. Lo mismo aplica para Bitbucket o GitLab.</p>
+    </div>
+  </div>
+</div>
+
+<!--
+El de soft skills genera reacción — muchos los incluyen. El de GitHub vs Git es un detalle técnico que demuestra criterio.
+-->
+
+---
+class: dark-slide
+---
+
+<span class="eyebrow">El Filtro de Ruido · 3 / 3</span>
+
+# Lo que <span class="accent">NO</span> debe llevar — Formato & Texto
+
+<div class="noise-grid">
+  <div class="noise-item" v-click>
     <span class="no">✕</span>
     <div>
       <strong>Fotografías</strong>
       <p>Abre la puerta a sesgos inconscientes. En EE. UU. está estrictamente desaconsejado.</p>
     </div>
   </div>
-  <div class="noise-item">
+  <div class="noise-item" v-click>
     <span class="no">✕</span>
     <div>
-      <strong>Dirección física</strong>
-      <p>Las empresas tienen sesgo hacia candidatos locales. Elimínala para no quedar fuera antes de empezar.</p>
+      <strong>Dirección física completa</strong>
+      <p>Las empresas tienen sesgo hacia candidatos locales. Ciudad y país es suficiente.</p>
     </div>
   </div>
-  <div class="noise-item">
+  <div class="noise-item" v-click>
     <span class="no">✕</span>
     <div>
-      <strong>Hobbies y datos personales</strong>
-      <p>Edad, género, estado civil, pasatiempos. Si el espacio es limitado, son los primeros en irse.</p>
+      <strong>La palabra "Proyecto" en tus proyectos</strong>
+      <p>"Proyecto de App de Tareas" es redundante. Solo pon el nombre: "TaskFlow".</p>
     </div>
   </div>
-  <div class="noise-item">
-    <span class="no">✕</span>
-  </div>
-  <div class="noise-item">
+  <div class="noise-item" v-click>
     <span class="no">✕</span>
     <div>
-      <strong>Buzzwords vacíos</strong>
-      <p>"Ninja", "Gurú", "Rockstar". Desperdicio de espacio que genera rechazo en líderes técnicos.</p>
+      <strong>Resumen genérico de objetivo</strong>
+      <p>"Soy un estudiante apasionado buscando una oportunidad..." ocupa espacio crítico. Solo úsalo para explicar un cambio drástico de carrera.</p>
     </div>
   </div>
 </div>
 
 <!--
-El punto de la dirección física suele sorprender al público — es un sesgo real y documentado. Detenerse aquí para que aterrice.
+El de "Proyecto de App de Tareas" genera risas — es un error muy común. Cerrar con el resumen genérico como puente a la cita de Heifetz.
 -->
 
 ---
