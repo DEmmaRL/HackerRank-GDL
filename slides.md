@@ -481,20 +481,29 @@ class: light-slide
 transition: view-transition
 ---
 
-<span class="eyebrow">El Resume Completo</span>
+<span class="eyebrow">  Nick Singh · Ex-Google & Facebook — "Rompe el orden cuando sea necesario para destacar."</span>
 
-# Así se ve <span class="accent">ensamblado</span>.
+# Orden <span class="accent">Junior</span>
 
 <div class="resume-full">
   <div class="rf-section rf-header">
     <p class="rf-name">Alex Garcia</p>
     <p class="rf-contact">Guadalajara, MX · alex.garcia@email.com · linkedin.com/in/alexgarcia · github.com/alexgarcia</p>
   </div>
-  <div class="rf-section">
+  <div class="rf-section" style="view-transition-name: rf-education">
+    <span class="rf-title">Education ↑</span>
+    <p><strong>Universidad de Guadalajara · CUCEI</strong> — B.S. in Computer Science · May 2021</p>
+  </div>
+  <div class="rf-section" style="view-transition-name: rf-projects">
+    <span class="rf-title">Projects ↑</span>
+    <p><strong>TaskFlow</strong> — React, Node.js, WebSocket, MongoDB · github.com/alexgarcia/taskflow</p>
+    <p><strong>RapStock.io</strong> — 2,000+ MAU · Python, Django, PostgreSQL · github.com/alexgarcia/rapstock</p>
+  </div>
+  <div class="rf-section" style="view-transition-name: rf-skills">
     <span class="rf-title">Technical Skills</span>
     <p><strong>Languages:</strong> Python, JavaScript, SQL, Java &nbsp;·&nbsp; <strong>Frameworks:</strong> React, Node.js, Express, Spring Boot &nbsp;·&nbsp; <strong>Tools & DBs:</strong> Git, Docker, AWS, PostgreSQL, Redis</p>
   </div>
-  <div class="rf-section">
+  <div class="rf-section" style="view-transition-name: rf-experience">
     <span class="rf-title">Work Experience</span>
     <p><strong>Software Engineer</strong> · TechSolutions Inc. · Jun 2021 – Present</p>
     <ul>
@@ -503,56 +512,52 @@ transition: view-transition
       <li>Reduced user-reported defects by <strong>50%</strong> fixing the 4 most common platform issues</li>
     </ul>
   </div>
-  <div class="rf-section">
-    <span class="rf-title">Projects</span>
-    <p><strong>TaskFlow</strong> · github.com/alexgarcia/taskflow — Real-time collaborative task manager for distributed remote teams · React, Node.js, WebSocket, MongoDB</p>
-    <p><strong>RapStock.io</strong> · github.com/alexgarcia/rapstock — Stock tracking platform · 2,000+ MAU · Python, Django, PostgreSQL</p>
+</div>
+
+<!--
+Primer estado: orden Junior. Click para avanzar a la slide Senior con view-transition.
+-->
+
+---
+class: light-slide
+transition: view-transition
+---
+
+<span class="eyebrow">Nick Singh · Ex-Google & Facebook — "Pon tus puntos de venta más fuertes en la parte superior."</span>
+
+# Orden <span class="accent">Senior</span>
+
+<div class="resume-full">
+  <div class="rf-section rf-header">
+    <p class="rf-name">Alex Garcia</p>
+    <p class="rf-contact">Guadalajara, MX · alex.garcia@email.com · linkedin.com/in/alexgarcia · github.com/alexgarcia</p>
   </div>
-  <div class="rf-section">
-    <span class="rf-title">Education</span>
+  <div class="rf-section" style="view-transition-name: rf-experience">
+    <span class="rf-title">Work Experience ↑</span>
+    <p><strong>Software Engineer</strong> · TechSolutions Inc. · Jun 2021 – Present</p>
+    <ul>
+      <li>Implemented Redis caching layer, reducing DB load by <strong>60%</strong> for 2M+ daily active users</li>
+      <li>Built JWT auth service, cutting dropped-session complaints by <strong>14%</strong></li>
+      <li>Reduced user-reported defects by <strong>50%</strong> fixing the 4 most common platform issues</li>
+    </ul>
+  </div>
+  <div class="rf-section" style="view-transition-name: rf-skills">
+    <span class="rf-title">Technical Skills</span>
+    <p><strong>Languages:</strong> Python, JavaScript, SQL, Java &nbsp;·&nbsp; <strong>Frameworks:</strong> React, Node.js, Express, Spring Boot &nbsp;·&nbsp; <strong>Tools & DBs:</strong> Git, Docker, AWS, PostgreSQL, Redis</p>
+  </div>
+  <div class="rf-section" style="view-transition-name: rf-projects">
+    <span class="rf-title">Projects</span>
+    <p><strong>TaskFlow</strong> — React, Node.js, WebSocket, MongoDB · github.com/alexgarcia/taskflow</p>
+  </div>
+  <div class="rf-section" style="view-transition-name: rf-education">
+    <span class="rf-title">Education ↓</span>
     <p><strong>Universidad de Guadalajara · CUCEI</strong> — B.S. in Computer Science · May 2021</p>
   </div>
 </div>
 
 <!--
-Slide de cierre de la sección. El resume completo ensamblado con todos los ejemplos vistos.
-Señalar: una página, sin fotos, sin barras de progreso, skills agrupados, bullets con métricas.
--->
-
----
-class: dark-slide
----
-
-<span class="eyebrow">El Orden Dinámico</span>
-
-# El esqueleto cambia según<br>tu <span class="accent">seniority</span>
-
-<div class="seniority-grid">
-  <div class="seniority-col">
-    <span class="label">Junior / Recién Graduado</span>
-    <div class="seniority-item highlight"><span class="s-num">01</span> Contacto</div>
-    <div class="seniority-item highlight"><span class="s-num">02</span> <span class="accent">Educación</span> ← sube</div>
-    <div class="seniority-item highlight"><span class="s-num">03</span> <span class="accent">Proyectos</span> ← sube</div>
-    <div class="seniority-item"><span class="s-num">04</span> Technical Skills</div>
-    <div class="seniority-item"><span class="s-num">05</span> Experience</div>
-  </div>
-  <div class="seniority-col">
-    <span class="label">Mid / Senior</span>
-    <div class="seniority-item"><span class="s-num">01</span> Contacto</div>
-    <div class="seniority-item highlight"><span class="s-num">02</span> <span class="accent">Experience</span> ← sube</div>
-    <div class="seniority-item"><span class="s-num">03</span> Technical Skills</div>
-    <div class="seniority-item"><span class="s-num">04</span> Projects <span style="opacity:0.5; font-size:0.7rem">(se reduce)</span></div>
-    <div class="seniority-item highlight"><span class="s-num">05</span> <span class="accent">Education</span> ← baja</div>
-  </div>
-</div>
-
-<p class="sub" style="margin-top: var(--gap-md)">
-  "Rompe el orden cuando sea necesario para destacar. Pon tus puntos de venta más fuertes en la parte superior." — Nick Singh
-</p>
-
-<!--
-Esta slide es especialmente relevante para la audiencia: la mayoría son juniors o están por graduarse.
-La regla de Nick Singh: el orden no es dogma, es estrategia.
+Segundo estado: orden Senior. Experience sube, Education baja, Projects se reduce a uno.
+La cita de Nick Singh en el eyebrow se mantiene igual en ambas slides — el view-transition la percibe como el mismo elemento.
 -->
 
 ---
