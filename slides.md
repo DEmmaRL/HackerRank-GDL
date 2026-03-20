@@ -56,6 +56,7 @@ class: dark-slide
 
 ---
 class: dark-slide
+transition: slide-up
 ---
 
 <span class="eyebrow">Resume vs CV</span>
@@ -84,6 +85,12 @@ class: dark-slide
     </ul>
   </div>
 </div>
+<v-click>
+<div class="pt-4">
+Esta separación más que nada <span class="accent">es un tecnicismo</span>.
+A efectos prácticos, todos usamos el término CV o currículum para referirnos al resume. Pero vale la pena saber que realmente son diferentes. <br>
+</div>
+</v-click>
 
 ---
 class: terrain-slide
@@ -109,6 +116,7 @@ Este es el mensaje más importante de la sección. Dejar que aterrice en silenci
 ---
 class: green-slide
 layout: center
+transition: fade
 ---
 
 <span class="eyebrow" style="color: var(--hr-black)">Sección 2</span>
@@ -160,7 +168,7 @@ Pregunta de cierre antes de avanzar: "¿Alguien ha escuchado sobre las metodolog
 -->
 
 ---
-class: dark-slide
+class: light-slide
 ---
 
 <span class="eyebrow">A vs B · Ejemplo 1</span>
@@ -184,7 +192,7 @@ Después del click: revelar etiquetas y colores — sin explicar todavía el por
 -->
 
 ---
-class: dark-slide
+class: light-slide
 ---
 
 <span class="eyebrow">A vs B · Ejemplo 2</span>

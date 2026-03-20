@@ -68,11 +68,18 @@ h1, h2, h3, h4 {
 
 /* ─── Slide Variants ─────────────────────────────────────────────────────── */
 .slidev-layout.dark-slide    { background-color: var(--hr-black);   color: var(--hr-white); }
+.slidev-layout.light-slide   { background-color: var(--hr-white);   color: var(--hr-black); }
 .slidev-layout.green-slide   { background-color: var(--hr-green);   color: var(--hr-black); }
 .slidev-layout.terrain-slide { background-color: var(--hr-terrain); color: var(--hr-white); }
 
 .green-slide h1,
 .green-slide h2 { color: var(--hr-black); font-weight: 700; }
+
+.light-slide .eyebrow        { color: var(--hr-black); opacity: 0.5; }
+.light-slide .accent         { color: var(--hr-green); }
+.light-slide .ab-card        { border-color: rgba(0,0,0,0.1); }
+.light-slide .ab-card.bad    { border-color: rgba(255,77,77,0.4); }
+.light-slide .ab-card.good   { border-color: rgba(5,199,112,0.4); }
 
 /* ─── Typography Utilities ───────────────────────────────────────────────── */
 .eyebrow {
