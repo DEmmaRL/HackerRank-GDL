@@ -561,6 +561,52 @@ La cita de Nick Singh en el eyebrow se mantiene igual en ambas slides — el vie
 -->
 
 ---
+class: light-slide
+transition: view-transition
+---
+
+<span class="eyebrow">Nick Singh · Ex-Google & Facebook — "Pon tus puntos de venta más fuertes en la parte superior."</span>
+
+# ¿Y si agregamos un <span class="accent">Summary</span>?
+
+<div class="resume-full">
+  <div class="rf-section rf-header">
+    <p class="rf-name">Alex Garcia</p>
+    <p class="rf-contact">Guadalajara, MX · alex.garcia@email.com · linkedin.com/in/alexgarcia · github.com/alexgarcia</p>
+  </div>
+  <div class="rf-section" style="border-color: rgba(5,199,112,0.4); background: rgba(5,199,112,0.04);">
+    <span class="rf-title" style="color: var(--hr-green)">Summary ← ¿necesario?</span>
+    <p>Full-stack engineer with 3+ years building scalable web products. Transitioning from backend-focused roles into frontend engineering.</p>
+  </div>
+  <div class="rf-section" style="view-transition-name: rf-experience">
+    <span class="rf-title">Work Experience</span>
+    <p><strong>Software Engineer</strong> · TechSolutions Inc. · Jun 2021 – Present</p>
+    <ul>
+      <li>Implemented Redis caching layer, reducing DB load by <strong>60%</strong> for 2M+ daily active users</li>
+      <li>Built JWT auth service, cutting dropped-session complaints by <strong>14%</strong></li>
+    </ul>
+  </div>
+  <div class="rf-section" style="view-transition-name: rf-skills">
+    <span class="rf-title">Technical Skills</span>
+    <p><strong>Languages:</strong> Python, JavaScript, SQL, Java &nbsp;·&nbsp; <strong>Frameworks:</strong> React, Node.js, Express, Spring Boot &nbsp;·&nbsp; <strong>Tools & DBs:</strong> Git, Docker, AWS, PostgreSQL, Redis</p>
+  </div>
+  <div class="rf-section" style="view-transition-name: rf-projects">
+    <span class="rf-title">Projects</span>
+    <p><strong>TaskFlow</strong> — React, Node.js, WebSocket, MongoDB · github.com/alexgarcia/taskflow</p>
+  </div>
+  <div class="rf-section" style="view-transition-name: rf-education">
+    <span class="rf-title">Education</span>
+    <p><strong>Universidad de Guadalajara · CUCEI</strong> — B.S. in Computer Science · May 2021</p>
+  </div>
+</div>
+
+<!--
+Pregunta al público antes de avanzar: "¿Creen que este summary agrega valor? ¿Cuándo sí y cuándo no?"
+El summary de ejemplo muestra el único caso válido: explicar una transición de carrera.
+La siguiente slide responde exactamente esto con la cita de Farah Sharghi.
+-->
+
+---
 class: terrain-slide
 layout: center
 ---
