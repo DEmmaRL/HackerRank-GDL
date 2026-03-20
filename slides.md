@@ -156,7 +156,7 @@ transition: view-transition
 
 <span class="eyebrow">Las 5 Secciones Clave</span>
 
-# Un resume no se lee,<br>se <span class="accent">escanea</span>.
+# Un resume se <span class="accent">escanea</span>.
 
 <div class="skeleton-layout">
   <div class="resume-skeleton vt-skeleton">
