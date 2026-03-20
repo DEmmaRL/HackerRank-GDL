@@ -151,34 +151,20 @@ Dinámica: lluvia de ideas con el público antes de revelar las respuestas. Preg
 
 ---
 class: dark-slide
+transition: view-transition
 ---
 
 <span class="eyebrow">Las 5 Secciones Clave</span>
 
-# Un resume se <span class="accent">escanea</span>.
+# Un resume no se lee,<br>se <span class="accent">escanea</span>.
 
 <div class="skeleton-layout">
-  <div class="resume-skeleton">
-    <div class="rs-block">
-      <span class="rs-title">Contacto</span>
-      <div class="rs-lines"><div class="rs-line" style="width:70%"></div><div class="rs-line" style="width:50%"></div></div>
-    </div>
-    <div class="rs-block">
-      <span class="rs-title">Technical Skills</span>
-      <div class="rs-lines"><div class="rs-line" style="width:90%"></div><div class="rs-line" style="width:75%"></div></div>
-    </div>
-    <div class="rs-block">
-      <span class="rs-title">Experience</span>
-      <div class="rs-lines"><div class="rs-line"></div><div class="rs-line" style="width:85%"></div><div class="rs-line" style="width:60%"></div></div>
-    </div>
-    <div class="rs-block">
-      <span class="rs-title">Projects</span>
-      <div class="rs-lines"><div class="rs-line" style="width:80%"></div><div class="rs-line" style="width:65%"></div></div>
-    </div>
-    <div class="rs-block">
-      <span class="rs-title">Education</span>
-      <div class="rs-lines"><div class="rs-line" style="width:55%"></div></div>
-    </div>
+  <div class="resume-skeleton vt-skeleton">
+    <div class="rs-block"><span class="rs-title">Contacto</span><div class="rs-lines"><div class="rs-line" style="width:70%"></div><div class="rs-line" style="width:50%"></div></div></div>
+    <div class="rs-block"><span class="rs-title">Technical Skills</span><div class="rs-lines"><div class="rs-line" style="width:90%"></div><div class="rs-line" style="width:75%"></div></div></div>
+    <div class="rs-block"><span class="rs-title">Experience</span><div class="rs-lines"><div class="rs-line"></div><div class="rs-line" style="width:85%"></div><div class="rs-line" style="width:60%"></div></div></div>
+    <div class="rs-block"><span class="rs-title">Projects</span><div class="rs-lines"><div class="rs-line" style="width:80%"></div><div class="rs-line" style="width:65%"></div></div></div>
+    <div class="rs-block"><span class="rs-title">Education</span><div class="rs-lines"><div class="rs-line" style="width:55%"></div></div></div>
   </div>
   <div class="skeleton-detail">
     <p>La información se presenta de <span class="accent">arriba a abajo</span> en orden de relevancia para el reclutador técnico.</p>
@@ -193,6 +179,7 @@ Señalar el skeleton de izquierda mientras se explica cada bloque.
 
 ---
 class: dark-slide
+transition: view-transition
 ---
 
 <span class="eyebrow">Sección 1 del Resume</span>
@@ -200,27 +187,12 @@ class: dark-slide
 # <span class="accent">Contacto</span> e Información de Cabecera
 
 <div class="skeleton-layout">
-  <div class="resume-skeleton">
-    <div class="rs-block active">
-      <span class="rs-title">Contacto</span>
-      <div class="rs-lines"><div class="rs-line" style="width:70%"></div><div class="rs-line" style="width:50%"></div></div>
-    </div>
-    <div class="rs-block">
-      <span class="rs-title">Technical Skills</span>
-      <div class="rs-lines"><div class="rs-line" style="width:90%"></div><div class="rs-line" style="width:75%"></div></div>
-    </div>
-    <div class="rs-block">
-      <span class="rs-title">Experience</span>
-      <div class="rs-lines"><div class="rs-line"></div><div class="rs-line" style="width:85%"></div><div class="rs-line" style="width:60%"></div></div>
-    </div>
-    <div class="rs-block">
-      <span class="rs-title">Projects</span>
-      <div class="rs-lines"><div class="rs-line" style="width:80%"></div><div class="rs-line" style="width:65%"></div></div>
-    </div>
-    <div class="rs-block">
-      <span class="rs-title">Education</span>
-      <div class="rs-lines"><div class="rs-line" style="width:55%"></div></div>
-    </div>
+  <div class="resume-skeleton vt-skeleton">
+    <div class="rs-block active"><span class="rs-title">Contacto</span><div class="rs-lines"><div class="rs-line" style="width:70%"></div><div class="rs-line" style="width:50%"></div></div></div>
+    <div class="rs-block"><span class="rs-title">Technical Skills</span><div class="rs-lines"><div class="rs-line" style="width:90%"></div><div class="rs-line" style="width:75%"></div></div></div>
+    <div class="rs-block"><span class="rs-title">Experience</span><div class="rs-lines"><div class="rs-line"></div><div class="rs-line" style="width:85%"></div><div class="rs-line" style="width:60%"></div></div></div>
+    <div class="rs-block"><span class="rs-title">Projects</span><div class="rs-lines"><div class="rs-line" style="width:80%"></div><div class="rs-line" style="width:65%"></div></div></div>
+    <div class="rs-block"><span class="rs-title">Education</span><div class="rs-lines"><div class="rs-line" style="width:55%"></div></div></div>
   </div>
   <div class="skeleton-detail">
     <span class="label">Qué incluir</span>
@@ -243,6 +215,7 @@ class: dark-slide
 
 ---
 class: dark-slide
+transition: view-transition
 ---
 
 <span class="eyebrow">Sección 2 del Resume</span>
@@ -250,27 +223,12 @@ class: dark-slide
 # <span class="accent">Technical Skills</span>
 
 <div class="skeleton-layout">
-  <div class="resume-skeleton">
-    <div class="rs-block">
-      <span class="rs-title">Contacto</span>
-      <div class="rs-lines"><div class="rs-line" style="width:70%"></div><div class="rs-line" style="width:50%"></div></div>
-    </div>
-    <div class="rs-block active">
-      <span class="rs-title">Technical Skills</span>
-      <div class="rs-lines"><div class="rs-line" style="width:90%"></div><div class="rs-line" style="width:75%"></div></div>
-    </div>
-    <div class="rs-block">
-      <span class="rs-title">Experience</span>
-      <div class="rs-lines"><div class="rs-line"></div><div class="rs-line" style="width:85%"></div><div class="rs-line" style="width:60%"></div></div>
-    </div>
-    <div class="rs-block">
-      <span class="rs-title">Projects</span>
-      <div class="rs-lines"><div class="rs-line" style="width:80%"></div><div class="rs-line" style="width:65%"></div></div>
-    </div>
-    <div class="rs-block">
-      <span class="rs-title">Education</span>
-      <div class="rs-lines"><div class="rs-line" style="width:55%"></div></div>
-    </div>
+  <div class="resume-skeleton vt-skeleton">
+    <div class="rs-block"><span class="rs-title">Contacto</span><div class="rs-lines"><div class="rs-line" style="width:70%"></div><div class="rs-line" style="width:50%"></div></div></div>
+    <div class="rs-block active"><span class="rs-title">Technical Skills</span><div class="rs-lines"><div class="rs-line" style="width:90%"></div><div class="rs-line" style="width:75%"></div></div></div>
+    <div class="rs-block"><span class="rs-title">Experience</span><div class="rs-lines"><div class="rs-line"></div><div class="rs-line" style="width:85%"></div><div class="rs-line" style="width:60%"></div></div></div>
+    <div class="rs-block"><span class="rs-title">Projects</span><div class="rs-lines"><div class="rs-line" style="width:80%"></div><div class="rs-line" style="width:65%"></div></div></div>
+    <div class="rs-block"><span class="rs-title">Education</span><div class="rs-lines"><div class="rs-line" style="width:55%"></div></div></div>
   </div>
   <div class="skeleton-detail">
     <span class="label">Va cerca de la parte superior</span>
@@ -282,7 +240,7 @@ class: dark-slide
       <li><strong>Bases de datos:</strong> PostgreSQL, MongoDB</li>
       <li><strong>Herramientas:</strong> AWS, Docker, Git</li>
     </ul>
-    <p style="margin-top:0.6rem; opacity:0.6">Sin barras de progreso ni calificaciones — son métricas arbitrarias que no significan nada para un ingeniero.</p>
+    <p style="margin-top:0.6rem; opacity:0.6">Sin barras de progreso ni calificaciones — métricas arbitrarias que no significan nada para un ingeniero.</p>
   </div>
 </div>
 
@@ -292,6 +250,7 @@ A vs B de skills viene después: barras de progreso vs categorización por domin
 
 ---
 class: dark-slide
+transition: view-transition
 ---
 
 <span class="eyebrow">Sección 3 del Resume</span>
@@ -299,34 +258,19 @@ class: dark-slide
 # <span class="accent">Work Experience</span>
 
 <div class="skeleton-layout">
-  <div class="resume-skeleton">
-    <div class="rs-block">
-      <span class="rs-title">Contacto</span>
-      <div class="rs-lines"><div class="rs-line" style="width:70%"></div><div class="rs-line" style="width:50%"></div></div>
-    </div>
-    <div class="rs-block">
-      <span class="rs-title">Technical Skills</span>
-      <div class="rs-lines"><div class="rs-line" style="width:90%"></div><div class="rs-line" style="width:75%"></div></div>
-    </div>
-    <div class="rs-block active">
-      <span class="rs-title">Experience</span>
-      <div class="rs-lines"><div class="rs-line"></div><div class="rs-line" style="width:85%"></div><div class="rs-line" style="width:60%"></div></div>
-    </div>
-    <div class="rs-block">
-      <span class="rs-title">Projects</span>
-      <div class="rs-lines"><div class="rs-line" style="width:80%"></div><div class="rs-line" style="width:65%"></div></div>
-    </div>
-    <div class="rs-block">
-      <span class="rs-title">Education</span>
-      <div class="rs-lines"><div class="rs-line" style="width:55%"></div></div>
-    </div>
+  <div class="resume-skeleton vt-skeleton">
+    <div class="rs-block"><span class="rs-title">Contacto</span><div class="rs-lines"><div class="rs-line" style="width:70%"></div><div class="rs-line" style="width:50%"></div></div></div>
+    <div class="rs-block"><span class="rs-title">Technical Skills</span><div class="rs-lines"><div class="rs-line" style="width:90%"></div><div class="rs-line" style="width:75%"></div></div></div>
+    <div class="rs-block active"><span class="rs-title">Experience</span><div class="rs-lines"><div class="rs-line"></div><div class="rs-line" style="width:85%"></div><div class="rs-line" style="width:60%"></div></div></div>
+    <div class="rs-block"><span class="rs-title">Projects</span><div class="rs-lines"><div class="rs-line" style="width:80%"></div><div class="rs-line" style="width:65%"></div></div></div>
+    <div class="rs-block"><span class="rs-title">Education</span><div class="rs-lines"><div class="rs-line" style="width:55%"></div></div></div>
   </div>
   <div class="skeleton-detail">
     <span class="label">El núcleo del documento</span>
     <p>Orden cronológico inverso. Cada puesto: <span class="accent">3 a 5 bullets</span> enfocados en logros y métricas.</p>
     <div class="example" style="margin-top:0.8rem">
       <span class="label">La regla del 95%</span>
-      <p>El 95% del contenido debe enfocarse en <span class="accent">resultados</span>, no en responsabilidades. Los bullets de impacto se construyen con las metodologías STAR y XYZ — las veremos en detalle en la siguiente sección.</p>
+      <p>El 95% del contenido debe enfocarse en <span class="accent">resultados</span>, no en responsabilidades. Los bullets de impacto se construyen con STAR y XYZ — los veremos en detalle en la siguiente sección.</p>
     </div>
   </div>
 </div>
@@ -337,6 +281,7 @@ No profundizar aquí en STAR/XYZ — solo mencionar que viene. El detalle está 
 
 ---
 class: dark-slide
+transition: view-transition
 ---
 
 <span class="eyebrow">Sección 4 del Resume</span>
@@ -344,27 +289,12 @@ class: dark-slide
 # <span class="accent">Projects</span>
 
 <div class="skeleton-layout">
-  <div class="resume-skeleton">
-    <div class="rs-block">
-      <span class="rs-title">Contacto</span>
-      <div class="rs-lines"><div class="rs-line" style="width:70%"></div><div class="rs-line" style="width:50%"></div></div>
-    </div>
-    <div class="rs-block">
-      <span class="rs-title">Technical Skills</span>
-      <div class="rs-lines"><div class="rs-line" style="width:90%"></div><div class="rs-line" style="width:75%"></div></div>
-    </div>
-    <div class="rs-block">
-      <span class="rs-title">Experience</span>
-      <div class="rs-lines"><div class="rs-line"></div><div class="rs-line" style="width:85%"></div><div class="rs-line" style="width:60%"></div></div>
-    </div>
-    <div class="rs-block active">
-      <span class="rs-title">Projects</span>
-      <div class="rs-lines"><div class="rs-line" style="width:80%"></div><div class="rs-line" style="width:65%"></div></div>
-    </div>
-    <div class="rs-block">
-      <span class="rs-title">Education</span>
-      <div class="rs-lines"><div class="rs-line" style="width:55%"></div></div>
-    </div>
+  <div class="resume-skeleton vt-skeleton">
+    <div class="rs-block"><span class="rs-title">Contacto</span><div class="rs-lines"><div class="rs-line" style="width:70%"></div><div class="rs-line" style="width:50%"></div></div></div>
+    <div class="rs-block"><span class="rs-title">Technical Skills</span><div class="rs-lines"><div class="rs-line" style="width:90%"></div><div class="rs-line" style="width:75%"></div></div></div>
+    <div class="rs-block"><span class="rs-title">Experience</span><div class="rs-lines"><div class="rs-line"></div><div class="rs-line" style="width:85%"></div><div class="rs-line" style="width:60%"></div></div></div>
+    <div class="rs-block active"><span class="rs-title">Projects</span><div class="rs-lines"><div class="rs-line" style="width:80%"></div><div class="rs-line" style="width:65%"></div></div></div>
+    <div class="rs-block"><span class="rs-title">Education</span><div class="rs-lines"><div class="rs-line" style="width:55%"></div></div></div>
   </div>
   <div class="skeleton-detail">
     <span class="label">La sección más importante para juniors</span>
@@ -387,6 +317,7 @@ No copias de tutoriales — proyectos que resuelven un problema real.
 
 ---
 class: dark-slide
+transition: view-transition
 ---
 
 <span class="eyebrow">Sección 5 del Resume</span>
@@ -394,27 +325,12 @@ class: dark-slide
 # <span class="accent">Education</span>
 
 <div class="skeleton-layout">
-  <div class="resume-skeleton">
-    <div class="rs-block">
-      <span class="rs-title">Contacto</span>
-      <div class="rs-lines"><div class="rs-line" style="width:70%"></div><div class="rs-line" style="width:50%"></div></div>
-    </div>
-    <div class="rs-block">
-      <span class="rs-title">Technical Skills</span>
-      <div class="rs-lines"><div class="rs-line" style="width:90%"></div><div class="rs-line" style="width:75%"></div></div>
-    </div>
-    <div class="rs-block">
-      <span class="rs-title">Experience</span>
-      <div class="rs-lines"><div class="rs-line"></div><div class="rs-line" style="width:85%"></div><div class="rs-line" style="width:60%"></div></div>
-    </div>
-    <div class="rs-block">
-      <span class="rs-title">Projects</span>
-      <div class="rs-lines"><div class="rs-line" style="width:80%"></div><div class="rs-line" style="width:65%"></div></div>
-    </div>
-    <div class="rs-block active">
-      <span class="rs-title">Education</span>
-      <div class="rs-lines"><div class="rs-line" style="width:55%"></div></div>
-    </div>
+  <div class="resume-skeleton vt-skeleton">
+    <div class="rs-block"><span class="rs-title">Contacto</span><div class="rs-lines"><div class="rs-line" style="width:70%"></div><div class="rs-line" style="width:50%"></div></div></div>
+    <div class="rs-block"><span class="rs-title">Technical Skills</span><div class="rs-lines"><div class="rs-line" style="width:90%"></div><div class="rs-line" style="width:75%"></div></div></div>
+    <div class="rs-block"><span class="rs-title">Experience</span><div class="rs-lines"><div class="rs-line"></div><div class="rs-line" style="width:85%"></div><div class="rs-line" style="width:60%"></div></div></div>
+    <div class="rs-block"><span class="rs-title">Projects</span><div class="rs-lines"><div class="rs-line" style="width:80%"></div><div class="rs-line" style="width:65%"></div></div></div>
+    <div class="rs-block active"><span class="rs-title">Education</span><div class="rs-lines"><div class="rs-line" style="width:55%"></div></div></div>
   </div>
   <div class="skeleton-detail">
     <span class="label">Mantenlo breve</span>

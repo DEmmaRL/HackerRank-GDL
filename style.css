@@ -276,6 +276,11 @@ code, pre {
 }
 .rs-block.active .rs-title { color: var(--hr-green); }
 
+.resume-skeleton.vt-skeleton {
+  view-transition-name: resume-skeleton;
+  contain: layout;
+}
+
 /* ─── Layout: Skeleton + Detail side by side ─────────────────────────────── */
 .skeleton-layout {
   display: grid;
