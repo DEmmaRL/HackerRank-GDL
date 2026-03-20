@@ -760,6 +760,26 @@ class: terrain-slide
 layout: center
 ---
 
+<span class="eyebrow">Disclaimer</span>
+
+<h1 style="font-size: 2rem; line-height: 1.3;">
+  Estas reglas no están<br>escritas en <span class="accent">piedra</span>.
+</h1>
+
+<p class="sub">
+  Rómpelas cuando hacerlo cuente una historia más poderosa o ponga tus fortalezas donde el ojo aterriza primero.<br><br>
+  El filtro es simple: <span class="accent">¿esto ayuda al reclutador a llegar al "Sí" en unos segundos?</span>
+</p>
+
+<!--
+No extenderse. La idea es plantar la duda y dejar que la cita de Heifetz la cierre.
+-->
+
+---
+class: terrain-slide
+layout: center
+---
+
 <span class="eyebrow">Jane Heifetz · Harvard Business Review</span>
 
 <h1 style="font-size: 2rem; line-height: 1.4; max-width: 38rem;">
