@@ -1008,16 +1008,16 @@ class: dark-slide
 
 <span class="eyebrow">Portafolio Web · La Regla de los 2 Segundos</span>
 
-# Rápido gana, <br>siempre.
+# <span v-if="$clicks === 0">¿Qué tipo de portfolio preferirían <span class="accent">ver</span>?</span><span v-else>Rápido siempre <span class="accent">ganará</span>.</span>
 
 <div class="ab">
   <div class="ab-card" :class="$clicks >= 1 ? 'bad' : ''">
     <span class="ab-tag bad" v-click>✕ Visualmente complejo</span>
-    <p>Animaciones pesadas, carga lenta, efectos de scroll. Si supera los 2 segundos de carga, el Engineering Manager ya lo descartó antes de ver una sola línea de tu trabajo.</p>
+    <p>Animaciones pesadas, carga lenta, efectos de scroll. <v-click at="1"><span>Si supera los 2 segundos de carga, el Engineering Manager ya lo descartó antes de ver una sola línea de tu trabajo.</span></v-click></p>
   </div>
   <div class="ab-card" :class="$clicks >= 1 ? 'good' : ''">
     <span class="ab-tag good" v-click="1">✓ Sitio estático rápido</span>
-    <p>Carga instantánea, contenido claro, proyectos con links directos al repo y al demo. <span :class="$clicks >= 1 ? 'accent' : ''">Un sitio estático rápido supera siempre a uno lento y vistoso.</span></p>
+    <p>Carga instantánea, contenido claro, proyectos con links directos al repo y al demo. <v-click at="1"><span class="accent">Un sitio estático rápido supera siempre a uno lento y vistoso.</span></v-click></p>
   </div>
 </div>
 
