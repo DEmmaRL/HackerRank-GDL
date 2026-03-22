@@ -934,27 +934,101 @@ Transición: ya sabemos qué poner y cómo formatearlo. Ahora: ¿cómo gestionam
 class: dark-slide
 ---
 
+<span class="eyebrow">La Realidad del Mercado</span>
+
+# Los números que<br>nadie te dice
+
+<div class="points">
+  <div class="point">
+    <span class="label">Lo que reportan los ingenieros</span>
+    <p>En comunidades de desarrolladores buscando empleo, es completamente normal documentar procesos largos. Los números reales: <span class="accent">100, 300, 400</span> y en ocasiones más de <span class="accent">800 aplicaciones</span> para aterrizar una sola oferta.</p>
+  </div>
+  <div class="point">
+    <span class="label">El volumen es parte del juego</span>
+    <p>No es señal de que algo está mal contigo. Es la naturaleza del mercado tech actual. La pregunta correcta no es "¿por qué tanto?" sino "¿cómo lo hago sostenible?"</p>
+  </div>
+</div>
+
+<!--
+Dejar que los números aterricen. Preguntar al público cuántas aplicaciones creen que son necesarias antes de revelar.
+-->
+
+---
+class: dark-slide
+---
+
+<span class="eyebrow">La Trampa del Tiempo</span>
+
+# ¿Mando el mismo PDF<br>a <span class="accent">todos</span>?
+
+<div class="ab">
+  <div class="ab-card" :class="$clicks >= 1 ? 'bad' : ''">
+    <span class="ab-tag bad" v-click>✕ Resume genérico</span>
+    <p>Un documento catch-all enviado a 300 vacantes. Rápido de enviar, pero el 75% de los candidatos que hacen esto no están calificados para el rol al que aplican a ojos del reclutador.</p>
+  </div>
+  <div class="ab-card" :class="$clicks >= 1 ? 'good' : ''">
+    <span class="ab-tag good" v-click="1">✓ Resume enfocado</span>
+    <p>Adaptado a cada vacante. Los hiring managers son claros: <span :class="$clicks >= 1 ? 'accent' : ''">"Si aplicas a 20 trabajos diferentes, deberías tener 20 currículums diferentes."</span></p>
+  </div>
+</div>
+
+<v-click at="2">
+<div class="example">
+  <span class="label">Nick Singh · Ex-Google & Facebook</span>
+  <p>"Lanzar un montón de cosas a la pared esperando que alguna se pegue no es una estrategia sólida."</p>
+</div>
+</v-click>
+
+<!--
+Antes del click: plantear la paradoja en voz alta. "Si tengo que aplicar a 300 trabajos, ¿mando el mismo PDF a todos para ahorrar tiempo?"
+Dejar que el público responda antes de revelar.
+-->
+
+---
+class: terrain-slide
+layout: center
+---
+
+<span class="eyebrow">El Problema Real</span>
+
+<h1 style="font-size: 2rem; line-height: 1.3; max-width: 40rem;">
+  ¿Cómo creas <span class="accent">50 versiones</span> de tu resume para cientos de vacantes sin perder 100 horas de tu vida?
+</h1>
+
+<p class="sub">
+  La respuesta no es reescribir desde cero cada vez.<br>
+  Es tener un sistema.
+</p>
+
+<!--
+Pausa. Dejar la pregunta en el aire antes de avanzar a la solución. Este es el puente hacia el Master Resume.
+-->
+
+---
+class: dark-slide
+---
+
 <span class="eyebrow">Master Resume · Single Source of Truth</span>
 
 # Tu base de datos<br>personal <span class="accent">privada</span>
 
 <div class="points">
   <div class="point">
-    <span class="label">¿Qué es?</span>
+    <span class="label">Qué es</span>
     <p>Un documento exhaustivo y <span class="accent">privado</span> con absolutamente todo: cada proyecto, cada skill, cada bullet point que has redactado. <strong>Nunca se envía a un reclutador.</strong></p>
   </div>
   <div class="point">
-    <span class="label">¿Para qué sirve?</span>
-    <p>Centraliza tu información para que no olvides logros importantes. Es tu única fuente de verdad — de ahí derivan todas las versiones que sí envías.</p>
+    <span class="label">Para qué sirve</span>
+    <p>Centraliza tu información para que no olvides logros importantes. Es tu única fuente de verdad, de ahí derivan todas las versiones que sí envías.</p>
   </div>
   <div class="point">
     <span class="label">La técnica de la poda</span>
-    <p>Cuando aplicas a una vacante, haces una copia del Master Resume y <span class="accent">eliminas</span> lo irrelevante. No escribes desde cero — recortas.</p>
+    <p>Cuando aplicas a una vacante, haces una copia del Master Resume y <span class="accent">eliminas</span> lo irrelevante. No escribes desde cero, recortas.</p>
   </div>
 </div>
 
 <!--
-Analogía útil: el Master Resume es como una base de datos. Cada versión que envías es una query — extraes solo lo que esa vacante necesita.
+Analogía útil: el Master Resume es como una base de datos. Cada versión que envías es una query, extraes solo lo que esa vacante necesita.
 -->
 
 ---
@@ -969,41 +1043,11 @@ layout: center
 </h1>
 
 <p class="sub">
-  Glover Lawrence, ejecutivo senior, envió <span class="accent">más de 50 versiones</span> distintas de su resume durante su búsqueda de empleo — una por empresa, adaptada a su cultura y posición.
+  Glover Lawrence, ejecutivo senior, envió <span class="accent">más de 50 versiones</span> distintas de su resume durante su búsqueda de empleo, una por empresa, adaptada a su cultura y posición.
 </p>
 
 <!--
-El dato de las 50 versiones suele impactar. No es exageración — es la realidad de una búsqueda de empleo seria.
--->
-
----
-class: dark-slide
----
-
-<span class="eyebrow">Polimorfismo · El Error Más Común</span>
-
-# El currículum <span class="accent">indeciso</span>
-
-<div class="ab">
-  <div class="ab-card" :class="$clicks >= 1 ? 'bad' : ''">
-    <span class="ab-tag bad" v-click>✕ Catch-all</span>
-    <p>Un solo documento que mezcla Frontend, Backend, Machine Learning y Management. Intenta abarcar todo esperando que algo encaje.</p>
-  </div>
-  <div class="ab-card" :class="$clicks >= 1 ? 'good' : ''">
-    <span class="ab-tag good" v-click="1">✓ Polimórfico</span>
-    <p>Versión <span :class="$clicks >= 1 ? 'accent' : ''">Frontend</span> para roles de producto. Versión <span :class="$clicks >= 1 ? 'accent' : ''">Backend</span> para infraestructura y datos. Cada una habla exactamente el idioma de esa vacante.</p>
-  </div>
-</div>
-
-<v-click at="2">
-<div class="example">
-  <span class="label">Nick Singh · Ex-Google & Facebook</span>
-  <p>"Lanzar un montón de cosas a la pared esperando que alguna se pegue no es una estrategia sólida."</p>
-</div>
-</v-click>
-
-<!--
-Antes del click: preguntar al público cuántos tienen un solo resume para todo. Casi todos levantarán la mano.
+El dato de las 50 versiones suele impactar. No es exageración, es la realidad de una búsqueda de empleo seria.
 -->
 
 ---
@@ -1034,7 +1078,8 @@ class: dark-slide
 </div>
 
 <!--
-Gergely Orosz: Hiring Manager y autor en Stack Overflow. La adaptación no tiene que ser drástica — reordenar ya es polimorfismo.
+Gergely Orosz: Hiring Manager y autor en Stack Overflow. La adaptación no tiene que ser drástica, reordenar ya es polimorfismo.
+Nick Singh: tenía una versión para Backend/Infraestructura y otra para Ingeniería de Producto. No un solo documento.
 -->
 
 ---
@@ -1052,7 +1097,7 @@ class: dark-slide
   </div>
   <div class="point">
     <span class="label">Paso 2 — Haz una copia y poda</span>
-    <p>Elimina lo irrelevante. Reordena skills para que las que pide la JD aparezcan primero. No reescribas — recorta y reorganiza.</p>
+    <p>Elimina lo irrelevante. Reordena skills para que las que pide la JD aparezcan primero. No reescribas, recorta y reorganiza.</p>
   </div>
   <div class="point">
     <span class="label">Paso 3 — El espejo</span>
@@ -1081,5 +1126,5 @@ layout: center
 </p>
 
 <!--
-Cerrar la sección con esta cita. Es el hook más memorable de la sección — dejar que aterrice antes de avanzar a la Sección 6.
+Cerrar la sección con esta cita. Es el hook más memorable de la sección, dejar que aterrice antes de avanzar a la Sección 6.
 -->
