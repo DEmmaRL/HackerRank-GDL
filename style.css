@@ -375,3 +375,13 @@ code, pre {
   width: 1.2rem;
 }
 .seniority-item.highlight { border-color: rgba(5,199,112,0.4); background: var(--hr-green-dim); }
+
+/* ─── Click Animations ───────────────────────────────────────────────────── */
+.slidev-vclick-target {
+  transition: opacity 400ms ease, transform 400ms ease;
+}
+.slidev-vclick-hidden {
+  opacity: 0;
+  transform: translateY(6px);
+  pointer-events: none;
+}
