@@ -1012,7 +1012,7 @@ layout: center
 
 <p class="sub">
   La respuesta no es reescribir desde cero cada vez.<br>
-  Es tener un sistema.
+  No reinventes la rueda
 </p>
 
 <!--
@@ -1137,7 +1137,7 @@ layout: center
 
 <p class="sub">
   Enviar el mismo resume genérico a todas las empresas demuestra que no te tomas en serio el proceso.<br>
-  Adapta tu resume para ser exactamente el platillo que esa empresa está buscando.
+  Adapta tu resume para ser exactamente el platillo que esa empresa está buscando, sin engaños.
 </p>
 
 <!--
