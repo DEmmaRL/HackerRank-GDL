@@ -1238,3 +1238,101 @@ layout: center
 <!--
 Cerrar la sección con esta cita. Es el hook más memorable de la sección, dejar que aterrice antes de avanzar a la Sección 6.
 -->
+
+---
+class: green-slide
+layout: center
+transition: fade
+---
+
+<span class="eyebrow" style="color: var(--hr-black)">Sección 6</span>
+
+# Para cerrar
+
+<!--
+Transición al cierre. Tono más personal, menos técnico.
+-->
+
+---
+class: dark-slide
+---
+
+<span class="eyebrow">Lo que se llevan hoy</span>
+
+# El resumen que<br>sí <span class="accent">importa</span>
+
+<div class="points">
+  <div class="point" v-click>
+    <span class="label">El ATS no es tu enemigo</span>
+    <p>Es una hoja de cálculo glorificada. Entiende cómo funciona el parsing y úsalo a tu favor. Formato simple, una columna, texto plano.</p>
+  </div>
+  <div class="point" v-click>
+    <span class="label">No caigas en el keywording</span>
+    <p>Saturar tu resume de keywords o usar texto blanco no engaña a nadie. Lo que importa es venderte al reclutador humano que llega después del parsing.</p>
+  </div>
+  <div class="point" v-click>
+    <span class="label">Un resume para todo no es estrategia</span>
+    <p>Construye tu Master Resume. Poda y adapta para cada vacante. El polimorfismo es lo que separa a los candidatos serios.</p>
+  </div>
+  <div class="point" v-click>
+    <span class="label">El resume abre la puerta, tú cierras el trato</span>
+    <p>Su único trabajo es conseguirte la entrevista. Escribe bullets con impacto real, métricas reales, y deja que tu GitHub hable por ti.</p>
+  </div>
+</div>
+
+<!--
+Revelar uno por uno. Dejar que cada punto aterrice antes de avanzar al siguiente.
+-->
+
+---
+class: dark-slide
+---
+
+<span class="eyebrow">HackerRank Campus Crew GDL</span>
+
+# Únete a la<br><span class="accent">comunidad</span>
+
+<div class="grid-2" style="margin-top: var(--gap-lg); align-items: start;">
+  <div class="points">
+    <div class="point">
+      <span class="label">La primera comunidad oficial de HackerRank en México</span>
+      <p>Un espacio para ingenieros de CUCEI y GDL que quieren crecer, prepararse y conectar con la industria tech.</p>
+    </div>
+    <div class="point">
+      <span class="label">Crea tu cuenta en HackerRank</span>
+      <p>Regístrate con tu correo universitario y selecciona <span class="accent">Universidad de Guadalajara</span>. Empieza a construir tu perfil técnico hoy.</p>
+    </div>
+    <div class="point">
+      <span class="label">Síguenos en Instagram</span>
+      <p><span class="accent">@hackerrank.gdl</span> — eventos, recursos y comunidad.</p>
+    </div>
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; gap: var(--gap-md); padding-top: 0.5rem;">
+    <img src="/qr-discord.png" style="width:160px;height:160px;border-radius:var(--radius);" />
+    <span class="label">Discord · HackerRank Crew GDL</span>
+  </div>
+</div>
+
+<!--
+Pedir que saquen el teléfono para escanear el QR antes de avanzar a la última slide.
+-->
+
+---
+class: terrain-slide
+layout: center
+---
+
+<span class="eyebrow">Q&A</span>
+
+<h1 style="font-size: 3rem; line-height: 1.1;">
+  ¿Preguntas?
+</h1>
+
+<p class="sub">
+  <span class="accent">@hackerrank.gdl</span> en Instagram<br>
+  hackerrank.com — regístrate con tu correo de la UdeG
+</p>
+
+<!--
+Dejar esta slide en pantalla durante toda la sesión de preguntas.
+-->
