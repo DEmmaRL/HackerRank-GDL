@@ -789,3 +789,129 @@ layout: center
 <!--
 Dejar la cita sola en pantalla. No agregar nada más — el silencio aquí es parte del mensaje.
 -->
+
+---
+class: green-slide
+layout: center
+transition: fade
+---
+
+<span class="eyebrow" style="color: var(--hr-black)">Sección 4</span>
+
+# Ya sabemos qué poner.<br>¿Cómo lo <span style="color: var(--hr-black); text-decoration: underline;">presentamos</span>?
+
+<!--
+Pausa narrativa. El público ya sabe el contenido ideal. Ahora la pregunta es: ¿en qué formato? ¿Cómo llega ese contenido al reclutador?
+Dejar que la pregunta quede en el aire antes de avanzar.
+-->
+
+---
+class: dark-slide
+layout: center
+transition: fade
+---
+
+<span class="eyebrow">Amy Miller · Ex-Reclutadora Google & Microsoft</span>
+
+<h1 style="font-size: 1.9rem; line-height: 1.3; max-width: 40rem;">
+  "La idea de que el ATS es una herramienta mítica infundida con IA es una locura. Cualquiera que haya trabajado dentro de un ATS se ríe de esto. Es ridículo."
+</h1>
+
+<!--
+Abrir con la cita antes de definir qué es un ATS. Genera curiosidad: ¿de qué están hablando?
+-->
+
+---
+class: dark-slide
+---
+
+<span class="eyebrow">ATS · Applicant Tracking System</span>
+
+# No es más que <span class="accent">un SQL</span>.<br>
+
+<div class="points">
+  <div class="point">
+    <span class="label">Qué hace realmente</span>
+    <p>Publica vacantes, almacena archivos y rastrea en qué etapa del proceso está cada candidato. Es una <span class="accent">hoja de cálculo glorificada</span>.</p>
+  </div>
+  <div class="point">
+    <span class="label">El problema real no es el rechazo automático</span>
+    Los reclutadores reciben tal volumen de aplicaciones que si tu perfil no es claro, simplemente eres ignorado por un humano.
+  </div>
+  <div class="point">
+    <span class="label">La escala del problema</span>
+    <p>Google recibe <span class="accent">3 millones de currículums al año</span> y contrata al <span class="accent">>1%</span>. El 75% de los aplicantes no están calificados para el puesto al que aplican. Los reclutadores escanean rápido por necesidad.</p>
+  </div>
+</div>
+
+<!--
+Énfasis: el ATS no te rechaza, te hace invisible. Esa distinción cambia cómo piensas en el formato.
+-->
+
+---
+class: dark-slide
+---
+
+<span class="eyebrow">ATS · Parsing</span>
+
+# Cómo te <span class="accent">lee</span> el sistema
+
+<div class="grid-2">
+  <div class="item">
+    <span class="label">OCR — Reconocimiento óptico</span>
+    <p>El ATS escanea tu PDF y extrae el texto para poblar un perfil digital en su base de datos.</p>
+  </div>
+  <div class="item">
+    <span class="label">El peligro del formato complejo</span>
+    <p>Columnas múltiples, tablas y gráficos rompen el parsing. Workday, por ejemplo, <span class="accent">no puede leer resumes de más de una columna</span> mezcla toda tu información.</p>
+  </div>
+  <div class="item">
+    <span class="label">Lo que el reclutador ve</span>
+    <p>Después del parsing, el reclutador no ve tu PDF ve el texto extraído en su sistema. Si el parsing falló, tu experiencia aparece desordenada o incompleta.</p>
+  </div>
+  <div class="item">
+    <span class="label">La regla de oro</span>
+    <p>Una columna. Texto plano. Sin tablas ni gráficos. El formato minimalista es <span class="accent">funcional</span>.</p>
+  </div>
+</div>
+
+<!--
+Este es el momento del "plot twist" visual — mostrar en la demo cómo un resume de Canva falla el parsing.
+-->
+
+---
+class: dark-slide
+---
+
+<span class="eyebrow">ATS · Mitos</span>
+
+# Lo que te han hecho <span class="accent">creer</span>
+
+<div class="noise-grid">
+  <div class="noise-item" v-click>
+    <span class="no">✕</span>
+    <div>
+      <strong>Mito: El ATS usa IA para darte un Match Score</strong>
+      <p>Los puntajes de "80% de coincidencia" fueron inventados por empresas como JobScan para vender auditorías. Los ATS reales son sistemas legacy de hasta 20 años. Legalmente en EE. UU., las herramientas automatizadas no pueden rechazar candidatos sin revisión humana.</p>
+    </div>
+  </div>
+  <div class="noise-item" v-click>
+    <span class="no">✕</span>
+    <div>
+      <strong>Mito: Los filtros booleanos te descartan automáticamente</strong>
+      <p>No existe un algoritmo leyendo tu resume en busca de keywords. El único rechazo automático real son las <span class="accent">Knockout Questions</span> del formulario — "¿Requiere visa?" — no el contenido de tu resume.</p>
+    </div>
+  </div>
+  <div class="noise-item" v-click>
+    <span class="no">✕</span>
+    <div>
+      <strong>Mito: El truco de la fuente blanca</strong>
+      <p>Pegar la job description en texto blanco. Cuando el ATS hace parsing, todo el texto oculto se vuelve visible para el reclutador. Pasas de candidato a <span class="accent">riesgo de seguridad</span> en segundos. "No te hace ver experto te hace ver inseguro."</p>
+    </div>
+  </div>
+</div>
+
+<!--
+Revelar uno por uno. El de fuente blanca genera reacción fuerte — mucha gente lo ha visto en TikTok.
+El de Match Score destruye una industria entera de "optimizadores de resume".
+-->
