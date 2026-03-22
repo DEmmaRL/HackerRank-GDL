@@ -880,6 +880,21 @@ Este es el momento del "plot twist" visual — mostrar en la demo cómo un resum
 -->
 
 ---
+class: green-slide
+layout: center
+transition: fade
+---
+
+<span class="eyebrow" style="color: var(--hr-black)">Un ATS real</span>
+
+# No me crean,<br> <span class=""><a href="https://app.breezy.hr/app/c/demmarl/">pongámoslo a prueba</a></span>
+
+<!--
+Pausa narrativa. El público ya sabe el contenido ideal. Ahora la pregunta es: ¿en qué formato? ¿Cómo llega ese contenido al reclutador?
+Dejar que la pregunta quede en el aire antes de avanzar.
+-->
+
+---
 class: dark-slide
 ---
 
