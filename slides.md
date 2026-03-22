@@ -915,3 +915,171 @@ class: dark-slide
 Revelar uno por uno. El de fuente blanca genera reacción fuerte — mucha gente lo ha visto en TikTok.
 El de Match Score destruye una industria entera de "optimizadores de resume".
 -->
+
+---
+class: green-slide
+layout: center
+transition: fade
+---
+
+<span class="eyebrow" style="color: var(--hr-black)">Sección 5</span>
+
+# Gestión y <span style="color: var(--hr-black)">Polimorfismo</span>
+
+<!--
+Transición: ya sabemos qué poner y cómo formatearlo. Ahora: ¿cómo gestionamos ese documento cuando aplicamos a decenas de vacantes?
+-->
+
+---
+class: dark-slide
+---
+
+<span class="eyebrow">Master Resume · Single Source of Truth</span>
+
+# Tu base de datos<br>personal <span class="accent">privada</span>
+
+<div class="points">
+  <div class="point">
+    <span class="label">¿Qué es?</span>
+    <p>Un documento exhaustivo y <span class="accent">privado</span> con absolutamente todo: cada proyecto, cada skill, cada bullet point que has redactado. <strong>Nunca se envía a un reclutador.</strong></p>
+  </div>
+  <div class="point">
+    <span class="label">¿Para qué sirve?</span>
+    <p>Centraliza tu información para que no olvides logros importantes. Es tu única fuente de verdad — de ahí derivan todas las versiones que sí envías.</p>
+  </div>
+  <div class="point">
+    <span class="label">La técnica de la poda</span>
+    <p>Cuando aplicas a una vacante, haces una copia del Master Resume y <span class="accent">eliminas</span> lo irrelevante. No escribes desde cero — recortas.</p>
+  </div>
+</div>
+
+<!--
+Analogía útil: el Master Resume es como una base de datos. Cada versión que envías es una query — extraes solo lo que esa vacante necesita.
+-->
+
+---
+class: terrain-slide
+layout: center
+---
+
+<span class="eyebrow">Jane Heifetz · Harvard Business Review</span>
+
+<h1 style="font-size: 1.9rem; line-height: 1.4; max-width: 40rem;">
+  "Puedes tener un currículum fundacional que articule de manera convincente la información más importante, pero <span class="accent">tienes que alterarlo para cada oportunidad</span>."
+</h1>
+
+<p class="sub">
+  Glover Lawrence, ejecutivo senior, envió <span class="accent">más de 50 versiones</span> distintas de su resume durante su búsqueda de empleo — una por empresa, adaptada a su cultura y posición.
+</p>
+
+<!--
+El dato de las 50 versiones suele impactar. No es exageración — es la realidad de una búsqueda de empleo seria.
+-->
+
+---
+class: dark-slide
+---
+
+<span class="eyebrow">Polimorfismo · El Error Más Común</span>
+
+# El currículum <span class="accent">indeciso</span>
+
+<div class="ab">
+  <div class="ab-card" :class="$clicks >= 1 ? 'bad' : ''">
+    <span class="ab-tag bad" v-click>✕ Catch-all</span>
+    <p>Un solo documento que mezcla Frontend, Backend, Machine Learning y Management. Intenta abarcar todo esperando que algo encaje.</p>
+  </div>
+  <div class="ab-card" :class="$clicks >= 1 ? 'good' : ''">
+    <span class="ab-tag good" v-click="1">✓ Polimórfico</span>
+    <p>Versión <span :class="$clicks >= 1 ? 'accent' : ''">Frontend</span> para roles de producto. Versión <span :class="$clicks >= 1 ? 'accent' : ''">Backend</span> para infraestructura y datos. Cada una habla exactamente el idioma de esa vacante.</p>
+  </div>
+</div>
+
+<v-click at="2">
+<div class="example">
+  <span class="label">Nick Singh · Ex-Google & Facebook</span>
+  <p>"Lanzar un montón de cosas a la pared esperando que alguna se pegue no es una estrategia sólida."</p>
+</div>
+</v-click>
+
+<!--
+Antes del click: preguntar al público cuántos tienen un solo resume para todo. Casi todos levantarán la mano.
+-->
+
+---
+class: dark-slide
+---
+
+<span class="eyebrow">Polimorfismo · En la Práctica</span>
+
+# Pequeños ajustes,<br><span class="accent">gran impacto</span>
+
+<div class="grid-2">
+  <div class="item">
+    <span class="label">DevOps / Infraestructura</span>
+    <p>Mueve al frente: CI/CD, Kubernetes, AWS, Terraform. Tus proyectos de backend suben. Los de frontend bajan.</p>
+  </div>
+  <div class="item">
+    <span class="label">Data Engineering</span>
+    <p>Mueve al frente: Python, SQL, pipelines ETL, Spark. Los proyectos de análisis de datos lideran.</p>
+  </div>
+  <div class="item">
+    <span class="label">Frontend / Producto</span>
+    <p>Mueve al frente: React, TypeScript, performance, UX. Los proyectos con usuarios reales y métricas de impacto lideran.</p>
+  </div>
+  <div class="item">
+    <span class="label">La regla de Gergely Orosz</span>
+    <p>Si la vacante pide React y Node.js y los tienes, <span class="accent">muévelos al frente de tu lista</span>. Un cambio pequeño con impacto enorme.</p>
+  </div>
+</div>
+
+<!--
+Gergely Orosz: Hiring Manager y autor en Stack Overflow. La adaptación no tiene que ser drástica — reordenar ya es polimorfismo.
+-->
+
+---
+class: dark-slide
+---
+
+<span class="eyebrow">Estrategia de Adaptación Rápida</span>
+
+# Side-by-side:<br>JD + Master Resume
+
+<div class="points">
+  <div class="point">
+    <span class="label">Paso 1 — Pon la JD junto a tu Master Resume</span>
+    <p>Identifica las 5 a 7 habilidades y palabras clave más críticas de esa vacante específica.</p>
+  </div>
+  <div class="point">
+    <span class="label">Paso 2 — Haz una copia y poda</span>
+    <p>Elimina lo irrelevante. Reordena skills para que las que pide la JD aparezcan primero. No reescribas — recorta y reorganiza.</p>
+  </div>
+  <div class="point">
+    <span class="label">Paso 3 — El espejo</span>
+    <p>El reclutador debe ver un <span class="accent">reflejo exacto</span> de lo que está pidiendo. Si la JD dice "React y Node.js", esas palabras deben ser visibles en los primeros segundos.</p>
+  </div>
+</div>
+
+<!--
+Farah Sharghi (ex-reclutadora técnica Google): este proceso no toma horas si tienes el Master Resume bien mantenido. La inversión real es construirlo una vez.
+-->
+
+---
+class: terrain-slide
+layout: center
+---
+
+<span class="eyebrow">Farah Sharghi · Ex-Reclutadora Técnica Google</span>
+
+<h1 style="font-size: 1.9rem; line-height: 1.4; max-width: 40rem;">
+  "Si vas a un restaurante, no te venden el plato y los cubiertos, porque eso es lo básico... debes venderles el <span class="accent">platillo delicioso</span> que han estado deseando."
+</h1>
+
+<p class="sub">
+  Enviar el mismo resume genérico a todas las empresas demuestra que no te tomas en serio el proceso.<br>
+  Adapta tu resume para ser exactamente el platillo que esa empresa está buscando.
+</p>
+
+<!--
+Cerrar la sección con esta cita. Es el hook más memorable de la sección — dejar que aterrice antes de avanzar a la Sección 6.
+-->
