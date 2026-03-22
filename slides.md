@@ -907,14 +907,14 @@ class: dark-slide
     <span class="no">✕</span>
     <div>
       <strong>Mito: El ATS usa IA para darte un Match Score</strong>
-      <p>Los puntajes de "80% de coincidencia" fueron inventados por empresas como JobScan para vender auditorías. Los ATS reales son sistemas legacy de hasta 20 años. Legalmente en EE. UU., las herramientas automatizadas no pueden rechazar candidatos sin revisión humana.</p>
+      <p>Actual mente existen la herramientas IA para recruting, sí, pero los puntajes de "80% de coincidencia" fueron inventados por empresas como JobScan para vender auditorías. Los ATS robustos son sistemas legacy de hasta 20 años. Legalmente en EE. UU., las herramientas automatizadas no pueden rechazar candidatos sin revisión humana.</p>
     </div>
   </div>
   <div class="noise-item" v-click>
     <span class="no">✕</span>
     <div>
       <strong>Mito: Los filtros booleanos te descartan automáticamente</strong>
-      <p>No existe un algoritmo leyendo tu resume en busca de keywords. El único rechazo automático real son las <span class="accent">Knockout Questions</span> del formulario — "¿Requiere visa?" — no el contenido de tu resume.</p>
+      <p>El único rechazo automático real son las <span class="accent">Knockout Questions</span> del formulario "¿Requiere visa?" no el contenido de tu resume.</p>
     </div>
   </div>
   <div class="noise-item" v-click>
