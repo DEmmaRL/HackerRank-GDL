@@ -930,8 +930,100 @@ class: dark-slide
 </div>
 
 <!--
-Revelar uno por uno. El de fuente blanca genera reacción fuerte — mucha gente lo ha visto en TikTok.
+Revelar uno por uno. El de fuente blanca genera reacción fuerte, mucha gente lo ha visto en TikTok.
 El de Match Score destruye una industria entera de "optimizadores de resume".
+-->
+
+---
+class: green-slide
+layout: center
+transition: fade
+---
+
+<span class="eyebrow" style="color: var(--hr-black)">Sección 4 · Bonus</span>
+
+# GitHub, Portafolio<br>y <span style="color: var(--hr-black)">Open Source</span>
+
+<!--
+Transición natural después de los mitos del ATS. El resume pasa el parsing, pero ¿qué valida que realmente construyes cosas?
+-->
+
+---
+class: dark-slide
+---
+
+<span class="eyebrow">GitHub · La Validación Inmediata</span>
+
+# El link que no<br>es <span class="accent">opcional</span>
+
+<div class="points">
+  <div class="point">
+    <span class="label">Nick Singh · Regla 28</span>
+    <p>Tener un GitHub listado es una señal de que has programado en open source y que eres consciente del control de versiones. No importa si tu portafolio web es una plantilla simple, el simple hecho de tener estos enlaces proporciona <span class="accent">validación inmediata</span> a los reclutadores de que realmente construyes cosas.</p>
+  </div>
+  <div class="point">
+    <span class="label">Escribe la URL completa</span>
+    <p>No uses hipervínculos con texto ancla como "ver portafolio". Muchos reclutadores imprimen el resume y no pueden hacer clic. Escribe siempre la URL completa: <span class="accent">github.com/tuusuario</span></p>
+  </div>
+</div>
+
+<!--
+Jobscan Tip 39: "Abstente de hipervincular detalles importantes, es mejor proporcionar las URL completas."
+-->
+
+---
+class: dark-slide
+---
+
+<span class="eyebrow">Open Source · Por Qué Importa</span>
+
+# El código que habla<br>por <span class="accent">ti</span>
+
+<div class="grid-2">
+  <div class="item">
+    <span class="label">Lo que demuestra</span>
+    <p>Que puedes colaborar en equipo y aceptar críticas constructivas sin supervisión constante. Que sabes navegar bases de código grandes y manejar procesos de code review.</p>
+  </div>
+  <div class="item">
+    <span class="label">Por qué los Engineer managers lo valoran</span>
+    <p>Un candidato con contribuciones a Open Source ya demostró que puede trabajar con desconocidos, recibir feedback en PRs y seguir convenciones de código ajenas. Eso no se puede fingir.</p>
+  </div>
+  <div class="item">
+    <span class="label">Science Projects vs Clones</span>
+    <p>Los líderes técnicos se alejan de los clones de Netflix o Spotify. Lo que buscan son <span class="accent">prototipos funcionales</span> que resuelvan problemas reales del mundo actual.</p>
+  </div>
+  <div class="item">
+    <span class="label">El README es parte del proyecto</span>
+    <p>Un proyecto destaca cuando su README explica no solo qué hace el software, sino <span class="accent">las decisiones de diseño tomadas</span>. El código sin contexto no comunica criterio.</p>
+  </div>
+</div>
+
+<!--
+Análisis Estratégico de Contratación Técnica 2026: los EMs valoran Open Source porque prueba colaboración real sin supervisión.
+-->
+
+---
+class: dark-slide
+---
+
+<span class="eyebrow">Portafolio Web · La Regla de los 2 Segundos</span>
+
+# Rápido gana, <br>siempre.
+
+<div class="ab">
+  <div class="ab-card" :class="$clicks >= 1 ? 'bad' : ''">
+    <span class="ab-tag bad" v-click>✕ Visualmente complejo</span>
+    <p>Animaciones pesadas, carga lenta, efectos de scroll. Si supera los 2 segundos de carga, el Engineering Manager ya lo descartó antes de ver una sola línea de tu trabajo.</p>
+  </div>
+  <div class="ab-card" :class="$clicks >= 1 ? 'good' : ''">
+    <span class="ab-tag good" v-click="1">✓ Sitio estático rápido</span>
+    <p>Carga instantánea, contenido claro, proyectos con links directos al repo y al demo. <span :class="$clicks >= 1 ? 'accent' : ''">Un sitio estático rápido supera siempre a uno lento y vistoso.</span></p>
+  </div>
+</div>
+
+<!--
+Reporte de Contratación Técnica 2026: "Si la carga supera los 2 segundos, el EM suele descartarlo."
+La regla de oro: un sitio estático rápido supera siempre a uno visualmente complejo pero lento.
 -->
 
 ---
