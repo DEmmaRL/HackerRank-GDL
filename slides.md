@@ -1318,6 +1318,37 @@ Pedir que saquen el teléfono para escanear el QR antes de avanzar a la última 
 -->
 
 ---
+class: dark-slide
+---
+
+<span class="eyebrow">Para seguir aprendiendo</span>
+
+# Recursos <span class="accent">recomendados</span>
+
+<div class="grid-2">
+  <div class="item">
+    <span class="label">Plantillas</span>
+    <p><span class="accent">Jake's Resume</span> — La plantilla LaTeX más recomendada en la industria. Una columna, 100% ATS-compatible.<br><a href="https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs" target="_blank">overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs</a></p>
+  </div>
+  <div class="item">
+    <span class="label">Comunidades Reddit</span>
+    <p><a href="https://www.reddit.com/r/EngineeringResumes" target="_blank"><span class="accent">r/EngineeringResumes</span></a> — Wiki con reglas de formato y verbos de acción aprobados por hiring managers.<br><a href="https://www.reddit.com/r/cscareerquestions/comments/1577dm9/the_ultimate_guide_to_writing_your_resuume_for/" target="_blank"><span class="accent">r/cscareerquestions</span></a> — Guía definitiva para resumes de estudiantes/juniors escrita por un Engineering Manager.</p>
+  </div>
+  <div class="item">
+    <span class="label">Lectura</span>
+    <p><a href="https://www.thetechresume.com" target="_blank"><span class="accent">The Tech Resume Inside Out</span></a> — Gergely Orosz. Gratis en TheTechResume.com<br><a href="https://www.nicksingh.com" target="_blank"><span class="accent">36 Resume Rules</span></a> — Nick Singh. Gratis en NickSingh.com</p>
+  </div>
+  <div class="item">
+    <span class="label">YouTube</span>
+    <p><a href="https://m.youtube.com/@Farah_Sharghi" target="_blank"><span class="accent">Farah Sharghi</span></a> — "Beat the ATS? They Lied | Ex-Google Recruiter Reveals the Resume Truth"<br><a href="https://www.youtube.com/@AmyMiller" target="_blank"><span class="accent">Amy Miller</span></a> — "The Truth About the ATS (it's not what you think)"</p>
+  </div>
+</div>
+
+<!--
+No leer la lista completa. Mencionar que el deck se compartirá en el Discord con todos los links clickeables.
+-->
+
+---
 class: terrain-slide
 layout: center
 ---
