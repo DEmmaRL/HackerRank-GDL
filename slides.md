@@ -105,7 +105,7 @@ layout: center
 </h1>
 
 <p class="sub">
-  Ningún resume genera una oferta inmediata — ese no es su rol.<br>
+  Ningún resume genera una oferta inmediata, ese no es su rol.<br>
   Su único trabajo es abrirte la puerta con los <strong>gatekeepers</strong>.
 </p>
 
@@ -245,7 +245,7 @@ transition: view-transition
       <li><strong>Bases de datos:</strong> PostgreSQL, MongoDB</li>
       <li><strong>Herramientas:</strong> AWS, Docker, Git</li>
     </ul>
-    <p style="margin-top:0.6rem; opacity:0.6">Sin barras de progreso ni calificaciones — métricas arbitrarias que no significan nada para un ingeniero.</p>
+    <p style="margin-top:0.6rem; opacity:0.6">Sin barras de progreso ni calificaciones, son métricas arbitrarias que no significan nada para un ingeniero.</p>
     <div class="rs-snippet">
       <span class="rs-snippet-label">Ejemplo · Technical Skills</span>
       <p><strong>Languages:</strong> Python, JavaScript, SQL, Java</p>
@@ -281,7 +281,7 @@ transition: view-transition
     <p>Orden cronológico inverso. Cada puesto: <span class="accent">3 a 5 bullets</span> enfocados en logros y métricas.</p>
     <div class="example" style="margin-top:0.8rem">
       <span class="label">La regla del 95%</span>
-      <p>El 95% del contenido debe enfocarse en <span class="accent">resultados</span>, no en responsabilidades. Los bullets de impacto se construyen con STAR y XYZ — los veremos en detalle en la siguiente sección.</p>
+      <p>El 95% del contenido debe enfocarse en <span class="accent">resultados</span>, no en responsabilidades. Los bullets de impacto se construyen con STAR y XYZ (los veremos en detalle en la siguiente sección).</p>
     </div>
     <div class="rs-snippet">
       <span class="rs-snippet-label">Ejemplo · Work Experience</span>
@@ -632,7 +632,7 @@ class: dark-slide
 
 <span class="eyebrow">El Filtro de Ruido · 1 / 3</span>
 
-# Lo que <span class="accent">NO</span> debe llevar — Educación
+# Lo que <span class="accent">NO</span> debe llevar : Educación
 
 <div class="noise-grid">
   <div class="noise-item" v-click>
@@ -675,7 +675,7 @@ class: dark-slide
 
 <span class="eyebrow">El Filtro de Ruido · 2 / 3</span>
 
-# Lo que <span class="accent">NO</span> debe llevar — Skills & Proyectos
+# Lo que <span class="accent">NO</span> debe llevar : Skills & Proyectos
 
 <div class="noise-grid">
   <div class="noise-item" v-click>
@@ -702,7 +702,7 @@ class: dark-slide
   <div class="noise-item" v-click>
     <span class="no">✕</span>
     <div>
-      <strong>"GitHub" como skill — usa "Git"</strong>
+      <strong>"GitHub" como skill : usa "Git"</strong>
       <p>Git es la habilidad. GitHub es el sitio web. Lo mismo aplica para Bitbucket o GitLab.</p>
     </div>
   </div>
@@ -718,7 +718,7 @@ class: dark-slide
 
 <span class="eyebrow">El Filtro de Ruido · 3 / 3</span>
 
-# Lo que <span class="accent">NO</span> debe llevar — Formato & Texto
+# Lo que <span class="accent">NO</span> debe llevar ; Formato & Texto
 
 <div class="noise-grid">
   <div class="noise-item" v-click>
@@ -827,7 +827,7 @@ class: dark-slide
 
 <span class="eyebrow">ATS · Applicant Tracking System</span>
 
-# No es más que <span class="accent">un SQL</span>.<br>
+# No es más que <span class="accent">un SQL</span>.
 
 <div class="points">
   <div class="point">
@@ -858,7 +858,7 @@ class: dark-slide
 
 <div class="grid-2">
   <div class="item">
-    <span class="label">OCR — Reconocimiento óptico</span>
+    <span class="label">OCR (Reconocimiento óptico)</span>
     <p>El ATS escanea tu PDF y extrae el texto para poblar un perfil digital en su base de datos.</p>
   </div>
   <div class="item">
@@ -985,7 +985,7 @@ class: dark-slide
     <p>Que puedes colaborar en equipo y aceptar críticas constructivas sin supervisión constante. Que sabes navegar bases de código grandes y manejar procesos de code review.</p>
   </div>
   <div class="item">
-    <span class="label">Por qué los Engineer managers lo valoran</span>
+    <span class="label">Por qué los Engineering managers lo valoran</span>
     <p>Un candidato con contribuciones a Open Source ya demostró que puede trabajar con desconocidos, recibir feedback en PRs y seguir convenciones de código ajenas. Eso no se puede fingir.</p>
   </div>
   <div class="item">
@@ -1202,15 +1202,15 @@ class: dark-slide
 
 <div class="points">
   <div class="point">
-    <span class="label">Paso 1 — Pon la JD junto a tu Master Resume</span>
+    <span class="label">Paso 1 : Pon la JD junto a tu Master Resume</span>
     <p>Identifica las 5 a 7 habilidades y palabras clave más críticas de esa vacante específica.</p>
   </div>
   <div class="point">
-    <span class="label">Paso 2 — Haz una copia y poda</span>
+    <span class="label">Paso 2 : Haz una copia y poda</span>
     <p>Elimina lo irrelevante. Reordena skills para que las que pide la JD aparezcan primero. No reescribas, recorta y reorganiza.</p>
   </div>
   <div class="point">
-    <span class="label">Paso 3 — El espejo</span>
+    <span class="label">Paso 3 : El espejo</span>
     <p>El reclutador debe ver un <span class="accent">reflejo exacto</span> de lo que está pidiendo. Si la JD dice "React y Node.js", esas palabras deben ser visibles en los primeros segundos.</p>
   </div>
 </div>
@@ -1300,7 +1300,7 @@ class: dark-slide
     </div>
     <div class="point">
       <span class="label">Crea tu cuenta en HackerRank</span>
-      <p>Regístrate con tu correo universitario y selecciona <span class="accent">Universidad de Guadalajara</span>. Empieza a construir tu perfil técnico hoy.</p>
+      <p>Regístrate y selecciona <span class="accent">Universidad de Guadalajara</span>. Empieza a construir tu perfil técnico hoy.</p>
     </div>
     <div class="point">
       <span class="label">Síguenos en Instagram</span>
@@ -1330,7 +1330,7 @@ layout: center
 
 <p class="sub">
   <span class="accent">@hackerrank.gdl</span> en Instagram<br>
-  hackerrank.com — regístrate con tu correo de la UdeG
+  hackerrank.com regístrate y apoyarás a que hagamos más y mejores eventos.
 </p>
 
 <!--
