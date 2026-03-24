@@ -880,6 +880,47 @@ Este es el momento del "plot twist" visual — mostrar en la demo cómo un resum
 -->
 
 ---
+class: dark-slide
+---
+
+<span class="eyebrow">ATS · Parsing · Formatos</span>
+
+# El formato del archivo <span class="accent">también importa</span>, en serio
+
+<div class="points">
+  <div class="point">
+    <span class="label">Cómo falla el parser</span>
+    <p>Ya lo dijimos: si el resume usa columnas, tablas o gráficos, el sistema puede romper la cronología de tu experiencia. <br>Se han documentado casos donde candidatos con <span class="accent">8 años de experiencia</span> son filtrados como si tuvieran solo 3, por inconsistencias en fechas que el parser no pudo interpretar.</p>
+  </div>
+</div>
+
+<div class="versus" style="margin-top: var(--gap-md);">
+  <div class="card">
+    <span class="label">Si envías un .PDF basado en texto:</span>
+    <ul>
+      <li>Preserva diseño y tipografía</li>
+      <li class="bad" style="opacity:0.6">Puede tener fallos en capas de texto complejas</li>
+    </ul>
+  </div>
+  <div class="card">
+    <span class="label">Si envías un .DOCX (Microsoft Word):</span>
+    <ul>
+      <li>Alta fidelidad en sistemas como Workday</li>
+      <li class="bad" style="opacity:0.6">Posibles desplazamientos de formato visual</li>
+    </ul>
+  </div>
+</div>
+
+<div class="example" style="margin-top: var(--gap-md);">
+  <span class="label">El peor caso es enviar un .PDF escaneado o basado en una imagen:</span>
+  <p>Tendrás invisibilidad total en las búsquedas pues el parser no extraerá nada.</p>
+</div>
+
+<!--
+El dato de los 8 años → 3 años suele impactar fuerte. Es el argumento más concreto contra los formatos complejos.
+-->
+
+---
 class: terrain-slide
 layout: center
 transition: fade
