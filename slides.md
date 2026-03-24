@@ -203,7 +203,7 @@ transition: view-transition
       <li>LinkedIn · <span class="accent">GitHub o portafolio</span></li>
     </ul>
     <div class="example" style="margin-top:0.8rem">
-      <span class="label">Por qué GitHub es obligatorio</span>
+      <span class="label">Por qué GitHub es altamente recomendable</span>
       <p>"Los hiring managers revisarán tu GitHub para ver si realmente programas. Estos enlaces no son opcionales."</p>
     </div>
     <div class="rs-snippet">
@@ -456,13 +456,13 @@ transition: view-transition
     <span class="label">Mantenlo breve</span>
     <ul>
       <li>Universidad · Título · Año de graduación</li>
-      <li>GPA solo si es <span class="accent">> 3.5</span> y te graduaste en los últimos 2 años</li>
+      <li>GPA solo si es <span class="accent">90 o más</span></li>
     </ul>
     <div class="example" style="margin-top:0.8rem">
       <span class="label">La regla de posición</span>
       <p>Si eres recién graduado → va <span class="accent">arriba</span>, justo después del contacto.<br>
       Si ya tienes experiencia sólida → va <span class="accent">al final</span>.<br>
-      Después de tu primer trabajo, a nadie le importa tu promedio.</p>
+      Después de ganar experiencia relevante, el GPA suele perder importancia rápidamente.</p>
     </div>
     <div class="rs-snippet">
       <span class="rs-snippet-label">Ejemplo · Education</span>
@@ -863,11 +863,11 @@ class: dark-slide
   </div>
   <div class="item">
     <span class="label">El peligro del formato complejo</span>
-    <p>Columnas múltiples, tablas y gráficos rompen el parsing. Workday, por ejemplo, <span class="accent">no puede leer resumes de más de una columna</span> mezcla toda tu información.</p>
+    <p>Columnas múltiples, tablas y gráficos rompen el parsing. Muchos parsers de ATS, incluyendo algunos de los más usados en enterprise, fallan con resumes de más de una columna y mezclan toda tu información.</p>
   </div>
   <div class="item">
     <span class="label">Lo que el reclutador ve</span>
-    <p>Después del parsing, el reclutador no ve tu PDF ve el texto extraído en su sistema. Si el parsing falló, tu experiencia aparece desordenada o incompleta.</p>
+    <p>El reclutador suele ver tanto el archivo original como los datos parseados. Si el parsing falló, tu experiencia puede aparecer desordenada o incompleta, y tu perfil queda excluido de búsquedas internas por keywords.</p>
   </div>
   <div class="item">
     <span class="label">La regla de oro</span>
@@ -910,21 +910,21 @@ class: dark-slide
     <span class="no">✕</span>
     <div>
       <strong>Mito: El ATS usa IA para darte un Match Score</strong>
-      <p>Actual mente existen la herramientas IA para recruting, sí, pero los puntajes de "80% de coincidencia" fueron inventados por empresas como JobScan para vender auditorías. Los ATS robustos son sistemas legacy de hasta 20 años. Legalmente en EE. UU., las herramientas automatizadas no pueden rechazar candidatos sin revisión humana.</p>
+      <p>Los puntajes de "80% de coincidencia" fueron inventados por empresas como JobScan para vender auditorías. Los ATS robustos son sistemas legacy de hasta 20 años. Según Farah Sharghi, regulaciones como OFCCP y EEOC desincentivan el rechazo automatizado sin revisión humana, aunque las reglas varían por jurisdicción.</p>
     </div>
   </div>
   <div class="noise-item" v-click>
     <span class="no">✕</span>
     <div>
       <strong>Mito: Los filtros booleanos te descartan automáticamente</strong>
-      <p>El único rechazo automático real son las <span class="accent">Knockout Questions</span> del formulario "¿Requiere visa?" no el contenido de tu resume.</p>
+      <p>El rechazo automático más común y directo ocurre a través de las <span class="accent">Knockout Questions</span> del formulario: autorización de trabajo, ubicación, certificaciones requeridas. No es un juicio sobre tu talento, solo son requisitos básicos.</p>
     </div>
   </div>
   <div class="noise-item" v-click>
     <span class="no">✕</span>
     <div>
       <strong>Mito: El truco de la fuente blanca</strong>
-      <p>Pegar la job description en texto blanco. Cuando el ATS hace parsing, todo el texto oculto se vuelve visible para el reclutador. Pasas de candidato a <span class="accent">riesgo de seguridad</span> en segundos. "No te hace ver experto te hace ver inseguro."</p>
+      <p>Pegar la job description en texto blanco. Cuando el ATS hace parsing, todo el texto oculto se vuelve visible para el reclutador. Pasas de candidato a <span class="accent">candidato deshonesto</span> en segundos. No te hace ver preparado, te hace ver inseguro.</p>
     </div>
   </div>
 </div>
@@ -1013,7 +1013,7 @@ class: dark-slide
 <div class="ab">
   <div class="ab-card" :class="$clicks >= 1 ? 'bad' : ''">
     <span class="ab-tag bad" v-click>✕ Visualmente complejo</span>
-    <p>Animaciones pesadas, carga lenta, efectos de scroll. <v-click at="1"><span>Si supera los 2 segundos de carga, el Engineering Manager ya lo descartó antes de ver una sola línea de tu trabajo.</span></v-click></p>
+    <p>Animaciones pesadas, carga lenta, efectos de scroll. <v-click at="1"><span>Un portafolio lento no solo frustra al reclutador, actúa como contra-indicador de tus habilidades de performance.</span></v-click></p>
   </div>
   <div class="ab-card" :class="$clicks >= 1 ? 'good' : ''">
     <span class="ab-tag good" v-click="1">✓ Sitio estático rápido</span>
@@ -1078,7 +1078,7 @@ class: dark-slide
   </div>
   <div class="ab-card" :class="$clicks >= 1 ? 'good' : ''">
     <span class="ab-tag good" v-click="1">✓ Resume enfocado</span>
-    <p>Adaptado a cada vacante. Los hiring managers son claros: <span :class="$clicks >= 1 ? 'accent' : ''">"Si aplicas a 20 trabajos diferentes, deberías tener 20 currículums diferentes."</span></p>
+    <p>Adaptado a cada vacante. Victoria Farelly, reclutadora de Uber, lo dice directo: <span :class="$clicks >= 1 ? 'accent' : ''">&ldquo;Si aplicas a 20 trabajos diferentes, deberías tener 20 currículums diferentes.&rdquo;</span> En la práctica, 2 a 5 variantes por familia de roles es lo más sostenible.</p>
   </div>
 </div>
 
