@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Regular.woff2') format('woff2');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Medium.woff2') format('woff2');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Bold.woff2') format('woff2');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Departure Mono';
+  src: url('/fonts/DepartureMono-Regular.woff2') format('woff2');
+}
+
+:root {
+  --hr-green: #05C770;
+  --hr-black: #141419;
+  --hr-white: #FFFFFF;
+  --hr-terrain: #003333;
+
+  --sl-font: 'Satoshi', sans-serif;
+  --sl-font-mono: 'Departure Mono', monospace;
+
+  --sl-color-accent-low: rgba(5, 199, 112, 0.15);
+  --sl-color-accent: var(--hr-green);
+  --sl-color-accent-high: #03a85e;
+
+  --sl-color-white: #f4f4f5;
+  --sl-color-gray-1: #e4e4e7;
+  --sl-color-gray-2: #a1a1aa;
+  --sl-color-gray-3: #52525b;
+  --sl-color-gray-4: #3f3f46;
+  --sl-color-gray-5: #27272a;
+  --sl-color-gray-6: #18181b;
+  --sl-color-black: var(--hr-black);
+}
+
+/* Slides iframe */
+.slides-embed {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 6px;
+  background: var(--hr-black);
+}
