@@ -1,5 +1,6 @@
 ---
 import Default from '@astrojs/starlight/components/PageFrame.astro';
+import SocialIcon from './SocialIcon.astro';
 
 const currentYear = new Date().getFullYear();
 ---
@@ -16,16 +17,16 @@ const currentYear = new Date().getFullYear();
 			<p>HackerRank Crew GDL · {currentYear}</p>
 			<nav aria-label="Redes sociales HackerRank Crew GDL">
 				<a class="hr-social-icon-link" href="https://www.linkedin.com/company/hackerrank-crew-gdl" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn">
-					<img src="/icons/linkedin.svg" alt="" aria-hidden="true" width="16" height="16" />
+					<SocialIcon name="linkedin" />
 				</a>
 				<a class="hr-social-icon-link" href="https://discord.com/invite/xSQN5sJP6M" target="_blank" rel="noreferrer noopener" aria-label="Discord">
-					<img src="/icons/discord.svg" alt="" aria-hidden="true" width="16" height="16" />
+					<SocialIcon name="discord" />
 				</a>
 				<a class="hr-social-icon-link" href="http://instagram.com/hackerrank.gdl/" target="_blank" rel="noreferrer noopener" aria-label="Instagram">
-					<img src="/icons/instagram.svg" alt="" aria-hidden="true" width="16" height="16" />
+					<SocialIcon name="instagram" />
 				</a>
 				<a class="hr-social-icon-link" href="https://www.facebook.com/people/HackerRank-Crew-GDL/61580737153824/" target="_blank" rel="noreferrer noopener" aria-label="Facebook">
-					<img src="/icons/facebook.svg" alt="" aria-hidden="true" width="16" height="16" />
+					<SocialIcon name="facebook" />
 				</a>
 			</nav>
 		</div>

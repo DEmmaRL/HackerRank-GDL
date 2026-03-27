@@ -97,11 +97,15 @@
   align-items: center;
   justify-content: center;
   border-radius: 999px;
-  color: var(--sl-color-gray-2);
+  color: #C0C3C8;
   border: 1px solid var(--sl-color-gray-5);
   background: transparent;
   text-decoration: none;
   transition: color 120ms ease, border-color 120ms ease, background-color 120ms ease;
+}
+
+:root[data-theme="light"] .hr-social-icon-link {
+  color: #03a85e;
 }
 
 .hr-social-icon-link svg {
