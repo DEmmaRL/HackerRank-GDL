@@ -1,0 +1,25 @@
+---
+import Default from '@astrojs/starlight/components/PageFrame.astro';
+
+const currentYear = new Date().getFullYear();
+---
+
+<div class="hr-app-shell">
+	<Default>
+		<slot />
+		<slot name="header" slot="header" />
+		<slot name="sidebar" slot="sidebar" />
+	</Default>
+
+	<footer class="hr-global-footer" role="contentinfo" aria-label="HackerRank Crew GDL footer">
+		<div class="hr-global-footer__inner">
+			<p>HackerRank Crew GDL · {currentYear}</p>
+			<nav aria-label="Redes sociales HackerRank Crew GDL">
+				<a href="https://www.linkedin.com/company/hackerrank-crew-gdl" target="_blank" rel="noreferrer noopener">LinkedIn</a>
+				<a href="https://discord.com/invite/xSQN5sJP6M" target="_blank" rel="noreferrer noopener">Discord</a>
+				<a href="http://instagram.com/hackerrank.gdl/" target="_blank" rel="noreferrer noopener">Instagram</a>
+				<a href="https://www.facebook.com/people/HackerRank-Crew-GDL/61580737153824/" target="_blank" rel="noreferrer noopener">Facebook</a>
+			</nav>
+		</div>
+	</footer>
+</div>

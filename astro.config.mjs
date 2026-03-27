@@ -6,6 +6,9 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'HackerRank Crew GDL',
+			components: {
+				PageFrame: './src/components/PageFrame.astro',
+			},
 			logo: {
 				light: './public/logos/logo-dark-narrow.svg',
 				dark: './public/logos/logo-light-narrow.svg',
