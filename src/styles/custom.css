@@ -27,18 +27,20 @@
   --sl-font: 'Satoshi', sans-serif;
   --sl-font-mono: 'Departure Mono', monospace;
 
-  --sl-color-accent-low: rgba(5, 199, 112, 0.15);
-  --sl-color-accent: var(--hr-green);
-  --sl-color-accent-high: #03a85e;
+  /* Accent — dark mode */
+  --sl-color-accent-low: #0a3d25;
+  --sl-color-accent: #05C770;
+  --sl-color-accent-high: #7fffc4;
+}
 
-  --sl-color-white: #f4f4f5;
-  --sl-color-gray-1: #e4e4e7;
-  --sl-color-gray-2: #a1a1aa;
-  --sl-color-gray-3: #52525b;
-  --sl-color-gray-4: #3f3f46;
-  --sl-color-gray-5: #27272a;
-  --sl-color-gray-6: #18181b;
-  --sl-color-black: var(--hr-black);
+:root[data-theme="dark"] {
+  --sl-color-black: #141419;
+}
+
+:root[data-theme="light"] {
+  --sl-color-accent-low: rgba(5, 199, 112, 0.2);
+  --sl-color-accent: #03a85e;
+  --sl-color-accent-high: #027a44;
 }
 
 /* Slides iframe */
