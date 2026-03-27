@@ -5,7 +5,7 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'HackerRank Crew GDL',
+			title: 'Home',
 			components: {
 				PageFrame: './src/components/PageFrame.astro',
 			},
