@@ -58,6 +58,12 @@
   flex-direction: column;
 }
 
+@media (min-width: 72rem) {
+  :root {
+    --sl-content-width: clamp(40rem, 70vw, 70rem);
+  }
+}
+
 .hr-app-shell > :first-child {
   flex: 1 0 auto;
 }
@@ -72,6 +78,12 @@
 @media (min-width: 50rem) {
   [data-has-sidebar] .hr-global-footer {
     margin-inline-start: var(--sl-sidebar-width);
+  }
+}
+
+@media (min-width: 72rem) {
+  [data-has-sidebar][data-has-toc] .hr-global-footer {
+    margin-inline-end: calc(var(--sl-sidebar-width) + (100% - var(--sl-content-width) - var(--sl-sidebar-width)) / 2);
   }
 }
 
