@@ -14,7 +14,10 @@ export default defineConfig({
 				dark: './public/logos/logo-light-narrow.svg',
 				replacesTitle: true,
 			},
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/hackerrank-gdl' }],
+			social: [
+				{ icon: 'github', label: 'GitHub', href: 'https://github.com/hackerrank-gdl' },
+				{ icon: 'youtube', label: 'YouTube', href: 'https://www.youtube.com/channel/UCU1GwiscWovSP0xS5xBL2iA' },
+			],
 			customCss: ['./src/styles/custom.css'],
 			sidebar: [
 				{

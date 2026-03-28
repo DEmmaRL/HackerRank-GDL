@@ -43,6 +43,15 @@
   --sl-color-accent-high: #027a44;
 }
 
+/* Theme-aware Hero Logo */
+:root[data-theme="light"] .hero img {
+  content: url('/src/assets/logo-dark-wide.svg');
+}
+
+:root[data-theme="dark"] .hero img {
+  content: url('/src/assets/logo-light-wide.svg');
+}
+
 /* Slides iframe */
 .slides-embed {
   width: 100%;
@@ -100,8 +109,8 @@
 }
 
 .hr-social-icon-link {
-  width: 2rem;
-  height: 2rem;
+  width: 2.75rem;
+  height: 2.75rem;
   flex-shrink: 0;
   display: inline-flex;
   align-items: center;
@@ -119,8 +128,8 @@
 }
 
 .hr-social-icon-link svg {
-  width: 1rem;
-  height: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
   fill: currentColor;
 }
 
