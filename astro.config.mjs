@@ -20,7 +20,7 @@ export default defineConfig({
 				{
 					label: 'Sesiones',
 					items: [
-						{ label: 'Resume Building 101', slug: 'sessions/resume-building-101' },
+						{ label: 'Cómo construir un resume de clase mundial', slug: 'sessions/construir-un-resume-de-clase-mundial' },
 					],
 				},
 			],
