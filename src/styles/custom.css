@@ -58,12 +58,6 @@
   flex-direction: column;
 }
 
-@media (min-width: 72rem) {
-  :root {
-    --sl-content-width: clamp(40rem, 70vw, 70rem);
-  }
-}
-
 .hr-app-shell > :first-child {
   flex: 1 0 auto;
 }
@@ -159,4 +153,34 @@
     align-items: center;
     text-align: center;
   }
+}
+
+/* Fix for right sidebar (Table of Contents) text wrapping */
+starlight-toc {
+  width: 100%;
+  overflow: visible !important;
+}
+
+starlight-toc a {
+  white-space: normal !important;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  display: block !important;
+}
+
+starlight-toc span {
+  display: inline !important;
+  word-break: break-word;
+}
+
+/* Fix for right sidebar text wrapping */
+[data-current-page-nav] a {
+  white-space: normal !important;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Ensure sidebar nav has proper width */
+[data-current-page-nav] {
+  overflow: visible !important;
 }
