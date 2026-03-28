@@ -33,6 +33,42 @@
   --sl-color-accent-high: #7fffc4;
 }
 
+/* Smooth transition for theme switching */
+:root {
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+
+body {
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+
+/* Targeting Starlight's internal containers and components for a complete fade effect */
+article, 
+.main-frame, 
+header, 
+footer,
+aside,
+.hr-global-footer,
+.card,
+starlight-toc,
+.sidebar-content,
+.mobile-menu-active,
+hr,
+input,
+button {
+  transition: 
+    background-color 0.4s ease-in-out, 
+    color 0.4s ease-in-out, 
+    border-color 0.4s ease-in-out,
+    box-shadow 0.4s ease-in-out,
+    fill 0.4s ease-in-out;
+}
+
+/* Apply transition to specific Starlight interactive elements */
+.sl-link, .sl-flex, a {
+  transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+}
+
 :root[data-theme="dark"] {
   --sl-color-black: #141419;
 }
@@ -43,13 +79,20 @@
   --sl-color-accent-high: #027a44;
 }
 
-/* Theme-aware Hero Logo */
+/* Theme-aware Hero Logo with a slight fade effect */
 :root[data-theme="light"] .hero img {
   content: url('/src/assets/logo-dark-wide.svg');
+  animation: fadeInLogo 0.5s ease-in-out;
 }
 
 :root[data-theme="dark"] .hero img {
   content: url('/src/assets/logo-light-wide.svg');
+  animation: fadeInLogo 0.5s ease-in-out;
+}
+
+@keyframes fadeInLogo {
+  from { opacity: 0.5; }
+  to { opacity: 1; }
 }
 
 /* Slides iframe */
