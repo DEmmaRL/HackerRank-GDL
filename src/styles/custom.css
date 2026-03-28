@@ -81,14 +81,8 @@
   }
 }
 
-@media (min-width: 72rem) {
-  [data-has-sidebar][data-has-toc] .hr-global-footer {
-    margin-inline-end: calc(var(--sl-sidebar-width) + (100% - var(--sl-content-width) - var(--sl-sidebar-width)) / 2);
-  }
-}
-
 .hr-global-footer__inner {
-  max-width: 90rem;
+  max-width: var(--sl-content-width);
   margin: 0 auto;
   padding: 1rem var(--sl-content-pad-x);
   display: flex;
@@ -97,6 +91,8 @@
   gap: 1rem;
   font-size: 0.9rem;
   color: var(--sl-color-gray-2);
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .hr-global-footer__inner p {
