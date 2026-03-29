@@ -1,0 +1,34 @@
+---
+import type { Props } from '@astrojs/starlight/props';
+
+const { data } = Astro.locals.starlightRoute.entry;
+const { title = data.title, tagline, actions = [] } = data.hero || {};
+---
+
+<div class="hero">
+	<div class="hero-content">
+		<h1 class="hero-title">{title}</h1>
+		{tagline && <p class="hero-tagline">{tagline}</p>}
+		{actions.length > 0 && (
+			<div class="hero-actions">
+				{actions.map((action) => (
+					<a 
+						href={action.link} 
+						class={`hero-btn hero-btn-${action.variant || 'primary'}`}
+					>
+						{action.text}
+					</a>
+				))}
+			</div>
+		)}
+	</div>
+	<div class="hero-logo-section">
+		<img 
+			src="/src/assets/logo-light-wide.svg" 
+			alt="HackerRank Logo" 
+			class="hero-logo"
+		/>
+		<div class="hero-divider"></div>
+		<p class="hero-crew-label">CREW GDL</p>
+	</div>
+</div>

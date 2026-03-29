@@ -207,6 +207,142 @@ button {
   }
 }
 
+/* Custom Hero Styles */
+.hero {
+  display: grid;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.5rem, calc(1.5rem + 1vw), 2rem);
+  align-items: center;
+}
+
+.hero-title {
+  font-size: clamp(var(--sl-text-3xl), calc(0.25rem + 5vw), var(--sl-text-6xl));
+  line-height: var(--sl-line-height-headings);
+  font-weight: 600;
+  color: var(--sl-color-white);
+  margin: 0;
+  max-width: 50ch;
+}
+
+.hero-tagline {
+  font-size: clamp(var(--sl-text-base), calc(0.0625rem + 2vw), var(--sl-text-xl));
+  color: var(--sl-color-gray-2);
+  margin: 0;
+  line-height: 1.6;
+  max-width: 50ch;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero-btn {
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 999rem;
+  display: inline-flex;
+  font-size: var(--sl-text-sm);
+  gap: 0.5em;
+  line-height: 1.1875;
+  outline-offset: 0.25rem;
+  padding: 0.4375rem 1.125rem;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.hero-btn-primary {
+  background: var(--sl-color-text-accent);
+  border-color: var(--sl-color-text-accent);
+  color: var(--sl-color-black);
+}
+
+.hero-btn-primary:hover {
+  color: var(--sl-color-black);
+}
+
+.hero-btn-secondary {
+  border-color: inherit;
+  color: var(--sl-color-white);
+}
+
+.hero-btn-secondary:hover {
+  border-color: var(--hr-green);
+}
+
+.hero-logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: min(70%, 20rem);
+  margin-inline: auto;
+}
+
+.hero-logo {
+  width: 100%;
+  height: auto;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.hero-divider {
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--hr-green),
+    transparent
+  );
+}
+
+.hero-crew-label {
+  font-family: var(--sl-font-mono);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--hr-green);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+@media (min-width: 50rem) {
+  .hero {
+    grid-template-columns: 7fr 4fr;
+    gap: 3%;
+    padding-block: clamp(2.5rem, calc(1rem + 10vmin), 10rem);
+    text-align: start;
+  }
+
+  .hero-content {
+    align-items: flex-start;
+  }
+
+  .hero-actions {
+    justify-content: flex-start;
+  }
+
+  .hero-logo-section {
+    order: 2;
+    width: min(100%, 25rem);
+  }
+
+  .hero-btn {
+    font-size: var(--sl-text-base);
+    padding: 0.9375rem 1.25rem;
+  }
+}
+
 /* Fix for right sidebar (Table of Contents) text wrapping */
 starlight-toc {
   width: 100%;

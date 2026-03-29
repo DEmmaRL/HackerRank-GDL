@@ -8,6 +8,7 @@ export default defineConfig({
 			title: 'Home',
 			components: {
 				PageFrame: './src/components/PageFrame.astro',
+				Hero: './src/components/Hero.astro',
 			},
 			logo: {
 				light: './public/logos/logo-dark-narrow.svg',
