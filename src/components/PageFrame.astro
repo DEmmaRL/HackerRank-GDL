@@ -1,6 +1,9 @@
 ---
 import Default from '@astrojs/starlight/components/PageFrame.astro';
 import SocialIcon from './SocialIcon.astro';
+import { inject } from '@vercel/analytics';
+
+inject();
 
 const currentYear = new Date().getFullYear();
 ---
