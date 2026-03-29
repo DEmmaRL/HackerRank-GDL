@@ -284,15 +284,18 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
-  width: min(70%, 20rem);
+  width: 20rem;
   margin-inline: auto;
   order: -1;
+  transform: scale(clamp(0.35, 0.05vw + 0.28, 1));
+  transform-origin: center;
+  will-change: transform;
 }
 
 .hero-logo {
   width: 100%;
   height: auto;
+  margin-bottom: 10px;
   transition: opacity 0.5s ease-in-out;
 }
 
@@ -308,13 +311,51 @@ button {
 }
 
 .hero-crew-label {
-  font-family: var(--sl-font-mono);
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  color: var(--hr-green);
+  font-family: var(--sl-font);
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 0em;
+  color: var(--hr-white);
   margin: 0;
+  padding: 0;
   text-transform: uppercase;
+  -webkit-text-stroke: 1.25px var(--hr-white);
+  paint-order: stroke fill;
+}
+
+.hero-crew-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  align-self: flex-end;
+}
+
+.hero-cursor {
+  width: 1.4rem;
+  height: 2.5rem;
+  background: var(--hr-green);
+  animation: blink 1s step-end infinite;
+}
+
+@media (max-width: 1110px) and (min-width: 801px) {
+  /* Removed - using continuous scale */
+}
+
+@media (max-width: 800px) and (min-width: 491px) {
+  /* Removed - using continuous scale */
+}
+
+@media (max-width: 490px) {
+  /* Removed - using continuous scale */
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
 }
 
 @media (min-width: 50rem) {
@@ -335,7 +376,6 @@ button {
 
   .hero-logo-section {
     order: 2;
-    width: min(100%, 25rem);
   }
 
   .hero-btn {
