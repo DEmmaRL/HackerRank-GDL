@@ -387,7 +387,7 @@ starlight-toc span {
 	display: inline-flex;
 	align-items: center;
 	margin-top: 4px;
-  padding-right: 24px; /* Space for cursor */
+  padding-right: 26px; /* Space for cursor */
 	align-self: flex-end; /* Align to the right of the parent container */
 }
 
@@ -399,7 +399,7 @@ starlight-toc span {
 	font-weight: 900;
 	letter-spacing: 0.04em;
   margin-top: 2px; /* Adjust for vertical alignment */
-	line-height: 1;
+  line-height: 1;
 }
 
 /* Base text (White with Stroke) */
@@ -431,6 +431,7 @@ starlight-toc span {
 	display: flex;
 	align-items: center;
 	z-index: 2;
+	margin-left: 2px; /* Gap between text and cursor */
 	/* No transition for mechanical pop effect */
 	pointer-events: none;
 }
