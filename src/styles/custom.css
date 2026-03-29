@@ -309,12 +309,12 @@ button {
   font-family: var(--sl-font);
   font-size: 2.5rem;
   font-weight: 900;
-  letter-spacing: 0em;
+  letter-spacing: 0.04em;
   color: var(--hr-white);
   margin: 0;
   padding: 0;
   text-transform: uppercase;
-  -webkit-text-stroke: 1.25px var(--hr-white);
+  -webkit-text-stroke: 1.75px var(--hr-white);
   paint-order: stroke fill;
 }
 
@@ -326,9 +326,10 @@ button {
 }
 
 .hero-cursor {
-  width: 1.4rem;
-  height: 2.5rem;
+  width: 24px;
+  height: 32px;
   background: var(--hr-green);
+  margin-bottom: 2px;
   animation: blink 1s step-end infinite;
 }
 
