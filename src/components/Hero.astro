@@ -1,5 +1,6 @@
 ---
 import type { Props } from '@astrojs/starlight/props';
+import Typewriter from './Typewriter.astro';
 
 const { data } = Astro.locals.starlightRoute.entry;
 const { title = data.title, tagline, actions = [] } = data.hero || {};
@@ -29,9 +30,6 @@ const { title = data.title, tagline, actions = [] } = data.hero || {};
 			class="hero-logo"
 		/>
 		<div class="hero-divider"></div>
-		<div class="hero-crew-wrapper">
-			<p class="hero-crew-label">Crew GDL</p>
-			<span class="hero-cursor"></span>
-		</div>
+		<Typewriter text="Crew GDL" />
 	</div>
 </div>

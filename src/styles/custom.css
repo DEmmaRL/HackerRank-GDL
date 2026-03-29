@@ -307,31 +307,37 @@ button {
 
 .hero-crew-label {
   font-family: var(--sl-font);
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: 900;
   letter-spacing: 0.04em;
   color: var(--sl-color-white);
   margin: 0;
   padding: 0;
   line-height: 1;
-  -webkit-text-stroke: 2px var(--sl-color-white);
+  -webkit-text-stroke: 1.8px var(--sl-color-white);
   paint-order: stroke fill;
+  display: inline-block;
 }
 
 .hero-crew-wrapper {
   display: flex;
   align-items: center;
   gap: 0.25rem;
-  margin-top: 8px;
+  margin-top: 4px;
   align-self: flex-end;
 }
 
 .hero-cursor {
-  width: 24px;
-  height: 33px;
+  display: inline-block;
+  width: 28px;
+  height: 34px;
+  margin-top: 6px;
   background: var(--hr-green);
-  margin-top: 0px;
-  animation: blink 1s step-end infinite;
+  vertical-align: bottom;
+}
+
+.hero-cursor.blink {
+  animation: blink 0.8s step-end infinite 2.5s;
 }
 
 @media (max-width: 1110px) and (min-width: 801px) {
