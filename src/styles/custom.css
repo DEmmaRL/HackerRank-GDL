@@ -313,6 +313,8 @@ button {
   color: var(--hr-white);
   margin: 0;
   padding: 0;
+  line-height: 1;
+  margin-top: 2px;
   text-transform: uppercase;
   -webkit-text-stroke: 1.75px var(--hr-white);
   paint-order: stroke fill;
