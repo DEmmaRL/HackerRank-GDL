@@ -16,9 +16,9 @@ const {
 	delay = 500, 
 	speed = 120, 
 	eraseSpeed = 60,
-	minWait = 2000,
-	maxWait = 5000,
-	charsPerLine = 12
+	minWait = 5000,
+	maxWait = 10000,
+	charsPerLine = 14 // Increased to 15
 } = Astro.props;
 
 /**
@@ -94,10 +94,25 @@ const ghostContent = Array(maxLines).fill(' ').join('\n');
 			let phraseIndex = 0;
 			let charIndex = 0;
 			let isDeleting = false;
+			let usedPhrases = new Set<number>();
 
 			if (prefersReducedMotion) {
 				typedEl.textContent = phrases[0];
 				return;
+			}
+
+			function getRandomPhrase() {
+				if (usedPhrases.size === phrases.length) {
+					usedPhrases.clear();
+				}
+				
+				let randomIndex;
+				do {
+					randomIndex = Math.floor(Math.random() * phrases.length);
+				} while (usedPhrases.has(randomIndex));
+				
+				usedPhrases.add(randomIndex);
+				return randomIndex;
 			}
 
 			function updateDisplay(currentPhrase: string, index: number, cursorChar: string, isBlinking = false) {
@@ -120,7 +135,7 @@ const ghostContent = Array(maxLines).fill(' ').join('\n');
 						setTimeout(tick, eraseSpeed);
 					} else {
 						isDeleting = false;
-						phraseIndex = (phraseIndex + 1) % phrases.length;
+						phraseIndex = getRandomPhrase();
 						setTimeout(tick, 500);
 					}
 				} else {

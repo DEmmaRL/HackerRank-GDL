@@ -395,7 +395,7 @@ starlight-toc span {
 	display: inline-grid;
 	grid-template-areas: "content";
 	font-family: var(--sl-font);
-	font-size: 2.8rem;
+	font-size: 2.7rem;
 	font-weight: 900;
 	letter-spacing: 0.04em;
 	line-height: 1.2;
@@ -433,7 +433,7 @@ starlight-toc span {
 .typewriter-inline-cursor {
 	display: inline-block;
 	background: var(--hr-green);
-	width: 28px;
+	width: 24px;
 	height: 34px;
 	text-align: center;
 	vertical-align: middle;
