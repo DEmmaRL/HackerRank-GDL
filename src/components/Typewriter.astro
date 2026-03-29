@@ -8,12 +8,16 @@ interface Props {
 const { text, delay = 500, speed = 120 } = Astro.props;
 ---
 
-<div class="typewriter-wrapper">
-	<div class="typewriter-container">
-		<!-- Invisible text to reserve space and prevent jumps -->
-		<span class="typewriter-ghost" aria-hidden="true">{text}</span>
+<div class="typewriter-wrapper" data-speed={speed} data-delay={delay}>
+	<!-- Accessible text for screen readers -->
+	<span class="hr-sr-only">{text}</span>
+	
+	<!-- Visual animation hidden from screen readers -->
+	<div class="typewriter-container" aria-hidden="true">
+		<!-- Invisible ghost text to reserve layout space -->
+		<span class="typewriter-ghost">{text}</span>
 		
-		<!-- Revealed text -->
+		<!-- Dynamically revealed text -->
 		<span class="typewriter-typed"></span>
 
 		<!-- Dynamic cursor -->
@@ -26,54 +30,68 @@ const { text, delay = 500, speed = 120 } = Astro.props;
 
 <script>
 	function initTypewriter() {
-		const container = document.querySelector('.typewriter-container');
-		if (!container) return;
-
-		const typedEl = container.querySelector('.typewriter-typed') as HTMLElement;
-		const cursorWrapper = container.querySelector('.typewriter-cursor-wrapper') as HTMLElement;
-		const cursorLetter = container.querySelector('.typewriter-cursor-letter') as HTMLElement;
-		const ghost = container.querySelector('.typewriter-ghost') as HTMLElement;
+		const wrappers = document.querySelectorAll('.typewriter-wrapper');
 		
-		const text = ghost.textContent || '';
-		const delay = 500;
-		const speed = 120;
-		
-		let index = 0;
+		wrappers.forEach(wrapper => {
+			const container = wrapper.querySelector('.typewriter-container');
+			if (!container) return;
 
-		// Initial clean state
-		typedEl.textContent = '';
-		cursorLetter.textContent = '';
-		cursorWrapper.classList.remove('blink');
-		cursorWrapper.style.transform = 'translateX(0)';
+			const typedEl = container.querySelector('.typewriter-typed') as HTMLElement;
+			const cursorWrapper = container.querySelector('.typewriter-cursor-wrapper') as HTMLElement;
+			const cursorLetter = container.querySelector('.typewriter-cursor-letter') as HTMLElement;
+			const ghost = container.querySelector('.typewriter-ghost') as HTMLElement;
+			
+			const text = ghost.textContent || '';
+			const speed = parseInt(wrapper.getAttribute('data-speed') || '120');
+			const delay = parseInt(wrapper.getAttribute('data-delay') || '500');
+			
+			// Detect prefers-reduced-motion for A11y
+			const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-		function type() {
-			if (index < text.length) {
-				// 1. The already 'fixed' text (white) is everything up to the current index
-				typedEl.textContent = text.slice(0, index);
-				
-				// 2. Position the cursor at the end of that text
-				const currentWidth = typedEl.getBoundingClientRect().width;
-				cursorWrapper.style.transform = `translateX(${currentWidth}px)`;
-				
-				// 3. The letter inside the cursor is the NEXT one (the one at current index)
-				cursorLetter.textContent = text[index];
+			let index = 0;
 
-				index++;
-				setTimeout(type, speed);
-			} else {
-				// Upon finishing, fix the entire text and clean the cursor
+			// Reset to clean state
+			typedEl.textContent = '';
+			cursorLetter.textContent = '';
+			cursorWrapper.classList.remove('blink');
+			cursorWrapper.style.transform = 'translateX(0)';
+
+			// Skip animation if user prefers reduced motion
+			if (prefersReducedMotion) {
 				typedEl.textContent = text;
-				const finalWidth = typedEl.getBoundingClientRect().width;
-				cursorWrapper.style.transform = `translateX(${finalWidth}px)`;
-				cursorLetter.textContent = '';
-				cursorWrapper.classList.add('blink');
+				cursorWrapper.style.display = 'none';
+				return;
 			}
-		}
 
-		setTimeout(type, delay);
+			function type() {
+				if (index < text.length) {
+					// Show text up to current point
+					typedEl.textContent = text.slice(0, index);
+					
+					// Move cursor to current end of text
+					const currentWidth = typedEl.getBoundingClientRect().width;
+					cursorWrapper.style.transform = `translateX(${currentWidth}px)`;
+					
+					// Show next character inside the cursor
+					cursorLetter.textContent = text[index];
+
+					index++;
+					setTimeout(type, speed);
+				} else {
+					// Finalize: fix full text and clean cursor
+					typedEl.textContent = text;
+					const finalWidth = typedEl.getBoundingClientRect().width;
+					cursorWrapper.style.transform = `translateX(${finalWidth}px)`;
+					cursorLetter.textContent = '';
+					cursorWrapper.classList.add('blink');
+				}
+			}
+
+			setTimeout(type, delay);
+		});
 	}
 
-	// Initialize on first load and on Starlight page swaps
+	// Run on initial load and on Starlight page transitions
 	initTypewriter();
 	document.addEventListener('astro:after-swap', initTypewriter);
 </script>
