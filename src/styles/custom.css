@@ -392,7 +392,7 @@ starlight-toc span {
 
 .typewriter-container {
 	position: relative;
-	display: grid; /* Stack ghost and typed using grid */
+	display: inline-grid;
 	grid-template-areas: "content";
 	font-family: var(--sl-font);
 	font-size: 2.8rem;
@@ -400,11 +400,12 @@ starlight-toc span {
 	letter-spacing: 0.04em;
 	line-height: 1.2;
 	text-align: right;
+  min-width: 1px;
 }
 
 .typewriter-ghost,
 .typewriter-typed {
-	grid-area: content; /* Both elements occupy the same grid area */
+	grid-area: content;
 	font-family: inherit;
 	font-size: inherit;
 	font-weight: inherit;
