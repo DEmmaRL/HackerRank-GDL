@@ -305,41 +305,6 @@ button {
   background: var(--hr-green);
 }
 
-.hero-crew-label {
-  font-family: var(--sl-font);
-  font-size: 2.8rem;
-  font-weight: 900;
-  letter-spacing: 0.04em;
-  color: var(--sl-color-white);
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  -webkit-text-stroke: 1.8px var(--sl-color-white);
-  paint-order: stroke fill;
-  display: inline-block;
-}
-
-.hero-crew-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-  margin-top: 4px;
-  align-self: flex-end;
-}
-
-.hero-cursor {
-  display: inline-block;
-  width: 28px;
-  height: 34px;
-  margin-top: 6px;
-  background: var(--hr-green);
-  vertical-align: bottom;
-}
-
-.hero-cursor.blink {
-  animation: blink 0.8s step-end infinite 2.5s;
-}
-
 @media (max-width: 1110px) and (min-width: 801px) {
   /* Removed - using continuous scale */
 }
@@ -415,4 +380,79 @@ starlight-toc span {
 /* Ensure sidebar nav has proper width */
 [data-current-page-nav] {
   overflow: visible !important;
+}
+
+/* Typewriter Component Styles */
+.typewriter-wrapper {
+	display: inline-flex;
+	align-items: center;
+	margin-top: 4px;
+}
+
+.typewriter-container {
+	position: relative;
+	display: inline-block;
+	font-family: var(--sl-font);
+	font-size: 2.8rem;
+	font-weight: 900;
+	letter-spacing: 0.04em;
+	line-height: 1;
+}
+
+/* Base text (White with Stroke) */
+.typewriter-ghost,
+.typewriter-typed {
+	-webkit-text-stroke: 1.8px var(--sl-color-white);
+	paint-order: stroke fill;
+	color: var(--sl-color-white);
+	white-space: pre;
+}
+
+.typewriter-ghost {
+	visibility: hidden;
+	user-select: none;
+}
+
+.typewriter-typed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.typewriter-cursor-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	z-index: 2;
+	/* No transition for mechanical pop effect */
+	pointer-events: none;
+}
+
+.typewriter-cursor-block {
+	position: absolute;
+	width: 0.85em; /* Adjusted for precision */
+	height: 1.1em;
+	background: var(--hr-green);
+	z-index: -1;
+}
+
+/* Letter inside cursor (Cut-out effect using current background) */
+.typewriter-cursor-letter {
+	display: inline-block;
+	width: 0.85em;
+	text-align: center;
+	color: var(--sl-color-bg); /* Use background color for cut-out effect */
+	-webkit-text-stroke: 0;
+	font-weight: 950;
+	position: relative;
+	z-index: 3;
+}
+
+.typewriter-cursor-wrapper.blink .typewriter-cursor-block {
+	animation: blink 0.8s step-end infinite;
+	width: 12px;
 }

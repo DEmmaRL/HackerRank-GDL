@@ -1,0 +1,79 @@
+---
+interface Props {
+	text: string;
+	delay?: number;
+	speed?: number;
+}
+
+const { text, delay = 500, speed = 120 } = Astro.props;
+---
+
+<div class="typewriter-wrapper">
+	<div class="typewriter-container">
+		<!-- Invisible text to reserve space and prevent jumps -->
+		<span class="typewriter-ghost" aria-hidden="true">{text}</span>
+		
+		<!-- Revealed text -->
+		<span class="typewriter-typed"></span>
+
+		<!-- Dynamic cursor -->
+		<div class="typewriter-cursor-wrapper">
+			<div class="typewriter-cursor-block"></div>
+			<span class="typewriter-cursor-letter"></span>
+		</div>
+	</div>
+</div>
+
+<script>
+	function initTypewriter() {
+		const container = document.querySelector('.typewriter-container');
+		if (!container) return;
+
+		const typedEl = container.querySelector('.typewriter-typed') as HTMLElement;
+		const cursorWrapper = container.querySelector('.typewriter-cursor-wrapper') as HTMLElement;
+		const cursorLetter = container.querySelector('.typewriter-cursor-letter') as HTMLElement;
+		const ghost = container.querySelector('.typewriter-ghost') as HTMLElement;
+		
+		const text = ghost.textContent || '';
+		const delay = 500;
+		const speed = 120;
+		
+		let index = 0;
+
+		// Initial clean state
+		typedEl.textContent = '';
+		cursorLetter.textContent = '';
+		cursorWrapper.classList.remove('blink');
+		cursorWrapper.style.transform = 'translateX(0)';
+
+		function type() {
+			if (index < text.length) {
+				// 1. The already 'fixed' text (white) is everything up to the current index
+				typedEl.textContent = text.slice(0, index);
+				
+				// 2. Position the cursor at the end of that text
+				const currentWidth = typedEl.getBoundingClientRect().width;
+				cursorWrapper.style.transform = `translateX(${currentWidth}px)`;
+				
+				// 3. The letter inside the cursor is the NEXT one (the one at current index)
+				cursorLetter.textContent = text[index];
+
+				index++;
+				setTimeout(type, speed);
+			} else {
+				// Upon finishing, fix the entire text and clean the cursor
+				typedEl.textContent = text;
+				const finalWidth = typedEl.getBoundingClientRect().width;
+				cursorWrapper.style.transform = `translateX(${finalWidth}px)`;
+				cursorLetter.textContent = '';
+				cursorWrapper.classList.add('blink');
+			}
+		}
+
+		setTimeout(type, delay);
+	}
+
+	// Initialize on first load and on Starlight page swaps
+	initTypewriter();
+	document.addEventListener('astro:after-swap', initTypewriter);
+</script>
