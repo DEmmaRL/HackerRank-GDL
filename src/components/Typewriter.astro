@@ -48,9 +48,10 @@ function wrapText(str: string, limit: number) {
 
 const allPhrases = [text, ...phrases.filter(p => p !== text)].map(p => wrapText(p, charsPerLine));
 
-// Calculate master ghost for height stability (max lines)
+// Calculate master ghost: Max lines across ALL phrases
 const maxLines = Math.max(...allPhrases.map(p => p.split('\n').length));
-const ghostContent = Array(maxLines).fill('').join('\n');
+// Create a ghost string with enough newlines to reserve the maximum vertical space
+const ghostContent = Array(maxLines).fill(' ').join('\n');
 ---
 
 <div 
@@ -65,10 +66,10 @@ const ghostContent = Array(maxLines).fill('').join('\n');
 	<span class="hr-sr-only">{text}</span>
 	
 	<div class="typewriter-container" aria-hidden="true">
-		<!-- Ghost only ensures the height for the max number of lines -->
+		<!-- Ghost reserves the maximum vertical space permanently -->
 		<pre class="typewriter-ghost">{ghostContent}</pre>
 		
-		<!-- Typed text will be right-aligned and contain the full phrase (parts hidden) -->
+		<!-- Typed text is stacked on top, right-aligned -->
 		<pre class="typewriter-typed"></pre>
 	</div>
 </div>
@@ -104,7 +105,8 @@ const ghostContent = Array(maxLines).fill('').join('\n');
 				const untypedPart = currentPhrase.slice(index + (isDeleting ? 0 : 1));
 				const cursorClass = isBlinking ? 'typewriter-inline-cursor blink' : 'typewriter-inline-cursor';
 				
-				// We keep the full string length so it stays right-aligned, but hide the untyped part
+				// Keep full string length for stable right alignment
+				// Untyped part is invisible but occupies space
 				typedEl.innerHTML = `${typedPart}<span class="${cursorClass}">${cursorChar}</span><span style="visibility:hidden">${untypedPart}</span>`;
 			}
 
@@ -125,7 +127,6 @@ const ghostContent = Array(maxLines).fill('').join('\n');
 					if (charIndex < currentPhrase.length) {
 						let charToShow = currentPhrase[charIndex];
 						
-						// Handle newline jump
 						if (charToShow === '\n') {
 							charIndex++;
 							charToShow = currentPhrase[charIndex] || '';
@@ -135,7 +136,6 @@ const ghostContent = Array(maxLines).fill('').join('\n');
 						charIndex++;
 						setTimeout(tick, speed);
 					} else {
-						// Finish typing
 						updateDisplay(currentPhrase, charIndex, '', true);
 						isDeleting = true;
 						const waitTime = Math.floor(Math.random() * (maxWait - minWait + 1)) + minWait;
