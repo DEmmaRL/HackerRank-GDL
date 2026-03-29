@@ -1,12 +1,13 @@
 ---
 interface Props {
-	text: string; // Initial text
-	phrases?: string[]; // List of phrases to cycle through
-	delay?: number; // Delay before starting the first animation
-	speed?: number; // Typing speed
-	eraseSpeed?: number; // Backspacing speed
-	minWait?: number; // Minimum wait time before changing phrase
-	maxWait?: number; // Maximum wait time before changing phrase
+	text: string;
+	phrases?: string[];
+	delay?: number;
+	speed?: number;
+	eraseSpeed?: number;
+	minWait?: number;
+	maxWait?: number;
+	charsPerLine?: number;
 }
 
 const { 
@@ -16,11 +17,40 @@ const {
 	speed = 120, 
 	eraseSpeed = 60,
 	minWait = 2000,
-	maxWait = 5000 
+	maxWait = 5000,
+	charsPerLine = 12
 } = Astro.props;
 
-// Combine initial text with phrases if they are not already there
-const allPhrases = [text, ...phrases.filter(p => p !== text)];
+/**
+ * Smart Word Wrap: Breaks at spaces or forces break if word exceeds limit.
+ */
+function wrapText(str: string, limit: number) {
+	const words = str.split(' ');
+	let lines: string[] = [];
+	let currentLine = '';
+
+	words.forEach(word => {
+		if ((currentLine + (currentLine ? ' ' : '') + word).length > limit) {
+			if (currentLine) lines.push(currentLine);
+			let remainingWord = word;
+			while (remainingWord.length > limit) {
+				lines.push(remainingWord.substring(0, limit));
+				remainingWord = remainingWord.substring(limit);
+			}
+			currentLine = remainingWord;
+		} else {
+			currentLine += (currentLine ? ' ' : '') + word;
+		}
+	});
+	if (currentLine) lines.push(currentLine);
+	return lines.join('\n');
+}
+
+const allPhrases = [text, ...phrases.filter(p => p !== text)].map(p => wrapText(p, charsPerLine));
+
+// Calculate master ghost for height stability (max lines)
+const maxLines = Math.max(...allPhrases.map(p => p.split('\n').length));
+const ghostContent = Array(maxLines).fill('').join('\n');
 ---
 
 <div 
@@ -32,22 +62,14 @@ const allPhrases = [text, ...phrases.filter(p => p !== text)];
 	data-min-wait={minWait}
 	data-max-wait={maxWait}
 >
-	<!-- Accessible text for screen readers (using the initial text) -->
 	<span class="hr-sr-only">{text}</span>
 	
-	<!-- Visual animation hidden from screen readers -->
 	<div class="typewriter-container" aria-hidden="true">
-		<!-- Invisible ghost text to reserve layout space (using the longest phrase to avoid jumps) -->
-		<span class="typewriter-ghost">{allPhrases.reduce((a, b) => a.length > b.length ? a : b)}</span>
+		<!-- Ghost only ensures the height for the max number of lines -->
+		<pre class="typewriter-ghost">{ghostContent}</pre>
 		
-		<!-- Dynamically revealed text -->
-		<span class="typewriter-typed"></span>
-
-		<!-- Dynamic cursor -->
-		<div class="typewriter-cursor-wrapper">
-			<div class="typewriter-cursor-block"></div>
-			<span class="typewriter-cursor-letter"></span>
-		</div>
+		<!-- Typed text will be right-aligned and contain the full phrase (parts hidden) -->
+		<pre class="typewriter-typed"></pre>
 	</div>
 </div>
 
@@ -56,13 +78,9 @@ const allPhrases = [text, ...phrases.filter(p => p !== text)];
 		const wrappers = document.querySelectorAll('.typewriter-wrapper');
 		
 		wrappers.forEach(wrapper => {
-			const container = wrapper.querySelector('.typewriter-container');
-			if (!container) return;
+			const typedEl = wrapper.querySelector('.typewriter-typed') as HTMLElement;
+			if (!typedEl) return;
 
-			const typedEl = container.querySelector('.typewriter-typed') as HTMLElement;
-			const cursorWrapper = container.querySelector('.typewriter-cursor-wrapper') as HTMLElement;
-			const cursorLetter = container.querySelector('.typewriter-cursor-letter') as HTMLElement;
-			
 			const phrases = JSON.parse(wrapper.getAttribute('data-phrases') || '[]');
 			const speed = parseInt(wrapper.getAttribute('data-speed') || '120');
 			const eraseSpeed = parseInt(wrapper.getAttribute('data-erase-speed') || '60');
@@ -76,63 +94,52 @@ const allPhrases = [text, ...phrases.filter(p => p !== text)];
 			let charIndex = 0;
 			let isDeleting = false;
 
-			// Reset to clean state
-			typedEl.textContent = '';
-			cursorLetter.textContent = '';
-			cursorWrapper.classList.remove('blink');
-
 			if (prefersReducedMotion) {
 				typedEl.textContent = phrases[0];
-				cursorWrapper.style.display = 'none';
 				return;
 			}
 
-			function getRandomWait() {
-				return Math.floor(Math.random() * (maxWait - minWait + 1)) + minWait;
+			function updateDisplay(currentPhrase: string, index: number, cursorChar: string, isBlinking = false) {
+				const typedPart = currentPhrase.slice(0, index);
+				const untypedPart = currentPhrase.slice(index + (isDeleting ? 0 : 1));
+				const cursorClass = isBlinking ? 'typewriter-inline-cursor blink' : 'typewriter-inline-cursor';
+				
+				// We keep the full string length so it stays right-aligned, but hide the untyped part
+				typedEl.innerHTML = `${typedPart}<span class="${cursorClass}">${cursorChar}</span><span style="visibility:hidden">${untypedPart}</span>`;
 			}
 
 			function tick() {
 				const currentPhrase = phrases[phraseIndex];
 				
 				if (isDeleting) {
-					// Erasing logic
-					charIndex--;
-					typedEl.textContent = currentPhrase.slice(0, charIndex);
-					
-					// Position cursor at the end of current visible text
-					const currentWidth = typedEl.getBoundingClientRect().width;
-					cursorWrapper.style.transform = `translateX(${currentWidth}px)`;
-					
-					// During deletion, show the letter being deleted or keep it empty
-					cursorLetter.textContent = currentPhrase[charIndex] || '';
-					cursorWrapper.classList.remove('blink');
-
-					if (charIndex <= 0) {
+					if (charIndex > 0) {
+						charIndex--;
+						updateDisplay(currentPhrase, charIndex, currentPhrase[charIndex] || '');
+						setTimeout(tick, eraseSpeed);
+					} else {
 						isDeleting = false;
 						phraseIndex = (phraseIndex + 1) % phrases.length;
-						setTimeout(tick, 500); // Small pause before typing next
-						return;
+						setTimeout(tick, 500);
 					}
-					
-					setTimeout(tick, eraseSpeed);
 				} else {
-					// Typing logic
-					typedEl.textContent = currentPhrase.slice(0, charIndex);
-					
-					const currentWidth = typedEl.getBoundingClientRect().width;
-					cursorWrapper.style.transform = `translateX(${currentWidth}px)`;
-					
 					if (charIndex < currentPhrase.length) {
-						cursorLetter.textContent = currentPhrase[charIndex];
-						cursorWrapper.classList.remove('blink');
+						let charToShow = currentPhrase[charIndex];
+						
+						// Handle newline jump
+						if (charToShow === '\n') {
+							charIndex++;
+							charToShow = currentPhrase[charIndex] || '';
+						}
+
+						updateDisplay(currentPhrase, charIndex, charToShow);
 						charIndex++;
 						setTimeout(tick, speed);
 					} else {
-						// Phrase complete
-						cursorLetter.textContent = '';
-						cursorWrapper.classList.add('blink');
+						// Finish typing
+						updateDisplay(currentPhrase, charIndex, '', true);
 						isDeleting = true;
-						setTimeout(tick, getRandomWait());
+						const waitTime = Math.floor(Math.random() * (maxWait - minWait + 1)) + minWait;
+						setTimeout(tick, waitTime);
 					}
 				}
 			}

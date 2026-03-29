@@ -385,30 +385,38 @@ starlight-toc span {
 /* Typewriter Component Styles */
 .typewriter-wrapper {
 	display: inline-flex;
-	align-items: center;
-	margin-top: 2px;
-  padding-right: 26px; /* Space for cursor */
-	align-self: flex-end; /* Align to the right of the parent container */
+	flex-direction: column;
+	margin-top: 4px;
+	align-self: flex-end;
 }
 
 .typewriter-container {
 	position: relative;
-	display: inline-block;
+	display: grid; /* Stack ghost and typed using grid */
+	grid-template-areas: "content";
 	font-family: var(--sl-font);
 	font-size: 2.8rem;
 	font-weight: 900;
 	letter-spacing: 0.04em;
-  margin-top: 2px; /* Adjust for vertical alignment */
-  line-height: 1;
+	line-height: 1.2;
+	text-align: right;
 }
 
-/* Base text (White with Stroke) */
 .typewriter-ghost,
 .typewriter-typed {
+	grid-area: content; /* Both elements occupy the same grid area */
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	letter-spacing: inherit;
+	line-height: inherit;
+	margin: 0;
+	padding: 0;
 	-webkit-text-stroke: 1.8px var(--sl-color-white);
 	paint-order: stroke fill;
 	color: var(--sl-color-white);
 	white-space: pre;
+	text-align: right;
 }
 
 .typewriter-ghost {
@@ -417,48 +425,31 @@ starlight-toc span {
 }
 
 .typewriter-typed {
-	position: absolute;
-	top: 0;
-	left: 0;
 	z-index: 1;
 }
 
-.typewriter-cursor-wrapper {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	z-index: 2;
-	margin-left: 2px; /* Gap between text and cursor */
-	/* No transition for mechanical pop effect */
-	pointer-events: none;
-}
-
-.typewriter-cursor-block {
-	position: absolute;
-	width: 0.85em; /* Adjusted for precision */
-	height: 1.1em;
-	background: var(--hr-green);
-	z-index: -1;
-}
-
-/* Letter inside cursor (Cut-out effect using current background) */
-.typewriter-cursor-letter {
+/* New Inline Cursor */
+.typewriter-inline-cursor {
 	display: inline-block;
-	width: 0.85em;
+	background: var(--hr-green);
+	width: 28px;
+	height: 34px;
 	text-align: center;
-	color: var(--sl-color-bg); /* Use background color for cut-out effect */
+	vertical-align: middle;
+	margin-left: 2px;
+	line-height: 34px;
+	color: var(--sl-color-bg);
 	-webkit-text-stroke: 0;
 	font-weight: 950;
 	position: relative;
-	z-index: 3;
+	top: -2px;
 }
 
-.typewriter-cursor-wrapper.blink .typewriter-cursor-block {
-	animation: blink 1.2s step-end infinite;
-	width: 24px; /* Final width */
-	height: 34px; /* Final height */
-	margin-top: 2px; /* Offset to center vertically or match design */
+.typewriter-inline-cursor.blink {
+	animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+	0%, 50% { opacity: 1; }
+	51%, 100% { opacity: 0; }
 }
