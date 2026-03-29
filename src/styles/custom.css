@@ -387,6 +387,8 @@ starlight-toc span {
 	display: inline-flex;
 	align-items: center;
 	margin-top: 4px;
+  padding-right: 24px; /* Space for cursor */
+	align-self: flex-end; /* Align to the right of the parent container */
 }
 
 .typewriter-container {
@@ -396,6 +398,7 @@ starlight-toc span {
 	font-size: 2.8rem;
 	font-weight: 900;
 	letter-spacing: 0.04em;
+  margin-top: 2px; /* Adjust for vertical alignment */
 	line-height: 1;
 }
 
@@ -454,5 +457,7 @@ starlight-toc span {
 
 .typewriter-cursor-wrapper.blink .typewriter-cursor-block {
 	animation: blink 0.8s step-end infinite;
-	width: 12px;
+	width: 24px; /* Final width */
+	height: 34px; /* Final height */
+	margin-top: 2px; /* Offset to center vertically or match design */
 }
