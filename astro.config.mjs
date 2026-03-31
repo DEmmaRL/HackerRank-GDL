@@ -6,6 +6,17 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'Home',
+			defaultLocale: 'es',
+			locales: {
+				es: {
+					label: 'ES',
+					lang: 'es',
+				},
+				en: {
+					label: 'EN',
+					lang: 'en',
+				},
+			},
 			components: {
 				PageFrame: './src/components/PageFrame.astro',
 				Hero: './src/components/Hero.astro',
@@ -23,9 +34,10 @@ export default defineConfig({
 			sidebar: [
 				{
 					label: 'Sesiones',
-					items: [
-						{ label: 'Cómo construir un resume de clase mundial', slug: 'sessions/construir-un-resume-de-clase-mundial' },
-					],
+					translations: {
+						en: 'Sessions',
+					},
+					autogenerate: { directory: 'sessions' },
 				},
 			],
 		}),
