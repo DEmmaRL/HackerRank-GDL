@@ -7,7 +7,7 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'HackerRank Crew GDL',
-			description: '¡La primera célula del programa HackerRank Campus Crew en México! Con sede en Guadalajara. Nuestro objetivo es empoderar a estudiantes de Guadalajara con las herramientas, mentoría y conocimientos para navegar con éxito la transición de la academia al mundo profesional tecnológico.',
+			description: 'Primera comunidad oficial de HackerRank Crew en México. Impulsamos talento con mentoría, talleres y recursos para crecer en tech.',
 			defaultLocale: 'es',
 			locales: {
 				es: {
