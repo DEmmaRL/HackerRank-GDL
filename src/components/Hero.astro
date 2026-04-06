@@ -1,6 +1,7 @@
 ---
 import type { Props } from '@astrojs/starlight/props';
 import Typewriter from './Typewriter.astro';
+import logoLightWide from '../assets/logo-light-wide.svg';
 
 const { data } = Astro.locals.starlightRoute.entry;
 const { title = data.title, tagline, actions = [] } = data.hero || {};
@@ -99,7 +100,7 @@ const phrases = lang === 'en' ? phrasesEN : phrasesES;
 	</div>
 	<div class="hero-logo-section">
 		<img 
-			src="/src/assets/logo-light-wide.svg" 
+			src={logoLightWide.src}
 			alt="HackerRank Logo" 
 			class="hero-logo"
 		/>

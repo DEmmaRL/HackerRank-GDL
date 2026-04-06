@@ -8,9 +8,8 @@ export default defineConfig({
 		starlight({
 			title: 'HackerRank Crew GDL',
 			description: 'Primera comunidad oficial de HackerRank Crew en México. Impulsamos talento con mentoría, talleres y recursos para crecer en tech.',
-			defaultLocale: 'es',
 			locales: {
-				es: {
+				root: {
 					label: 'ES',
 					lang: 'es',
 				},
