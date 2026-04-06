@@ -4,15 +4,15 @@ description: Aprende a crear un resume que destaque ante reclutadores técnicos 
 ---
 
 import { Badge } from '@astrojs/starlight/components';
+import SlidesEmbed from '../../../components/SlidesEmbed.astro';
 
 <Badge text="Career" variant="tip" /> <Badge text="Mar 2026" variant="note" />
 
 ## Presentación
-<iframe
-  class="slides-embed"
+<SlidesEmbed
   src="https://resume-building-101.vercel.app"
   title="Resume Building 101 - HackerRank Crew GDL"
-  allowfullscreen
+  buttonLabel="Pantalla completa"
 />
 
 ## Sobre esta sesión
