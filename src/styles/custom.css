@@ -31,6 +31,13 @@
   --sl-color-accent-low: #0a3d25;
   --sl-color-accent: #05C770;
   --sl-color-accent-high: #7fffc4;
+
+  /* Slides embed controls (WCAG compliant) */
+  --hr-slides-btn-size: 2.75rem; /* 44px minimum WCAG target */
+  --hr-slides-icon-size: 1.375rem; /* 22px minimum WCAG icon size */
+  --hr-slides-toolbar-padding-v: 0.35rem;
+  --hr-slides-toolbar-padding-h: 0.45rem;
+  --hr-slides-btn-radius: 0.5rem;
 }
 
 /* Smooth transition for theme switching */
@@ -106,17 +113,18 @@ button {
 .slides-embed-toolbar {
   display: flex;
   justify-content: flex-end;
-  padding: 0.5rem;
+  padding: var(--hr-slides-toolbar-padding-v) var(--hr-slides-toolbar-padding-h);
   border-bottom: 1px solid var(--sl-color-gray-5);
   background: color-mix(in srgb, var(--sl-color-bg) 84%, var(--hr-terrain) 16%);
+  align-items: center;
 }
 
 .slides-embed-fullscreen-btn {
   position: relative;
-  width: 2.25rem;
-  height: 2.25rem;
+  width: var(--hr-slides-btn-size);
+  height: var(--hr-slides-btn-size);
   border: 1px solid var(--sl-color-gray-4);
-  border-radius: 0.65rem;
+  border-radius: var(--hr-slides-btn-radius);
   background: transparent;
   color: var(--sl-color-text);
   padding: 0;
@@ -127,8 +135,8 @@ button {
 }
 
 .slides-embed-fullscreen-icon {
-  width: 1.05rem;
-  height: 1.05rem;
+  width: var(--hr-slides-icon-size);
+  height: var(--hr-slides-icon-size);
   fill: currentColor;
 }
 
