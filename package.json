@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "description": "Official website for HackerRank Crew GDL built with Astro and Starlight.",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
