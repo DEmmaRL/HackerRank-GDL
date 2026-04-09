@@ -1,10 +1,12 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
 	site: 'https://www.hackerrankcrewgdl.com',
 	integrations: [
+		sitemap(),
 		starlight({
 			title: 'HackerRank Crew GDL',
 			description: 'Primera comunidad oficial de HackerRank Crew en México. Impulsamos talento con mentoría, talleres y recursos para crecer en tech.',

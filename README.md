@@ -1,49 +1,54 @@
-# Starlight Starter Kit: Basics
+# HackerRank Crew GDL Website
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+Official website for HackerRank Crew GDL, a students-for-students community focused on growth, employability, and technical excellence.
 
-```
-pnpm create astro@latest -- --template starlight
-```
+## Stack
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- Astro
+- Starlight
+- TypeScript
 
-## 🚀 Project Structure
+## Quick start
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
-
-```
-.
-├── public/
-├── src/
-│   ├── assets/
-│   ├── content/
-│   │   └── docs/
-│   └── content.config.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
+```bash
+pnpm install
+pnpm dev
 ```
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+## Scripts
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+```bash
+pnpm dev      # Local development server
+pnpm build    # Production build
+pnpm preview  # Preview production build
+```
 
-Static assets, like favicons, can be placed in the `public/` directory.
+## Project structure
 
-## 🧞 Commands
+```text
+src/
+	components/      # Reusable Astro components
+	content/docs/    # Documentation and sessions content (ES/EN)
+	styles/          # Global and component styles
+```
 
-All commands are run from the root of the project, from a terminal:
+## Accessibility and UX notes
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+- Bilingual support (ES/EN).
+- Embedded presentations with fullscreen mode.
+- Visual adjustments focused on contrast and usability.
 
-## 👀 Want to learn more?
+## Repository model
 
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+This repository is public and licensed under Apache License 2.0.
+
+Before contributing, review:
+
+- CONTRIBUTING.md
+- CODE_OF_CONDUCT.md
+- SECURITY.md
+- PRIVACY.md
+
+## License
+
+Apache-2.0. See LICENSE.
