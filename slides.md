@@ -28,24 +28,78 @@ transition: fade
 
 <span class="eyebrow" style="color: var(--hr-black)">Sección 1</span>
 
-# Título de Sección
+# Evolución de la Entrevista Técnica: <br>¿Qué estamos evaluando hoy?
+
+<!--
+Lo que la audiencia va a aprender: ¿Por qué ya no basta con saber programar para pasar una entrevista?
+-->
 
 ---
 class: dark-slide
 ---
 
-<span class="eyebrow">points</span>
+<span class="eyebrow">¿Qué es realmente?</span>
 
-# Componente <span class="accent">points</span>
+# ¿Qué es una <span class="accent">Technical Interview</span>?
 
 <div class="points">
   <div class="point">
-    <span class="label">Label del punto</span>
-    <p>Descripción del punto con posible <span class="accent">acento</span> en palabras clave.</p>
+    <span class="label">Definición formal</span>
+    <p>Proceso de contratación estructurado que utilizan las empresas para roles tecnológicos: desarrolladores, científicos de datos, DevOps, etc.</p>
   </div>
+  <div class="point" v-click>
+    <span class="label">Una simulación de trabajo real</span>
+    <p>La empresa busca crear una <span class="accent">simulación de cómo sería trabajar contigo</span> todos los días. Evalúan cómo desglosas un problema complejo, tu conocimiento de algoritmos, toma de decisiones y cómo te comunicas bajo presión.</p>
+  </div>
+</div>
+
+<!--
+Énfasis: en la universidad te evalúan para ver si llegas a la respuesta correcta. Aquí evalúan el proceso.
+-->
+
+---
+class: dark-slide
+---
+
+<span class="eyebrow">Contexto histórico · Era 1 · 1990–2005</span>
+
+# La Era de los <span class="accent">Acertijos</span>
+
+<div class="points">
   <div class="point">
-    <span class="label">Otro punto</span>
-    <p>Más contenido aquí.</p>
+    <span class="label">El mito de la genialidad</span>
+    <p>Influenciado por Microsoft y Google, te encerraban en una sala y preguntaban: "¿Cuántas pelotas de golf caben en un Boeing 747?" o "¿Por qué las tapas de las alcantarillas son redondas?" La creencia: si resuelves esto, eres un genio creativo.</p>
+  </div>
+  <div class="point" v-click>
+    <span class="label">El dato duro</span>
+    <p>Google analizó sus propios datos de contratación y descubrió algo vergonzoso: la correlación entre resolver acertijos y ser un buen empleado era <span class="accent">cero</span>. Laszlo Bock (SVP People Ops) admitió en The New York Times que eran "una completa pérdida de tiempo" y servían principalmente para hacer que el entrevistador se sintiera inteligente.</p>
+  </div>
+</div>
+
+<!--
+Fun fact: la pregunta del blender de Google aparece en la película "The Internship" (2013) y en un video de Veritasium. "You're shrunken to the size of a nickel and dropped into a blender. What do you do?"
+-->
+
+---
+class: dark-slide
+---
+
+<span class="eyebrow">Contexto histórico · Era 2 · 2006–2018</span>
+
+# La Era de la <span class="accent">Pizarra Blanca</span>
+
+<div class="points">
+  <div class="point">
+    <span class="label">El péndulo al extremo opuesto</span>
+    <p>Para corregir los acertijos, la industria comenzó a pedir a los ingenieros que escribieran código de algoritmos complejos <span class="accent">a mano en una pizarra</span>, frente a un panel de jueces.</p>
+  </div>
+  <div class="point" v-click>
+    <span class="label">El dato duro</span>
+    <p>Un estudio de la Universidad Estatal de Carolina del Norte y Microsoft Research midió la carga cognitiva con rastreadores oculares. Descubrieron que el rendimiento de un programador se <span class="accent">reduce a la mitad</span> simplemente por el hecho de ser observado.</p>
+  </div>
+  <div class="point" v-click>
+    <span class="label">La conclusión del estudio</span>
+    <p>Las empresas no estaban contratando a los mejores programadores, sino a los que mejor toleraban la <span class="accent">ansiedad de desempeño social</span>.</p>
   </div>
 </div>
 
@@ -53,26 +107,18 @@ class: dark-slide
 class: dark-slide
 ---
 
-<span class="eyebrow">grid-2 + item</span>
+<span class="eyebrow">Contexto histórico · Era 3 · 2019–2023</span>
 
-# Componente <span class="accent">grid-2</span>
+# La Era del <span class="accent">Grinding</span>
 
-<div class="grid-2">
-  <div class="item">
-    <span class="label">Item 1</span>
-    <p>Contenido del item con border-left accent.</p>
+<div class="points">
+  <div class="point">
+    <span class="label">Las plataformas automatizadas</span>
+    <p>Las empresas comenzaron a usar LeetCode y HackerRank para filtrar a millones de candidatos. Esto creó una cultura donde los estudiantes pasaban meses memorizando cientos de patrones algorítmicos abstractos.</p>
   </div>
-  <div class="item">
-    <span class="label">Item 2</span>
-    <p>Otro item en la segunda columna.</p>
-  </div>
-  <div class="item">
-    <span class="label">Item 3</span>
-    <p>Tercera celda del grid.</p>
-  </div>
-  <div class="item">
-    <span class="label">Item 4</span>
-    <p>Cuarta celda del grid.</p>
+  <div class="point" v-click>
+    <span class="label">El dato duro</span>
+    <p>Según el Developer Skills Report de HackerRank 2025, el <span class="accent">62%</span> de los desarrolladores sentía que este proceso no evaluaba su capacidad real para hacer el trabajo, y el <span class="accent">73%</span> reportaba niveles de ansiedad que arruinaban su rendimiento.</p>
   </div>
 </div>
 
@@ -80,110 +126,19 @@ class: dark-slide
 class: dark-slide
 ---
 
-<span class="eyebrow">versus</span>
+<span class="eyebrow">Contexto histórico · Era 4 · 2024–2026</span>
 
-# Componente <span class="accent">versus</span>
+# La Era de la <span class="accent">Colaboración Humano-IA</span>
 
-<div class="versus">
-  <div class="card">
-    <span class="label">Opción A</span>
-    <ul>
-      <li>Característica uno</li>
-      <li>Característica dos</li>
-      <li>Característica tres</li>
-    </ul>
+<div class="points">
+  <div class="point">
+    <span class="label">Las reglas volvieron a cambiar</span>
+    <p>Con la llegada de GitHub Copilot, Cursor y Claude, si un candidato puede resolver el algoritmo de mayor dificultad de LeetCode en 5 segundos usando IA, la memorización de código ya no sirve para evaluar talento.</p>
   </div>
-  <div class="card">
-    <span class="label">Opción B</span>
-    <ul>
-      <li>Característica uno</li>
-      <li>Característica dos</li>
-      <li>Característica tres</li>
-    </ul>
+  <div class="point" v-click>
+    <span class="label">El nuevo estándar</span>
+    <p>La industria pasó de evaluar la sintaxis a evaluar el <span class="accent">Juicio de Ingeniería (Engineering Judgment)</span>: saber qué construir, por qué importa y si el resultado es correcto.</p>
   </div>
-</div>
-
----
-class: light-slide
----
-
-<span class="eyebrow">A vs B</span>
-
-# Componente <span class="accent">ab</span> con v-click
-
-<div class="ab">
-  <div class="ab-card" :class="$clicks >= 1 ? 'bad' : ''">
-    <span class="ab-tag bad" v-click>✕ Opción mala</span>
-    <p>Descripción de la opción incorrecta o menos recomendada.</p>
-  </div>
-  <div class="ab-card" :class="$clicks >= 1 ? 'good' : ''">
-    <span class="ab-tag good" v-click="1">✓ Opción buena</span>
-    <p>Descripción de la opción correcta con <span :class="$clicks >= 1 ? 'accent' : ''">métrica o dato clave</span>.</p>
-  </div>
-</div>
-
----
-class: dark-slide
----
-
-<span class="eyebrow">noise-grid</span>
-
-# Componente <span class="accent">noise-grid</span>
-
-<div class="noise-grid">
-  <div class="noise-item" v-click>
-    <span class="no">✕</span>
-    <div>
-      <strong>Cosa a evitar</strong>
-      <p>Explicación de por qué esto es un problema o antipatrón.</p>
-    </div>
-  </div>
-  <div class="noise-item" v-click>
-    <span class="no">✕</span>
-    <div>
-      <strong>Otra cosa a evitar</strong>
-      <p>Más contexto sobre este punto.</p>
-    </div>
-  </div>
-  <div class="noise-item" v-click>
-    <span class="no">✕</span>
-    <div>
-      <strong>Un tercer antipatrón</strong>
-      <p>Descripción adicional.</p>
-    </div>
-  </div>
-</div>
-
----
-class: dark-slide
----
-
-<span class="eyebrow">methods</span>
-
-# Componente <span class="accent">methods</span>
-
-<div class="methods">
-  <div class="method">
-    <div class="method-name">Método A</div>
-    <div class="method-formula">
-      <span>Paso 1</span><span class="sep">→</span>
-      <span>Paso 2</span><span class="sep">→</span>
-      <span class="accent">Resultado</span>
-    </div>
-    <p>Descripción del método y cuándo usarlo.</p>
-  </div>
-  <div class="method">
-    <div class="method-name">Método B</div>
-    <div class="method-formula mono">
-      Acción <span class="accent">X</span>, medida por <span class="accent">Y</span>, haciendo <span class="accent">Z</span>
-    </div>
-    <p>Descripción del segundo método.</p>
-  </div>
-</div>
-
-<div class="example">
-  <span class="label">Ejemplo aplicado</span>
-  <p>Aquí va un ejemplo concreto usando uno de los métodos anteriores.</p>
 </div>
 
 ---
@@ -191,16 +146,96 @@ class: terrain-slide
 layout: center
 ---
 
-<span class="eyebrow">Cita · Fuente</span>
+<span class="eyebrow">Vikas Aditya · CEO de HackerEarth, 2026</span>
 
-<h1 style="font-size: 2rem; line-height: 1.4; max-width: 40rem;">
-  "Texto de la cita que quieres destacar con <span class="accent">énfasis</span> en la parte más importante."
+<h1 style="font-size: 1.7rem; line-height: 1.5; max-width: 44rem;">
+  "Las empresas ya no están evaluando la fluidez en la sintaxis; están evaluando el <span class="accent">juicio</span>. En un mundo asistido por IA donde la generación de código se ha comoditizado, el valor reside en saber <span class="accent">qué construir, por qué importa</span> y si el resultado es correcto."
 </h1>
 
-<p class="sub">
-  Contexto adicional o explicación de la cita.<br>
-  Segunda línea de contexto si es necesario.
-</p>
+---
+class: dark-slide
+---
+
+<span class="eyebrow">Subtema 2 · Memorización vs. Supervisión</span>
+
+# La <span class="accent">Paradoja</span> de la Productividad con IA
+
+<div class="grid-2">
+  <div class="item" v-click>
+    <span class="label">El nuevo baseline (2024–2026)</span>
+    <p>El <span class="accent">92%</span> de los desarrolladores ya usa IA en su trabajo diario. GitHub Copilot genera el <span class="accent">46%</span> de todo el código escrito.</p>
+  </div>
+  <div class="item" v-click>
+    <span class="label">El cuello de botella cambió</span>
+    <p>Escribir código es rápido. Ser ingeniero es más difícil. Los devs pasan un <span class="accent">68% más de tiempo</span> revisando código de IA y un <span class="accent">67% más</span> debuggeando implementaciones complejas.</p>
+  </div>
+  <div class="item" v-click>
+    <span class="label">Lo que ya no impresiona</span>
+    <p>Memorizar algoritmos de LeetCode. Una IA lo hace en segundos.</p>
+  </div>
+  <div class="item" v-click>
+    <span class="label">Lo que sí evalúan hoy</span>
+    <p><span class="accent">Orquestación:</span> ¿Puedes leer código generado por IA, encontrar el fallo de seguridad, entender si la arquitectura escala y arreglarlo? El código es barato; el entendimiento profundo del sistema es caro.</p>
+  </div>
+</div>
+
+---
+class: dark-slide
+---
+
+<span class="eyebrow">Subtema 3 · Startup vs. Big Tech</span>
+
+# Dos mundos, <span class="accent">dos manuales</span> de juego
+
+<div class="versus">
+  <div class="card">
+    <span class="label">Big Tech · FAANG</span>
+    <ul>
+      <li>Optimizan para evitar <strong>falsos positivos</strong> — prefieren rechazar a un buen candidato antes que contratar a uno malo</li>
+      <li>5–7 rondas: algoritmos complejos, diseño de sistemas para millones de usuarios, rondas conductuales estructuradas</li>
+      <li>Un código ineficiente a su escala <span class="accent">cuesta millones</span></li>
+    </ul>
+  </div>
+  <div class="card">
+    <span class="label">Startups · Series A–C</span>
+    <ul>
+      <li>Optimizan para evitar <strong>falsos negativos</strong> — rechazar al ingeniero que lanzaría el producto esta semana puede ser existencial</li>
+      <li>2–3 rondas: pruebas prácticas, take-homes, bugs en tiempo real. Rara vez invertirás un árbol binario</li>
+      <li>Buscan: <span class="accent">agilidad, versatilidad, mentalidad Full-Stack</span></li>
+    </ul>
+  </div>
+</div>
+
+<!--
+Error novato: prepararse igual para cualquier empresa. La tolerancia al error es completamente distinta.
+-->
+
+---
+class: dark-slide
+---
+
+<span class="eyebrow">Cierre · Sección 1</span>
+
+# ¿Por qué ya no basta con <span class="accent">saber programar</span>?
+
+<div class="points">
+  <div class="point">
+    <span class="label">El dato que lo cambia todo</span>
+    <p>Un estudio de Leadership IQ rastreó 20,000 nuevas contrataciones: el <span class="accent">46% fracasa</span> en sus primeros 18 meses.</p>
+  </div>
+  <div class="point" v-click>
+    <span class="label">¿Por qué fracasan?</span>
+    <p>El <span class="accent">89%</span> por deficiencias en habilidades blandas: no saber recibir feedback, falta de adaptabilidad, inteligencia emocional. Solo el <span class="accent">11%</span> por falta de habilidades técnicas.</p>
+  </div>
+  <div class="point" v-click>
+    <span class="label">La conclusión de 2026</span>
+    <p>El código lo escribe una máquina. La <span class="accent">comunicación técnica, el diseño de arquitecturas escalables y la colaboración bajo ambigüedad</span> son habilidades exclusivamente humanas — y esas te dan el trabajo.</p>
+  </div>
+</div>
+
+<!--
+Transición: "Entonces, si las empresas ya saben que memorizar código no sirve... ¿qué es exactamente lo que te van a pedir que hagas en tu próxima entrevista? Eso es lo que vemos a continuación."
+-->
 
 ---
 class: dark-slide
