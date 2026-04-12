@@ -1,6 +1,6 @@
 ---
 theme: default
-title: HackerRank Crew GDL — Template
+title: The Technical Interview | HackerRank Crew GDL
 transition: slide-left
 drawings:
   persist: false
@@ -12,12 +12,12 @@ class: dark-slide
   <span class="hero-gdl"><span class="accent">CREW</span> GDL</span>
 </div>
 
-<span class="eyebrow">Template · Component Reference</span>
+<span class="eyebrow">Diego Rivera · demmarl</span>
 
-# Título de la <span class="accent">presentación</span>
+# The Technical Interview | <span class="accent">Metodologías, preparación y psicología</span>
 
 <!--
-Slide de portada. Reemplaza el título y el eyebrow.
+Portada. Esperar a que el público se acomode antes de avanzar.
 -->
 
 ---
