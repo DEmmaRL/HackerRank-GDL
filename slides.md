@@ -382,6 +382,49 @@ Fuentes: "Universal Technical Interview Signal Research" · "How To Handle Hints
 -->
 
 ---
+class: terrain-slide
+---
+
+<span class="eyebrow">Formato 2</span>
+
+# Take-home Assignment: El README <span class="accent">importa</span> 
+
+<div class="grid-2 mt-8 gap-8">
+  <div class="points">
+    <div class="point">
+      <span class="label">El escenario</span>
+      <p>Construye una pequeña app o API. Tienes entre 2 y 7 días. Sin nadie observando.</p>
+    </div>
+    <div class="point">
+      <span class="label">El error más común</span>
+      <p>Pensar que el código que funciona es suficiente. Es solo el <span class="accent">50% de la calificación</span>. La otra mitad es tu madurez técnica.</p>
+    </div>
+    <p class="sub" style="margin-top: 0.75rem">
+      <a href="https://eliya-b.medium.com/make-your-take-home-coding-assignment-stand-out-477f6f1efa81" target="_blank">Make your Take-Home stand out</a> · <a href="https://prepfully.com/interview-guides/software-engineer-interview-rubric-2026" target="_blank">Interview Rubric 2026</a>
+      <br>
+      <a href="https://github.com/DEmmaRL/lola-challenge" target="_blank">Challenge Example</a>
+    </p>
+  </div>
+  <div class="card">
+    <span class="label">Lo que sí o sí debe incluir</span>
+    <ul>
+      <li>README con instrucciones de instalación, variables de entorno y <span class="accent">decisiones técnicas tomadas</span></li>
+      <li>Pruebas unitarias (tests)</li>
+      <li>Código limpio y estructura coherente</li>
+    </ul>
+    
+  </div>
+</div>
+
+<!--
+Fuentes: "Make your Take-Home Coding Assignment stand out" (Elia Bar) · "Software Engineer Interview Rubric 2026" (Prepfully)
+-->
+
+<!--
+Fuente: ["Software Engineer Interview Rubric 2026"](https://prepfully.com/interview-guides/software-engineer-interview-rubric-2026) (Prepfully)
+-->
+
+---
 class: dark-slide
 ---
 
