@@ -101,6 +101,8 @@ Defaults are defined in `:root` inside `style.css`. Override globally by redefin
 ## Behavior notes
 
 - In `modal` variant, clicking outside the box closes it.
+- Pressing `Escape` closes the modal.
+- Focus is automatically moved to the first focusable element inside the modal when it opens (focus trap). `Tab` and `Shift+Tab` cycle within the modal.
 - `placement` only applies to `tooltip` variant.
 - `trigger="hover"` + `variant="modal"` is valid but uncommon — the modal opens on mouseenter and closes on mouseleave.
 - The modal is rendered via `<Teleport to="body">` to avoid z-index and overflow clipping issues inside Slidev slides.
