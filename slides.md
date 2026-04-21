@@ -181,11 +181,11 @@ class: dark-slide
   </div>
   <div class="item" v-click>
     <span class="label">El cuello de botella cambió</span>
-    <p>Escribir código es rápido. Ser ingeniero es más difícil. Los devs pasan un <span class="accent">68% más de tiempo</span> revisando código de IA y un <span class="accent">67% más</span> debuggeando implementaciones complejas.</p>
+    <p>Los devs pasan un <span class="accent">68% más de tiempo</span> revisando código de IA y un <span class="accent">67% más</span> debuggeando implementaciones complejas.</p>
   </div>
   <div class="item" v-click>
     <span class="label">Lo que ya no impresiona</span>
-    <p>Memorizar algoritmos de LeetCode. Una IA lo hace en segundos.</p>
+    <p>Memorizar algoritmos. Una IA lo hace en segundos.</p>
   </div>
   <div class="item" v-click>
     <span class="label">Lo que sí evalúan hoy</span>
@@ -206,7 +206,7 @@ class: dark-slide
     <span class="label">Big Tech · FAANG</span>
     <ul>
       <li>
-        <Popover placement="top">
+        <Popover trigger="click" placement="top">
           Evitan <strong>falsos positivos</strong>, corregir un error de contratación a su escala es sumamente costoso
           <template #content>
             <span class="label">¿Por qué?</span>
@@ -216,8 +216,8 @@ class: dark-slide
         </Popover>
       </li>
       <li>
-        <Popover placement="top">
-          <span class="accent">5–7 rondas:</span> LeetCode, diseño de sistemas y rondas conductuales. IA prohibida. Google reintrodujo entrevistas en persona por trampas
+        <Popover trigger="click" placement="top">
+          <span class="accent">5–7 rondas:</span> HackerRank,  diseño de sistemas y rondas conductuales. IA prohibida. Google reintrodujo entrevistas en persona por trampas
           <template #content>
             <span class="label">Desglose</span>
             <p>Reclutador, pantalla técnica, 2–3 rondas de código, diseño de sistemas y conductual. IA prohibida. Google volvió a entrevistas presenciales por trampas con IA.</p>
@@ -226,7 +226,7 @@ class: dark-slide
         </Popover>
       </li>
       <li>
-        <Popover placement="bottom">
+        <Popover trigger="click" placement="top">
           Código ineficiente = costos de infraestructura masivos y peor experiencia de usuario
           <template #content>
             <span class="label">El costo real</span>
@@ -241,8 +241,8 @@ class: dark-slide
     <span class="label">Startups</span>
     <ul>
       <li>
-        <Popover placement="top">
-          Evitan <strong>falsos negativos</strong>, rechazar al ingeniero que lanzaría el producto esta semana es un riesgo existencial
+        <Popover trigger="click" placement="top">
+          Evitan <strong>falsos negativos</strong>, rechazar al ingeniero que lanzaría el producto esta semana es un riesgo.
           <template #content>
             <span class="label">¿Por qué?</span>
             <p>En etapa temprana, rechazar al ingeniero que habría lanzado el producto esta semana puede ser existencial para el negocio.</p>
@@ -251,7 +251,7 @@ class: dark-slide
         </Popover>
       </li>
       <li>
-        <Popover placement="top">
+        <Popover trigger="click" placement="top">
           <span class="accent">2–5 rondas:</span> pruebas prácticas y take-homes. Casi nunca algoritmos abstractos. Muchas esperan que uses Copilot o Cursor
           <template #content>
             <span class="label">Desglose</span>
@@ -261,7 +261,7 @@ class: dark-slide
         </Popover>
       </li>
       <li>
-        <Popover placement="bottom">
+        <Popover trigger="click" placement="top">
           <span class="accent">Ownership end-to-end</span>, sentido de producto y entrega rápida bajo recursos limitados
           <template #content>
             <span class="label">Lo que buscan</span>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, type CSSProperties } from 'vue'
+import { ref, computed, onUnmounted, type CSSProperties } from 'vue'
 
 const props = defineProps<{
   trigger?:   'hover' | 'click'
@@ -16,42 +16,65 @@ const props = defineProps<{
 const trigger   = computed(() => props.trigger   ?? 'hover')
 const variant   = computed(() => props.variant   ?? 'tooltip')
 const placement = computed(() => props.placement ?? 'top')
-const delay     = computed(() => props.delay     ?? 0)
 
 const open  = ref(false)
 let   timer = 0
 
-const show = () => {
+function openPopover() {
   clearTimeout(timer)
-  if (delay.value > 0) timer = setTimeout(() => { open.value = true }, delay.value) as unknown as number
-  else open.value = true
+  timer = window.setTimeout(() => {
+    open.value = true
+    document.body.classList.add('popover-active')
+  }, props.delay ?? 0)
 }
-const hide = () => {
+
+function closePopover() {
+  open.value = false
+  window.setTimeout(() => document.body.classList.remove('popover-active'), 200)
+  document.removeEventListener('click', onDocClick)
+}
+
+function onDocClick() {
+  closePopover()
+}
+
+function onHostClick() {
+  if (trigger.value !== 'click') return
+  if (open.value) {
+    closePopover()
+  } else {
+    openPopover()
+    window.setTimeout(() => document.addEventListener('click', onDocClick), 0)
+  }
+}
+
+function onMouseEnter() { if (trigger.value === 'hover') openPopover() }
+function onMouseLeave() {
+  if (trigger.value !== 'hover') return
   clearTimeout(timer)
-  if (delay.value > 0) timer = setTimeout(() => { open.value = false }, delay.value) as unknown as number
-  else open.value = false
+  closePopover()
 }
-const toggle = () => { open.value ? hide() : show() }
 
-const onEnter = () => { if (trigger.value === 'hover') show() }
-const onLeave = () => { if (trigger.value === 'hover') hide() }
-const onClick = () => { if (trigger.value === 'click') toggle() }
+onUnmounted(() => {
+  clearTimeout(timer)
+  document.removeEventListener('click', onDocClick)
+  document.body.classList.remove('popover-active')
+})
 
-// Compute tooltip position styles from placement + optional offsets
 const tooltipStyle = computed<CSSProperties>(() => {
-  const ox = props.offsetX ?? 0
-  const oy = props.offsetY ?? 0
+  const ox  = props.offsetX ?? 0
+  const oy  = props.offsetY ?? 0
   const off = 'var(--popover-offset)'
 
   const map: Record<string, CSSProperties> = {
-    'top':          { bottom: `calc(100% + ${off} + ${oy}px)`, left: `calc(50% + ${ox}px)`,        translate: '-50% 0' },
-    'top-left':     { bottom: `calc(100% + ${off} + ${oy}px)`, left: `calc(0% + ${ox}px)`,         translate: '0 0'    },
-    'top-right':    { bottom: `calc(100% + ${off} + ${oy}px)`, right: `calc(0% + ${-ox}px)`,       translate: '0 0'    },
-    'bottom':       { top:    `calc(100% + ${off} + ${oy}px)`, left: `calc(50% + ${ox}px)`,        translate: '-50% 0' },
-    'bottom-left':  { top:    `calc(100% + ${off} + ${oy}px)`, left: `calc(0% + ${ox}px)`,         translate: '0 0'    },
-    'bottom-right': { top:    `calc(100% + ${off} + ${oy}px)`, right: `calc(0% + ${-ox}px)`,       translate: '0 0'    },
-    'left':         { right:  `calc(100% + ${off} + ${-ox}px)`, top: `calc(50% + ${oy}px)`,        translate: '0 -50%' },
-    'right':        { left:   `calc(100% + ${off} + ${ox}px)`,  top: `calc(50% + ${oy}px)`,        translate: '0 -50%' },
+    'top':          { bottom: `calc(100% + ${off} + ${oy}px)`, left:  `calc(50% + ${ox}px)`,   translate: '-50% 0'  },
+    'top-left':     { bottom: `calc(100% + ${off} + ${oy}px)`, left:  `${ox}px`,               translate: '0 0'     },
+    'top-right':    { bottom: `calc(100% + ${off} + ${oy}px)`, right: `${-ox}px`,              translate: '0 0'     },
+    'bottom':       { top:    `calc(100% + ${off} + ${oy}px)`, left:  `calc(50% + ${ox}px)`,   translate: '-50% 0'  },
+    'bottom-left':  { top:    `calc(100% + ${off} + ${oy}px)`, left:  `${ox}px`,               translate: '0 0'     },
+    'bottom-right': { top:    `calc(100% + ${off} + ${oy}px)`, right: `${-ox}px`,              translate: '0 0'     },
+    'left':         { right:  `calc(100% + ${off} + ${-ox}px)`, top:  `calc(50% + ${oy}px)`,   translate: '0 -50%'  },
+    'right':        { left:   `calc(100% + ${off} + ${ox}px)`,  top:  `calc(50% + ${oy}px)`,   translate: '0 -50%'  },
   }
   return map[placement.value] ?? map['top']
 })
@@ -67,10 +90,11 @@ const cssVars = computed(() => ({
   <span
     v-if="variant === 'tooltip'"
     class="popover-host"
+    :class="{ 'is-active': open }"
     :style="cssVars"
-    @mouseenter="onEnter"
-    @mouseleave="onLeave"
-    @click="onClick"
+    @mouseenter="onMouseEnter"
+    @mouseleave="onMouseLeave"
+    @click.stop="onHostClick"
   >
     <slot />
     <span
@@ -84,14 +108,14 @@ const cssVars = computed(() => ({
   </span>
 
   <template v-else>
-    <span class="popover-host" @mouseenter="onEnter" @mouseleave="onLeave" @click="onClick">
+    <span class="popover-host" @mouseenter="onMouseEnter" @mouseleave="onMouseLeave" @click.stop="onHostClick">
       <slot />
     </span>
     <Teleport to="body">
       <Transition name="popover-modal">
-        <div v-if="open" class="popover-backdrop" @click.self="hide">
+        <div v-if="open" class="popover-backdrop" @click.self="closePopover">
           <div class="popover-modal" role="dialog" aria-modal="true" :style="cssVars">
-            <button class="popover-close" aria-label="Close" @click="hide">✕</button>
+            <button class="popover-close" aria-label="Close" @click="closePopover">✕</button>
             <slot name="content" />
           </div>
         </div>
