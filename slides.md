@@ -459,6 +459,131 @@ Fuentes: "Evaluación Técnica HR-Tech 2026" · "How to Dry Run Code Manually" (
 class: dark-slide
 ---
 
+<span class="eyebrow">Formato 4 · El mito vs. la realidad</span>
+
+# ¿LeetCode <span class="accent">ha muerto</span>?
+
+<div class="ab mt-6">
+  <div class="ab-card bad">
+    <span class="ab-tag bad">✕ El mito</span>
+    <p>La IA ya resuelve cualquier problema de LeetCode en segundos. Estas plataformas ya no se usan y prepararse en ellas es perder el tiempo.</p>
+  </div>
+  <div class="ab-card good">
+    <span class="ab-tag good">✓ La realidad</span>
+    <p>Google, Meta y Amazon siguen teniendo rondas algorítmicas. A su escala, un algoritmo <span class="accent">O(n²) en lugar de O(n)</span> no es un error teórico: colapsa servidores, aumenta la latencia y cuesta millones en infraestructura.</p>
+  </div>
+</div>
+
+<div class="example" style="margin-top: var(--gap-md)">
+  <span class="label">Lo que cambió</span>
+  <p>No si las usan, sino <span class="accent">para qué</span>. Ya no prueban memorización de patrones. Prueban si tu código sobreviviría al tráfico de producción real.</p>
+</div>
+
+<!--
+El punto clave: no desmotivar a nadie de practicar algoritmos, sino redirigir el enfoque hacia entender complejidad, no memorizar soluciones.
+-->
+
+---
+class: terrain-slide
+---
+
+<span class="eyebrow">Formato 4 · La trampa</span>
+
+# La <span class="accent">Ley de Goodhart</span> y el Grinding
+
+<div class="grid-2 mt-8 gap-8">
+  <div class="points">
+    <div class="point">
+      <span class="label">La trampa del grinding</span>
+      <p>Resolver 500+ problemas de forma compulsiva sin entenderlos. Una década de esta cultura produjo candidatos con perfiles perfectos en LeetCode que <span class="accent">fracasan al diseñar un sistema real</span>.</p>
+    </div>
+    <div class="point">
+      <span class="label">La Ley de Goodhart</span>
+      <p>"Cuando una medida se convierte en un objetivo, deja de ser una buena medida." Las entrevistas dejaron de medir ingeniería y empezaron a medir <span class="accent">la habilidad para resolver LeetCode</span>.</p>
+    </div>
+  </div>
+  <div class="card">
+    <span class="label">La alternativa</span>
+    <p style="margin-bottom: var(--gap-sm)">En lugar de resolver 500 problemas, domina <span class="accent">20–30 patrones</span> y entiende por qué funcionan:</p>
+    <ul>
+      <li>Sliding window</li>
+      <li>Two pointers</li>
+      <li>BFS / DFS</li>
+      <li>Dynamic programming básico</li>
+    </ul>
+  </div>
+</div>
+
+<!--
+Énfasis: la diferencia entre alguien que memorizó la solución y alguien que entiende el patrón se nota en 30 segundos de conversación.
+-->
+
+---
+class: dark-slide
+---
+
+<span class="eyebrow">Formato 4 · Cómo prepararse bien</span>
+
+# Practica con <span class="accent">intención</span>, no con volumen
+
+<div class="grid-2 mt-6 gap-8">
+  <div class="points">
+    <div class="point">
+      <span class="label">Listas curadas > problemas al azar</span>
+      <p>Listas como <span class="accent">NeetCode 150</span> cubren los patrones que más aparecen. 150 problemas bien entendidos valen más que 500 resueltos a ciegas.</p>
+    </div>
+    <div class="point">
+      <span class="label">Simula la presión real</span>
+      <p>Practica con <span class="accent">cronómetro, sin categoría visible y limitando tus ejecuciones</span>.</p>
+    </div>
+  </div>
+  <div class="card">
+    <span class="label">El dato que lo justifica todo</span>
+    <p>Las pruebas algorítmicas puras explican solo el <span class="accent" style="font-size: 1.4rem">19.4%</span> del éxito futuro de un ingeniero.</p>
+    <p style="margin-top: var(--gap-sm)">Combinadas con Juicio de Ingeniería y capacidad de justificar decisiones arquitectónicas, la predicción sube al <span class="accent" style="font-size: 1.4rem">27%</span>.</p>
+    <p style="margin-top: var(--gap-sm); opacity: 0.6; font-size: var(--text-sm)">Que el código compile importa. Saber hablar y colaborar importa igual.</p>
+  </div>
+</div>
+
+<!--
+Énfasis: no es solo practicar más, es practicar diferente. El cerebro necesita habituarse al estrés de la entrevista, no solo al problema.
+-->
+
+---
+class: dark-slide
+---
+
+<span class="eyebrow">Formato 4 · Las plataformas</span>
+
+# LeetCode vs. <span class="accent">HackerRank</span>
+
+<div class="versus mt-6">
+  <div class="card">
+    <span class="label">LeetCode </span>
+    <ul>
+      <li>Plataforma <span class="accent">B2C</span>: vende suscripciones a desarrolladores</li>
+      <li>Su mayor valor: banco de problemas con <span class="accent">etiquetas por empresa</span> (qué preguntó Amazon en los últimos 6 meses) y foros de la comunidad</li>
+      <li>Sirve para tu práctica personal, no es lo que el empleador usa</li>
+    </ul>
+  </div>
+  <div class="card">
+    <span class="label">HackerRank · Tu herramienta y del empleador</span>
+    <ul>
+      <li>Plataforma <span class="accent">B2B</span>: procesa más de 172,800 evaluaciones diarias</li>
+      <li>En 2026: proyectos del mundo real, IDEs colaborativos con IA integrada y proyectos multi-archivo</li>
+      <li>Anti-plagio sofisticado: detecta cambios de pestaña, patrones de teclado y uso de IA no permitida</li>
+    </ul>
+  </div>
+</div>
+
+<!--
+Cuando practican en LeetCode se están preparando para la entrevista. Cuando usan HackerRank en una evaluación, están siendo evaluados por el empleador con herramientas mucho más sofisticadas.
+-->
+
+---
+class: dark-slide
+---
+
 <span class="eyebrow">HackerRank Campus Crew GDL</span>
 
 # Únete
