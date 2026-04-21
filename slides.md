@@ -26,12 +26,12 @@ layout: center
 transition: fade
 ---
 
-<span class="eyebrow" style="color: var(--hr-black)">Sección 1</span>
+<span class="eyebrow" style="color: var(--hr-black)">Introducción</span>
 
-# Evolución de la Entrevista Técnica: <br>¿Qué estamos evaluando hoy?
+# ¿Qué es una entrevista técnica?
 
 <!--
-Lo que la audiencia va a aprender: ¿Por qué ya no basta con saber programar para pasar una entrevista?
+Establecer el punto de partida: asegurarse de que todos tienen la misma definición antes de entrar al contexto histórico.
 -->
 
 ---
@@ -58,12 +58,26 @@ class: dark-slide
 -->
 
 ---
+class: green-slide
+layout: center
+transition: fade
+---
+
+<span class="eyebrow" style="color: var(--hr-black)">Sección 1</span>
+
+# Evolución de la Entrevista Técnica: <br>¿Qué estamos evaluando hoy?
+
+<!--
+Lo que la audiencia va a aprender: ¿Por qué ya no basta con saber programar para pasar una entrevista?
+-->
+
+---
 class: dark-slide
 ---
 
 <span class="eyebrow">Contexto histórico · Era 1 · 1990–2005</span>
 
-# La Era de los <span class="accent">Acertijos</span>
+# Los <span class="accent">Acertijos</span>
 
 <div class="points">
   <div class="point">
@@ -86,7 +100,7 @@ class: dark-slide
 
 <span class="eyebrow">Contexto histórico · Era 2 · 2006–2018</span>
 
-# La Era de la <span class="accent">Pizarra Blanca</span>
+# El <span class="accent">Whiteboard</span>
 
 <div class="points">
   <div class="point">
@@ -109,7 +123,7 @@ class: dark-slide
 
 <span class="eyebrow">Contexto histórico · Era 3 · 2019–2023</span>
 
-# La Era del <span class="accent">Grinding</span>
+# El <span class="accent">Grinding</span>
 
 <div class="points">
   <div class="point">
@@ -128,7 +142,7 @@ class: dark-slide
 
 <span class="eyebrow">Contexto histórico · Era 4 · 2024–2026</span>
 
-# La Era de la <span class="accent">Colaboración Humano-IA</span>
+# La <span class="accent">Colaboración Humano-IA</span>
 
 <div class="points">
   <div class="point">
