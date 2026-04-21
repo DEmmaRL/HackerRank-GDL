@@ -315,7 +315,7 @@ code, pre {
 /* ─── Component: Popover ─────────────────────────────────────────────────── */
 .popover-host {
   position: relative;
-  display: inline-block;
+  display: block;
   cursor: pointer;
 }
 
@@ -343,10 +343,6 @@ code, pre {
   transform: translateY(0);
   pointer-events: auto;
 }
-.popover-tooltip--top    { bottom: calc(100% + var(--popover-offset)); left: 50%; translate: -50% 0; }
-.popover-tooltip--bottom { top:    calc(100% + var(--popover-offset)); left: 50%; translate: -50% 0; }
-.popover-tooltip--left   { right:  calc(100% + var(--popover-offset)); top:  50%; translate: 0 -50%; }
-.popover-tooltip--right  { left:   calc(100% + var(--popover-offset)); top:  50%; translate: 0 -50%; }
 
 .popover-backdrop {
   position: fixed;

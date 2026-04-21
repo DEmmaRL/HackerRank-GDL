@@ -19,7 +19,10 @@ Styles live in `style.css` alongside the rest of the design system. The componen
 |------|------|---------|-------------|
 | `trigger` | `'hover' \| 'click'` | `'hover'` | What opens the popover |
 | `variant` | `'tooltip' \| 'modal'` | `'tooltip'` | Display mode |
-| `placement` | `'top' \| 'bottom' \| 'left' \| 'right'` | `'top'` | Tooltip position relative to trigger. Ignored in `modal` variant |
+| `placement` | `'top' \| 'top-left' \| 'top-right' \| 'bottom' \| 'bottom-left' \| 'bottom-right' \| 'left' \| 'right'` | `'top'` | Tooltip position relative to trigger. Ignored in `modal` variant |
+| `delay` | `number` | `0` | Milliseconds before showing or hiding. Applied to both open and close |
+| `offsetX` | `number` | `0` | Horizontal offset in pixels from the computed placement position |
+| `offsetY` | `number` | `0` | Vertical offset in pixels from the computed placement position |
 | `bg` | `string` | `var(--popover-bg)` | Background color override (any valid CSS value) |
 | `color` | `string` | `var(--popover-color)` | Text color override |
 | `border` | `string` | `var(--popover-border)` | Border color override |
@@ -49,9 +52,19 @@ Styles live in `style.css` alongside the rest of the design system. The componen
 ### Tooltip with placement
 
 ```md
-<Popover placement="bottom">
+<Popover placement="bottom-right">
   <span class="label">Source</span>
   <template #content>BirJob, 2026</template>
+</Popover>
+```
+
+### Delay and offset
+
+```md
+<!-- Appears after 500ms, shifted 12px to the right -->
+<Popover placement="top" :delay="500" :offsetX="12">
+  <span class="accent">Hover me</span>
+  <template #content>Delayed tooltip</template>
 </Popover>
 ```
 

@@ -205,23 +205,77 @@ class: dark-slide
   <div class="card">
     <span class="label">Big Tech · FAANG</span>
     <ul>
-      <li>Optimizan para evitar <strong>falsos positivos</strong> — prefieren rechazar a un buen candidato antes que contratar a uno malo</li>
-      <li>5–7 rondas: algoritmos complejos, diseño de sistemas para millones de usuarios, rondas conductuales estructuradas</li>
-      <li>Un código ineficiente a su escala <span class="accent">cuesta millones</span></li>
+      <li>
+        <Popover placement="top">
+          Evitan <strong>falsos positivos</strong>
+          <template #content>
+            <span class="label">Why?</span>
+            <p>At FAANG scale, a bad hire is extremely costly to correct — both in team dynamics and infrastructure impact. They'd rather reject a good candidate than risk onboarding the wrong one.</p>
+            <p class="sub" style="margin-top:0.4rem">Source: "The Technical Interview in 2026" · BirJob</p>
+          </template>
+        </Popover>, corregir un error de contratación a su escala es sumamente costoso
+      </li>
+      <li>
+        <Popover placement="top">
+          <span class="accent">5–7 rondas</span>
+          <template #content>
+            <span class="label">Round breakdown</span>
+            <p>Typically: recruiter screen, technical phone screen, 2–3 coding rounds (LeetCode-style), system design, and behavioral. AI assistance is banned. Google reintroduced in-person rounds after remote assessments became too vulnerable to AI cheating.</p>
+            <p class="sub" style="margin-top:0.4rem">Source: "Ace the Software Engineer interview" · Prepfully · "Inside FAANG's Coding Assessment Process" · Shadecoder</p>
+          </template>
+        </Popover>: LeetCode, diseño de sistemas y rondas conductuales. IA prohibida. Google reintrodujo entrevistas en persona por trampas
+      </li>
+      <li>
+        <Popover placement="bottom">
+          Código ineficiente
+          <template #content>
+            <span class="label">Real cost</span>
+            <p>At FAANG scale, inefficient code isn't theoretical — it causes massive cloud infrastructure cost increases, slower response times, and degraded user experience across hundreds of millions of users.</p>
+            <p class="sub" style="margin-top:0.4rem">Source: "Inside FAANG's Coding Assessment Process" · Shadecoder</p>
+          </template>
+        </Popover> = costos de infraestructura masivos y peor experiencia de usuario
+      </li>
     </ul>
   </div>
   <div class="card">
-    <span class="label">Startups · Series A–C</span>
+    <span class="label">Startups</span>
     <ul>
-      <li>Optimizan para evitar <strong>falsos negativos</strong> — rechazar al ingeniero que lanzaría el producto esta semana puede ser existencial</li>
-      <li>2–3 rondas: pruebas prácticas, take-homes, bugs en tiempo real. Rara vez invertirás un árbol binario</li>
-      <li>Buscan: <span class="accent">agilidad, versatilidad, mentalidad Full-Stack</span></li>
+      <li>
+        <Popover placement="top">
+          Evitan <strong>falsos negativos</strong>
+          <template #content>
+            <span class="label">Why?</span>
+            <p>For an early-stage startup, rejecting the engineer who would have shipped the product this week can be existential. Speed of execution matters more than filtering perfection.</p>
+            <p class="sub" style="margin-top:0.4rem">Source: "The Technical Interview in 2026" · BirJob</p>
+          </template>
+        </Popover>, rechazar al ingeniero que lanzaría el producto esta semana es un riesgo existencial
+      </li>
+      <li>
+        <Popover placement="top">
+          <span class="accent">2–5 rondas</span>
+          <template #content>
+            <span class="label">Round breakdown</span>
+            <p>Usually: intro call, a practical take-home or live coding task, and a culture/team fit round. Abstract algorithmic problems are rare. Many startups actively expect candidates to use Copilot or Cursor to simulate real day-to-day work.</p>
+            <p class="sub" style="margin-top:0.4rem">Source: "The Technical Interview in 2026" · BirJob · "An Engineering leader's honest take on AI in tech interviews" · Utkrusht</p>
+          </template>
+        </Popover>: pruebas prácticas y take-homes. Casi nunca algoritmos abstractos. Muchas esperan que uses Copilot o Cursor
+      </li>
+      <li>
+        <Popover placement="bottom">
+          <span class="accent">Ownership end-to-end</span>
+          <template #content>
+            <span class="label">What they're really looking for</span>
+            <p>Product sense, pragmatism, and the ability to deliver working code fast under limited resources. They want someone who can own a feature from idea to production — not just solve isolated algorithm puzzles.</p>
+            <p class="sub" style="margin-top:0.4rem">Source: "Universal Technical Interview Signal Research" · "FAANG vs Startups Interview Prep" · Sensei AI</p>
+          </template>
+        </Popover>, sentido de producto y entrega rápida bajo recursos limitados
+      </li>
     </ul>
   </div>
 </div>
 
 <!--
-Error novato: prepararse igual para cualquier empresa. La tolerancia al error es completamente distinta.
+Error novato: prepararse igual para cualquier empresa. FAANG prueba si puedes aportar valor a un sistema masivo y estructurado; las startups, si puedes contribuir de inmediato y adaptarte a cambios constantes.
 -->
 
 ---
@@ -243,7 +297,7 @@ class: dark-slide
   </div>
   <div class="point" v-click>
     <span class="label">La conclusión de 2026</span>
-    <p>El código lo escribe una máquina. La <span class="accent">comunicación técnica, el diseño de arquitecturas escalables y la colaboración bajo ambigüedad</span> son habilidades exclusivamente humanas — y esas te dan el trabajo.</p>
+    <p>El código lo escribe una máquina. La <span class="accent">comunicación técnica, el diseño de arquitecturas escalables y la colaboración bajo ambigüedad</span> son habilidades exclusivamente humanas, y esas te dan el trabajo.</p>
   </div>
 </div>
 
@@ -271,7 +325,7 @@ class: dark-slide
     </div>
     <div class="point">
       <span class="label">Síguenos en Instagram</span>
-      <p><span class="accent">@hackerrank.gdl</span> — eventos, recursos y comunidad.</p>
+      <p><span class="accent">@hackerrank.gdl</span> en Instagram. Eventos, recursos y comunidad.</p>
     </div>
     <div class="point">
       <span class="label">Recursos y material de sesiones</span>
@@ -301,7 +355,7 @@ layout: center
 
 <p class="sub">
   <span class="accent">@hackerrank.gdl</span> en Instagram<br>
-  hackerrank.com — regístrate y apoyarás a que hagamos más y mejores eventos.
+  hackerrank.com, regístrate y apoyarás a que hagamos más y mejores eventos.
 </p>
 
 <!--
