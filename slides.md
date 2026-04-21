@@ -85,7 +85,6 @@ class: dark-slide
     <p>Influenciado por Microsoft y Google, te encerraban en una sala y preguntaban: "¿Cuántas pelotas de golf caben en un Boeing 747?" o "¿Por qué las tapas de las alcantarillas son redondas?" La creencia: si resuelves esto, eres un genio creativo.</p>
   </div>
   <div class="point" v-click>
-    <span class="label">El dato duro</span>
     <p>Google analizó sus propios datos de contratación y descubrió algo vergonzoso: la correlación entre resolver acertijos y ser un buen empleado era <span class="accent">cero</span>. Laszlo Bock (SVP People Ops) admitió en The New York Times que eran "una completa pérdida de tiempo" y servían principalmente para hacer que el entrevistador se sintiera inteligente.</p>
   </div>
 </div>
@@ -108,7 +107,6 @@ class: dark-slide
     <p>Para corregir los acertijos, la industria comenzó a pedir a los ingenieros que escribieran código de algoritmos complejos <span class="accent">a mano en una pizarra</span>, frente a un panel de jueces.</p>
   </div>
   <div class="point" v-click>
-    <span class="label">El dato duro</span>
     <p>Un estudio de la Universidad Estatal de Carolina del Norte y Microsoft Research midió la carga cognitiva con rastreadores oculares. Descubrieron que el rendimiento de un programador se <span class="accent">reduce a la mitad</span> simplemente por el hecho de ser observado.</p>
   </div>
   <div class="point" v-click>
@@ -284,6 +282,103 @@ class: dark-slide
 
 <!--
 Transición: "Entonces, si las empresas ya saben que memorizar código no sirve... ¿qué es exactamente lo que te van a pedir que hagas en tu próxima entrevista? Eso es lo que vemos a continuación."
+-->
+
+---
+class: green-slide
+layout: center
+transition: fade
+---
+
+<span class="eyebrow" style="color: var(--hr-black)">Sección 2</span>
+
+# Formatos de Evaluación: <br>¿Cómo navegar cada tipo de prueba?
+
+<!--
+Transición: ya sabemos por qué cambió la entrevista. Ahora veamos exactamente qué formatos te vas a encontrar y cómo sobrevivir a cada uno.
+-->
+
+---
+class: terrain-slide
+---
+
+<span class="eyebrow">Formato 1</span>
+
+# Live Coding <span class="accent">&</span> Pair Programming
+
+<div class="grid-2 mt-8 gap-8">
+  <div class="points">
+    <div class="point">
+      <span class="label">El escenario</span>
+      <p>Tú, un editor compartido y un ingeniero observando cada tecla que pulsas en tiempo real.</p>
+    </div>
+    <div class="point">
+      <span class="label">Qué evalúan</span>
+      <p>No solo si llegas a la respuesta. Evalúan <span class="accent">cómo piensas, cómo te comunicas bajo presión y si es fácil trabajar contigo</span>.</p>
+    </div>
+  </div>
+  <div class="card">
+    <span class="label">Recordemos:</span>
+    <p style="font-size: 2rem; font-weight: 700; color: var(--hr-terminal); line-height: 1.2; margin: 0.5rem 0;">50%</p>
+    <p>El rendimiento de un programador cae a la mitad solo por ser observado. El estrés bloquea la memoria de trabajo, recuerden respirar</p>
+    <p class="sub" style="margin-top: 0.5rem">NC State University</p>
+  </div>
+</div>
+
+<!--
+Fuente: "Tech Sector Job Interviews Assess Anxiety, Not Software Skills" (NC State News)
+-->
+
+---
+class: dark-slide
+---
+
+<span class="eyebrow">Formato 1 · Cómo sobrevivir</span>
+
+# <span class="accent">Live Coding:</span> lo que funciona y lo que no
+
+<div class="grid-2 mt-6 gap-8">
+  <div class="noise-grid">
+    <div class="noise-item">
+      <span class="no">✕</span>
+      <div>
+        <strong>Monólogo continuo</strong>
+        <p>Hablar sin parar genera interferencia cognitiva. No puedes pensar, programar y verbalizar con eficiencia al mismo tiempo.</p>
+      </div>
+    </div>
+    <div class="noise-item">
+      <span class="no">✕</span>
+      <div>
+        <strong>Rechazar las pistas</strong>
+        <p>Ignorar o resistir una pista del entrevistador señala que no sabes colaborar. <span class="accent"> El entrevistador no es tu enemigo </span> </p>
+      </div>
+    </div>
+    <div class="noise-item">
+      <span class="no">✕</span>
+      <div>
+        <strong>Codificar sin plan</strong>
+        <p>Lanzarse a escribir código sin estructurar la lógica primero produce soluciones frágiles y difíciles de explicar.</p>
+      </div>
+    </div>
+  </div>
+  <div class="points">
+    <div class="point">
+      <span class="label">Silencio Estructurado</span>
+      <p>Toma una pausa: <span class="accent">"Voy a tomarme un momento para cocinar mi idea"</span> Piensas, verbalizas el plan, luego codificas.</p>
+    </div>
+    <div class="point">
+      <span class="label">Las pistas suman puntos</span>
+      <p>Aceptar ayuda demuestra que sabes colaborar, aceptas feedback y que aprovechas que son dos cabezas y no solo una, que es exactamente lo que el Pair Programming evalúa.</p>
+    </div>
+    <div class="point">
+      <span class="label">Habla el "por qué"</span>
+      <p>Antes de cada decisión, di en voz alta por qué la tomas.</p>
+    </div>
+  </div>
+</div>
+
+<!--
+Fuentes: "Universal Technical Interview Signal Research" · "How To Handle Hints In A Software Engineer Interview Without Failing" (Taro)
 -->
 
 ---
