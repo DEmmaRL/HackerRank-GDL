@@ -144,14 +144,22 @@ class: dark-slide
 
 # La <span class="accent">Colaboración Humano-IA</span>
 
-<div class="points">
-  <div class="point">
+<div class="grid-2 mt-8 gap-8 content-between h-72% pb-16">
+  <div class="item">
     <span class="label">Las reglas volvieron a cambiar</span>
-    <p>Con la llegada de GitHub Copilot, Cursor y Claude, si un candidato puede resolver el algoritmo de mayor dificultad de LeetCode en 5 segundos usando IA, la memorización de código ya no sirve para evaluar talento.</p>
+    <p>El <span class="accent">92%</span> de los devs ya usa IA diariamente. Copilot genera el <span class="accent">46%</span> de todo el código. Si la IA resuelve un problema de Leetcode en 5 segundos, memorizar código ya no evalúa talento.</p>
   </div>
-  <div class="point" v-click>
+  <div class="item" >
+    <span class="label">El cuello de botella cambió</span>
+    <p>Los devs pasan <span class="accent">68% más tiempo</span> revisando código de IA y <span class="accent">67% más</span> debuggeando. Escribir código es barato, pero no el entenderlo.</p>
+  </div>
+  <div class="item" >
+    <span class="label">Lo que ya no impresiona</span>
+    <p>Memorizar algoritmos. Una IA lo hace en segundos.</p>
+  </div>
+  <div class="item" >
     <span class="label">El nuevo estándar</span>
-    <p>La industria pasó de evaluar la sintaxis a evaluar el <span class="accent">Juicio de Ingeniería (Engineering Judgment)</span>: saber qué construir, por qué importa y si el resultado es correcto.</p>
+    <p>La industria transiciona a evaluarte sobre tu <span class="accent">Juicio de Ingeniería:</span> ¿puedes leer código generado por IA, detectar el fallo, entender si la arquitectura escala y corregirlo?</p>
   </div>
 </div>
 
@@ -170,40 +178,13 @@ layout: center
 class: dark-slide
 ---
 
-<span class="eyebrow">Subtema 2 · Memorización vs. Supervisión</span>
-
-# La <span class="accent">Paradoja</span> de la Productividad con IA
-
-<div class="grid-2">
-  <div class="item" v-click>
-    <span class="label">El nuevo baseline (2024–2026)</span>
-    <p>El <span class="accent">92%</span> de los desarrolladores ya usa IA en su trabajo diario. GitHub Copilot genera el <span class="accent">46%</span> de todo el código escrito.</p>
-  </div>
-  <div class="item" v-click>
-    <span class="label">El cuello de botella cambió</span>
-    <p>Los devs pasan un <span class="accent">68% más de tiempo</span> revisando código de IA y un <span class="accent">67% más</span> debuggeando implementaciones complejas.</p>
-  </div>
-  <div class="item" v-click>
-    <span class="label">Lo que ya no impresiona</span>
-    <p>Memorizar algoritmos. Una IA lo hace en segundos.</p>
-  </div>
-  <div class="item" v-click>
-    <span class="label">Lo que sí evalúan hoy</span>
-    <p><span class="accent">Orquestación:</span> ¿Puedes leer código generado por IA, encontrar el fallo de seguridad, entender si la arquitectura escala y arreglarlo? El código es barato; el entendimiento profundo del sistema es caro.</p>
-  </div>
-</div>
-
----
-class: dark-slide
----
-
 <span class="eyebrow">Subtema 3 · Startup vs. Big Tech</span>
 
-# Dos mundos, <span class="accent">dos manuales</span> de juego
+# Dos mundos, <span class="accent">sus diferencias</span>
 
 <div class="versus">
   <div class="card">
-    <span class="label">Big Tech · FAANG</span>
+    <span class="label">Big Tech</span>
     <ul>
       <li>
         <Popover trigger="click" placement="top">
@@ -217,10 +198,10 @@ class: dark-slide
       </li>
       <li>
         <Popover trigger="click" placement="top">
-          <span class="accent">5–7 rondas:</span> HackerRank,  diseño de sistemas y rondas conductuales. IA prohibida. Google reintrodujo entrevistas en persona por trampas
+          HackerRank, Leetcode,  diseño de sistemas y rondas conductuales. IA prohibida. Google reintrodujo entrevistas en persona por trampas
           <template #content>
             <span class="label">Desglose</span>
-            <p>Reclutador, pantalla técnica, 2–3 rondas de código, diseño de sistemas y conductual. IA prohibida. Google volvió a entrevistas presenciales por trampas con IA.</p>
+            <p>2–3 rondas de código, diseño de sistemas y conductual. Con IA prohibida, Google volvió a entrevistas presenciales por trampas con IA.</p>
             <p class="sub" style="margin-top:0.4rem">Fuente: Prepfully y Shadecoder (2026)</p>
           </template>
         </Popover>
@@ -252,7 +233,7 @@ class: dark-slide
       </li>
       <li>
         <Popover trigger="click" placement="top">
-          <span class="accent">2–5 rondas:</span> pruebas prácticas y take-homes. Casi nunca algoritmos abstractos. Muchas esperan que uses Copilot o Cursor
+          <span class="accent">Pruebas prácticas y take-homes</span>. Casi nunca algoritmos abstractos. Muchas esperan que uses Copilot o Cursor
           <template #content>
             <span class="label">Desglose</span>
             <p>Intro call, take-home práctico y fit cultural. Sin LeetCode. Muchas startups esperan que uses Copilot o Cursor durante la entrevista.</p>
