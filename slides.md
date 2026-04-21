@@ -420,8 +420,39 @@ class: terrain-slide
 Fuentes: "Make your Take-Home Coding Assignment stand out" (Elia Bar) · "Software Engineer Interview Rubric 2026" (Prepfully)
 -->
 
+---
+class: light-slide
+---
+
+<span class="eyebrow">Formato 3</span>
+
+# Reverse Debugging: <br>Encontrar la aguja <span class="accent">en el pajar</span>
+
+<div class="grid-2 mt-8 gap-8">
+  <div class="points">
+    <div class="point">
+      <span class="label">El escenario</span>
+      <p>Te dan una codebase masiva con un error sutil. Tu trabajo: encontrarlo y arreglarlo. Sin escribir nada desde cero.</p>
+    </div>
+    <div class="point">
+      <span class="label">Por qué lo hacen</span>
+      <p>En la vida real, los devs pasan el <span class="accent">41% de su tiempo</span> leyendo y navegando código existente, no escribiéndolo.</p>
+    </div>
+  </div>
+  <div class="points">
+    <div class="point">
+      <span class="label">Qué evalúan</span>
+      <p>Cómo lees logs y stack traces, si usas las herramientas de diagnóstico correctas y si puedes seguir el flujo del programa mentalmente.</p>
+    </div>
+    <div class="point">
+      <span class="label">Trace Tables (prueba de escritorio)</span>
+      <p>Si no tienes acceso a un debugger, usa una tabla de rastreo: anota el valor de cada variable en cada paso. Demuestra que entiendes el código, no solo que lo ejecutas. <a href="https://dev.to/alex_hunter_44f4c9ed6671e/how-to-dry-run-code-manually-the-missing-skill-for-coding-interviews-1g7p" target="_blank">Cómo hacerlo</a></p>
+    </div>
+  </div>
+</div>
+
 <!--
-Fuente: ["Software Engineer Interview Rubric 2026"](https://prepfully.com/interview-guides/software-engineer-interview-rubric-2026) (Prepfully)
+Fuentes: "Evaluación Técnica HR-Tech 2026" · "How to Dry Run Code Manually" (DEV Community)
 -->
 
 ---
