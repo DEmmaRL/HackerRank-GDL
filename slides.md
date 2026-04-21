@@ -207,33 +207,33 @@ class: dark-slide
     <ul>
       <li>
         <Popover placement="top">
-          Evitan <strong>falsos positivos</strong>
+          Evitan <strong>falsos positivos</strong>, corregir un error de contratación a su escala es sumamente costoso
           <template #content>
-            <span class="label">Why?</span>
-            <p>At FAANG scale, a bad hire is extremely costly to correct — both in team dynamics and infrastructure impact. They'd rather reject a good candidate than risk onboarding the wrong one.</p>
-            <p class="sub" style="margin-top:0.4rem">Source: "The Technical Interview in 2026" · BirJob</p>
+            <span class="label">¿Por qué?</span>
+            <p>A su escala, un mal hire es carísimo de corregir. Prefieren perder un buen candidato antes que arriesgarse.</p>
+            <p class="sub" style="margin-top:0.4rem">Fuente: "The Technical Interview in 2026" (BirJob)</p>
           </template>
-        </Popover>, corregir un error de contratación a su escala es sumamente costoso
+        </Popover>
       </li>
       <li>
         <Popover placement="top">
-          <span class="accent">5–7 rondas</span>
+          <span class="accent">5–7 rondas:</span> LeetCode, diseño de sistemas y rondas conductuales. IA prohibida. Google reintrodujo entrevistas en persona por trampas
           <template #content>
-            <span class="label">Round breakdown</span>
-            <p>Typically: recruiter screen, technical phone screen, 2–3 coding rounds (LeetCode-style), system design, and behavioral. AI assistance is banned. Google reintroduced in-person rounds after remote assessments became too vulnerable to AI cheating.</p>
-            <p class="sub" style="margin-top:0.4rem">Source: "Ace the Software Engineer interview" · Prepfully · "Inside FAANG's Coding Assessment Process" · Shadecoder</p>
+            <span class="label">Desglose</span>
+            <p>Reclutador, pantalla técnica, 2–3 rondas de código, diseño de sistemas y conductual. IA prohibida. Google volvió a entrevistas presenciales por trampas con IA.</p>
+            <p class="sub" style="margin-top:0.4rem">Fuente: Prepfully y Shadecoder (2026)</p>
           </template>
-        </Popover>: LeetCode, diseño de sistemas y rondas conductuales. IA prohibida. Google reintrodujo entrevistas en persona por trampas
+        </Popover>
       </li>
       <li>
         <Popover placement="bottom">
-          Código ineficiente
+          Código ineficiente = costos de infraestructura masivos y peor experiencia de usuario
           <template #content>
-            <span class="label">Real cost</span>
-            <p>At FAANG scale, inefficient code isn't theoretical — it causes massive cloud infrastructure cost increases, slower response times, and degraded user experience across hundreds of millions of users.</p>
-            <p class="sub" style="margin-top:0.4rem">Source: "Inside FAANG's Coding Assessment Process" · Shadecoder</p>
+            <span class="label">El costo real</span>
+            <p>A su escala, código ineficiente = más costos en la nube, respuestas lentas y peor UX para cientos de millones de usuarios.</p>
+            <p class="sub" style="margin-top:0.4rem">Fuente: "Inside FAANG's Coding Assessment Process" (Shadecoder)</p>
           </template>
-        </Popover> = costos de infraestructura masivos y peor experiencia de usuario
+        </Popover>
       </li>
     </ul>
   </div>
@@ -242,33 +242,33 @@ class: dark-slide
     <ul>
       <li>
         <Popover placement="top">
-          Evitan <strong>falsos negativos</strong>
+          Evitan <strong>falsos negativos</strong>, rechazar al ingeniero que lanzaría el producto esta semana es un riesgo existencial
           <template #content>
-            <span class="label">Why?</span>
-            <p>For an early-stage startup, rejecting the engineer who would have shipped the product this week can be existential. Speed of execution matters more than filtering perfection.</p>
-            <p class="sub" style="margin-top:0.4rem">Source: "The Technical Interview in 2026" · BirJob</p>
+            <span class="label">¿Por qué?</span>
+            <p>En etapa temprana, rechazar al ingeniero que habría lanzado el producto esta semana puede ser existencial para el negocio.</p>
+            <p class="sub" style="margin-top:0.4rem">Fuente: "The Technical Interview in 2026" (BirJob)</p>
           </template>
-        </Popover>, rechazar al ingeniero que lanzaría el producto esta semana es un riesgo existencial
+        </Popover>
       </li>
       <li>
         <Popover placement="top">
-          <span class="accent">2–5 rondas</span>
+          <span class="accent">2–5 rondas:</span> pruebas prácticas y take-homes. Casi nunca algoritmos abstractos. Muchas esperan que uses Copilot o Cursor
           <template #content>
-            <span class="label">Round breakdown</span>
-            <p>Usually: intro call, a practical take-home or live coding task, and a culture/team fit round. Abstract algorithmic problems are rare. Many startups actively expect candidates to use Copilot or Cursor to simulate real day-to-day work.</p>
-            <p class="sub" style="margin-top:0.4rem">Source: "The Technical Interview in 2026" · BirJob · "An Engineering leader's honest take on AI in tech interviews" · Utkrusht</p>
+            <span class="label">Desglose</span>
+            <p>Intro call, take-home práctico y fit cultural. Sin LeetCode. Muchas startups esperan que uses Copilot o Cursor durante la entrevista.</p>
+            <p class="sub" style="margin-top:0.4rem">Fuente: BirJob y Utkrusht (2026)</p>
           </template>
-        </Popover>: pruebas prácticas y take-homes. Casi nunca algoritmos abstractos. Muchas esperan que uses Copilot o Cursor
+        </Popover>
       </li>
       <li>
         <Popover placement="bottom">
-          <span class="accent">Ownership end-to-end</span>
+          <span class="accent">Ownership end-to-end</span>, sentido de producto y entrega rápida bajo recursos limitados
           <template #content>
-            <span class="label">What they're really looking for</span>
-            <p>Product sense, pragmatism, and the ability to deliver working code fast under limited resources. They want someone who can own a feature from idea to production — not just solve isolated algorithm puzzles.</p>
-            <p class="sub" style="margin-top:0.4rem">Source: "Universal Technical Interview Signal Research" · "FAANG vs Startups Interview Prep" · Sensei AI</p>
+            <span class="label">Lo que buscan</span>
+            <p>Alguien que sea dueño de una feature de principio a fin: idea, código, deploy. Pragmatismo sobre perfección.</p>
+            <p class="sub" style="margin-top:0.4rem">Fuente: Sensei AI (2026)</p>
           </template>
-        </Popover>, sentido de producto y entrega rápida bajo recursos limitados
+        </Popover>
       </li>
     </ul>
   </div>
