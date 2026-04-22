@@ -581,6 +581,118 @@ Cuando practican en LeetCode se están preparando para la entrevista. Cuando usa
 -->
 
 ---
+class: green-slide
+layout: center
+transition: fade
+---
+
+<span class="eyebrow" style="color: var(--hr-black)">Formato 5</span>
+
+# Game-Based Assessments: <br>La entrevista que parece un juego
+
+<!--
+Transición: hay un formato que la mayoría no conoce y que ya está reemplazando al currículum como primer filtro.
+-->
+
+---
+class: dark-slide
+transition: view-transition
+---
+
+<span class="eyebrow">Formato 5</span>
+
+#  ¿Por qué?
+
+<div class="grid-2 mt-6 gap-8" style="align-items: start;">
+  <div class="points">
+    <div class="point">
+      <span class="label">El caso Roblox · Kaiju Cats</span>
+      <p>En la superficie: diriges tres gatos por una ciudad destruyendo edificios. Detrás de la pantalla, el sistema mapea cada clic a competencias reales de ingeniería.</p>
+    </div>
+    <div class="point">
+      <span class="label">Por qué existen</span>
+      <p>Muchas empresas los usan como <span class="accent">primer filtro oficial</span>, reemplazando la revisión de currículum. Son especialmente comunes para posiciones junior y recién graduados.</p>
+    </div>
+  </div>
+  <img src="/assets/kaiju-cats.png" style="width:100%;border-radius:var(--radius);view-transition-name:kaiju-cats;" />
+</div>
+
+<!--
+Énfasis: el juego no mide si llegas al puntaje más alto, mide el proceso. Igual que el Live Coding.
+-->
+
+---
+class: dark-slide
+---
+
+<span class="eyebrow">Formato 5 · La rúbrica oculta</span>
+
+#  Evalúan cómo <span class="accent">decides</span>.
+
+<div class="grid-2 mt-6 gap-8" style="align-items: start;">
+  <img src="/assets/kaiju-cats.png" style="width:100%;border-radius:var(--radius);view-transition-name:kaiju-cats;" />
+  <div class="points">
+    <div class="point">
+      <span class="label">Pensamiento sistémico</span>
+      <p>Cómo optimizas rutas, evitas obstáculos y gestionas colisiones entre recursos.</p>
+    </div>
+    <div class="point">
+      <span class="label">Gestión de recursos</span>
+      <p>El retorno de cada decisión con un presupuesto de comandos limitado.</p>
+    </div>
+    <div class="point">
+      <span class="label">Resiliencia</span>
+      <p>Un candidato enfocado hace en promedio <span class="accent">9 iteraciones en 15 minutos</span>, mejorando su plan constantemente tras cada error.</p>
+    </div>
+  </div>
+</div>
+
+<!--
+El juego captura métricas no lineales: no si ganas, sino qué tan rápido ajustas tu estrategia cuando algo falla.
+-->
+
+---
+class: dark-slide
+---
+
+<span class="eyebrow">Formato 5 · Cómo enfrentarlo</span>
+
+# Juega
+
+<div class="grid-2 mt-6 gap-8">
+  <div class="noise-grid">
+    <div class="noise-item">
+      <span class="no">✕</span>
+      <div>
+        <strong>Hacer clic de inmediato</strong>
+        <p>Los candidatos que fracasan empiezan a interactuar en menos de 1 minuto. El sistema lo registra como impulsividad, no como agilidad.</p>
+      </div>
+    </div>
+    <div class="noise-item">
+      <span class="no">✕</span>
+      <div>
+        <strong>Obsesionarse con la puntuación</strong>
+        <p>Ya existe un algoritmo de ML que obtiene 215,000 puntos. A los comités de contratación no les interesa la optimización perfecta.</p>
+      </div>
+    </div>
+  </div>
+  <div class="points">
+    <div class="point">
+      <span class="label">Los primeros 3–5 minutos</span>
+      <p>Los candidatos exitosos los usan solo para <span class="accent">analizar el problema antes de enviar su primer plan</span>.</p>
+    </div>
+    <div class="point">
+      <span class="label">La justificación importa</span>
+      <p>Después del juego suelen pedirte que expliques tu estrategia. Un enfoque reflexivo te da el material para <span class="accent">defender tus decisiones</span>.</p>
+    </div>
+  </div>
+</div>
+
+<!--
+El punto clave: la ventaja humana no es el puntaje, es la capacidad de navegar la ambigüedad y articular una estrategia coherente.
+-->
+
+---
 class: dark-slide
 ---
 
