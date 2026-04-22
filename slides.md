@@ -720,6 +720,170 @@ El punto clave: la ventaja humana no es el puntaje, es la capacidad de navegar l
 -->
 
 ---
+class: green-slide
+layout: center
+transition: slide-up
+---
+
+<span class="eyebrow" style="color: var(--hr-black)">Sección 3</span>
+
+# La Señal Técnica: <br>¿Qué busca capturar el entrevistador?
+
+<!--
+Lo que van a aprender: cómo se califica el desempeño a puerta cerrada y qué activa un "Strong Hire".
+-->
+
+---
+class: dark-slide
+transition: view-transition
+---
+
+<span class="eyebrow"></span>
+
+# <span class="accent">"Si compila, pasé"</span>
+
+<div class="points mt-6">
+  <div>
+    <p>El código funcional es solo la mitad del puntaje. Cada compañía es diferente, pero la mayoría se enfocan en buscar señales que demuestren <span class="accent">tu madurez como ingeniero</span></p>
+  </div>
+</div>
+
+<div class="grid-2 mt-6 gap-8">
+  <div class="item">
+    <span class="label">Mantenibilidad</span>
+    <p>¿Escribiste código limpio? Un código legible y modular siempre le gana a un "truco" complejo pero imposible de leer para tus compañeros.</p>
+  </div>
+  <div class="item">
+    <span class="label">Descomposición</span>
+    <p>¿Abordaste todo en una sola función gigante, o pudiste separar la lógica en módulos más pequeños y manejables?</p>
+  </div>
+  <div class="item">
+    <span class="label">Comunicación Continua</span>
+    <p>Evita quedarte callado después de planear. Si te quedas atascado y no hablas, el evaluador no tiene nada que calificar. Pensar en voz alta demuestra cómo reaccionas a la frustración.</p>
+  </div>
+  <div class="item">
+    <span class="label">Verificación Autónoma (Dry Run)</span>
+    <p>¿Esperaste a que el entrevistador te marcara un error? Los mejores candidatos rastrean sus variables manualmente y encuentran sus propios fallos.</p>
+  </div>
+</div>
+<!--
+Fuente: "Universal Technical Interview Signal Research"
+-->
+
+---
+class: terrain-slide
+transition: view-transition
+---
+
+<span class="eyebrow">Trade-offs · Big O</span>
+
+# No existen soluciones <span class="accent">perfectas</span>
+
+<div class="grid-2 mt-8 gap-8" style="align-items: start;">
+  <div class="points">
+    <div class="point">
+      <span class="label">El error de novato</span>
+      <p>Presentar una solución y actuar como si no tuviera ninguna desventaja. Los entrevistadores evalúan si entiendes los trade-offs de tiempo y espacio entre estructuras de datos.</p>
+    </div>
+    <div>
+      <p>Buscan que razonas siguiendo alguna <span class="accent">metodología o patrón</span> y no solo por instinto</p>
+    </div>
+  </div>
+  <div class="card">
+    <span class="label">Ejemplo</span>
+    <p style="margin-top: var(--gap-sm)">"Podríamos usar un Array anidado con <span class="accent">O(N²)</span> de tiempo, pero con un Hash Map bajamos a <span class="accent">O(N)</span> sacrificando <span class="accent">O(N)</span> de memoria extra. Dado que el problema exige consultas rápidas, optaré por el Hash Map."</p>
+  </div>
+</div>
+
+<!--
+Fuente: "30 Software Engineer Interview Questions for 2026" (Wiz)
+-->
+
+---
+class: light-slide
+transition: slide-up
+---
+
+<span class="eyebrow">La vara de medir · Entry Level</span>
+
+# No te van a pedir <span class="accent">diseñar Twitter</span>
+
+<div class="grid-2 mt-8 gap-8" style="align-items: start;">
+  <div class="points">
+    <div class="point">
+      <span class="label">Junior</span>
+      <p>Como junior, nadie espera que domines patrones de System design, pero sí deberías tener un <span class="accent">razonamiento proactivo</span>.</p>
+    </div>
+    <div class="point">
+      <span class="label">¿Cómo demostrarlo en la entrevista?</span>
+      <p>Hacer preguntas aclaratorias sobre los <span class="accent">edge cases</span> antes de escribir la primera línea de código.</p>
+    </div>
+  </div>
+  <div class="card">
+    <span class="label">Preguntas que demuestran razonamiento</span>
+    <ul style="margin-top: var(--gap-sm)">
+      <li>"¿El arreglo puede venir vacío?"</li>
+      <li>"¿Manejamos números negativos?"</li>
+      <li>"¿Qué pasa si la entrada es nula?"</li>
+    </ul>
+    <p class="sub" style="margin-top: var(--gap-sm)">Identificar estos límites antes de empezar te ayuda a considerar todas las posibilidades.</p>
+  </div>
+</div>
+
+<!--
+Proactivo no solo en cuanto a trabajar, sino también en aprender, demostrar motivación por avanzar y curiosidad técnica. No solo sabes cómo resolver el problema impuesto sino que entiendes el problema en sí y puedes anticiparte a problemas.
+
+¿Qué pasaría si ?
+Fuente: "Software Engineer Interview Rubric 2026" (Prepfully)
+-->
+
+---
+class: dark-slide
+layout: center
+transition: slide-up
+---
+
+<span class="eyebrow">Cierre · Sección 3</span>
+
+# ¿Cómo activar el <span class="accent">Strong Hire</span>?
+
+<!--
+El cierre de sección más importante: la acción concreta que detona la mejor calificación posible.
+-->
+
+---
+class: dark-slide
+transition: view-transition
+---
+
+<span class="eyebrow">Strong Hire · Mental Debugging</span>
+
+# No esperes a que el compilador <span class="accent">te corrija</span>
+
+<div class="grid-2 mt-6 gap-8" style="align-items: start;">
+  <div class="points">
+    <div>
+      <span class="label">Mental Debugging · Dry Run</span>
+      <p>Simula tu propio código manualmente, encuentra tus errores lógicos y corrígelos antes de ejecutar. Demuestra control total sobre el estado del programa.</p>
+    </div>
+  </div>
+  <div class="card">
+    <span class="label">Trace Table · El tip de oro</span>
+    <p style="margin-top: var(--gap-sm)">Anota los valores de tus variables como comentarios al margen a medida que el bucle avanza:</p>
+    <pre style="margin-top: var(--gap-sm); font-family: var(--font-mono); font-size: var(--text-sm); opacity: 0.85">
+i=0  sum=0  arr=[3,1,4]
+i=1  sum=3
+i=2  sum=4
+     sum=8  ✓</pre>
+    <p class="sub" style="margin-top: var(--gap-sm)">Fuente: "How to Dry Run Code Manually"</p>
+  </div>
+</div>
+
+<!--
+Este es el cierre de la sección 3. La Trace Table es el diferenciador visual más poderoso que pueden mostrar en una entrevista.
+-->
+
+---
 class: dark-slide
 ---
 
