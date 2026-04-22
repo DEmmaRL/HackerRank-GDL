@@ -555,7 +555,7 @@ class: dark-slide
 
 <span class="eyebrow">Formato 4 · Las plataformas</span>
 
-# LeetCode vs. <span class="accent">HackerRank</span>
+# LeetCode y <span class="accent">HackerRank</span>
 
 <div class="versus mt-6">
   <div class="card">
