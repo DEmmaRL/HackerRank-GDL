@@ -974,6 +974,26 @@ Cerrar con el mensaje positivo: la preparación genuina no solo es más ética, 
 
 ---
 class: terrain-slide
+layout: center
+transition: slide-up
+---
+
+<span class="eyebrow" style="color: var(--hr-celery)">Integridad técnica</span>
+
+<h1 style="font-size: 2.5rem; line-height: 1.3; max-width: 40rem;">
+  Seamos <span class="accent">éticos</span>
+</h1>
+
+<p class="sub" style="max-width: 36rem; margin-top: var(--gap-md);">
+  La preparación genuina no solo es más ética, también es la estrategia más inteligente. Los sistemas de detección mejoran cada día, pero tu reputación profesional se arruina en segundos.
+</p>
+
+<!--
+Pausa deliberada antes de pasar al uso estratégico de IA. El mensaje: hay una forma correcta de usar estas herramientas.
+-->
+
+---
+class: terrain-slide
 transition: view-transition
 ---
 
