@@ -856,7 +856,7 @@ class: dark-slide
 transition: view-transition
 ---
 
-<span class="eyebrow">Strong Hire · Mental Debugging</span>
+<span class="eyebrow">Leaning Hire vs. Strong Hire</span>
 
 # No esperes a que el compilador <span class="accent">te corrija</span>
 
@@ -870,17 +870,143 @@ transition: view-transition
   <div class="card">
     <span class="label">Trace Table · El tip de oro</span>
     <p style="margin-top: var(--gap-sm)">Anota los valores de tus variables como comentarios al margen a medida que el bucle avanza:</p>
-    <pre style="margin-top: var(--gap-sm); font-family: var(--font-mono); font-size: var(--text-sm); opacity: 0.85">
+```
 i=0  sum=0  arr=[3,1,4]
 i=1  sum=3
 i=2  sum=4
-     sum=8  ✓</pre>
+     sum=8  ✓
+```
     <p class="sub" style="margin-top: var(--gap-sm)">Fuente: "How to Dry Run Code Manually"</p>
   </div>
 </div>
 
 <!--
 Este es el cierre de la sección 3. La Trace Table es el diferenciador visual más poderoso que pueden mostrar en una entrevista.
+-->
+
+---
+class: green-slide
+layout: center
+transition: slide-up
+---
+
+<span class="eyebrow" style="color: var(--hr-black)">Sección 4</span>
+
+# Inteligencia Artificial: <br>Uso estratégico y detección de fraude
+
+<!--
+Lo que van a aprender: cómo usar IA a su favor sin que el reclutador piense que están haciendo trampa.
+-->
+
+---
+class: dark-slide
+transition: slide-up
+---
+
+<span class="eyebrow">Integridad técnica · La epidemia</span>
+
+# La tasa de fraude se <span class="accent">duplicó</span>
+
+<div class="grid-2 mt-6 gap-8" style="align-items: start;">
+  <div class="item">
+    <span class="label">El dato</span>
+    <p>El análisis de más de 50,000 entrevistas mostró que la tasa de fraude detectado pasó del <span class="accent">15% al 35%</span> a finales de 2025.</p>
+  </div>
+  <div class="item">
+    <span class="label">Cómo creen que no los atraparán</span>
+    <p>Herramientas que crean <span class="accent">capas invisibles</span> sobre el editor de código: muestran respuestas de IA que son completamente invisibles para el entrevistador al compartir pantalla.</p>
+  </div>
+  <div class="item">
+    <span class="label">Cómo los atrapan de todas formas</span>
+    <p>Las plataformas no solo ven el código. Monitorean <span class="accent">cómo se comporta el candidato</span>.</p>
+  </div>
+  <div class="item">
+    <span class="label">Deepfake detection</span>
+    <p>Las plataformas de vanguardia integran detección de deepfakes en tiempo real para alertar si el candidato usa un bot de voz o si su rostro fue suplantado digitalmente.</p>
+  </div>
+</div>
+
+<!--
+Fuente: Fabric HQ · "Interview Red Flags and Interview Cheating"
+-->
+
+---
+class: dark-slide
+transition: view-transition
+---
+
+<span class="eyebrow">Integridad técnica · Cómo detectan el fraude</span>
+
+# Las señales que el sistema <span class="accent">nunca ignora</span>
+
+<div class="grid-2 mt-6 gap-8">
+  <div class="noise-grid">
+    <div class="noise-item">
+      <span class="no">✕</span>
+      <div>
+        <strong>El Lag Loop</strong>
+        <p>Silencio sistemático de 3–5 segundos antes de responder. El sistema asume que estás esperando a que la IA procese el audio y genere la respuesta.</p>
+      </div>
+    </div>
+    <div class="noise-item">
+      <span class="no">✕</span>
+      <div>
+        <strong>Burst typing</strong>
+        <p>Bloques masivos de código escritos a velocidades robóticas, sin las pausas ni correcciones naturales de un humano.</p>
+      </div>
+    </div>
+    <div class="noise-item">
+      <span class="no">✕</span>
+      <div>
+        <strong>Rastreo de mirada</strong>
+        <p>Los sistemas cruzan el patrón de tecleo con el movimiento ocular para detectar si estás leyendo un guion fuera de pantalla.</p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <p style="margin-top: var(--gap-sm)">Las herramientas de trampa son detectables precisamente porque <span class="accent">eliminan los patrones humanos</span>: las dudas, las correcciones, el ritmo irregular. Eso es exactamente lo que el sistema busca.</p>
+    <p style="margin-top: var(--gap-sm)">Prepararte bien es más seguro y más rentable que intentar engañar al sistema.</p>
+    <p class="sub" style="margin-top: var(--gap-sm)">Fuente: Fabric HQ · Incruiter · "Evaluación Técnica HR-Tech 2026"</p>
+  </div>
+</div>
+
+<!--
+Cerrar con el mensaje positivo: la preparación genuina no solo es más ética, es la estrategia más inteligente.
+-->
+
+---
+class: terrain-slide
+transition: view-transition
+---
+
+<span class="eyebrow">IA en la entrevista · El nuevo estándar</span>
+
+# Algunas empresas ya <span class="accent">exigen</span> que uses IA
+
+<div class="grid-2 mt-8 gap-8" style="align-items: start;">
+  <div class="points">
+    <div class="point">
+      <span class="label">El caso Canva</span>
+      <p>Empresas como Canva hoy exigen que los candidatos usen Copilot o Cursor durante la entrevista. No para ver qué tan rápido generas código, sino para evaluar si puedes <span class="accent">auditar y corregir los errores que la IA comete</span>.</p>
+    </div>
+    <div class="point">
+      <span class="label">La trampa</span>
+      <p>Si aceptas ciegamente la sugerencia de la IA sin revisarla, repruebas. La IA genera código con confianza aunque esté equivocada.</p>
+    </div>
+  </div>
+  <div class="card">
+    <span class="label">Lo que realmente evalúan</span>
+    <p style="margin-top: var(--gap-sm)">Tu capacidad para encontrar el fallo en el código generado, entender por qué ocurre y corregirlo. Es exactamente el mismo juicio que evalúa el <span class="accent">Reverse Debugging</span>.</p>
+    <p class="sub" style="margin-top: var(--gap-sm)">Fuente: Utkrusht · "An Engineering leader's honest take on AI in tech interviews"</p>
+  </div>
+</div>
+
+<!--
+Transición natural desde la Sección 3: el juicio de ingeniería que describimos ahí es exactamente lo que estas empresas miden con IA.
+-->
+
+<!--
+Cerrar con el mensaje positivo: la preparación genuina no solo es más ética, es la estrategia más inteligente.
 -->
 
 ---
