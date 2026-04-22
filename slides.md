@@ -459,6 +459,33 @@ Fuentes: "Evaluación Técnica HR-Tech 2026" · "How to Dry Run Code Manually" (
 class: dark-slide
 ---
 
+<span class="eyebrow">Formato 4</span>
+
+# ¿Qué es un <span class="accent">Coding Assessment</span>?
+
+<div class="points mt-6">
+  <div class="point">
+    <span class="label">Definición</span>
+    <p>Una prueba técnica automatizada donde resuelves uno o más problemas de programación en un tiempo limitado, dentro de una plataforma como HackerRank o LeetCode. Es el filtro más común antes de hablar con un humano.</p>
+  </div>
+  <div class="point" v-click>
+    <span class="label">¿Qué evalúa?</span>
+    <p>Que tu código produzca el resultado correcto para todos los casos de prueba, incluyendo los casos extremos. La plataforma lo verifica de forma automática, sin que nadie lo lea.</p>
+  </div>
+  <div class="point" v-click>
+    <span class="label">¿Cuándo aparece en el proceso?</span>
+    <p>Generalmente es la <span class="accent">primera barrera técnica</span>: después de aplicar y antes de cualquier entrevista con el equipo. Puede ser sincrónico (con tiempo corriendo) o asincrónico (tienes días para entregarlo).</p>
+  </div>
+</div>
+
+<!--
+Establecer la definición antes de entrar al debate de LeetCode vs. HackerRank y si "ha muerto" o no.
+-->
+
+---
+class: dark-slide
+---
+
 <span class="eyebrow">Formato 4 · El mito vs. la realidad</span>
 
 # ¿LeetCode <span class="accent">ha muerto</span>?
