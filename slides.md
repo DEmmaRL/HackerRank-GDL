@@ -1030,6 +1030,252 @@ Cerrar con el mensaje positivo: la preparación genuina no solo es más ética, 
 -->
 
 ---
+class: green-slide
+layout: center
+transition: slide-up
+---
+
+<span class="eyebrow" style="color: var(--hr-black)">Sección 5</span>
+
+# Protocolos de Ejecución: <br>Del problema a la solución
+
+<!--
+Lo que van a aprender: los pasos exactos desde que recibes el enunciado hasta que terminas la sesión.
+-->
+
+---
+class: dark-slide
+transition: slide-up
+---
+
+<span class="eyebrow">Repaso · Coding Assessments</span>
+
+# ¿Qué tipos de problemas te vas a encontrar?
+
+<div class="grid-2 mt-6 gap-8">
+  <div class="item">
+    <span class="label">Estructuras de datos</span>
+    <p>Arrays, strings, linked lists, stacks, queues, trees, graphs y hash maps. La mayoría de los problemas son variaciones de estos.</p>
+  </div>
+  <div class="item">
+    <span class="label">Algoritmos de búsqueda y ordenamiento</span>
+    <p>Binary search, BFS, DFS, merge sort. No para memorizarlos, sino para reconocer cuándo aplicarlos.</p>
+  </div>
+
+</div>
+<div class="mt-12">
+  <span class="label">Temas recurrentes</span>
+  <p>Sliding window, two pointers, dynamic programming básico. El 80% de los problemas de nivel entry caben en menos de 10 temas diferentes.</p>
+</div>
+
+<!--
+Este slide no es nuevo contenido — es un ancla. La audiencia ya sabe esto; el objetivo es activar el contexto antes de hablar de cómo ejecutar.
+-->
+
+---
+class: terrain-slide
+transition: view-transition
+---
+
+<span class="eyebrow">Repaso · Cómo se evalúan</span>
+
+# No solo cuentan los <span class="accent">test cases</span>
+
+<div class="grid-2 mt-6 gap-8" style="align-items:start;">
+  <div class="points">
+    <div class="point">
+      <span class="label">La plataforma evalúa:</span>
+      <p>Que tu código pase todos los casos de prueba, incluyendo los edge cases.</p>
+    </div>
+    <div class="point">
+      <span class="label">Mientras el entrevistador evalúa:</span>
+      <p>Legibilidad, eficiencia, cómo nombraste tus variables, si dejaste comentarios útiles y si tu solución escala.</p>
+    </div>
+  </div>
+  <div class="card">
+    <span class="label">La regla práctica</span>
+    <p style="margin-top: var(--gap-sm)">Un código que pasa el <span class="accent">70% de los casos y está bien estructurado</span> suele puntuar mejor que uno que pasa el 100% pero es ilegible.</p>
+  </div>
+</div>
+
+<!--
+Transición: "Entonces, ¿cómo estructuramos ese proceso? Eso es exactamente lo que vemos ahora."
+-->
+
+---
+class: dark-slide
+layout: center
+transition: slide-up
+---
+
+<span class="eyebrow">Sección 5</span>
+
+# Protocolos en <span class="accent">entrevistas 1:1</span>
+
+<!--
+Transición: ya sabemos qué nos van a pedir. Ahora veamos cómo ejecutarlo paso a paso.
+-->
+
+---
+class: dark-slide
+transition: slide-up
+---
+
+<span class="eyebrow">Protocolo 1 · UMPIRE</span>
+
+<div style="display:grid; grid-template-columns: 3rem 1fr; gap: 0.4rem var(--gap-md); margin-top: var(--gap-md); align-items:center;">
+  <span style="font-size:3rem; font-weight:700; line-height:1; color:var(--hr-green);">U</span>
+  <div class="item"><span class="label">Understand</span><p>Reformula el problema en tus propias palabras. Haz preguntas sobre edge cases antes de escribir una sola línea.</p></div>
+  <span style="font-size:3rem; font-weight:700; line-height:1; color:var(--hr-green);">M</span>
+  <div class="item"><span class="label">Match</span><p>Identifica qué patrón o estructura de datos aplica. ¿Es un problema de sliding window? ¿De BFS?</p></div>
+  <span style="font-size:3rem; font-weight:700; line-height:1; color:var(--hr-green);">P</span>
+  <div class="item"><span class="label">Plan</span><p>Describe tu solución en pseudocódigo o en voz alta antes de implementar.</p></div>
+  <span style="font-size:3rem; font-weight:700; line-height:1; color:var(--hr-green);">I</span>
+  <div class="item"><span class="label">Implement</span><p>Escribe el código limpio y modular. Nombra bien tus variables.</p></div>
+  <span style="font-size:3rem; font-weight:700; line-height:1; color:var(--hr-green);">R</span>
+  <div class="item"><span class="label">Review</span><p>Haz un dry run manual con un ejemplo. Encuentra tus propios errores antes de que el sistema los encuentre.</p></div>
+  <span style="font-size:3rem; font-weight:700; line-height:1; color:var(--hr-green);">E</span>
+  <div class="item"><span class="label">Evaluate</span><p>Declara la complejidad de tiempo y espacio en voz alta. Propón optimizaciones si el tiempo lo permite.</p></div>
+</div>
+
+<!--
+Fuente: "Mastering the UMPIRE Interview Strategy in Coding" (Design Gurus)
+El peor error: empezar a teclear en cuanto el entrevistador termina de leer el problema.
+-->
+
+---
+class: dark-slide
+transition: view-transition
+---
+
+<span class="eyebrow">Protocolo 2 · Alternativa : REACT</span>
+
+<div style="display:grid; grid-template-columns: 3rem 1fr; gap: 0.4rem var(--gap-md); margin-top: var(--gap-md); align-items:center;">
+  <span style="font-size:3rem; font-weight:700; line-height:1; color:var(--hr-green);">R</span>
+  <div class="item"><span class="label">Repeat</span><p>Repite el problema en voz alta con tus propias palabras para confirmar que entendiste.</p></div>
+  <span style="font-size:3rem; font-weight:700; line-height:1; color:var(--hr-green);">E</span>
+  <div class="item"><span class="label">Examples</span><p>Genera tus propios ejemplos, incluyendo casos límite. No esperes a que el entrevistador los dé.</p></div>
+  <span style="font-size:3rem; font-weight:700; line-height:1; color:var(--hr-green);">A</span>
+  <div class="item"><span class="label">Approach</span><p>Explica tu estrategia antes de codificar. Fuerza bruta primero si es necesario.</p></div>
+  <span style="font-size:3rem; font-weight:700; line-height:1; color:var(--hr-green);">C</span>
+  <div class="item"><span class="label">Code</span><p>Implementa con claridad. Comenta las decisiones no obvias.</p></div>
+  <span style="font-size:3rem; font-weight:700; line-height:1; color:var(--hr-green);">T</span>
+  <div class="item"><span class="label">Test</span><p>Corre mentalmente tu solución con los ejemplos que generaste. Verifica los edge cases.</p></div>
+</div>
+
+<!--
+REACT es útil cuando el tiempo es más corto o el formato es menos formal. La clave es el paso R: replantear el problema en voz alta activa la comunicación desde el primer segundo.
+-->
+
+---
+class: terrain-slide
+transition: slide-up
+---
+
+<span class="eyebrow">Protocolo 2 · Brute Force First</span>
+
+# Primero que <span class="accent">funcione</span>, luego que escale
+
+<div class="grid-2 mt-6 gap-8" style="align-items:start;">
+  <div class="points">
+    <div class="point">
+      <span class="label">PAsa mucho:</span>
+      <p>Quedarse paralizado buscando la solución óptima desde el minuto uno, pero se te acaba el tiempo y tu editor vacío.</p>
+    </div>
+    <div class="point">
+      <span class="label">La regla de oro</span>
+      <p>Plantea la solución más ingenua primero, declara su complejidad en voz alta, y luego optimiza. Un código ineficiente que resuelve el problema siempre puntúa más que uno optimizado a medias que no compila.</p>
+    </div>
+  </div>
+  <div class="card">
+    <span class="label">El flujo según Gayle Laakman</span>
+    <ol style="margin-top: var(--gap-sm); display:flex; flex-direction:column; gap:0.5rem;">
+      <li>Solución bruta → <span class="accent">funciona</span></li>
+      <li>Declara complejidad: <span class="accent">O(N²)</span></li>
+      <li>"¿Puedo reducirlo?" → identifica el cuello de botella</li>
+      <li>Optimiza con el algoritmo correcto → <span class="accent">O(N)</span></li>
+    </ol>
+    <p class="sub" style="margin-top: var(--gap-sm)">Fuente: Cracking the Coding Interview (Gayle Laakmann)</p>
+  </div>
+</div>
+
+<!--
+Énfasis: el entrevistador quiere ver el proceso de optimización, no solo el resultado final.
+-->
+
+---
+class: dark-slide
+transition: view-transition
+---
+
+<span class="eyebrow">El entrevistador no es tu enemigo</span>
+
+# Recuerda <span class="accent">pedir ayuda</span>
+
+<div class="grid-2 mt-6">
+<div class="">
+
+  <div>Es la diferencia entre un coding assestment individual y una entrevista 1 a 1</div>
+  
+  <div class="ab-card good mt-8">
+      <span class="ab-tag good">No tengas miedo</span>
+      <p>Recibir una pista y mantener el flujo de razonamiento demuestra que sabes <span class="accent">colaborar y aprovechar el contexto</span> — exactamente lo que evalúa el Pair Programming.</p>
+    </div>
+  </div>
+
+</div>
+
+<!--
+Fuente: "How To Handle Hints In A Software Engineer Interview Without Failing" (Taro)
+-->
+
+---
+class: dark-slide
+transition: slide-up
+---
+
+<span class="eyebrow">Worst Case · Protocolo de emergencia</span>
+
+# Quedan 5 minutos y <span class="accent">encontraste un error</span>
+
+<div class="grid-2 mt-6 gap-8" style="align-items:start;">
+  <div class="noise-grid">
+    <div class="noise-item">
+      <span class="no">✕</span>
+      <div>
+        <strong>Expresar frustración</strong>
+        <p>La reacción emocional ante el error es parte de lo que evalúan. Perder la compostura es una señal negativa independiente del código.</p>
+      </div>
+    </div>
+    <div class="noise-item">
+      <span class="no">✕</span>
+      <div>
+        <strong>Borrar todo a ciegas</strong>
+        <p>Eliminar código sin un diagnóstico claro solo consume el tiempo que te queda y borra el trabajo que sí estaba bien.</p>
+      </div>
+    </div>
+  </div>
+  <div class="points">
+    <div class="point">
+      <span class="label">1 · Reconoce en voz alta</span>
+      <p>"Veo que hay un fallo aquí, déjame aislarlo."</p>
+    </div>
+    <div class="point">
+      <span class="label">2 · Apunta a la línea exacta</span>
+      <p>No borres. Señala el problema específico y explica por qué falla.</p>
+    </div>
+    <div class="point">
+      <span class="label">3 · Propón la refactorización</span>
+      <p>"Si tuviera más tiempo, reestructuraría esta función para separar la lógica de validación." Esto demuestra madurez de ingeniería aunque no alcances a implementarlo.</p>
+    </div>
+  </div>
+</div>
+
+<!--
+Fuente: "Universal Technical Interview Signal Research" · r/cscareerquestions
+-->
+
+---
 class: dark-slide
 ---
 
