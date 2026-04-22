@@ -999,30 +999,62 @@ transition: view-transition
 
 <span class="eyebrow">El nuevo estándar</span>
 
-# Algunas empresas ahora <span class="accent">exigen</span> que uses IA
+# IA: Habilidades de <span class="accent">Orquestación</span>
 
 <div class="grid-2 mt-8 gap-8" style="align-items: start;">
   <div class="points">
     <div class="point">
-      <span class="label">Antecendentes</span>
-      <p>Empresas como Canva hoy exigen que los candidatos usen Copilot o Cursor durante la entrevista. No para ver qué tan rápido generas código, sino para evaluar si puedes <span class="accent">auditar y corregir los errores que la IA comete</span>.</p>
+      <span class="label">Antecedentes</span>
+      <p>Empresas como Meta y Canva ahora ponen a prueba entrevistas asistidas por IA. Se enfocan en la <span class="accent">orquestación</span>: diseño de prompts, revisión manual, edición y pruebas.</p>
     </div>
     <div class="point">
-      <span class="label">Tips</span>
-      <p>No aceptes ciegamente las sugerencias de la IA sin revisarlas</p>
-      <p> El reclutador observará qué tan bien estructuras tus promtps antes de generar el código.</p>
-      <p></p>
+      <span class="label">Red Flag:</span>
+      <p>Copiar y pegar ciegamente el resultado de la IA sin realizar ediciones humanas o explicaciones es un <span class="accent">rechazo inmediato</span>.</p>
     </div>
   </div>
   <div class="card">
-    <span class="label">Se evalúa:</span>
-    <p style="margin-top: var(--gap-sm)">Tu capacidad para encontrar el fallo en el código generado, entender por qué ocurre y corregirlo. Es exactamente el mismo juicio que evalúa el <span class="accent">Reverse Debugging</span>.</p>
-    <p class="sub" style="margin-top: var(--gap-sm)">Utkrusht · "An Engineering leader's honest take on AI in tech interviews"</p>
+    <span class="label">La Regla de Oro</span>
+    <p style="font-size: 1.1rem; font-weight: 500; line-height: 1.4;">"Trata a la IA como a un <span class="accent">pasante muy rápido pero MUY ingenuo</span>."</p>
+    <p class="sub" style="margin-top: var(--gap-sm)">Siempre asume que su primer código tiene errores sutiles de seguridad o rendimiento que tú, como ingeniero a cargo, debes cazar.</p>
+    <p class="sub" style="margin-top: 0.5rem"> Prepfully · "Ace the SWE interview 2026"</p>
   </div>
 </div>
 
 <!--
-Transición natural desde la Sección 3: el juicio de ingeniería que describimos ahí es exactamente lo que estas empresas miden con IA.
+Énfasis: El reclutador no está viendo el código, está viendo tu juicio al supervisar a la IA.
+-->
+
+---
+class: dark-slide
+---
+
+<span class="eyebrow">Ingeniería de Contexto</span>
+
+# La diferencia entre un buen y un <span class="accent">mal Prompt</span>
+
+<div class="ab mt-6">
+  <div class="ab-card bad">
+    <span class="ab-tag bad text-lg">✕</span>
+    <p>"Haz un sistema de autenticación de usuarios."</p>
+    <div class="example" style="border-color: #ff4d4d; margin-top: 0.5rem">
+      <p class="sub">Es vago. La IA adivinará el lenguaje, usará librerías obsoletas y métodos inseguros por falta de límites.</p>
+    </div>
+  </div>
+  <div class="ab-card good">
+    <span class="ab-tag good text-lg ">✓</span>
+    <p style="font-size: 0.75rem; line-height: 1.3">"Crea un middleware de Express en Node.js para autenticación JWT. Debe: 1) Extraer token del header, 2) Verificar con jsonwebtoken, 3) Añadir usuario a req.user, 4) Error 401 si falta/es inválido. Usa TypeScript."</p>
+    <div class="example" style="margin-top: 0.5rem">
+      <p class="sub">Demuestra que tienes la <span class="accent">arquitectura completa</span> en tu cabeza antes de tirar una sola línea de código.</p>
+    </div>
+  </div>
+</div>
+
+<div  style="margin-top: var(--gap-md)">
+  <p>La precisión de la IA es directamente proporcional al <span class="accent">esfuerzo de diseño</span> que inviertas en el prompt.</p>
+</div>
+
+<!--
+Fuente: "The Complete Full-Stack Developer Roadmap for 2026" · TypoApp
 -->
 
 <!--
