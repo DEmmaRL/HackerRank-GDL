@@ -892,7 +892,7 @@ transition: slide-up
 
 <span class="eyebrow" style="color: var(--hr-black)">Sección 4</span>
 
-# Inteligencia Artificial: <br>Uso estratégico y detección de fraude
+# Inteligencia Artificial: <br>Fair use y detección de trampa.
 
 <!--
 Lo que van a aprender: cómo usar IA a su favor sin que el reclutador piense que están haciendo trampa.
@@ -1008,12 +1008,14 @@ transition: view-transition
       <p>Empresas como Canva hoy exigen que los candidatos usen Copilot o Cursor durante la entrevista. No para ver qué tan rápido generas código, sino para evaluar si puedes <span class="accent">auditar y corregir los errores que la IA comete</span>.</p>
     </div>
     <div class="point">
-      <span class="label">La trampa</span>
-      <p>Si aceptas ciegamente la sugerencia de la IA sin revisarla, repruebas.</p>
+      <span class="label">Tips</span>
+      <p>No aceptes ciegamente las sugerencias de la IA sin revisarlas</p>
+      <p> El reclutador observará qué tan bien estructuras tus promtps antes de generar el código.</p>
+      <p></p>
     </div>
   </div>
   <div class="card">
-    <span class="label">Lo que realmente evalúan</span>
+    <span class="label">Se evalúa:</span>
     <p style="margin-top: var(--gap-sm)">Tu capacidad para encontrar el fallo en el código generado, entender por qué ocurre y corregirlo. Es exactamente el mismo juicio que evalúa el <span class="accent">Reverse Debugging</span>.</p>
     <p class="sub" style="margin-top: var(--gap-sm)">Utkrusht · "An Engineering leader's honest take on AI in tech interviews"</p>
   </div>
