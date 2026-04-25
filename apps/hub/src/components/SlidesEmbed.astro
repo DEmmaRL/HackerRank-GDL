@@ -1,4 +1,6 @@
 ---
+import { getLocalSessionPorts } from '../utils/ports';
+
 interface Props {
 	src: string;
 	title: string;
@@ -6,6 +8,20 @@ interface Props {
 }
 
 const { src, title, buttonLabel = 'Fullscreen' } = Astro.props;
+
+// Development HMR logic: 
+// If we are in DEV mode, try to find a local port for this session
+let finalSrc = src;
+if (import.meta.env.DEV) {
+	const sessionPorts = getLocalSessionPorts();
+	// Extract slug from src (e.g., "/slides/resume-building-101/" -> "resume-building-101")
+	const slugMatch = src.match(/\/slides\/([^/]+)\/?/);
+	const slug = slugMatch ? slugMatch[1] : null;
+	
+	if (slug && sessionPorts[slug]) {
+		finalSrc = `http://localhost:${sessionPorts[slug]}${src}`;
+	}
+}
 ---
 
 <div class="slides-embed-card" data-slides-embed>
@@ -25,7 +41,7 @@ const { src, title, buttonLabel = 'Fullscreen' } = Astro.props;
 	</div>
 	<iframe
 		class="slides-embed"
-		src={src}
+		src={finalSrc}
 		title={title}
 		allow="fullscreen"
 		allowfullscreen

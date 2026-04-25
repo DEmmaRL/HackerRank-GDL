@@ -1,5 +1,5 @@
 import { execSync } from 'node:child_process';
-import { cpSync, mkdirSync, rmSync } from 'node:fs';
+import { cpSync, mkdirSync, rmSync, statSync, existsSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
 const sessions = [
@@ -10,16 +10,57 @@ const sessions = [
 
 const publicSlides = 'apps/hub/public/slides';
 
-rmSync(publicSlides, { recursive: true, force: true });
-mkdirSync(publicSlides, { recursive: true });
+// Ensure the target directory exists instead of wiping it
+if (!existsSync(publicSlides)) {
+  mkdirSync(publicSlides, { recursive: true });
+}
+
+function getFilesRecursively(dir) {
+  const files = [];
+  const items = readdirSync(dir, { withFileTypes: true });
+  for (const item of items) {
+    if (item.isDirectory()) {
+      if (item.name === 'node_modules' || item.name === 'dist') continue;
+      files.push(...getFilesRecursively(join(dir, item.name)));
+    } else {
+      if (['.md', '.vue', '.ts', '.css'].some(ext => item.name.endsWith(ext))) {
+        files.push(join(dir, item.name));
+      }
+    }
+  }
+  return files;
+}
+
+function needsRebuild(sessionDir, distDir) {
+  if (!existsSync(distDir)) return true;
+  const distMtime = statSync(distDir).mtimeMs;
+  const files = getFilesRecursively(sessionDir);
+  return files.some(f => statSync(f).mtimeMs > distMtime);
+}
 
 for (const { dir, filter, slug } of sessions) {
-  console.log(`\n▶ Building: ${slug}`);
-  execSync(`pnpm --filter ${filter} build`, { stdio: 'inherit' });
-  cpSync(join('sessions', dir, 'dist'), join(publicSlides, slug), { recursive: true });
-  console.log(`✓ ${slug} → ${publicSlides}/${slug}`);
+  const sessionPath = join('sessions', dir);
+  const targetPath = join(publicSlides, slug);
+  const sessionDistPath = join(sessionPath, 'dist');
+
+  console.log(`\n▶ Checking: ${slug}`);
+
+  if (needsRebuild(sessionPath, targetPath)) {
+    console.log(`  Changes detected. Building...`);
+    execSync(`pnpm --filter ${filter} build`, { stdio: 'inherit' });
+
+    // Clean only this session's target folder before copying
+    rmSync(targetPath, { recursive: true, force: true });
+    mkdirSync(targetPath, { recursive: true });
+
+    cpSync(sessionDistPath, targetPath, { recursive: true });
+    console.log(`✓ ${slug} → ${targetPath}`);
+  } else {
+    console.log(`  No changes. Skipping build.`);
+  }
 }
 
 console.log('\n▶ Building hub');
 execSync('pnpm --filter hub build', { stdio: 'inherit' });
 console.log('\n✓ Done');
+
