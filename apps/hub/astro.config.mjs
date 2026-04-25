@@ -6,27 +6,7 @@ import vercel from '@astrojs/vercel';
 
 export default defineConfig({
 	site: 'https://www.hackerrankcrewgdl.com',
-	adapter: vercel({
-		edgeMiddleware: true,
-	}),
-	vite: {
-		server: {
-			proxy: {
-				'/slides/resume-building-101': {
-					target: 'http://localhost:3031',
-					changeOrigin: true,
-				},
-				'/slides/technical-interview': {
-					target: 'http://localhost:3032',
-					changeOrigin: true,
-				},
-				'/slides/asegura-tu-futuro': {
-					target: 'http://localhost:3033',
-					changeOrigin: true,
-				},
-			},
-		},
-	},
+	adapter: vercel(),
 	integrations: [
 
 		sitemap(),
