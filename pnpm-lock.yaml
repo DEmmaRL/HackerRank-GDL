@@ -45,7 +45,7 @@ importers:
         version: 0.25.0
       vue:
         specifier: ^3.5.29
-        version: 3.5.33(typescript@6.0.3)
+        version: 3.5.33(typescript@5.9.3)
 
   sessions/resume-building-101:
     devDependencies:
@@ -70,12 +70,9 @@ importers:
       '@slidev/theme-default':
         specifier: latest
         version: 0.25.0
-      '@slidev/theme-seriph':
-        specifier: latest
-        version: 0.25.0
       vue:
         specifier: ^3.5.29
-        version: 3.5.33(typescript@5.9.3)
+        version: 3.5.33(typescript@6.0.3)
 
 packages:
 
