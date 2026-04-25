@@ -1,4 +1,6 @@
 ---
+import { getLocalSessionPorts } from '../utils/ports';
+
 interface Props {
 	src: string;
 	title: string;
@@ -6,6 +8,19 @@ interface Props {
 }
 
 const { src, title, buttonLabel = 'Fullscreen' } = Astro.props;
+
+// Extract session identifier from URL path (e.g., "/slides/resume-101/" -> "resume-101")
+const sessionName = src.split('/')[2];
+
+// In development, resolve the specific local port for the requested session
+const localPorts = import.meta.env.DEV ? getLocalSessionPorts() : {};
+const port = sessionName ? localPorts[sessionName] : undefined;
+
+// Direct local proxying: Bypass the Astro middleware in dev mode to prevent Vite HMR conflicts.
+// The original path is preserved to ensure parity with Vercel's production routing.
+const finalSrc = import.meta.env.DEV && port 
+    ? `http://localhost:${port}${src}`
+    : src;
 ---
 
 <div class="slides-embed-card" data-slides-embed>
@@ -26,7 +41,7 @@ const { src, title, buttonLabel = 'Fullscreen' } = Astro.props;
 	</div>
 	<iframe
 		class="slides-embed"
-		src={src}
+		src={finalSrc}
 		title={title}
 		allow="fullscreen"
 		allowfullscreen

@@ -1,15 +1,9 @@
 import { defineMiddleware } from "astro:middleware";
-
-const LOCAL_PORTS: Record<string, number> = {
-  'resume-building-101': 3031,
-  'technical-interview': 3032,
-  'asegura-tu-futuro': 3033,
-};
+import { getLocalSessionPorts } from "./utils/ports";
 
 export const onRequest = defineMiddleware(async (context, next) => {
   const url = new URL(context.request.url);
 
-  // Si la ruta empieza con /slides/, actuamos como proxy
   if (url.pathname.startsWith('/slides/')) {
     const segments = url.pathname.split('/');
     const sessionName = segments[2]; 
@@ -17,34 +11,44 @@ export const onRequest = defineMiddleware(async (context, next) => {
 
     if (sessionName) {
       let targetUrl: string;
+      let port: number | undefined;
 
-      // En desarrollo, usamos los puertos locales si existen
-      if (import.meta.env.DEV && LOCAL_PORTS[sessionName]) {
-        targetUrl = `http://localhost:${LOCAL_PORTS[sessionName]}/${remainingPath}${url.search}`;
+      if (import.meta.env.DEV) {
+        const localPorts = getLocalSessionPorts();
+        port = localPorts[sessionName];
+        if (!port) return next();
+
+        // Local proxy: Preserve full URL path to match Slidev's --base configuration.
+        // Note: The SlidesEmbed component bypasses this middleware in dev for the iframe source to preserve HMR.
+        // This middleware block primarily handles direct browser navigation to /slides/* in local dev.
+        targetUrl = `http://localhost:${port}${url.pathname}${url.search}`;
       } else {
-        // Convención de nombres: hr-gdl-slide-<nombre-carpeta>
+        // Edge proxy (Vercel): Strip the '/slides/:session' prefix as micro-frontends are served from root
         targetUrl = `https://hr-gdl-slide-${sessionName}.vercel.app/${remainingPath}${url.search}`;
       }
 
       try {
         const response = await fetch(targetUrl);
 
-        // Si el slide no existe (404) y es la ruta raíz de la sesión, dejamos que Astro maneje su propio 404
+        // Fallback: Yield to Astro's internal 404 handler if the session root is not found
         if (response.status === 404 && !remainingPath) {
             return next();
         }
 
-        // Clonamos la respuesta para devolverla al usuario
+        // Strip decompression headers (Node.js fetch auto-decodes the body; forwarding these causes ERR_CONTENT_DECODING_FAILED)
+        const proxiedHeaders = new Headers(response.headers);
+        proxiedHeaders.delete('content-encoding');
+        proxiedHeaders.delete('content-length');
+
         return new Response(response.body, {
           status: response.status,
-          headers: response.headers
+          headers: proxiedHeaders
         });
       } catch (e) {
-        // En desarrollo, si falla el fetch al puerto local, avisamos pero seguimos
         if (import.meta.env.DEV) {
-          console.warn(`[Proxy Warning] No se pudo conectar con la sesión local "${sessionName}" en el puerto ${LOCAL_PORTS[sessionName]}. ¿Está el servidor corriendo?`);
+          console.warn(`[Proxy Warning] Could not connect to local session "${sessionName}" on port ${port}. Is the Slidev server running?`);
         } else {
-          console.error(`[Proxy Error] No se pudo conectar con ${sessionName}:`, e);
+          console.error(`[Proxy Error] Could not connect to ${sessionName}:`, e);
         }
         return next();
       }
@@ -53,4 +57,3 @@ export const onRequest = defineMiddleware(async (context, next) => {
 
   return next();
 });
-
