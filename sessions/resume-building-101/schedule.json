@@ -1,0 +1,107 @@
+{
+  "conference_metadata": {
+    "title": "Decoding the Resume: De Estudiante a Big Tech",
+    "target_audience": "Estudiantes de Ingeniería (CUCEI)",
+    "duration_minutes": 90,
+    "presenter_profile": "Frontend Engineer & HackerRank Campus Crew Lead",
+    "core_philosophy": "Function over Form / Accessibility is Machine-Readability"
+  },
+  "agenda_structure": [
+    {
+      "id": 1,
+      "section": "Apertura: El Choque de Realidad",
+      "duration": 10,
+      "goal": "Desmitificar el propósito del documento.",
+      "key_points": [
+        "Dinámica interactiva: ¿Qué es un Resume?",
+        "Diferencia técnica: Resume vs CV (Extensión y audiencia).",
+        "The Hook: El resume no es tu biografía, es un ticket para la entrevista."
+      ]
+    },
+    {
+      "id": 2,
+      "section": "Construyendo el DNI del Ingeniero",
+      "duration": 15,
+      "goal": "Definir el contenido esencial mediante validación colectiva.",
+      "dynamics": [
+        {
+          "type": "Lluvia de ideas",
+          "description": "¿Qué debe llevar un Resume?",
+          "validation": "Filtro de ruido (No fotos, no dirección, no hobbies)."
+        },
+        {
+          "type": "Duelo_AB_1",
+          "case": "Header & Links",
+          "option_a": "Iconos de colores (Visual)",
+          "option_b": "Texto plano / Hipervínculos (Funcional)",
+          "winner_reason": "Parsing stability & Accessibility (WCAG)."
+        },
+        {
+          "type": "Duelo_AB_2",
+          "case": "Technical Skills",
+          "option_a": "Barras de progreso % (Gráficas)",
+          "option_b": "Categorización por dominio (Técnica)",
+          "winner_reason": "Avoids arbitrary metrics; machine-searchable keywords."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "section": "Experiencia y la Fórmula de Oro",
+      "duration": 15,
+      "goal": "Enseñar a redactar bullets con impacto de ingeniería.",
+      "concepts": [
+        "Introducción a Google XYZ Formula: [Accomplished X, measured by Y, by doing Z].",
+        {
+          "type": "Duelo_AB_3",
+          "case": "Experience Bullets",
+          "option_a": "Lista de responsabilidades (Manual de usuario)",
+          "option_b": "Resultados cuantificables (Engineering mindset)",
+          "winner_reason": "Demonstrates seniority and business impact."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "section": "El Formato: El Gran Plot Twist",
+      "duration": 15,
+      "goal": "Introducir el concepto de ATS mediante la caída de un mito visual.",
+      "dynamics": [
+        {
+          "type": "Duelo_AB_4_The_Hook",
+          "case": "Layout General",
+          "option_a": "Doble columna / Canva / Creativo",
+          "option_b": "Simple / Una columna / Minimalista",
+          "winner_preview": "Option B is the Big Tech standard."
+        }
+      ],
+      "technical_deep_dive": [
+        "¿Qué es un ATS (Applicant Tracking System)?",
+        "Parsing: Del PDF al Objeto JSON.",
+        "Mitos: Texto blanco (OCD), rankings de IA, filtros booleanos."
+      ]
+    },
+    {
+      "id": 5,
+      "section": "Estrategia de Gestión y Polimorfismo",
+      "duration": 10,
+      "goal": "Productividad en la búsqueda de empleo.",
+      "key_points": [
+        "The Master Resume: Tu base de datos personal (Single Source of Truth).",
+        "Polimorfismo: Adaptar el resume según la Job Description (Frontend vs Backend).",
+
+      ]
+    },
+    {
+      "id": 6,
+      "section": "Live Demo & Ecosistema",
+      "duration": 25,
+      "goal": "Demostración empírica y cierre.",
+      "live_actions": [
+        "Procesar resumes A/B en un ATS Enterprise (ej. Breezy/Manatal).",
+        "Visualización del fallo de parsing en formatos complejos.",
+        "GitHub, Portafolio y Open Source como validadores."
+      ]
+    }
+  ]
+}
