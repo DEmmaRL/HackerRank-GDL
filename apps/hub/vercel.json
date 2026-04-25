@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/slides/:session/:path*",
+      "destination": "https://hr-gdl-slide-:session.vercel.app/:path*"
+    }
+  ]
+}
