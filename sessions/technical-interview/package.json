@@ -3,8 +3,8 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "slidev build",
-    "dev": "slidev --open --port 3032",
+    "build": "slidev build --base /slides/technical-interview/",
+    "dev": "slidev --port 3032",
     "export": "slidev export"
   },
   "devDependencies": {

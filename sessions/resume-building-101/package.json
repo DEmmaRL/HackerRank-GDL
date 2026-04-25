@@ -3,7 +3,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "slidev build",
+    "build": "slidev build --base /slides/resume-building-101/",
     "dev": "slidev --open --port 3031",
     "export": "slidev export"
   },

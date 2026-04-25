@@ -3,9 +3,9 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "slidev build",
+    "build": "slidev build --base /slides/asegura-tu-futuro/",
     "build:public": "node build-public.js && cd dist-public && slidev build --base /",
-    "dev": "slidev --open --remote --port 3033",
+    "dev": "slidev --port 3033",
     "export": "slidev export"
   },
   "devDependencies": {

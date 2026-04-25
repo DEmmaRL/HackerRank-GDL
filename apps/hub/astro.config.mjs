@@ -4,8 +4,27 @@ import starlight from '@astrojs/starlight';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-	site: 'https://www.hackerrankcrewgdl.com',
-	integrations: [
+        site: 'https://www.hackerrankcrewgdl.com',
+        vite: {
+                server: {
+                        proxy: {
+                                '/slides/resume-building-101': {
+                                        target: 'http://localhost:3031',
+                                        changeOrigin: true,
+                                },
+                                '/slides/technical-interview': {
+                                        target: 'http://localhost:3032',
+                                        changeOrigin: true,
+                                },
+                                '/slides/asegura-tu-futuro': {
+                                        target: 'http://localhost:3033',
+                                        changeOrigin: true,
+                                },
+                        },
+                },
+        },
+        integrations: [
+
 		sitemap(),
 		starlight({
 			title: 'HackerRank Crew GDL',
