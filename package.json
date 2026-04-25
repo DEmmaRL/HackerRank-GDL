@@ -7,7 +7,7 @@
     "dev:resume": "pnpm --filter resume-building-101 dev",
     "dev:interview": "pnpm --filter hackerrank-crew-gdl-template dev",
     "dev:asegura": "pnpm --filter asegura-tu-futuro-en-big-tech dev",
-    "build": "pnpm --filter hub build",
+    "build": "node build.mjs",
     "build:all": "pnpm -r build",
     "preview": "pnpm --filter hub preview"
   }
