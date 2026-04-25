@@ -1,5 +1,11 @@
 import { defineMiddleware } from "astro:middleware";
 
+const LOCAL_PORTS: Record<string, number> = {
+  'resume-building-101': 3031,
+  'technical-interview': 3032,
+  'asegura-tu-futuro': 3033,
+};
+
 export const onRequest = defineMiddleware(async (context, next) => {
   const url = new URL(context.request.url);
 
@@ -10,13 +16,20 @@ export const onRequest = defineMiddleware(async (context, next) => {
     const remainingPath = segments.slice(3).join('/') || '';
 
     if (sessionName) {
-      // Convención de nombres: hr-gdl-slide-<nombre-carpeta>
-      const targetUrl = `https://hr-gdl-slide-${sessionName}.vercel.app/${remainingPath}${url.search}`;
+      let targetUrl: string;
+
+      // En desarrollo, usamos los puertos locales si existen
+      if (import.meta.env.DEV && LOCAL_PORTS[sessionName]) {
+        targetUrl = `http://localhost:${LOCAL_PORTS[sessionName]}/${remainingPath}${url.search}`;
+      } else {
+        // Convención de nombres: hr-gdl-slide-<nombre-carpeta>
+        targetUrl = `https://hr-gdl-slide-${sessionName}.vercel.app/${remainingPath}${url.search}`;
+      }
 
       try {
         const response = await fetch(targetUrl);
-        
-        // Si el slide no existe (404), dejamos que Astro maneje su propio 404
+
+        // Si el slide no existe (404) y es la ruta raíz de la sesión, dejamos que Astro maneje su propio 404
         if (response.status === 404 && !remainingPath) {
             return next();
         }
@@ -27,7 +40,12 @@ export const onRequest = defineMiddleware(async (context, next) => {
           headers: response.headers
         });
       } catch (e) {
-        console.error(`[Proxy Error] No se pudo conectar con ${sessionName}:`, e);
+        // En desarrollo, si falla el fetch al puerto local, avisamos pero seguimos
+        if (import.meta.env.DEV) {
+          console.warn(`[Proxy Warning] No se pudo conectar con la sesión local "${sessionName}" en el puerto ${LOCAL_PORTS[sessionName]}. ¿Está el servidor corriendo?`);
+        } else {
+          console.error(`[Proxy Error] No se pudo conectar con ${sessionName}:`, e);
+        }
         return next();
       }
     }
@@ -35,3 +53,4 @@ export const onRequest = defineMiddleware(async (context, next) => {
 
   return next();
 });
+
