@@ -1,0 +1,17 @@
+{
+  "name": "asegura-tu-futuro-en-big-tech",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "build:public": "node build-public.js && cd dist-public && slidev build --base /",
+    "dev": "slidev --open --remote --port 3033",
+    "export": "slidev export"
+  },
+  "devDependencies": {
+    "@slidev/cli": "^52.14.2",
+    "@slidev/theme-default": "latest",
+    "@slidev/theme-seriph": "latest",
+    "vue": "^3.5.29"
+  }
+}

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embudo de Selección FAANG</title>
+    <style>
+        :root {
+            --funnel-width: 650px;
+            --triangle-base-percent: 100%; /* Ancho en % de --funnel-width */
+            --triangle-height: 440px; /* Alto del triángulo en px */
+            --color-ats: #31394dff;
+            --color-oa: #b85741ff;
+            --color-loop: #d9c4b1ff;
+            --color-offer: #002f4aff;
+            --text-light: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        .funnel-container {
+            width: min(100%, var(--funnel-width));
+            height: var(--triangle-height);
+            overflow: hidden;
+            /* Cálculo: izquierda = (100% - base) / 2, derecha = izquierda + base */
+            clip-path: polygon(
+                calc((100% - var(--triangle-base-percent)) / 2) 0%,
+                calc((100% - var(--triangle-base-percent)) / 2 + var(--triangle-base-percent)) 0%,
+                50% 100%
+            );
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
+            transform: translateX(-110px);
+        }
+
+        /* Cada etapa del embudo */
+        .stage {
+            width: 100%;
+            height: calc((var(--triangle-height) - 160px) / 3);
+            padding-top: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            color: var(--text-light);
+            position: relative;
+            transition: transform 0.3s;
+            cursor: help;
+        }
+
+        .stage:hover {
+            transform: scale(1.02);
+            z-index: 10;
+        }
+
+        .global-tooltip {
+            position: fixed;
+            z-index: 9999;
+            background: rgba(0, 0, 0, 0.78);
+            color: #fff;
+            font-size: 12px;
+            line-height: 1.3;
+            padding: 8px 12px;
+            border-radius: 6px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.12s ease;
+            white-space: normal;
+            width: auto;
+            max-width: min(340px, calc(100vw - 24px));
+            overflow-wrap: anywhere;
+        }
+
+        /* Títulos y datos */
+        .stage-title {
+            font-weight: bold;
+            font-size: 18px;
+            margin: 0;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 1.2;
+        }
+
+        .stage-desc {
+            font-size: 14px;
+            opacity: 0.9;
+            text-align: center;
+            padding: 0 20px;
+            line-height: 1.25;
+            margin-top: 6px;
+        }
+
+        /* Formas de las capas (Trapecios y Triángulo) */
+        
+        /* 1. ATS - El más ancho */
+        .ats {
+            background-color: var(--color-ats);
+            width: 100%;
+        }
+
+        /* 2. OA - Evaluación Técnica */
+        .oa {
+            background-color: var(--color-oa);
+            width: 100%;
+            margin-top: -2px;
+        }
+
+        /* 3. The Loop - Entrevistas */
+        .loop {
+            background-color: var(--color-loop);
+            width: 100%;
+            margin-top: -2px;
+        }
+
+        /* 4. Oferta - La punta del triángulo */
+        .offer {
+            background-color: var(--color-offer);
+            width: 100%;
+            height: 160px;
+            margin-top: -2px;
+            padding: 22px 26px 26px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="funnel-container">
+        <div class="stage ats" data-tooltip="+75% de los currículums enviados son descartados automáticamente por algoritmos que buscan palabras clave específicas, prestigio de la universidad de origen o experiencia en otras empresas de su interés.">
+            <p class="stage-title">ATS (Applicant Tracking System)</p>
+            <p class="stage-desc">75% de CVs descartados automáticamente</p>
+        </div>
+
+        <div class="stage oa" data-tooltip="Tras el ATS, recibes un Online Assessment: problemas clásicos de Leetcode, Hackerrank… Buscan poner a prueba tu habilidad para resolver problemas.">
+            <p class="stage-title">Online Assessment - OA</p>
+            <p class="stage-desc">Problem solving (CodeSignal / HackerRank)</p>
+        </div>
+
+        <div class="stage loop" data-tooltip="Serie de rondas de entrevistas 1:1. Por lo general son de una hora, algunas son técnicas y por lo menos hay una de comportamiento. La cantidad de entrevistas y orden varían mucho.">
+            <p class="stage-title">Loop Interviews</p>
+            <p class="stage-desc">4 a 6 entrevistas (Técnicas y Behavioral)</p>
+        </div>
+
+        <div class="stage offer" data-tooltip="¿Por qué solo 35 de 10k?">
+            <p class="stage-title">Return offer</p>
+            <p class="stage-desc">
+                <span class="highlight">35 de 10,000</span>
+            </p>
+        </div>
+    </div>
+
+    <div id="global-tooltip" class="global-tooltip" role="tooltip" aria-hidden="true"></div>
+
+    <script>
+        const tooltip = document.getElementById('global-tooltip');
+        const stages = document.querySelectorAll('.stage[data-tooltip]');
+
+        const placeTooltip = (stage) => {
+            const offset = 40;
+            const rect = stage.getBoundingClientRect();
+            const viewportWidth = window.innerWidth;
+
+            tooltip.style.left = '0px';
+            tooltip.style.top = '0px';
+
+            const tooltipWidth = tooltip.offsetWidth;
+            const tooltipHeight = tooltip.offsetHeight;
+
+            let left = rect.right + offset;
+            let top = rect.top + (rect.height / 2) - (tooltipHeight / 2);
+
+            if (left + tooltipWidth > viewportWidth - 8) {
+                left = viewportWidth - tooltipWidth - 8;
+            }
+
+            if (top < 8) top = 8;
+            if (top + tooltipHeight > window.innerHeight - 8) {
+                top = window.innerHeight - tooltipHeight - 8;
+            }
+
+            tooltip.style.left = `${left}px`;
+            tooltip.style.top = `${top}px`;
+        };
+
+        stages.forEach((stage) => {
+            stage.addEventListener('mouseenter', () => {
+                tooltip.textContent = stage.dataset.tooltip || '';
+                tooltip.style.opacity = '1';
+                tooltip.setAttribute('aria-hidden', 'false');
+                placeTooltip(stage);
+            });
+
+            stage.addEventListener('mousemove', () => {
+                placeTooltip(stage);
+            });
+
+            stage.addEventListener('mouseleave', () => {
+                tooltip.style.opacity = '0';
+                tooltip.setAttribute('aria-hidden', 'true');
+            });
+        });
+
+        window.addEventListener('resize', () => {
+            if (tooltip.style.opacity === '1') {
+                const active = document.querySelector('.stage:hover');
+                if (active) placeTooltip(active);
+            }
+        });
+    </script>
+
+</body>
+</html>

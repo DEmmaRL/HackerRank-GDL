@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Mono&display=swap');
+
+/* Color Palette */
+:root {
+  --charcoal-blue: #31394dff;
+  --white: #ffffffff;
+  --pale-oak: #d9c4b1ff;
+  --rosy-copper: #b85741ff;
+  --deep-space-blue: #002f4aff;
+  --font-sans: 'DM Sans', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+}
+
+/* Slidev Theme Overrides */
+.slidev-layout {
+  background-color: var(--white);
+  color: var(--charcoal-blue);
+  font-family: var(--font-sans);
+}
+
+/* Title & Section Slides */
+.slidev-layout.title,
+.slidev-layout.section {
+  background: linear-gradient(135deg, var(--deep-space-blue) 0%, var(--charcoal-blue) 50%, var(--charcoal-blue) 100%);
+  color: var(--white);
+}
+
+.slidev-layout.title h1,
+.slidev-layout.section h1 {
+  color: var(--pale-oak);
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.slidev-layout.title h2,
+.slidev-layout.section h2 {
+  color: var(--pale-oak);
+  opacity: 0.95;
+}
+
+.bigtech-title {
+  view-transition-name: bigtech-title;
+  display: inline-block;
+}
+
+/* Default Layout */
+.slidev-layout.default h1 {
+  color: var(--deep-space-blue);
+  border-bottom: 3px solid var(--rosy-copper);
+  padding-bottom: 0.5rem;
+}
+
+.slidev-layout.default h2 {
+  color: var(--charcoal-blue);
+}
+
+.slidev-layout.default h3 {
+  color: var(--rosy-copper);
+}
+
+/* Accent Elements */
+a {
+  color: var(--rosy-copper);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  color: var(--deep-space-blue);
+  text-decoration: underline;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table thead {
+  background-color: var(--charcoal-blue);
+  color: var(--white);
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: rgba(217, 196, 177, 0.2);
+}
+
+table tbody tr:hover {
+  background-color: rgba(184, 87, 65, 0.1);
+}
+
+table td,
+table th {
+  border: 1px solid var(--pale-oak);
+  padding: 0.75rem;
+}
+
+/* Borders & Cards */
+.border {
+  border-color: var(--pale-oak) !important;
+}
+
+.border-gray-200 {
+  border-color: var(--pale-oak) !important;
+}
+
+/* Shadow */
+.shadow-sm {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+div.rounded {
+  background-color: rgba(49, 57, 77, 0.05);
+  border-left: 4px solid var(--rosy-copper);
+  padding: 1rem;
+}
+
+/* Lists */
+ul {
+  list-style-color: var(--rosy-copper);
+}
+
+li {
+  color: var(--charcoal-blue);
+}
+
+strong {
+  color: var(--rosy-copper);
+  font-weight: 700;
+}
+
+em {
+  color: var(--deep-space-blue);
+  font-style: italic;
+}
+
+/* Blockquote */
+blockquote {
+  border-left: 4px solid var(--rosy-copper);
+  color: var(--charcoal-blue);
+  background-color: rgba(217, 196, 177, 0.15);
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+/* Code blocks */
+.shiki {
+  background-color: var(--charcoal-blue) !important;
+  color: var(--pale-oak) !important;
+}
+
+.shiki code {
+  color: var(--pale-oak);
+}
+
+/* Button-like elements */
+button,
+.btn {
+  background-color: var(--rosy-copper);
+  color: var(--white);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+button:hover,
+.btn:hover {
+  background-color: var(--deep-space-blue);
+}
+
+/* Animations */
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.5s ease-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fade-in 0.55s ease-out both;
+}
+
+.salary-question {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--charcoal-blue);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+  transform: translateY(8px);
+  opacity: 0;
+}
+
+.slidev-vclick-visible.salary-question {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.salary-stage {
+  position: relative;
+  margin-top: 1.5rem;
+  min-height: 420px;
+}
+
+.salary-questions {
+  position: relative;
+  z-index: 1;
+}
+
+.browser-wrap {
+  margin-top: 0rem;
+  border: 1px solid rgba(49, 57, 77, 0.2);
+  border-radius: 16px;
+  overflow: hidden;
+  background: #f6f3ef;
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.18);
+  position: relative;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.salary-stage .browser-wrap {
+  position: absolute;
+  inset: 0;
+  margin-top: 0;
+}
+
+.slidev-vclick-visible.browser-wrap {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.browser-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: #1b2533;
+  color: var(--pale-oak);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
+.browser-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.browser-dot.is-red {
+  background: #ff5f57;
+}
+
+.browser-dot.is-yellow {
+  background: #ffbd2e;
+}
+
+.browser-dot.is-green {
+  background: #28c840;
+}
+
+.browser-url {
+  margin-left: 6px;
+  opacity: 0.9;
+}
+
+.browser-frame {
+  width: 100%;
+  height: 450px;
+  border: 0;
+  background: #ffffff;
+}
+
+.browser-open {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  background: rgba(184, 87, 65, 0.9);
+  color: #ffffff;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  text-decoration: none;
+}
+
+.browser-open:hover {
+  background: var(--deep-space-blue);
+}
+
+/* Presenter notes styling */
+.slidev-presenter-notes {
+  font-size: 1.5rem !important;
+  line-height: 1.7 !important;
+}
+
+.slidev-presenter-notes p {
+  font-size: 1.5rem !important;
+  margin-bottom: 1rem !important;
+}
+
+/* Presenter layout - slide más pequeña, notas más anchas (40/60) */
+.slidev-presenter-layout {
+  grid-template-columns: 0.7fr 1.3fr !important;
+}
+
+.slidev-presenter-layout > div:first-child {
+  grid-column: 1 !important;
+}
+
+.slidev-presenter-layout > div:last-child {
+  grid-column: 2 !important;
+}
+
+/* Footer branding */
+.slidev-layout::after {
+  content: 'demmarl.dev | diego-rivera-jobs';
+  position: fixed;
+  bottom: 1rem;
+  right: 1.5rem;
+  font-size: 0.75rem;
+  color: var(--charcoal-blue);
+  opacity: 0.4;
+  font-family: var(--font-mono);
+  pointer-events: none;
+  z-index: 100;
+}
+
+.slidev-layout:hover::after {
+  opacity: 0.7;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .grid-cols-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grid-cols-2 {
+    grid-template-columns: 1fr;
+  }
+  
+  .slidev-presenter-notes {
+    font-size: 1.4rem !important;
+  }
+  
+  .slidev-presenter-notes p {
+    font-size: 1.4rem !important;
+  }
+}

@@ -1,24 +1,14 @@
 {
-  "name": "hackerrank-crew-gdl-web",
-  "type": "module",
-  "version": "0.1.0",
+  "name": "hackerrank-gdl",
   "private": true,
-  "description": "Official website for HackerRank Crew GDL built with Astro and Starlight.",
-  "license": "Apache-2.0",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@astrojs/check": "^0.9.8",
-    "@astrojs/sitemap": "^3.7.2",
-    "@astrojs/starlight": "^0.38.2",
-    "@vercel/analytics": "^2.0.1",
-    "astro": "^6.0.1",
-    "sharp": "^0.34.2",
-    "typescript": "^6.0.2"
+    "dev": "pnpm --filter hub dev",
+    "dev:all": "pnpm --parallel -r dev",
+    "dev:resume": "pnpm --filter resume-building-101 dev",
+    "dev:interview": "pnpm --filter hackerrank-crew-gdl-template dev",
+    "dev:asegura": "pnpm --filter asegura-tu-futuro-en-big-tech dev",
+    "build": "pnpm --filter hub build",
+    "build:all": "pnpm -r build",
+    "preview": "pnpm --filter hub preview"
   }
 }
