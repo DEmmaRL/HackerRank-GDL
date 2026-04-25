@@ -1,0 +1,10 @@
+{
+  "name": "hackerrank-gdl",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --filter hub dev",
+    "build": "pnpm --filter hub build",
+    "build:all": "pnpm -r build",
+    "preview": "pnpm --filter hub preview"
+  }
+}
