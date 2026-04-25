@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "slidev build --base /slides/technical-interview/",
-    "dev": "slidev --port 3032",
+    "dev": "slidev --port 3032 --base /slides/technical-interview/",
     "export": "slidev export"
   },
   "devDependencies": {
