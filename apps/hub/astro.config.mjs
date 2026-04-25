@@ -2,9 +2,13 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import sitemap from '@astrojs/sitemap';
+import vercel from '@astrojs/vercel';
 
 export default defineConfig({
 	site: 'https://www.hackerrankcrewgdl.com',
+	adapter: vercel({
+		edgeMiddleware: true,
+	}),
 	vite: {
 		server: {
 			proxy: {

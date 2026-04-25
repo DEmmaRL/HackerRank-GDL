@@ -1,10 +1,4 @@
 {
   "buildCommand": "pnpm build",
-  "outputDirectory": "apps/hub/dist",
-  "rewrites": [
-    {
-      "source": "/slides/:session/:path*",
-      "destination": "https://hr-gdl-slide-:session.vercel.app/:path*"
-    }
-  ]
+  "outputDirectory": "apps/hub/dist"
 }
