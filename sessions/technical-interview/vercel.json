@@ -1,6 +1,6 @@
 {
   "rewrites": [
-    { "source": "/slides/technical-interview/:match*", "destination": "/:match*" },
+    { "source": "/slides/technical-interview/(.*)", "destination": "/$1" },
     { "source": "/(.*)", "destination": "/index.html" }
   ],
   "buildCommand": "pnpm build",

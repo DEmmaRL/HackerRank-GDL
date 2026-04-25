@@ -1,6 +1,6 @@
 {
   "rewrites": [
-    { "source": "/slides/asegura-tu-futuro/:match*", "destination": "/:match*" },
+    { "source": "/slides/asegura-tu-futuro/(.*)", "destination": "/$1" },
     { "source": "/(.*)", "destination": "/index.html" }
   ],
   "buildCommand": "pnpm build:public",
