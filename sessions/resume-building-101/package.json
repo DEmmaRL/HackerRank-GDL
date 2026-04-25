@@ -7,8 +7,8 @@
     "dev": "slidev --open --port 3031",
     "export": "slidev export"
   },
-  "dependencies": {
-    "@slidev/cli": "^52.14.1",
+  "devDependencies": {
+    "@slidev/cli": "^52.14.2",
     "@slidev/theme-default": "latest",
     "@slidev/theme-seriph": "latest",
     "vue": "^3.5.29"

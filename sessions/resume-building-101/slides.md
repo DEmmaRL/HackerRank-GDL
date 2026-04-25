@@ -4,9 +4,10 @@ title: HackerRank Crew GDL
 transition: slide-left
 drawings:
   persist: false
-css: style.css
 class: dark-slide
 ---
+
+<style src="./style.css"></style>
 
 <div class="hero-lockup">
   <img src="/logos/logo-light-wide.svg" class="hero-logo" />
