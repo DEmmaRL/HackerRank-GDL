@@ -3,8 +3,8 @@
   "outputDirectory": "apps/hub/dist",
   "rewrites": [
     {
-      "source": "/slides/(?<session>[^/]+)/(.*)",
-      "destination": "https://hr-gdl-slide-$session.vercel.app/$1"
+      "source": "/slides/:session/:path*",
+      "destination": "https://hr-gdl-slide-:session.vercel.app/:path*"
     }
   ]
 }
