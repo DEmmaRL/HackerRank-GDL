@@ -4,3 +4,4 @@ dist/
 .astro/
 apps/**/pnpm-lock.yaml
 sessions/**/pnpm-lock.yaml
+.vercel/
