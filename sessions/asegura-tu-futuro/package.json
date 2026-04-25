@@ -5,7 +5,7 @@
   "scripts": {
     "build": "slidev build",
     "build:public": "node build-public.js && cd dist-public && slidev build --base /",
-    "dev": "slidev --open --remote",
+    "dev": "slidev --open --remote --port 3033",
     "export": "slidev export"
   },
   "dependencies": {

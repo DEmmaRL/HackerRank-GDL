@@ -3,6 +3,10 @@
   "private": true,
   "scripts": {
     "dev": "pnpm --filter hub dev",
+    "dev:all": "pnpm --parallel -r dev",
+    "dev:resume": "pnpm --filter resume-building-101 dev",
+    "dev:interview": "pnpm --filter hackerrank-crew-gdl-template dev",
+    "dev:asegura": "pnpm --filter asegura-tu-futuro-en-big-tech dev",
     "build": "pnpm --filter hub build",
     "build:all": "pnpm -r build",
     "preview": "pnpm --filter hub preview"
