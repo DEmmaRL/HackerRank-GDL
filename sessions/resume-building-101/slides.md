@@ -7,8 +7,6 @@ drawings:
 class: dark-slide
 ---
 
-<style src="./style.css"></style>
-
 <div class="hero-lockup">
   <img src="/logos/logo-light-wide.svg" class="hero-logo" />
   <span class="hero-gdl"><span class="accent">CREW</span> GDL</span>

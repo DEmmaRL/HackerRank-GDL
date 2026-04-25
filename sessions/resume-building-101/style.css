@@ -1,23 +1,27 @@
 /* ─── Fonts ──────────────────────────────────────────────────────────────── */
 @font-face {
   font-family: 'Satoshi';
-  src: url('/fonts/Satoshi-Regular.woff2') format('woff2');
+  src: url('./fonts/Satoshi-Regular.woff2') format('woff2');
   font-weight: 400;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Satoshi';
-  src: url('/fonts/Satoshi-Medium.woff2') format('woff2');
+  src: url('./fonts/Satoshi-Medium.woff2') format('woff2');
   font-weight: 500;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Satoshi';
-  src: url('/fonts/Satoshi-Bold.woff2') format('woff2');
+  src: url('./fonts/Satoshi-Bold.woff2') format('woff2');
   font-weight: 700;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Departure Mono';
-  src: url('/fonts/DepartureMono-Regular.woff2') format('woff2');
+  src: url('./fonts/DepartureMono-Regular.woff2') format('woff2');
   font-weight: 400;
+  font-display: swap;
 }
 
 /* ─── Design Tokens ──────────────────────────────────────────────────────── */
@@ -60,7 +64,7 @@
   color: var(--hr-white);
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-primary);
   font-weight: 700;
   letter-spacing: 0;
@@ -303,7 +307,6 @@ code, pre {
   font-size: 0.72rem;
   line-height: 1.5;
   margin-top: var(--mt-section);
-  font-family: var(--font-primary);
 }
 .rs-snippet .rs-snippet-label {
   font-family: var(--font-mono);
