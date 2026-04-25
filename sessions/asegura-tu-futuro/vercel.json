@@ -1,8 +1,0 @@
-{
-  "rewrites": [
-    { "source": "/slides/asegura-tu-futuro/:match*", "destination": "/:match*" },
-    { "source": "/(.*)", "destination": "/index.html" }
-  ],
-  "buildCommand": "pnpm build:public",
-  "outputDirectory": "dist-public/dist"
-}

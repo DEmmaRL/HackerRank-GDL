@@ -1,8 +1,0 @@
-{
-  "rewrites": [
-    { "source": "/slides/resume-building-101/:match*", "destination": "/:match*" },
-    { "source": "/(.*)", "destination": "/index.html" }
-  ],
-  "buildCommand": "pnpm build",
-  "outputDirectory": "dist"
-}
