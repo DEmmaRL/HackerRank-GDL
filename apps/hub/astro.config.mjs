@@ -6,7 +6,9 @@ import vercel from '@astrojs/vercel';
 
 export default defineConfig({
 	site: 'https://www.hackerrankcrewgdl.com',
-	adapter: vercel(),
+	adapter: vercel({
+		edgeMiddleware: true,
+	}),
 	vite: {
 		server: {
 			proxy: {
@@ -26,7 +28,6 @@ export default defineConfig({
 		},
 	},
 	integrations: [
-
 
 		sitemap(),
 		starlight({
