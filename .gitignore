@@ -1,5 +1,6 @@
 node_modules/
 dist/
+apps/hub/public/slides/
 .DS_Store
 .astro/
 apps/**/pnpm-lock.yaml
