@@ -1,4 +1,4 @@
-# HackerRank GDL Hub
+# HackerRank Crew GDL
 
 The central portal for HackerRank Crew GDL's technical sessions, workshops, and interactive presentations. This project is built as a high-performance monorepo to host both the main discovery hub and independent slide decks.
 
