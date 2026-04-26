@@ -12,7 +12,7 @@ This repository uses **pnpm workspaces** to manage multiple packages:
 ## Tech Stack
 
 - **Core**: Astro, Slidev, TypeScript.
-- **Styling**: UnoCSS migrating to pure Tailwind CSS.
+- **Styling**: UnoCSS (sessions), Starlight design system (hub).
 - **Package Management**: pnpm.
 - **Automation**: Custom build orchestrator with local caching (`build.mjs`).
 
@@ -29,18 +29,22 @@ pnpm install
 
 ### Development
 
-To start the main hub:
+To start the main hub (slides served from last build):
 ```bash
 pnpm dev
 ```
 
-To work on a specific session with **Hot Module Replacement (HMR)**:
-The hub is configured to automatically detect and proxy local Slidev servers when they are running.
+To work on a specific session with **Hot Module Replacement (HMR)**, run both servers in parallel:
 
 ```bash
-# Work on Resume Building slides
-pnpm dev:resume
+# Terminal 1 — start the Slidev session you want to work on
+pnpm --filter <session-name> dev
+
+# Terminal 2 — start the hub (auto-detects the running Slidev port)
+pnpm dev
 ```
+
+> Session names match their directory names under `sessions/`.
 
 ## Building for Production
 
