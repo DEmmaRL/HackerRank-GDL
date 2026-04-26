@@ -1,0 +1,63 @@
+# HackerRank GDL Hub
+
+The central portal for HackerRank Crew GDL's technical sessions, workshops, and interactive presentations. This project is built as a high-performance monorepo to host both the main discovery hub and independent slide decks.
+
+## Architecture
+
+This repository uses **pnpm workspaces** to manage multiple packages:
+
+- **`apps/hub`**: The main landing page and session navigator built with **Astro**.
+- **`sessions/`**: A collection of interactive presentations built with **Slidev** (Vue +  UnoCSS).
+
+## Tech Stack
+
+- **Core**: Astro, Slidev, TypeScript.
+- **Styling**: UnoCSS migrating to pure Tailwind CSS.
+- **Package Management**: pnpm.
+- **Automation**: Custom build orchestrator with local caching (`build.mjs`).
+
+## Getting Started
+
+### Prerequisites
+- Node.js (Latest LTS recommended)
+- pnpm (`npm install -g pnpm`)
+
+### Installation
+```bash
+pnpm install
+```
+
+### Development
+
+To start the main hub:
+```bash
+pnpm dev
+```
+
+To work on a specific session with **Hot Module Replacement (HMR)**:
+The hub is configured to automatically detect and proxy local Slidev servers when they are running.
+
+```bash
+# Work on Resume Building slides
+pnpm dev:resume
+```
+
+## Building for Production
+
+We use a custom build script that optimizes the deployment by caching unchanged sessions:
+
+```bash
+pnpm build
+```
+
+The build orchestrator (`build.mjs`):
+1. Checks for file changes in each session directory.
+2. Skips building sessions that haven't changed (local cache).
+3. Compiles the Hub and embeds the static slide decks into `public/slides/`.
+
+## Brand Identity
+
+This project adheres to the **HackerRank Brand Guides**. All assets, logos, and typography (Montserrat, Satoshi, Departure Mono) are managed within the respective application assets or shared public folders.
+
+## License
+This project is private and intended for HackerRank GDL community events.
