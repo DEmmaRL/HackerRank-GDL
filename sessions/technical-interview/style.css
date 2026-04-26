@@ -1,22 +1,22 @@
 /* ─── Fonts ──────────────────────────────────────────────────────────────── */
 @font-face {
   font-family: 'Satoshi';
-  src: url('./fonts/Satoshi-Regular.woff2') format('woff2');
+  src: url('/fonts/Satoshi-Regular.woff2') format('woff2');
   font-weight: 400;
 }
 @font-face {
   font-family: 'Satoshi';
-  src: url('./fonts/Satoshi-Medium.woff2') format('woff2');
+  src: url('/fonts/Satoshi-Medium.woff2') format('woff2');
   font-weight: 500;
 }
 @font-face {
   font-family: 'Satoshi';
-  src: url('./fonts/Satoshi-Bold.woff2') format('woff2');
+  src: url('/fonts/Satoshi-Bold.woff2') format('woff2');
   font-weight: 700;
 }
 @font-face {
   font-family: 'Departure Mono';
-  src: url('./fonts/DepartureMono-Regular.woff2') format('woff2');
+  src: url('/fonts/DepartureMono-Regular.woff2') format('woff2');
   font-weight: 400;
 }
 
@@ -92,7 +92,7 @@
   bottom: 1.2rem;
   width: 2.5rem;
   height: 2.5rem;
-  background-image: url('./logos/logo-crew-light-narrow.png');
+  background-image: url('/logos/logo-crew-light-narrow.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -129,7 +129,7 @@ h1, h2, h3, h4 {
 
 .slidev-layout.light-slide::after,
 .slidev-layout.green-slide::after {
-  background-image: url('./logos/logo-crew-dark-narrow.png');
+  background-image: url('/logos/logo-crew-dark-narrow.png');
 }
 
 /* ─── Typography Utilities ───────────────────────────────────────────────── */
