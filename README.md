@@ -2,6 +2,8 @@
 
 The central portal for HackerRank Crew GDL's technical sessions, workshops, and interactive presentations. This project is built as a high-performance monorepo to host both the main discovery hub and independent slide decks.
 
+![HackerRank GDL Banner](assets/banner.jpg)
+
 ## Architecture
 
 This repository uses **pnpm workspaces** to manage multiple packages:
