@@ -1,25 +1,25 @@
 /* ─── Fonts ──────────────────────────────────────────────────────────────── */
 @font-face {
   font-family: 'Satoshi';
-  src: url('./fonts/Satoshi-Regular.woff2') format('woff2');
+  src: url('/fonts/Satoshi-Regular.woff2') format('woff2');
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: 'Satoshi';
-  src: url('./fonts/Satoshi-Medium.woff2') format('woff2');
+  src: url('/fonts/Satoshi-Medium.woff2') format('woff2');
   font-weight: 500;
   font-display: swap;
 }
 @font-face {
   font-family: 'Satoshi';
-  src: url('./fonts/Satoshi-Bold.woff2') format('woff2');
+  src: url('/fonts/Satoshi-Bold.woff2') format('woff2');
   font-weight: 700;
   font-display: swap;
 }
 @font-face {
   font-family: 'Departure Mono';
-  src: url('./fonts/DepartureMono-Regular.woff2') format('woff2');
+  src: url('/fonts/DepartureMono-Regular.woff2') format('woff2');
   font-weight: 400;
   font-display: swap;
 }
