@@ -34,6 +34,14 @@ export default defineConfig({
 			},
 			head: [
 				{
+					tag: 'script',
+					attrs: {
+						defer: true,
+						src: 'https://umami-green-two.vercel.app/script.js',
+						'data-website-id': 'b8f63b69-e159-4a95-9832-521956adc2ab',
+					},
+				},
+				{
 					tag: 'meta',
 					attrs: {
 						property: 'og:image',
