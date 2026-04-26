@@ -61,7 +61,12 @@ The build orchestrator (`build.mjs`):
 
 ## Brand Identity
 
-This project adheres to the **HackerRank Brand Guides**. All assets, logos, and typography (Montserrat, Satoshi, Departure Mono) are managed within the respective application assets or shared public folders.
+This project adheres to the HackerRank Brand Guides. All assets, logos, and typography (Montserrat, Satoshi, Departure Mono) are managed within the respective application assets or shared public folders.
+
+## Legal Disclaimer
+
+This is a community-led project managed by the **HackerRank Crew Guadalajara**. It is not an official product of HackerRank Ltd. All HackerRank logos and trademarks are the property of HackerRank Ltd. and are used here for community educational purposes under community brand guidelines.
 
 ## License
-This project is private and intended for HackerRank GDL community events.
+
+This project is licensed under the [MIT License](LICENSE).
