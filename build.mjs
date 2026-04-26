@@ -45,14 +45,15 @@ for (const { dir, filter, slug } of sessions) {
 
   console.log(`\n▶ Checking: ${slug}`);
 
-  if (needsRebuild(sessionPath, targetPath)) {
-    console.log(`  Changes detected. Building...`);
+  const skipBuild = !needsRebuild(sessionPath, targetPath) && existsSync(targetPath);
+
+  if (!skipBuild) {
+    console.log(`  Building ${slug}...`);
     execSync(`pnpm --filter ${filter} build`, { stdio: 'inherit' });
 
-    // Clean only this session's target folder before copying
+    // Clean and update target
     rmSync(targetPath, { recursive: true, force: true });
     mkdirSync(targetPath, { recursive: true });
-
     cpSync(sessionDistPath, targetPath, { recursive: true });
     console.log(`✓ ${slug} → ${targetPath}`);
   } else {
