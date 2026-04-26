@@ -3,9 +3,9 @@ import { cpSync, mkdirSync, rmSync, statSync, existsSync, readdirSync } from 'no
 import { join } from 'node:path';
 
 const sessions = [
-  { dir: 'resume-building-101',   filter: 'resume-building-101',           slug: 'resume-building-101' },
-  { dir: 'technical-interview',   filter: 'hackerrank-crew-gdl-template',   slug: 'technical-interview' },
-  { dir: 'asegura-tu-futuro',     filter: 'asegura-tu-futuro-en-big-tech',  slug: 'asegura-tu-futuro' },
+  { dir: 'resume-building-101',   filter: 'resume-building-101',  slug: 'resume-building-101' },
+  { dir: 'technical-interview',   filter: 'technical-interview',   slug: 'technical-interview' },
+  { dir: 'asegura-tu-futuro',     filter: 'asegura-tu-futuro',     slug: 'asegura-tu-futuro' },
 ];
 
 const publicSlides = 'apps/hub/public/slides';
