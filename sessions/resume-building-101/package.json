@@ -2,9 +2,13 @@
   "name": "resume-building-101",
   "type": "module",
   "private": true,
+  "dependencies": {
+    "@hr-gdl/shared-assets": "workspace:*"
+  },
   "scripts": {
-    "build": "slidev build --base /slides/resume-building-101/",
-    "dev": "slidev --open --port 3031 --base /slides/resume-building-101/",
+    "prebuild": "mkdir -p public && cp -r ../../../node_modules/@hr-gdl/shared-assets/dist/* public/",
+    "build": "npm run prebuild && slidev build --base /slides/resume-building-101/",
+    "dev": "npm run prebuild && slidev --open --port 3031 --base /slides/resume-building-101/",
     "export": "slidev export"
   },
   "devDependencies": {
