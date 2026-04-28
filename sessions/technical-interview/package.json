@@ -2,9 +2,13 @@
   "name": "technical-interview",
   "type": "module",
   "private": true,
+  "dependencies": {
+    "@hr-gdl/shared-assets": "workspace:*"
+  },
   "scripts": {
-    "build": "slidev build --base /slides/technical-interview/",
-    "dev": "slidev --port 3032 --base /slides/technical-interview/",
+    "prebuild": "mkdir -p public && cp -r ../../../node_modules/@hr-gdl/shared-assets/dist/* public/",
+    "build": "npm run prebuild && slidev build --base /slides/technical-interview/",
+    "dev": "npm run prebuild && slidev --port 3032 --base /slides/technical-interview/",
     "export": "slidev export"
   },
   "devDependencies": {
