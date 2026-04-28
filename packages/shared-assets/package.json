@@ -1,0 +1,26 @@
+{
+  "name": "@gdl/shared-assets",
+  "version": "1.0.0",
+  "description": "Shared fonts, logos, and images for HackerRank Crew GDL projects (hub, slides, presentations)",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "exports": {
+    ".": "./dist",
+    "./fonts/*": "./dist/fonts/*",
+    "./logos/*": "./dist/logos/*",
+    "./images/*": "./dist/images/*"
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "mkdir -p dist && cp -r src/* dist/",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "fonts",
+    "logos",
+    "images",
+    "assets",
+    "shared"
+  ]
+}
