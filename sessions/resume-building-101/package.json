@@ -6,7 +6,7 @@
     "@hr-gdl/shared-assets": "workspace:*"
   },
   "scripts": {
-    "prebuild": "mkdir -p public && cp -r ../../../node_modules/@hr-gdl/shared-assets/dist/* public/",
+    "prebuild": "mkdir -p public && cp -r node_modules/@hr-gdl/shared-assets/dist/* public/",
     "build": "npm run prebuild && slidev build --base /slides/resume-building-101/",
     "dev": "npm run prebuild && slidev --open --port 3031 --base /slides/resume-building-101/",
     "export": "slidev export"
