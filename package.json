@@ -4,6 +4,7 @@
   "scripts": {
     "postinstall": "pnpm -r prebuild",
     "dev": "pnpm --filter hub dev",
+    "dev:all": "pnpm -r --parallel dev",
     "build": "node build.mjs",
     "preview": "pnpm --filter hub preview",
     "test": "vitest run",
