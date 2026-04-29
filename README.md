@@ -29,53 +29,53 @@ This repository uses **pnpm workspaces** to manage multiple packages:
 pnpm install
 ```
 
+The postinstall hook automatically syncs assets from `@hr-gdl/shared-assets` to all project `public/` directories.
+
 ### Development
 
-To start the main hub (slides served from last build):
+All scripts automatically include asset prebuild (no manual steps required):
+
+**Start the hub** (main entry point):
 ```bash
 pnpm dev
 ```
 
-To work on a specific session with **Hot Module Replacement (HMR)**, run both servers in parallel:
-
+**Start a specific session** for HMR development:
 ```bash
-# Terminal 1 — start the Slidev session you want to work on
-pnpm --filter <session-name> dev
+# Terminal 1 — Slidev with live reload
+pnpm --filter resume-building-101 dev   # Port 3031
+# or
+pnpm --filter technical-interview dev   # Port 3032
 
-# Terminal 2 — start the hub (auto-detects the running Slidev port)
-pnpm dev
+# Terminal 2 — Hub (auto-detects running Slidev)
+pnpm dev                                  # Port 3000
 ```
-
-> Session names match their directory names under `sessions/`.
 
 ## Asset Management
 
-Assets (fonts, logos, images) are centrally managed via the `@hr-gdl/shared-assets` package:
+Assets (fonts, logos, images) are centrally managed via the `@hr-gdl/shared-assets` workspace package:
 
-- **Location**: `packages/shared-assets/`
-- **Exports**: Granular exports for fonts, logos, and images
-- **Distribution**: Each project prebuild copies assets to `public/`
-- **Benefits**: Single source of truth, reduced duplication, easy maintenance
+- **Single Source**: `packages/shared-assets/src/` → `dist/` → distributed to all projects
+- **Automatic Sync**: Assets are synced to `public/` on install and before each dev/build
+- **Reduced Duplication**: ~100MB saved by consolidating shared assets
+- **Tree-shakeable**: Each project imports only what it needs
 
-To sync assets after installation:
-```bash
-pnpm install          # Links @hr-gdl/shared-assets
-pnpm -r prebuild      # Copies assets to all project public directories
-```
+**No manual asset steps required.** The workflow is completely automatic:
+1. `pnpm install` → Postinstall hook runs prebuild
+2. `pnpm dev` → Prebuild runs before starting dev server
+3. `pnpm build` → Prebuild runs before building
 
 ## Building for Production
-
-We use a custom build script that optimizes the deployment by caching unchanged sessions:
 
 ```bash
 pnpm build
 ```
 
-The build orchestrator (`build.mjs`):
-1. Runs prebuild to ensure assets are synced
-2. Checks for file changes in each session directory
-3. Skips building sessions that haven't changed (local cache)
-4. Compiles the Hub and embeds the static slide decks into `public/slides/`
+The build process:
+1. Runs prebuild to sync assets
+2. Checks for file changes in each session
+3. Skips rebuilding unchanged sessions (local optimization)
+4. Compiles the Hub and embeds slide decks into `public/slides/`
 
 ## Brand Identity
 

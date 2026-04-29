@@ -2,6 +2,7 @@
   "name": "hackerrank-gdl",
   "private": true,
   "scripts": {
+    "postinstall": "pnpm -r prebuild",
     "dev": "pnpm --filter hub dev",
     "build": "node build.mjs",
     "preview": "pnpm --filter hub preview",
