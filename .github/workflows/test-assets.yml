@@ -1,0 +1,51 @@
+name: Test Asset Migration
+
+on:
+  push:
+    branches:
+      - unify-assets
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 10
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Run asset tests
+        run: pnpm test
+
+      - name: Run asset tests with coverage
+        run: pnpm test:coverage
+
+      - name: Validate asset structure
+        run: node scripts/validate-assets-structure.mjs
+
+      - name: Validate asset integrity
+        run: node scripts/validate-asset-integrity.mjs
+
+      - name: Validate CSS references
+        run: node scripts/validate-css-references.mjs
