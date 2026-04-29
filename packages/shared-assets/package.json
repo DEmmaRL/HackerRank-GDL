@@ -1,5 +1,5 @@
 {
-  "name": "@gdl/shared-assets",
+  "name": "@hr-gdl/shared-assets",
   "version": "1.0.0",
   "description": "Shared fonts, logos, and images for HackerRank Crew GDL projects (hub, slides, presentations)",
   "type": "module",
