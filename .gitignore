@@ -1,5 +1,7 @@
 node_modules/
 dist/
+# Exception: shared-assets dist/ must be committed for workspace publishing
+!packages/shared-assets/dist/
 apps/hub/public/slides/
 .DS_Store
 .astro/
