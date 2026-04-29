@@ -131,7 +131,7 @@ layout: section
 
   </div>
   <div style="flex: 1; text-align: center;">
-    <img src="/stock/12083608_Wavy_Bus-26_Single-11.svg" alt="Competencia" style="max-width: 100%; max-height: 300px; object-fit: contain; pointer-events: none;" />
+    <img src="/images/stock/12083608_Wavy_Bus-26_Single-11.svg" alt="Competencia" style="max-width: 100%; max-height: 300px; object-fit: contain; pointer-events: none;" />
   </div>
 </div>
 
@@ -140,7 +140,7 @@ Google: Recibe más de 3 millones de solicitudes al año. Si hacemos el promedio
 
 Microsoft y Amazon: Se estiman volúmenes similares a los de Google.
 
-Cambio en la ubicación del talento: Debido a nuevas regulaciones de visas en Estados Unidos, empresas como Google, Meta y Microsoft han desplazado miles de nuevas vacantes a centros tecnológicos en el extranjero, como India, donde agregaron más de 32,000 empleos en 2025.
+Cambio en la ubicación del talento: Debido a nuevas regulaciones de visas en Estados Unidos, empresas como Google, Meta y Microsoft han desplazado miles de nuevas vacantes a centros tecnológicos en el extranjero, como India, donde agregaron más de 32,000 empleos in 2025.
 
 -->
 ---
@@ -150,7 +150,7 @@ transition: slide-up
 
 ## ¿Cómo es el proceso de selección?
 
-<iframe src="/process-pyramid.html" style="width: 100%; height: 600px; border: none; margin-top: 10px;"></iframe>
+<iframe src="process-pyramid.html" style="width: 100%; height: 600px; border: none; margin-top: 10px;"></iframe>
 
 <!--
 ATS: Más del 75% de los currículums enviados a través de portales de empleo son descartados automáticamente por algoritmos que buscan palabras clave específicas, prestigio de la universidad de origen o experiencia en otras empresas de su interés.
@@ -191,7 +191,7 @@ El estudio completo es muy interesante, se los recomiendo, pero me voy a centrar
 
 <!--
 La contratación de recién graduados se redujo un 50% comparado con niveles pre-pandemia.
-En pandemia todos los trabajos bajaron, en 2023 ya había un 25%, pero los empleos para new grads siguieron bajando
+En pandemia todos los trabajos bajaron, en 2023 ya había un 25%, pero los empleos para new grads suivieron bajando
 
 En contraste, según datos de Indeed Hiring Lab: Las vacantes que requieren 5 años o más de experiencia han aumentado su cuota de mercado del 37% al 42%, desplazando directamente a las oportunidades para candidatos con 0-4 años de experiencia.
 
@@ -206,7 +206,7 @@ transition: fade
 
 <div style="display: flex; gap: 24px; align-items: flex-start;">
   <div style="flex: 1.1; text-align: left;">
-    <img src="/stock/percentage-54.png" alt="AI value in software development and data analysis" style="width: 100%; max-height: 360px; object-fit: contain;" />
+    <img src="/images/stock/percentage-54.png" alt="AI value in software development and data analysis" style="width: 100%; max-height: 360px; object-fit: contain;" />
     <p style="margin-top: 12px; font-size: 16px; line-height: 1.35; text-align: center;">
       Se espera que la IA aporte mayor valor en <strong style="font-weight: 600; font-style: italic;">desarrollo de software (54%) y análisis de datos (52%)</strong>, lo que destaca su fuerte alineacion con funciones clave de programacion y analisis
     </p>
@@ -253,11 +253,11 @@ transition: slide-left
     El 93% de las vacantes son para <span style="color: var(--deep-space-blue);">personas que ya saben qué hacer desde el dia uno.</span>
   </p>
 
-  <img src="/stock/percentage-7.svg" alt="7%" style="width: 360px; margin-top: 20px; opacity: 0.95;" />
+  <img src="/images/stock/percentage-7.svg" alt="7%" style="width: 360px; margin-top: 20px; opacity: 0.95;" />
 </div>
 
 <!--
-En Big tech, los New Grads representaron solo el 7% de las contrataciones en 2025.
+En Big tech, los New Grads representaron solo el 7% de las contrataciones in 2025.
 
 ¿Esto qué implica? El 93% de las vacantes son para personas que ya saben qué hacer desde el día uno
 -->
@@ -447,7 +447,7 @@ transition: slide-up
 
 <div style="display: flex; gap: 40px; align-items: center; margin-top: 24px;">
   <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
-    <img src="/stock/success-team.svg" alt="Employers value" style="max-width: 280px; max-height: 320px; object-fit: contain;" />
+    <img src="/images/stock/success-team.svg" alt="Employers value" style="max-width: 280px; max-height: 320px; object-fit: contain;" />
   </div>
   
   <div style="flex: 1.5; position: relative;">
@@ -514,7 +514,7 @@ transition: slide-up
       <p style="font-size: 15px; margin: 0; line-height: 1.4;">de empleadores valoran la experiencia práctica</p>
     </div>
     <div style="text-align: center;">
-      <img src="/stock/nace-report.jpeg" alt="NACE Report 2025" style="max-width: 100%; max-height: 280px; object-fit: contain; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); display: block; margin: 0 auto;" />
+      <img src="/images/stock/nace-report.jpeg" alt="NACE Report 2025" style="max-width: 100%; max-height: 280px; object-fit: contain; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); display: block; margin: 0 auto;" />
     </div>
   </div>
 </div>
@@ -546,7 +546,7 @@ transition: slide-up
 
 <div style="display: flex; gap: 32px; align-items: flex-start; margin-top: 24px;">
   <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
-    <img src="/stock/standOutCV.png" alt="StandOut CV Report" style="max-width: 100%; max-height: 450px; object-fit: contain; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);" />
+    <img src="/images/stock/standOutCV.png" alt="StandOut CV Report" style="max-width: 100%; max-height: 450px; object-fit: contain; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);" />
   </div>
   
   <div style="flex: 1; display: flex; flex-direction: column; gap: 20px;">
@@ -768,7 +768,7 @@ Proyectos personales (Demostrar que te gusta construir cosas).
 -->
 ---
 layout: iframe
-url: /Timeline-Internships/index.html
+url: images/timeline-internships/index.html
 transition: slide-up
 ---
 ---
@@ -777,15 +777,15 @@ transition: slide-up
 
 <div class="grid grid-cols-3 gap-4 mt-8">
   <div class="text-center">
-    <img src="/big tech resumes/RESUME-IBM.jpg" class="w-full h-auto rounded shadow-lg cursor-pointer" @click="$slidev.nav.openInEditor('/big tech resumes/RESUME-IBM.jpg')" />
+    <img src="/images/big-tech-resumes/RESUME-IBM.jpg" class="w-full h-auto rounded shadow-lg cursor-pointer" @click="$slidev.nav.openInEditor('/images/big-tech-resumes/RESUME-IBM.jpg')" />
     <p class="mt-2 text-sm">IBM</p>
   </div>
   <div class="text-center">
-    <img src="/big tech resumes/RESUME-META.jpg" class="w-full h-auto rounded shadow-lg cursor-pointer" @click="$slidev.nav.openInEditor('/big tech resumes/RESUME-META.jpg')" />
+    <img src="/images/big-tech-resumes/RESUME-META.jpg" class="w-full h-auto rounded shadow-lg cursor-pointer" @click="$slidev.nav.openInEditor('/images/big-tech-resumes/RESUME-META.jpg')" />
     <p class="mt-2 text-sm">Meta</p>
   </div>
   <div class="text-center">
-    <iframe src="/big tech resumes/RESUME-GOOGLE.pdf" class="w-full h-96 rounded shadow-lg"></iframe>
+    <iframe src="images/big-tech-resumes/RESUME-GOOGLE.pdf" class="w-full h-96 rounded shadow-lg"></iframe>
     <p class="mt-2 text-sm">Google</p>
   </div>
 </div>

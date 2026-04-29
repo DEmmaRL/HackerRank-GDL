@@ -6,3 +6,8 @@ dist-public
 .vite-inspect
 .remote-assets
 components.d.ts
+
+# Shared assets
+public/fonts/
+public/logos/
+public/images/

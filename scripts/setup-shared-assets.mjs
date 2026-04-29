@@ -21,9 +21,11 @@ async function migrate() {
   const dirs = [
     `${sharedAssets}/fonts`,
     `${sharedAssets}/logos`,
-    `${sharedAssets}/images/timeline`,
+    `${sharedAssets}/images/assets`,
+    `${sharedAssets}/images/technical-assets`,
+    `${sharedAssets}/images/timeline-internships`,
     `${sharedAssets}/images/intern-experience`,
-    `${sharedAssets}/images/resumes`,
+    `${sharedAssets}/images/big-tech-resumes`,
     `${sharedAssets}/images/stock`,
   ];
 
@@ -69,6 +71,19 @@ async function migrate() {
     console.log('Logos copied from asegura-tu-futuro');
   } catch (e) {
     console.warn('Logos not found in asegura-tu-futuro');
+  }
+
+  // Copy logos from technical-interview
+  console.log('\nCopying logos from technical-interview...');
+  try {
+    await cp(
+      path.join(root, 'sessions/technical-interview/public/logos'),
+      `${sharedAssets}/logos`,
+      { recursive: true, force: true }
+    );
+    console.log('Logos copied from technical-interview');
+  } catch (e) {
+    console.warn('Logos not found in technical-interview');
   }
 
   // Copy images from all sources

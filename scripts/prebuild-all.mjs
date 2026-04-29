@@ -14,6 +14,7 @@ const root = path.resolve(__dirname, '..');
 
 const projects = [
   { name: 'apps/hub', cwd: path.join(root, 'apps/hub') },
+  { name: 'sessions/asegura-tu-futuro', cwd: path.join(root, 'sessions/asegura-tu-futuro') },
   { name: 'sessions/resume-building-101', cwd: path.join(root, 'sessions/resume-building-101') },
   { name: 'sessions/technical-interview', cwd: path.join(root, 'sessions/technical-interview') },
 ];

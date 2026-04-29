@@ -4,7 +4,7 @@
   "scripts": {
     "postinstall": "pnpm -r prebuild",
     "dev": "pnpm --filter hub dev",
-    "dev:all": "pnpm -r --parallel dev",
+    "dev:all": "pnpm --filter @hr-gdl/shared-assets build && pnpm -r --parallel --filter !@hr-gdl/shared-assets dev",
     "build": "node build.mjs",
     "preview": "pnpm --filter hub preview",
     "test": "vitest run",

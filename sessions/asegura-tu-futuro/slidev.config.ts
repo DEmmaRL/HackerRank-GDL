@@ -16,4 +16,7 @@ export default defineConfig({
     serif: 'Georgia, serif',
     mono: 'Fira Code, monospace',
   },
+  vite: {
+    publicDir: 'public',
+  }
 })

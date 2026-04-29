@@ -37,12 +37,12 @@ export default {
   data() {
     return {
       images: [
-        '/intern-experience/01.png',
-        '/intern-experience/02.png',
-        '/intern-experience/03.png',
-        '/intern-experience/04.png',
-        '/intern-experience/05.jpeg',
-      ],
+              'images/intern-experience/01.png',
+              'images/intern-experience/02.png',
+              'images/intern-experience/03.png',
+              'images/intern-experience/04.png',
+              'images/intern-experience/05.jpeg',
+            ],
       currentIndex: 0,
     }
   },

@@ -1,3 +1,8 @@
 node_modules/
 dist/
 .slidev/
+
+# Shared assets
+public/fonts/
+public/logos/
+public/images/
