@@ -2,7 +2,7 @@
   "name": "hackerrank-gdl",
   "private": true,
   "scripts": {
-    "postinstall": "pnpm -r prebuild",
+    "postinstall": "pnpm --filter @hr-gdl/shared-assets build && pnpm -r prebuild",
     "dev": "pnpm --filter hub dev",
     "dev:all": "pnpm --filter @hr-gdl/shared-assets build && pnpm -r --parallel --filter !@hr-gdl/shared-assets dev",
     "build": "node build.mjs",
