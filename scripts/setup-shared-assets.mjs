@@ -58,15 +58,17 @@ async function migrate() {
     console.warn('Logos not found in apps/hub');
   }
 
+  // Copy logos from asegura-tu-futuro
+  console.log('\nCopying logos from asegura-tu-futuro...');
   try {
     await cp(
-      path.join(root, 'sessions/resume-building-101/public/assets/logos'),
+      path.join(root, 'sessions/asegura-tu-futuro/public/logos'),
       `${sharedAssets}/logos`,
       { recursive: true, force: true }
     );
-    console.log('Logos copied from resume-building-101');
+    console.log('Logos copied from asegura-tu-futuro');
   } catch (e) {
-    // May not exist
+    console.warn('Logos not found in asegura-tu-futuro');
   }
 
   // Copy images from all sources
@@ -81,6 +83,26 @@ async function migrate() {
       src: 'sessions/technical-interview/public/assets',
       dest: `${sharedAssets}/images/technical-assets`,
       name: 'technical-interview assets'
+    },
+    {
+      src: 'sessions/asegura-tu-futuro/public/big tech resumes',
+      dest: `${sharedAssets}/images/big-tech-resumes`,
+      name: 'asegura-tu-futuro big tech resumes'
+    },
+    {
+      src: 'sessions/asegura-tu-futuro/public/intern-experience',
+      dest: `${sharedAssets}/images/intern-experience`,
+      name: 'asegura-tu-futuro intern experience'
+    },
+    {
+      src: 'sessions/asegura-tu-futuro/public/stock',
+      dest: `${sharedAssets}/images/stock`,
+      name: 'asegura-tu-futuro stock images'
+    },
+    {
+      src: 'sessions/asegura-tu-futuro/public/Timeline-Internships',
+      dest: `${sharedAssets}/images/timeline-internships`,
+      name: 'asegura-tu-futuro timeline internships'
     },
   ];
 

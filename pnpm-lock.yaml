@@ -48,6 +48,10 @@ importers:
   packages/shared-assets: {}
 
   sessions/asegura-tu-futuro:
+    dependencies:
+      '@hr-gdl/shared-assets':
+        specifier: workspace:*
+        version: link:../../packages/shared-assets
     devDependencies:
       '@slidev/cli':
         specifier: ^52.14.2
