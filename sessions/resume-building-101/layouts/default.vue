@@ -3,7 +3,7 @@
     <slot />
     <!-- Watermark: bottom-right corner, low opacity -->
     <img
-      src="/logos/logo-light-narrow.svg"
+      src="@hr-gdl/shared-assets/logos/logo-light-narrow.svg"
       class="watermark"
       aria-hidden="true"
     />

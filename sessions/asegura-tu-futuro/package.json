@@ -6,9 +6,8 @@
     "@hr-gdl/shared-assets": "workspace:*"
   },
   "scripts": {
-    "prebuild": "mkdir -p public && cp -r node_modules/@hr-gdl/shared-assets/dist/* public/",
-    "build": "npm run prebuild && slidev build --base /slides/asegura-tu-futuro/",
-    "dev": "npm run prebuild && slidev --port 3033 --base /slides/asegura-tu-futuro/",
+    "build": "slidev build --base /slides/asegura-tu-futuro/",
+    "dev": "slidev --port 3033 --base /slides/asegura-tu-futuro/",
     "export": "slidev export"
   },
   "devDependencies": {

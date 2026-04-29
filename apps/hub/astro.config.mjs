@@ -3,6 +3,10 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import sitemap from '@astrojs/sitemap';
 import vercel from '@astrojs/vercel';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
 	site: 'https://www.hackerrankcrewgdl.com',
@@ -28,8 +32,8 @@ export default defineConfig({
 				Hero: './src/components/Hero.astro',
 			},
 			logo: {
-				light: './public/logos/logo-dark-narrow.svg',
-				dark: './public/logos/logo-light-narrow.svg',
+				light: '../../packages/shared-assets/dist/logos/logo-dark-narrow.svg',
+				dark: '../../packages/shared-assets/dist/logos/logo-light-narrow.svg',
 				replacesTitle: true,
 			},
 			head: [
@@ -93,4 +97,11 @@ export default defineConfig({
 			],
 		}),
 	],
+	vite: {
+		resolve: {
+			alias: {
+				'@hr-gdl/shared-assets': path.resolve(__dirname, '../../packages/shared-assets/dist'),
+			},
+		},
+	},
 });

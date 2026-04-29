@@ -131,7 +131,7 @@ layout: section
 
   </div>
   <div style="flex: 1; text-align: center;">
-    <img src="/images/stock/12083608_Wavy_Bus-26_Single-11.svg" alt="Competencia" style="max-width: 100%; max-height: 300px; object-fit: contain; pointer-events: none;" />
+    <img src="@hr-gdl/shared-assets/images/stock/12083608_Wavy_Bus-26_Single-11.svg" alt="Competencia" style="max-width: 100%; max-height: 300px; object-fit: contain; pointer-events: none;" />
   </div>
 </div>
 
@@ -206,7 +206,7 @@ transition: fade
 
 <div style="display: flex; gap: 24px; align-items: flex-start;">
   <div style="flex: 1.1; text-align: left;">
-    <img src="/images/stock/percentage-54.png" alt="AI value in software development and data analysis" style="width: 100%; max-height: 360px; object-fit: contain;" />
+    <img src="@hr-gdl/shared-assets/images/stock/percentage-54.png" alt="AI value in software development and data analysis" style="width: 100%; max-height: 360px; object-fit: contain;" />
     <p style="margin-top: 12px; font-size: 16px; line-height: 1.35; text-align: center;">
       Se espera que la IA aporte mayor valor en <strong style="font-weight: 600; font-style: italic;">desarrollo de software (54%) y análisis de datos (52%)</strong>, lo que destaca su fuerte alineacion con funciones clave de programacion y analisis
     </p>
@@ -253,7 +253,7 @@ transition: slide-left
     El 93% de las vacantes son para <span style="color: var(--deep-space-blue);">personas que ya saben qué hacer desde el dia uno.</span>
   </p>
 
-  <img src="/images/stock/percentage-7.svg" alt="7%" style="width: 360px; margin-top: 20px; opacity: 0.95;" />
+  <img src="@hr-gdl/shared-assets/images/stock/percentage-7.svg" alt="7%" style="width: 360px; margin-top: 20px; opacity: 0.95;" />
 </div>
 
 <!--
@@ -447,7 +447,7 @@ transition: slide-up
 
 <div style="display: flex; gap: 40px; align-items: center; margin-top: 24px;">
   <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
-    <img src="/images/stock/success-team.svg" alt="Employers value" style="max-width: 280px; max-height: 320px; object-fit: contain;" />
+    <img src="@hr-gdl/shared-assets/images/stock/success-team.svg" alt="Employers value" style="max-width: 280px; max-height: 320px; object-fit: contain;" />
   </div>
   
   <div style="flex: 1.5; position: relative;">
@@ -514,7 +514,7 @@ transition: slide-up
       <p style="font-size: 15px; margin: 0; line-height: 1.4;">de empleadores valoran la experiencia práctica</p>
     </div>
     <div style="text-align: center;">
-      <img src="/images/stock/nace-report.jpeg" alt="NACE Report 2025" style="max-width: 100%; max-height: 280px; object-fit: contain; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); display: block; margin: 0 auto;" />
+      <img src="@hr-gdl/shared-assets/images/stock/nace-report.jpeg" alt="NACE Report 2025" style="max-width: 100%; max-height: 280px; object-fit: contain; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); display: block; margin: 0 auto;" />
     </div>
   </div>
 </div>
@@ -546,7 +546,7 @@ transition: slide-up
 
 <div style="display: flex; gap: 32px; align-items: flex-start; margin-top: 24px;">
   <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
-    <img src="/images/stock/standOutCV.png" alt="StandOut CV Report" style="max-width: 100%; max-height: 450px; object-fit: contain; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);" />
+    <img src="@hr-gdl/shared-assets/images/stock/standOutCV.png" alt="StandOut CV Report" style="max-width: 100%; max-height: 450px; object-fit: contain; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);" />
   </div>
   
   <div style="flex: 1; display: flex; flex-direction: column; gap: 20px;">
@@ -777,11 +777,11 @@ transition: slide-up
 
 <div class="grid grid-cols-3 gap-4 mt-8">
   <div class="text-center">
-    <img src="/images/big-tech-resumes/RESUME-IBM.jpg" class="w-full h-auto rounded shadow-lg cursor-pointer" @click="$slidev.nav.openInEditor('/images/big-tech-resumes/RESUME-IBM.jpg')" />
+    <img src="@hr-gdl/shared-assets/images/big-tech-resumes/RESUME-IBM.jpg" class="w-full h-auto rounded shadow-lg cursor-pointer" @click="$slidev.nav.openInEditor('@hr-gdl/shared-assets/images/big-tech-resumes/RESUME-IBM.jpg')" />
     <p class="mt-2 text-sm">IBM</p>
   </div>
   <div class="text-center">
-    <img src="/images/big-tech-resumes/RESUME-META.jpg" class="w-full h-auto rounded shadow-lg cursor-pointer" @click="$slidev.nav.openInEditor('/images/big-tech-resumes/RESUME-META.jpg')" />
+    <img src="@hr-gdl/shared-assets/images/big-tech-resumes/RESUME-META.jpg" class="w-full h-auto rounded shadow-lg cursor-pointer" @click="$slidev.nav.openInEditor('@hr-gdl/shared-assets/images/big-tech-resumes/RESUME-META.jpg')" />
     <p class="mt-2 text-sm">Meta</p>
   </div>
   <div class="text-center">

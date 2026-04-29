@@ -8,7 +8,7 @@ class: dark-slide
 ---
 
 <div class="hero-lockup">
-  <img src="/logos/logo-light-wide.svg" class="hero-logo" />
+  <img src="@hr-gdl/shared-assets/logos/logo-light-wide.svg" class="hero-logo" />
   <span class="hero-gdl"><span class="accent">CREW</span> GDL</span>
 </div>
 

@@ -6,10 +6,9 @@
   "description": "Official website for HackerRank Crew GDL built with Astro and Starlight.",
   "license": "Apache-2.0",
   "scripts": {
-    "prebuild": "mkdir -p public && cp -r node_modules/@hr-gdl/shared-assets/dist/* public/",
-    "dev": "npm run prebuild && astro dev",
-    "start": "npm run prebuild && astro dev",
-    "build": "npm run prebuild && astro build",
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
