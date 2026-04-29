@@ -27,7 +27,7 @@ describe('Workspace Configuration', () => {
     const content = await readFile(pkgPath, 'utf-8');
     const pkg = JSON.parse(content);
     
-    expect(pkg.name).toBe('@gdl/shared-assets');
+    expect(pkg.name).toBe('@hr-gdl/shared-assets');
     expect(pkg.exports).toBeDefined();
     expect(pkg.exports['.']).toBe('./dist');
     expect(pkg.exports['./fonts/*']).toBe('./dist/fonts/*');
