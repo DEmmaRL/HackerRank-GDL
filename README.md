@@ -48,6 +48,21 @@ pnpm dev
 
 > Session names match their directory names under `sessions/`.
 
+## Asset Management
+
+Assets (fonts, logos, images) are centrally managed via the `@hr-gdl/shared-assets` package:
+
+- **Location**: `packages/shared-assets/`
+- **Exports**: Granular exports for fonts, logos, and images
+- **Distribution**: Each project prebuild copies assets to `public/`
+- **Benefits**: Single source of truth, reduced duplication, easy maintenance
+
+To sync assets after installation:
+```bash
+pnpm install          # Links @hr-gdl/shared-assets
+pnpm -r prebuild      # Copies assets to all project public directories
+```
+
 ## Building for Production
 
 We use a custom build script that optimizes the deployment by caching unchanged sessions:
@@ -57,9 +72,10 @@ pnpm build
 ```
 
 The build orchestrator (`build.mjs`):
-1. Checks for file changes in each session directory.
-2. Skips building sessions that haven't changed (local cache).
-3. Compiles the Hub and embeds the static slide decks into `public/slides/`.
+1. Runs prebuild to ensure assets are synced
+2. Checks for file changes in each session directory
+3. Skips building sessions that haven't changed (local cache)
+4. Compiles the Hub and embeds the static slide decks into `public/slides/`
 
 ## Brand Identity
 
