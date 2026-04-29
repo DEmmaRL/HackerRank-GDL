@@ -38,9 +38,18 @@ All scripts automatically include asset prebuild (no manual steps required):
 **Start the hub** (main entry point):
 ```bash
 pnpm dev
+# Hub on http://localhost:3000
 ```
 
-**Start a specific session** for HMR development:
+**Start all projects in parallel** (hub + all sessions):
+```bash
+pnpm dev:all
+# Hub: http://localhost:3000
+# Resume Building 101: http://localhost:3031
+# Technical Interview: http://localhost:3032
+```
+
+**Start a specific session** for focused HMR development:
 ```bash
 # Terminal 1 — Slidev with live reload
 pnpm --filter resume-building-101 dev   # Port 3031
