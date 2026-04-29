@@ -1,19 +1,26 @@
 <script setup>
 import { ref, onMounted, onUnmounted, nextTick } from 'vue'
+import nvidiaLogo from '@hr-gdl/shared-assets/logos/Nvidia-Light-Vertical-Logo.wine.svg'
+import amazonLogo from '@hr-gdl/shared-assets/logos/amazon.svg'
+import tsmcLogo from '@hr-gdl/shared-assets/logos/tsmc.svg'
+import broadcomLogo from '@hr-gdl/shared-assets/logos/broadcom.svg'
+import openaiLogo from '@hr-gdl/shared-assets/logos/openai-icon.svg'
+import alibabaLogo from '@hr-gdl/shared-assets/logos/alibaba.svg'
+import samsungLogo from '@hr-gdl/shared-assets/logos/samsung.svg'
 
 const nodesData = [
-  { id: 'nvidia', rank: 1, label: 'Nvidia', status: 'activa', valueT: 4.56, current: '$4,56 billones', peak: '$5,00 billones (2025)', preExit: 'N/A', logo: 'logos/Nvidia-Light-Vertical-Logo.wine.svg', x: 50, y: 14, size: 114 },
+  { id: 'nvidia', rank: 1, label: 'Nvidia', status: 'activa', valueT: 4.56, current: '$4,56 billones', peak: '$5,00 billones (2025)', preExit: 'N/A', logo: nvidiaLogo, x: 50, y: 14, size: 114 },
   { id: 'apple', rank: 2, label: 'Apple', status: 'activa', valueT: 3.95, current: '$3,95 billones', peak: '$4,06 billones (2025)', preExit: 'N/A', logo: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg', x: 22, y: 23, size: 104, invert: true },
   { id: 'alphabet', rank: 3, label: 'Alphabet', status: 'activa', valueT: 3.83, current: '$3,83 billones', peak: '$4,15 billones (2026)', preExit: 'N/A', logo: 'https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg', x: 78, y: 23, size: 103 },
   { id: 'microsoft', rank: 4, label: 'Microsoft', status: 'activa', valueT: 3.53, current: '$3,53 billones', peak: '$3,85 billones (2025)', preExit: 'N/A', logo: 'https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg', x: 17, y: 42, size: 98 },
-  { id: 'amazon', rank: 5, label: 'Amazon', status: 'activa', valueT: 2.49, current: '$2,49 billones', peak: '$2,60 billones (2026)', preExit: 'N/A', logo: 'logos/amazon.svg', x: 83, y: 42, size: 82 },
-  { id: 'tsmc', rank: 6, label: 'TSMC', status: 'nueva', valueT: 1.9, current: '$1,90 billones', peak: '$3,14 billones (2025)', preExit: 'N/A', logo: 'logos/tsmc.svg', x: 36, y: 43, size: 74 },
+  { id: 'amazon', rank: 5, label: 'Amazon', status: 'activa', valueT: 2.49, current: '$2,49 billones', peak: '$2,60 billones (2026)', preExit: 'N/A', logo: amazonLogo, x: 83, y: 42, size: 82 },
+  { id: 'tsmc', rank: 6, label: 'TSMC', status: 'nueva', valueT: 1.9, current: '$1,90 billones', peak: '$3,14 billones (2025)', preExit: 'N/A', logo: tsmcLogo, x: 36, y: 43, size: 74 },
   { id: 'meta', rank: 7, label: 'Meta', status: 'activa', valueT: 1.7, current: '$1,70 billones', peak: '$1,79 billones (2026)', preExit: 'N/A', logo: 'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/meta-icon.png', x: 64, y: 43, size: 71 },
-  { id: 'broadcom', rank: 8, label: 'Broadcom', status: 'nueva', valueT: 1.57, current: '$1,57 billones', peak: '$1,75 billones (2025)', preExit: 'N/A', logo: 'logos/broadcom.svg', x: 25, y: 62, size: 68 },
+  { id: 'broadcom', rank: 8, label: 'Broadcom', status: 'nueva', valueT: 1.57, current: '$1,57 billones', peak: '$1,75 billones (2025)', preExit: 'N/A', logo: broadcomLogo, x: 25, y: 62, size: 68 },
   { id: 'tesla', rank: 9, label: 'Tesla', status: 'activa', valueT: 1.55, current: '$1,55 billones', peak: '$1,60 billones (2024)', preExit: 'N/A', logo: 'https://upload.wikimedia.org/wikipedia/commons/b/bd/Tesla_Motors.svg', x: 75, y: 62, size: 68 },
-  { id: 'openai', rank: 10, label: 'OpenAI', status: 'candidata', valueT: 1.0, current: '$1,00 billón (Est.)', peak: 'N/A', preExit: 'N/A', logo: 'logos/openai-icon.svg', x: 50, y: 70, size: 60, invert: true },
-  { id: 'alibaba', rank: 11, label: 'Alibaba', status: 'legacy', valueT: 0.37, current: '$370 mil M', peak: '$783 mil M (2020)', preExit: '$606 mil M (2021)', reason: 'Regulación china, pérdida de cuota en pagos digitales frente a WeChat Pay', logo: 'logos/alibaba.svg', x: 16, y: 82, size: 50 },
-  { id: 'samsung', rank: 12, label: 'Samsung', status: 'activa', valueT: 0.727, current: '$727 mil M', peak: '$727 mil M (2026)', preExit: 'N/A', logo: 'logos/samsung.svg', x: 36, y: 87, size: 52 },
+  { id: 'openai', rank: 10, label: 'OpenAI', status: 'candidata', valueT: 1.0, current: '$1,00 billón (Est.)', peak: 'N/A', preExit: 'N/A', logo: openaiLogo, x: 50, y: 70, size: 60, invert: true },
+  { id: 'alibaba', rank: 11, label: 'Alibaba', status: 'legacy', valueT: 0.37, current: '$370 mil M', peak: '$783 mil M (2020)', preExit: '$606 mil M (2021)', reason: 'Regulación china, pérdida de cuota en pagos digitales frente a WeChat Pay', logo: alibabaLogo, x: 16, y: 82, size: 50 },
+  { id: 'samsung', rank: 12, label: 'Samsung', status: 'activa', valueT: 0.727, current: '$727 mil M', peak: '$727 mil M (2026)', preExit: 'N/A', logo: samsungLogo, x: 36, y: 87, size: 52 },
   { id: 'oracle', rank: 13, label: 'Oracle', status: 'en-ascenso', valueT: 0.436, current: '$436 mil M', peak: '$575 mil M (2025)', preExit: 'N/A', logo: 'https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg', x: 50, y: 87, size: 50 },
   { id: 'cisco', rank: 14, label: 'Cisco', status: 'legacy', valueT: 0.34, current: '$340 mil M', peak: '$555 mil M (2000)', preExit: '$129 mil M (2014)', reason: 'Desplazamiento por proveedores de networking modernos, transición incompleta a software', logo: 'https://upload.wikimedia.org/wikipedia/commons/0/08/Cisco_logo_blue_2016.svg', x: 64, y: 87, size: 48 },
   { id: 'intel', rank: 15, label: 'Intel', status: 'legacy', valueT: 0.222, current: '$222 mil M', peak: '$509 mil M (2000)', preExit: '$211 mil M (2023)', reason: 'Retraso en nodos de fabricación (7nm+), competencia de ARM y arquitecturas abiertas', logo: 'https://upload.wikimedia.org/wikipedia/commons/7/7d/Intel_logo_%282006-2020%29.svg', x: 84, y: 82, size: 48 }

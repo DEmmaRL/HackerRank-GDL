@@ -1,11 +1,13 @@
 <script setup>
 import { ref, onMounted, onUnmounted, nextTick } from 'vue'
+import amazonLogo from '@hr-gdl/shared-assets/logos/amazon.svg'
+import nvidiaLogo from '@hr-gdl/shared-assets/logos/Nvidia-Light-Vertical-Logo.wine.svg'
 
 const nodesData = [
   { id: 'microsoft', logo: 'https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg', x: 50, y: 15, invert: false },
   { id: 'meta', logo: 'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/meta-icon.png', x: 8, y: 42, invert: false },
-  { id: 'amazon', logo: 'logos/amazon.svg', x: 92, y: 42, invert: false },
-  { id: 'nvidia', logo: 'logos/Nvidia-Light-Vertical-Logo.wine.svg', x: 15, y: 88, invert: false },
+  { id: 'amazon', logo: amazonLogo, x: 92, y: 42, invert: false },
+  { id: 'nvidia', logo: nvidiaLogo, x: 15, y: 88, invert: false },
   { id: 'apple', logo: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg', x: 85, y: 88, invert: true }
 ]
 

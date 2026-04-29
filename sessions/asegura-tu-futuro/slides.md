@@ -768,27 +768,14 @@ Proyectos personales (Demostrar que te gusta construir cosas).
 -->
 ---
 layout: iframe
-url: images/timeline-internships/index.html
+url: timeline-internships/index.html
 transition: slide-up
 ---
 ---
 
 ## ¿Cómo se ve el Resume de alguien que lo logró?
 
-<div class="grid grid-cols-3 gap-4 mt-8">
-  <div class="text-center">
-    <img src="@hr-gdl/shared-assets/images/big-tech-resumes/RESUME-IBM.jpg" class="w-full h-auto rounded shadow-lg cursor-pointer" @click="$slidev.nav.openInEditor('@hr-gdl/shared-assets/images/big-tech-resumes/RESUME-IBM.jpg')" />
-    <p class="mt-2 text-sm">IBM</p>
-  </div>
-  <div class="text-center">
-    <img src="@hr-gdl/shared-assets/images/big-tech-resumes/RESUME-META.jpg" class="w-full h-auto rounded shadow-lg cursor-pointer" @click="$slidev.nav.openInEditor('@hr-gdl/shared-assets/images/big-tech-resumes/RESUME-META.jpg')" />
-    <p class="mt-2 text-sm">Meta</p>
-  </div>
-  <div class="text-center">
-    <iframe src="images/big-tech-resumes/RESUME-GOOGLE.pdf" class="w-full h-96 rounded shadow-lg"></iframe>
-    <p class="mt-2 text-sm">Google</p>
-  </div>
-</div>
+<BigTechResumes />
 
 ---
 layout: section

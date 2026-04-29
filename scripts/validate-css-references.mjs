@@ -90,6 +90,3 @@ validateCssReferences().catch(e => {
   console.error('Error:', e);
   process.exit(1);
 });
-
-  process.exit(1);
-});

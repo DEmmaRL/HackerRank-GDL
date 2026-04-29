@@ -33,16 +33,16 @@
 </template>
 
 <script>
+import img01 from '@hr-gdl/shared-assets/images/intern-experience/01.png'
+import img02 from '@hr-gdl/shared-assets/images/intern-experience/02.png'
+import img03 from '@hr-gdl/shared-assets/images/intern-experience/03.png'
+import img04 from '@hr-gdl/shared-assets/images/intern-experience/04.png'
+import img05 from '@hr-gdl/shared-assets/images/intern-experience/05.jpeg'
+
 export default {
   data() {
     return {
-      images: [
-              'images/intern-experience/01.png',
-              'images/intern-experience/02.png',
-              'images/intern-experience/03.png',
-              'images/intern-experience/04.png',
-              'images/intern-experience/05.jpeg',
-            ],
+      images: [img01, img02, img03, img04, img05],
       currentIndex: 0,
     }
   },
