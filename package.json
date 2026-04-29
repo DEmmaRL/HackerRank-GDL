@@ -13,6 +13,7 @@
     "test:coverage": "vitest run --coverage"
   },
   "devDependencies": {
+    "@vitest/coverage-v8": "4.1.5",
     "@vitest/ui": "^4.1.5",
     "vitest": "^4.1.5"
   }
